@@ -1,0 +1,34 @@
+melee_weapons_tables
+21
+bonus_v_cavalry	bonus_v_large	bonus_v_infantry	key	damage	ap_damage	first_strike	weapon_length	melee_weapon_type	audio_type	splash_attack_target_size	splash_attack_max_attacks	splash_attack_power_multiplier	building_damage	ignition_amount	is_magical	contact_phase	collision_attack_max_targets	collision_attack_max_targets_cooldown	melee_attack_interval
+0	0	0	brt_macemen	11	16	0	1	club	club		1	1	10	0	False		0	10	4.6
+0	0	0	brt_tournament	35	40	0	1	sword	sword	small	3	1	10	0	True		0	10	4.4
+0	0	0	wh_archer_brt_sword	25	6	0	1	sword	sword		1	1	10	0	False		0	10	4.6
+0	0	0	Pestigor	33	11	0	1	axe	axe	small	2	0.45	5	0	False	wh_main_unit_contact_poison	0	10	4.7
+0	0	8	Khorngor	34	10	0	1	axe	axe	small	3	0.64	10	0	False		0	10	4.5
+0	0	0	Slaangor	18	36	0	2	axe	axe		1	1	10	0	False		0	10	4.3
+0	0	0	Tzaangor	40	14	0	1	sword	sword		1	1	5	0	True		0	10	4.4
+0	0	0	chs_zelot	55	25	0	1	sword	sword	medium	5	1.18	5	0	True		0	4	4.2
+0	0	0	chs_chaos_dragon	350	350	0	4	axe	claw	very_large	15	1.9	600	15	False		0	3	4.2
+0	0	10	chs_marauder_mutant	32	44	0	1	axe	axe	small	3	0.8	15	0	False		0	6	4.2
+0	0	0	dwf_oathsworn	58	42	0	1	axe	axe	medium	5	1.16	40	0	True		0	6	4.4
+0	45	0	dwf_giant_slayer	30	50	0	2	axe	axe	small	3	1	75	0	False		0	8	4.4
+0	0	0	wh_main_dwf_drakegun_engineers	22	6	0	1	sword	drakegun		1	1	6	0	False		0	10	4.5
+0	0	0	wh_main_dwf_hammer_hero_lord	160	290	0	2	axe	hammer	medium	6	1.1	300	0	False		0	10	4
+0	20	0	wh_main_imp_guard_halberds	20	26	0	2	spear	halberd		1	1	12	0	False		0	10	4.6
+0	0	0	wh_main_huntsmen_short_swords	26	5	0	0	sword	sword	small	2	1	5	0	False		0	10	4.5
+0	0	0	wh_main_disciples_hammers	20	25	0	1	axe	hammer	very_small	2	0.4	15	0	True		0	10	4.5
+0	0	0	wh_main_emp_ironsides	30	8	0	1	sword	sword		1	1	5	0	False		0	10	4.5
+0	0	8	wh_main_emp_axe_panthers	20	20	0	1	axe	axe	small	3	1.16	5	0	False		0	10	4.5
+0	20	0	wh_main_witch_hunters_rapiers	63	32	0	0	sword	sword		1	1	5	0	True		0	10	4.2
+0	0	0	grn_savage_big_great	38	20	0	1	axe	club_medium	small	1	1	25	0	True		0	8	4.5
+0	0	0	grn_black_orc_shields	26	20	0	1	sword	axe		1	1	10	0	False		0	10	4.6
+0	0	0	grn_black_orc_boss	35	45	0	1	axe	axe	small	2	1	10	0	False		0	5	4.5
+0	8	0	grn_forest_spear	24	4	0	1	spear	spear		1	1	5	0	False	wh_main_unit_contact_poison_lethal	0	10	4.4
+0	6	0	wh_main_grn_goblin_spear_poison	21	5	0	1	spear	spear		1	1	10	0	False	wh_main_unit_contact_poison	0	10	4.4
+0	0	25	vmp_bloody_knights	60	45	0	1	sword	sword	small	3	0.9	5	0	True		0	8	4.2
+0	0	0	vmp_zombie_dragon	250	300	0	3	axe	claw	large	10	1.65	600	0	False	wh_main_unit_contact_poison_lethal	0	3	4.3
+0	35	0	vmp_lance_black_grail_knight	125	95	0	2	lance	spear	medium	6	1.28	15	0	True	wh_dlc06_unit_contact_discouraged	0	6	4.4
+0	0	0	wef_shadowdancer	60	65	0	2	spear	spear	medium	4	1.25	15	0	True		0	6	4
+0	0	6	wef_eternal_sword	24	25	0	1	sword	sword	small	2	0.3	5	0	False		0	9	4.1
+0	25	0	wef_wildwood_warden	27	37	0	1	sword	sword	small	3	0.65	5	0	False		0	8	4

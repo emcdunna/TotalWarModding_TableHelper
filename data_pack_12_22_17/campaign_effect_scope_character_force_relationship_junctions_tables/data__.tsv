@@ -1,0 +1,4 @@
+campaign_effect_scope_character_force_relationship_junctions_tables
+0
+campaign_effect_scope_key	force_relationship_key
+force_to_general_own	force_commander

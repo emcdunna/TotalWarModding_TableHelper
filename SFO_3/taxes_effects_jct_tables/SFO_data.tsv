@@ -1,0 +1,4 @@
+taxes_effects_jct_tables
+2
+tax_name	effect	effect_scope	ai_only	ai_only5	ai_only6	value	unknown7
+lower_normal	wh_main_effect_public_order_tax_rate	province_to_province_own				-6	False

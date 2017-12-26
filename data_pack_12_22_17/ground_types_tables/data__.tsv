@@ -1,0 +1,16 @@
+ground_types_tables
+8
+unknown0	unknown1	unknown2	unknown3	unknown4	unknown5	unknown6	unknown7	unknown8	unknown9
+		burnt		1	earth	64	0	0	55
+		deep_water		0	water	0	0	255	55
+terrain_heavy	terrain_heavy_noselect	forest	ignore_forest_penalties	1	earth	25	51	0	55
+		grass		1	earth	0	255	0	0
+		mud		1	earth	150	75	0	55
+		road		1	sand	255	96	0	55
+		rock		1	rock	170	170	170	55
+		sand		1	sand	244	164	96	55
+		scrub		1	earth	172	225	175	55
+terrain_rough	terrain_rough_noselect	shallow_water	ignore_forest_penalties	0	water	93	255	255	55
+		sharp_stones		1	sand	255	255	0	55
+		snow		1	sand	255	255	255	55
+		wooden_floor		1	wood	255	100	100	55

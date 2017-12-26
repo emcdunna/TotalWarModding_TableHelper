@@ -1,0 +1,15 @@
+autoresolver_player_types_tables
+0
+unknown0	unknown1	unknown2	unknown3	unknown4	unknown5	unknown6
+False	true	True	True	ai_vs_human		false
+False		True	True	any		
+False		True	False	attacker_target		
+False		False	True	defender_target		
+False	true	False	True	defending_ai_vs_human		false
+False	false	False	True	defending_human_vs_ai		true
+False	false	True	True	human_vs_ai		true
+False	false	True	True	human_vs_ai_easy	easy	true
+False	false	True	True	human_vs_ai_hard	hard	true
+False	false	True	True	human_vs_ai_legendary	legendary	true
+False	false	True	True	human_vs_ai_normal	normal	true
+False	false	True	True	human_vs_ai_vhard	very_hard	true

@@ -1,0 +1,7 @@
+special_ability_to_invalid_target_flags_tables
+0
+unknown0	unknown1
+hp_replenish_cap_reached	chs_zealot_dark_healing
+unit_is_commander_class	emp_main1
+unit_is_commander_class	vmp_main1
+unit_is_not_commander_class	unit_ability_grn_black_orc_bellow_aura

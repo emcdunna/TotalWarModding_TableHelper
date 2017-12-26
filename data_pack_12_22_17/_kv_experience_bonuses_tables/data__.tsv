@@ -1,0 +1,10 @@
+_kv_experience_bonuses_tables
+0
+key	value
+captured_key_building	80
+captured_victory_location	160
+first_to_enter_enemy_fort	200
+killed_enemy_commander_base	200
+killed_enemy_commander_per_star	50
+killed_enemy_faction_leader	500
+killed_enemy_family_member	200

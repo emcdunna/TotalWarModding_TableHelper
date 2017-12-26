@@ -1,0 +1,12 @@
+effects_tables
+3
+effect	icon	priority	icon_negative	category	is_positive_value_good
+twh_emp_no_war_declaration	diplomacy.png	5	diplomacy.png	campaign	True
+twh_emp_no_war_marienburg	diplomacy.png	5	diplomacy.png	campaign	True
+wh_twh_empire_diplomacy_marienburg	diplomacy.png	2	diplomacy.png	campaign	True
+wh_twh_empire_diplomacy_nordland	diplomacy.png	2	diplomacy.png	campaign	True
+wh_twh_empire_relation_elector_states	diplomacy.png	7	diplomacy.png	campaign	True
+wh_twh_cost_reduction_flagellants	treasury.png	106	treasury.png	campaign	False
+wh_twh_empire_diplomacy_marienburg_hidden	diplomacy.png	0	diplomacy.png	campaign	True
+wh_twh_building_construction_cost_mod_emp_religion	treasury.png	101	treasury.png	campaign	False
+twh_emp_no_war_kislev	diplomacy.png	5	diplomacy.png	campaign	True

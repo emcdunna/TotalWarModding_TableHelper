@@ -1,0 +1,9 @@
+effects_tables
+3
+effect	icon	priority	icon_negative	category	is_positive_value_good
+wh_main_effect_force_unit_stat_melee_during_siege_subterranean	melee.png	109	melee.png	battle	True
+wh_main_effect_force_tunnel_stance_movement_range_zar	campaign_movement.png	13	campaign_movement.png	campaign	True
+wh2_main_pooled_resource_skaven_food_army_zar	pooled_resource_food.png	3	pooled_resource_food.png	campaign	True
+wh2_main_pooled_resource_skaven_food_cannibalism_zar	pooled_resource_food.png	3	pooled_resource_food.png	campaign	True
+wh2_main_pooled_resource_skaven_food_elven_region_zar	pooled_resource_food.png	3	pooled_resource_food.png	campaign	True
+zar_sk_effect_sewer_patrol_dummy	melee.png	109	melee.png	campaign	True

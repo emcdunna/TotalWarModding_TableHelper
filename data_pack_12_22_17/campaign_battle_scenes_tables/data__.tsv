@@ -1,0 +1,24 @@
+campaign_battle_scenes_tables
+1
+unknown0	unknown1	unknown2	unknown3
+prefabs/campaign/chaos_battle.bmd	11		terrain/campaigns/warhammer_map_1_1_wood_elves/lighting/chaos_wastes.environment
+prefabs/campaign/empire_battle.bmd	111		terrain/campaigns/warhammer_map_1_1_wood_elves/lighting/empire.environment
+prefabs/campaign/skaven_battle.bmd	111	wh2_main_skv_skaven	terrain/campaigns/warhammer_map_1_1_wood_elves/lighting/empire.environment
+prefabs/campaign/beastmen_battle.bmd	111	wh_dlc03_bst_beastmen	terrain/campaigns/warhammer_map_1_1_wood_elves/lighting/chaos_wastes.environment
+prefabs/campaign/woodelf_battle.bmd	111	wh_dlc05_wef_wood_elves	terrain/campaigns/warhammer_map_1_1_wood_elves/lighting/woodelves.environment
+prefabs/campaign/bretonnia_battle.bmd	111	wh_main_brt_bretonnia	terrain/campaigns/warhammer_map_1_1_wood_elves/lighting/bretonnia.environment
+prefabs/campaign/chaos_battle.bmd	111	wh_main_chs_chaos	terrain/campaigns/warhammer_map_1_1_wood_elves/lighting/chaos_wastes.environment
+prefabs/campaign/vampire_battle.bmd	111	wh_main_vmp_vampire_counts	terrain/campaigns/warhammer_map_1_1_wood_elves/lighting/empire.environment
+prefabs/campaign/mountains_greenskins_battle.bmd	148		terrain/campaigns/warhammer_map_1_1_wood_elves/lighting/badland.environment
+prefabs/campaign/darkelf_battle.bmd	200		terrain/campaigns/warhammer_map_1_1_wood_elves/lighting/darkelf.environment
+prefabs/campaign/mountains_dwarf_battle.bmd	220		terrain/campaigns/warhammer_map_1_1_wood_elves/lighting/empire.environment
+prefabs/campaign/southlands_battle.bmd	230		terrain/campaigns/warhammer_map_1_1_wood_elves/lighting/southland.environment
+prefabs/campaign/highelf_battle.bmd	240		terrain/campaigns/warhammer_map_1_1_wood_elves/lighting/ulthuan.environment
+prefabs/campaign/underground_battle.bmd	255		terrain/campaigns/warhammer_map_1_1_wood_elves/lighting/prebattle_underground.environment
+prefabs/campaign/skaven_underground_battle.bmd	255	wh2_main_skv_skaven	terrain/campaigns/warhammer_map_1_1_wood_elves/lighting/prebattle_beastmen.environment
+prefabs/campaign/beastmen_beastpath_battle.bmd	255	wh_dlc03_bst_beastmen	terrain/campaigns/warhammer_map_1_1_wood_elves/lighting/prebattle_beastmen.environment
+prefabs/campaign/woodelf_worldroot_battle.bmd	255	wh_dlc05_wef_wood_elves	terrain/campaigns/warhammer_map_1_1_wood_elves/lighting/worldroot.environment
+prefabs/campaign/norsca_battle.bmd	40		terrain/campaigns/warhammer_map_1_1_wood_elves/lighting/norsca.environment
+prefabs/campaign/lizardmen_battle.bmd	60		terrain/campaigns/warhammer_map_1_1_wood_elves/lighting/lizardmen.environment
+prefabs/campaign/badlands_battle.bmd	96		terrain/campaigns/warhammer_map_1_1_wood_elves/lighting/badland.environment
+prefabs/campaign/isle_of_the_dead_final_battle.bmd	99		terrain/campaigns/warhammer_map_1_1_wood_elves/lighting/ulthuan.environment

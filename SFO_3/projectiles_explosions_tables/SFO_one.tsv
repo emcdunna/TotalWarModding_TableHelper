@@ -1,0 +1,98 @@
+projectiles_explosions_tables
+18
+key	detonator_type	detonation_type	detonation_radius	detonation_duration	detonation_speed	detonation_damage	projectile_name	explosion_particle_effect	distance_from_target	explosion_particle_effect_on_ground	explosion_audio	contact_phase_effect	ignition_amount	is_magical	detonation_damage_ap	shrapnel	fuse_distance_from_target	fuse_fixed_time	affects_allies
+boiling_oil_splash	percussive	boiling_oil	2	3	2	2		wh_main_generic_spherical_explosion_large	0		none		0	False	0		100	-1	True
+default_fire_spread	percussive	none	5	4	2	20		wh_main_generic_spherical_explosion_large	0		none		0	False	0		100	-1	True
+fire_ignition	percussive	fire_ignition	5	10	4	5			0		none		0	False	0		100	-1	True
+fire_ignition_l	percussive	fire_ignition	7	0	4	5			0	wh_main_generic_explosion_medium	none		0	False	0		100	-1	True
+fire_spread	percussive	none	7	4	2	4			0	wh_main_generic_explosion_medium	none		0	False	0		100	-1	True
+wh_dlc03_bst_cygor_boulder_explosion_boss	percussive	shockwave	12	0	10	55	wh_dlc03_bst_cygor_boulder_boss_split	wh_dlc03_cygor_boulder_explosion	0		wh_large_rock		0	False	100	wh_main_unit_explosion_heavy	200	-1	True
+wh_dlc03_bst_cygor_boulder_explosion_boss_minor	percussive	shockwave	6	0	10	40	wh_dlc03_bst_cygor_boulder_boss_split_split	wh_dlc03_cygor_boulder_explosion	0		none		0	False	25	wh_main_unit_explosion_heavy	100	-1	True
+wh_dlc03_bst_cygor_boulder_explosion_boss_minor_minor	percussive	shockwave	3	0	10	55		wh_dlc03_cygor_boulder_explosion	0		none		0	False	25	wh_main_unit_explosion_heavy	50	-1	True
+wh_dlc08_abilities_lightening_down	percussive	shockwave	6	0	8	15		wh_dlc08_abilities_lightening_down_explosion	0		wh_dlc08_lightening_down		0	False	24	wh_main_unit_explosion_medium	100	-1	True
+wh_dlc08_abilities_nor_copious_vomit	percussive	shockwave	1	1	5	25		empty	0		none		0	False	120	wh_main_unit_explosion_light	100	-1	True
+wh_dlc08_grn_giant_terror	percussive	shockwave	30	2	140	50		wh_dlc08_ability_exploding_fart	0		wh_explosive_fart		0	False	60	wh_main_unit_explosion_medium	100	-1	True
+wh_dlc08_nor_hellcannon_ice	percussive	shockwave	7	0	12	85		wh_dlc08_weapon_hellcannon_ice_explosion	0		wh_soul	wh_main_unit_contact_overhead_morale	0	True	75	wh_main_unit_explosion_medium	100	-1	True
+wh_dlc08_weapon_passive_stinky_giant_club	percussive	shockwave	20	2	140	5		wh_dlc08_ability_exploding_fart	0		wh_explosive_fart		0	True	1	wh_main_unit_explosion_light	100	-1	True
+wh_pro04_bst_cygor_boulder_explosion_ror	percussive	shockwave	8	0	10	65		wh_dlc03_amber_spear_explosion	0		wh_large_rock		0	False	85	wh_main_unit_explosion_heavy	200	-1	True
+wh_pro04_chs_hellcannon_ror	percussive	shockwave	9	0	12	90		wh_main_weapon_hellcannon_explosion	0		wh_soul	wh_main_unit_contact_overhead_morale	0	True	85	wh_main_unit_explosion_medium	200	-1	True
+wh_dlc03_bst_cygor_boulder_explosion	percussive	shockwave	8	0	10	55		wh_dlc03_cygor_boulder_explosion	0		wh_large_rock		0	False	85	wh_main_unit_explosion_heavy	200	-1	True
+wh_dlc03_grn_squig_explosion	percussive	shockwave	20	2	140	100		wh_dlc06_kamakaze_squig_explosion	0		wh_rocket		0	True	200	wh_main_unit_explosion_light	200	-1	True
+wh_dlc03_spell_beast_the_amber_spear	percussive	shockwave	2	1	10	25		wh_dlc03_amber_spear_explosion	0		none		0	True	140	wh_main_unit_explosion_medium	125	-1	True
+wh_dlc03_spell_beast_the_amber_spear_upgraded	percussive	shockwave	4	1	10	30		wh_dlc03_amber_spear_explosion	0		none		0	True	210	wh_main_unit_explosion_medium	150	-1	True
+wh_dlc03_spell_beasts_miscast	percussive	shockwave	3	1	10	400		wh_dlc03_beasts_miscast	0		wh_generic_small		0	True	300	wh_main_unit_explosion_light	150	-1	True
+wh_dlc03_spell_wild_miscast	percussive	shockwave	3	1	10	400		wh_dlc03_wild_miscast	0		wh_generic_small		0	True	300	wh_main_unit_explosion_light	150	-1	True
+wh_dlc05_item_abilities_hail_of_doom_arrow	percussive	shockwave	6	0	13	70		wh_dlc05_abilities_hail_of_doom_explosion	0		wh_main_spell_fire_fireball		0	True	60	wh_main_unit_explosion_medium	70	-1	True
+wh_dlc05_spell_life_miscast	percussive	shockwave	3	1	10	400		wh_main_vampires_miscast	0		wh_generic_small		0	True	300	wh_main_unit_explosion_light	150	-1	True
+wh_dlc05_spell_shadow_penumbral_pendulum	percussive	shockwave	12	2	40	40			0		wh_comet_of_cas		0	True	128	wh_main_unit_explosion_heavy	100	-1	True
+wh_dlc05_spell_shadow_penumbral_pendulum_upgrade	percussive	shockwave	12	2	40	60			0		wh_comet_of_cas		0	True	256	wh_main_unit_explosion_heavy	100	-1	True
+wh_dlc05_weapon_abilities_bow_of_loren	percussive	shockwave	5	0	13	125		wh_dlc05_wef_magic_explosion	0		wh_main_spell_fire_fireball		0	True	50	wh_main_unit_explosion_medium	450	-1	True
+wh_dlc05_weapon_abilities_hawks_talon	percussive	shockwave	5	0	13	5		wh_main_generic_spherical_explosion_large	0		wh_main_spell_fire_fireball		0	True	35	wh_main_unit_explosion_medium	450	-1	True
+wh_dlc05_weapon_abilities_lamentation_of_despair	percussive	shockwave	7	0	13	30		wh_dlc05_ability_lamentation_of_despair_explosion	0		wh_main_spell_fire_fireball		0	True	40	wh_main_unit_explosion_medium	70	-1	True
+wh_dlc05_wef_arrow_of_kurnous	percussive	shockwave	4	1	10	25		wh_dlc05_ability_arrow_of_kurnous_explosion	0		wh_generic_small		0	True	140	wh_main_unit_explosion_light	150	-1	True
+wh_dlc06_weapon_abilities_skarsniks_prodder	percussive	shockwave	5	1	5	0	wh_dlc06_weapon_abilities_skarsniks_prodder_mini	wh_dlc06_skarsnik_explosion	0		wh_generic_small		0	True	50	wh_main_unit_explosion_light	40	-1	True
+wh_dlc06_weapon_abilities_skarsniks_prodder_mini	percussive	shockwave	5	1	13	30		wh_dlc06_skarsnik_explosion_mini	0		wh_blasting_charge		25	False	40	wh_main_unit_explosion_light	70	-1	True
+wh_dlc07_brt_blessed_stone_explosion	percussive	shockwave	6	0	12	70		wh_dlc07_blessed_stone_impact	0		wh_large_rock		0	True	60	wh_main_unit_explosion_light	100	-1	True
+wh_dlc07_item_abilities_chalice_of_potions	percussive	shockwave	18	1	8	10			0		wh_dlc07_ability_chalice_of_potions		0	True	48	wh_main_unit_explosion_heavy	500	-1	True
+wh_main_big_waaagh_miscast	percussive	shockwave	3	1	10	400		wh_main_big_waaagh_miscast	0		wh_generic_small		0	True	300	wh_main_unit_explosion_light	150	-1	True
+wh_main_bound_spell_solheims_bolt_of_illumination	percussive	shockwave	6	1	10	300		wh_main_machine_bolt_of_illumination_explosion	0		none		1	True	700	wh_main_unit_explosion_light	150	-1	True
+wh_main_brt_blessed_stone_explosion	percussive	shockwave	5	0	6	70		wh_main_generic_spherical_explosion_medium	0		wh_large_rock		0	False	20	wh_main_unit_explosion_light	220	-1	True
+wh_main_brt_trebuchet_stone_explosion	percussive	shockwave	4	0	12	40			0		wh_large_rock		0	False	50	wh_main_unit_explosion_medium	220	-1	True
+wh_main_chs_hellcannon	percussive	shockwave	9	0	12	90		wh_main_weapon_hell_cannon_explosion	0		wh_soul	wh_main_unit_contact_overhead_morale	0	True	80	wh_main_unit_explosion_medium	350	-1	True
+wh_main_death_miscast	percussive	shockwave	3	1	10	400		wh_main_death_miscast	0		wh_generic_small		0	True	300	wh_main_unit_explosion_light	150	-1	True
+wh_main_dwf_blasting_charge_explosion	percussive	shockwave	3	0	13	28		wh_main_generic_explosion_mine	0		wh_blasting_charge		25	False	9	wh_main_unit_explosion_light	200	1	True
+wh_main_dwf_cinderblast_explosion	percussive	shockwave	3	0	13	30		wh_main_generic_explosion_mine	0		wh_blasting_charge		25	False	12	wh_main_unit_explosion_light	200	-1	True
+wh_main_dwf_drakegun_explosion	percussive	shockwave	3	0	14	16		wh_main_weapon_flamethrower_explosion	0		none		5	False	2	wh_main_unit_explosion_medium	40	-1	True
+wh_main_dwf_flamecannon_explosion	percussive	shockwave	8	0	12	105		wh_main_weapon_flamethrower_explosion	0		wh_fireball		10	False	20	wh_main_unit_explosion_medium	150	-1	True
+wh_main_dwf_grudge_thrower_explosion	percussive	shockwave	4	0	12	34			0		wh_large_rock		0	False	65	wh_main_unit_explosion_medium	180	-1	True
+wh_main_dwf_gyrocopter_steamgun_explosion	percussive	shockwave	5	0	8	54		wh_main_steam_explosion_medium	0		wh_copter_steamgun		0	False	9	wh_main_unit_explosion_light	10	-1	True
+wh_main_dwf_trollhammer	percussive	shockwave	1	0	15	16		wh_main_weapon_trollhammer_explosion	0		wh_troll_hammer		0	False	12	wh_main_unit_explosion_light	100	-1	True
+wh_main_emp_grenade_explosion	percussive	shockwave	3	0	13	35		wh_main_generic_spherical_explosion_small	0		wh_grenade		25	False	14	wh_main_unit_explosion_light	180	-1	True
+wh_main_emp_mortar_explosion	percussive	shockwave	7	0	11	90		wh_main_generic_spherical_explosion_large	0		wh_mortar		0	False	25	wh_main_unit_explosion_medium	260	-1	True
+wh_main_emp_rocket_explosion	percussive	shockwave	5	0	11	45		wh_main_generic_spherical_explosion_large	0		wh_rocket		0	False	17	wh_main_unit_explosion_medium	200	-1	True
+wh_main_emp_steamtank_steamgun_explosion	percussive	shockwave	5	0	8	55		wh_main_steam_explosion_medium	0		wh_bomb		0	False	10	wh_main_unit_explosion_light	10	-1	True
+wh_main_fire_miscast	percussive	shockwave	3	1	10	400		wh_main_fire_miscast	0		wh_generic_small		0	True	300	wh_main_unit_explosion_light	150	-1	True
+wh_main_gen_carcass_explosion	percussive	carcass	2	0	6	1			0		wh_carcass		0	False	0	wh_main_unit_explosion_light	100	-1	True
+wh_main_gen_large_explosion	percussive	shockwave	7	0	6	90		wh_main_generic_spherical_explosion_large	0		wh_generic_large		0	False	0	wh_main_unit_explosion_heavy	100	-1	True
+wh_main_gen_small_explosion	percussive	shockwave	5	0	10	250		wh_main_generic_spherical_explosion_small	0		wh_generic_small		0	False	750	wh_main_unit_explosion_light	100	-1	True
+wh_main_generic_miscast	percussive	shockwave	3	1	10	48		wh_main_fire_miscast	0		wh_generic_small		0	True	192	wh_main_unit_explosion_light	150	-1	True
+wh_main_grn_doomdiver_goblin_explosion	percussive	carcass	2	0	10	45			0		wh_carcass		0	False	35	wh_main_unit_explosion_medium	100	-1	True
+wh_main_grn_rock_lobber_explosion	percussive	shockwave	4	0	12	35			0		wh_large_rock		0	False	55	wh_main_unit_explosion_medium	180	-1	True
+wh_main_heavens_miscast	percussive	shockwave	3	1	10	400		wh_main_heavens_miscast	0		wh_generic_small		0	True	300	wh_main_unit_explosion_light	150	-1	True
+wh_main_light_miscast	percussive	shockwave	3	1	10	400		wh_main_light_miscast	0		wh_generic_small		0	True	300	wh_main_unit_explosion_light	150	-1	True
+wh_main_lil_waaagh_miscast	percussive	shockwave	3	1	10	300		wh_main_lil_waaagh_miscast	0		wh_generic_small		0	True	300	wh_main_unit_explosion_light	150	-1	True
+wh_main_lord_abilities_lord_of_the_storm	percussive	shockwave	6	0	8	50		wh_main_abilities_lord_of_the_storm_explosion	0		wh_lord_of_the_storm		0	True	50	wh_main_unit_explosion_medium	450	-1	True
+wh_main_metal_miscast	percussive	shockwave	3	1	10	400		wh_main_metal_miscast	0		wh_generic_small		0	True	300	wh_main_unit_explosion_light	150	-1	True
+wh_main_spell_big_waaagh_gaze_of_mork	percussive	shockwave	1	1	5	210		wh_main_big_waaagh_gaze_of_mork_explosion	0		wh_generic_small		0	True	0	wh_main_unit_explosion_light	40	-1	True
+wh_main_spell_big_waaagh_gaze_of_mork_upgraded	percussive	shockwave	1	1	5	210		wh_main_big_waaagh_gaze_of_mork_explosion	0		wh_generic_small		0	True	0	wh_main_unit_explosion_light	50	-1	True
+wh_main_spell_bound_soulfire	percussive	shockwave	1	1	10	55			0		none		0	True	0		400	-1	True
+wh_main_spell_fire_fireball	percussive	shockwave	3	1	5	400		wh_main_generic_spherical_explosion_large	0		wh_main_spell_fire_fireball		1	True	0	wh_main_unit_explosion_light	450	-1	True
+wh_main_spell_fire_fireball_upgraded	percussive	shockwave	6	1	5	500		wh_main_generic_spherical_explosion_large	0		wh_main_spell_fire_fireball		2	True	0	wh_main_unit_explosion_light	450	-1	True
+wh_main_spell_fire_piercing_bolts_of_burning	percussive	shockwave	2	1	5	30		wh_main_fire_piercing_bolts_of_burning_explode	0		wh_generic_small		0	True	75	wh_main_unit_explosion_light	400	-1	True
+wh_main_spell_fire_piercing_bolts_of_burning_upgraded	percussive	shockwave	2	1	5	40		wh_main_fire_piercing_bolts_of_burning_explode	0		wh_generic_small		0	True	85	wh_main_unit_explosion_light	400	-1	True
+wh_main_spell_heavens_comet_of_casandora	percussive	shockwave	20	1	8	50			0		wh_comet_of_cas		0	True	75	wh_main_unit_explosion_heavy	500	-1	True
+wh_main_spell_heavens_comet_of_casandora_upgraded	percussive	shockwave	20	1	8	75			0		wh_comet_of_cas		0	True	100	wh_main_unit_explosion_heavy	500	-1	True
+wh_main_spell_heavens_urannons_thunderbolt	percussive	shockwave	6	1	10	25			0		wh_urannons_thunderbolt		0	True	85	wh_main_unit_explosion_light	400	-1	True
+wh_main_spell_heavens_urannons_thunderbolt_upgraded	percussive	shockwave	8	1	10	45			0		wh_urannons_thunderbolt		0	True	150	wh_main_unit_explosion_light	400	-1	True
+wh_main_spell_light_shems_burning_gaze	percussive	shockwave	1	1	5	75		wh_main_light_shems_burning_gaze_explosion	0		wh_generic_small		1	True	105	wh_main_unit_explosion_light	40	-1	True
+wh_main_spell_light_shems_burning_gaze_upgraded	percussive	shockwave	1	1	5	100		wh_main_light_shems_burning_gaze_explosion	0		wh_generic_small		1	True	125	wh_main_unit_explosion_light	50	-1	True
+wh_main_spell_lil_waaagh_vindictive_glare	percussive	shockwave	1	1	5	375		wh_main_lil_waaagh_vindictive_glare_explosion	0		wh_generic_small		0	True	25	wh_main_unit_explosion_light	40	-1	True
+wh_main_spell_lil_waaagh_vindictive_glare_upgraded	percussive	shockwave	1	1	5	450		wh_main_lil_waaagh_vindictive_glare_explosion	0		wh_generic_small		0	True	35	wh_main_unit_explosion_light	50	-1	True
+wh_main_spell_metal_searing_doom	percussive	shockwave	2	1	5	15		wh_main_metal_searing_doom_impact	0		wh_generic_small		0	True	35	wh_main_unit_explosion_light	400	-1	True
+wh_main_spell_metal_searing_doom_upgraded	percussive	shockwave	2	1	5	20		wh_main_metal_searing_doom_impact	0		wh_generic_small		0	True	45	wh_main_unit_explosion_light	400	-1	True
+wh_main_spell_vampires_gaze_of_nagash	percussive	shockwave	1	1	5	75		wh_main_vampires_gaze_of_nagash_explosion	0		wh_main_spell_vampires_gaze_of_nagash		0	True	95	wh_main_unit_explosion_light	40	-1	True
+wh_main_spell_vampires_gaze_of_nagash_upgraded	percussive	shockwave	1	1	5	90		wh_main_vampires_gaze_of_nagash_explosion	0		wh_main_spell_vampires_gaze_of_nagash		0	True	115	wh_main_unit_explosion_light	50	-1	True
+wh_main_tower_brt_blessed_stone_explosion	percussive	shockwave	4	0	7	65		wh_main_generic_spherical_explosion_small	0		wh_large_rock		0	False	35	wh_main_unit_explosion_light	100	-1	True
+wh_main_tower_brt_carcass_explosion	percussive	shockwave	5	0	7	70		wh_main_generic_spherical_explosion_small	0		wh_carcass		0	False	50	wh_main_unit_explosion_light	100	-1	True
+wh_main_tower_dwf_cannon_ball_explosion	percussive	shockwave	4	0	7	65		wh_main_generic_spherical_explosion_small	0		none		1	False	35	wh_main_unit_explosion_medium	100	-1	True
+wh_main_tower_dwf_fused_beer_keg_explosion	percussive	shockwave	5	0	7	70		wh_main_generic_spherical_explosion_large	0		none		5	False	50	wh_main_unit_explosion_medium	150	-1	True
+wh_main_tower_emp_cannon_ball_explosion	percussive	shockwave	4	0	7	65		wh_main_generic_spherical_explosion_small	0		none		1	False	35	wh_main_unit_explosion_medium	100	-1	True
+wh_main_tower_emp_clockwork_bomb_explosion	percussive	shockwave	5	0	7	70		wh_main_generic_spherical_explosion_medium	0		wh_bomb		5	False	50	wh_main_unit_explosion_medium	150	-1	True
+wh_main_tower_grn_giant_dungball_explosion	percussive	shockwave	4	0	7	65		wh_main_grn_giant_dungball_explosion	0		none		0	False	35	wh_main_unit_explosion_medium	100	-1	True
+wh_main_tower_grn_rock_idol_explosion	percussive	shockwave	5	0	7	70		wh_main_tower_grn_rock_idol	0		none		0	False	50	wh_main_unit_explosion_medium	150	-1	True
+wh_main_tower_vmp_caged_bats_explosion	percussive	shockwave	4	0	7	65		wh_main_vmp_caged_bats_explosion	0		none		0	False	35	wh_main_unit_explosion_medium	100	-1	True
+wh_main_tower_vmp_corpse_ball_explosion	percussive	shockwave	5	0	7	70		wh_main_vmp_dark_magic_medium	0		wh_carcass		0	False	50	wh_main_unit_explosion_light	100	-1	True
+wh_main_unit_abilities_gyrobomber_bomb	percussive	shockwave	6	0	11	320		wh_main_weapon_gyrobomber_bomb_large	0		wh_bomb		1	False	65	wh_main_unit_explosion_medium	450	-1	True
+wh_main_unit_abilities_gyrocopter_grenade	percussive	shockwave	4	0	10	275		wh_main_weapon_gyrocopter_grenade	0		wh_bomb		1	False	52	wh_main_unit_explosion_light	400	-1	True
+wh_main_vampires_miscast	percussive	shockwave	3	1	10	400		wh_main_vampires_miscast	0		wh_generic_small		0	True	300	wh_main_unit_explosion_light	150	-1	True
+wh_main_vmp_bat_explosion	percussive	shockwave	5	0	6	70		wh_main_vmp_caged_bats_explosion	0		wh_large_rock		0	False	0	wh_main_unit_explosion_light	100	-1	True

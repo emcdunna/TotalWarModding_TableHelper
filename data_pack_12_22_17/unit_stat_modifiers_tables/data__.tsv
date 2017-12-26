@@ -1,0 +1,8 @@
+unit_stat_modifiers_tables
+2
+how	key	stat
+add	mod_armour	stat_armour
+add	mod_charge_bonus	stat_charge_bonus
+mult	mod_entity_acceleration	scalar_entity_acceleration_modifier
+add	mod_melee_attack	stat_melee_attack
+mult	mod_speed_scalar	scalar_speed

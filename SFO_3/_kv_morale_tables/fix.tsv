@@ -1,0 +1,7 @@
+_kv_morale_tables
+0
+key	value
+difficulty_modifier_ai_easy	4
+difficulty_modifier_ai_hard	-4
+difficulty_modifier_ai_normal	0
+difficulty_modifier_ai_very_hard	10

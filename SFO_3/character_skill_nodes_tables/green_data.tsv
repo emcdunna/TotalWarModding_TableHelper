@@ -1,0 +1,23 @@
+character_skill_nodes_tables
+5
+campaign_key	character_skill_key	character_skill_node_set_key	faction_key	indent	key	tier	subculture	points_on_creation	required_num_parents	visible_in_ui
+	green_knight_1	wh_dlc07_skill_node_set_brt_green_knight		1	green_knight_1	33		1	0	True
+	green_knight_2	wh_dlc07_skill_node_set_brt_green_knight		1	green_knight_2	34		1	0	True
+	green_knight_3	wh_dlc07_skill_node_set_brt_green_knight		1	green_knight_3	35		1	0	True
+	green_knight_4	wh_dlc07_skill_node_set_brt_green_knight		1	green_knight_4	36		1	0	True
+	green_knight_5	wh_dlc07_skill_node_set_brt_green_knight		1	green_knight_5	37		1	0	True
+	green_knight_6	wh_dlc07_skill_node_set_brt_green_knight		2	green_knight_6	33		1	0	True
+	green_knight_7	wh_dlc07_skill_node_set_brt_green_knight		2	green_knight_7	34		1	0	True
+	green_knight_8	wh_dlc07_skill_node_set_brt_green_knight		2	green_knight_8	35		1	0	True
+	green_knight_9	wh_dlc07_skill_node_set_brt_green_knight		2	green_knight_9	36		1	0	True
+	green_knight_10	wh_dlc07_skill_node_set_brt_green_knight		2	green_knight_10	37		1	0	True
+	green_knight_11	wh_dlc07_skill_node_set_brt_green_knight		3	green_knight_11	33		1	0	True
+	green_knight_12	wh_dlc07_skill_node_set_brt_green_knight		3	green_knight_12	34		1	0	True
+	green_knight_13	wh_dlc07_skill_node_set_brt_green_knight		3	green_knight_13	35		1	0	True
+	green_knight_14	wh_dlc07_skill_node_set_brt_green_knight		3	green_knight_14	36		1	0	True
+	green_knight_15	wh_dlc07_skill_node_set_brt_green_knight		3	green_knight_15	37		1	0	True
+	green_knight_16	wh_dlc07_skill_node_set_brt_green_knight		4	green_knight_16	33		1	0	True
+	green_knight_17	wh_dlc07_skill_node_set_brt_green_knight		4	green_knight_17	34		1	0	True
+	green_knight_18	wh_dlc07_skill_node_set_brt_green_knight		4	green_knight_18	35		1	0	True
+	green_knight_19	wh_dlc07_skill_node_set_brt_green_knight		4	green_knight_19	36		1	0	True
+	green_knight_20	wh_dlc07_skill_node_set_brt_green_knight		4	green_knight_20	37		1	0	True

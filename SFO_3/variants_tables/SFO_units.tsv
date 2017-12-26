@@ -1,0 +1,34 @@
+variants_tables
+5
+variant_name	tech_folder	variant_file_name	low_poly_filename	mount_scale	scale	scale_variation
+brt_macemen		brt_macemen		1	1	0.05
+brt_crossbow		brt_crossbow		1	1	0.05
+brt_tournament		brt_tournament		1	1.02	0.05
+bst_Pestigor		bst_Pestigor		1.15	1.15	0.01
+bst_Khorngor		bst_Khorngor		1.15	1.15	0.01
+bst_Slaangor		bst_Slaangor		1.15	1.15	0.01
+bst_Tzaangor		bst_Tzaangor		1.15	1.15	0.01
+chs_zelot		chs_zelot		1	0.98	0.05
+chs_marauder_mutant		chs_marauder_mutant		1	1.03	0.05
+chs_chaos_dragon		chs_chaos_dragon		1.15	1.15	0
+dwf_oathsworn		dwf_oathsworn		1	0.95	0.05
+dwf_giant_slayer		dwf_giant_slayer		1	0.95	0.05
+dwf_sniper		dwf_sniper		1	0.95	0.05
+emp_imp_guard		emp_imp_guard		1	1.02	0.05
+emp_huntsmen		emp_huntsmen		1	1	0.05
+emp_sigmar_war		emp_sigmar_war		1	1	0.05
+emp_witch_squad		emp_witch_squad		1	1	0.05
+emp_nuln_ironsides		emp_nuln_ironsides		1	1	0.05
+emp_knights_panther		emp_knights_panther		1	1	0.05
+warhorse_panther		warhorse_panther		1	1	0.05
+grn_savage_big_great		grn_savage_big_great		1	1.15	0.05
+grn_black_orc_shields		grn_black_orc_shields		1	1.2	0.05
+grn_black_orc_boss		grn_black_orc_boss		1	1.25	0.05
+grn_forest_spear		grn_forest_spear		1	0.9	0.05
+grn_nightgoblin_spearmen		grn_nightgoblin_spearmen	hu5\grn\grn_goblin\low_poly\grn_goblin_lowlod	1	0.98	0.05
+vmp_black_grail		vmp_black_grail		1	1.15	0.05
+vmp_blood_dragon		vmp_blood_dragon		1	1.02	0.05
+vmp_zombie_dragon		vmp_zombie_dragon		1	1.2	0.05
+wef_shadowdancer		wef_shadowdancer		1	1	0.05
+wef_eternal_sword		wef_eternal_sword		1	1	0.05
+wef_wildwood_warden		wef_wildwood_warden		1	1	0.05

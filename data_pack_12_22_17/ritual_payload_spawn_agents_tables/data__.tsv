@@ -1,0 +1,7 @@
+ritual_payload_spawn_agents_tables
+0
+unknown0	unknown1	unknown2	unknown3
+general	wh2_main_ritual_def_mathlann	True	wh2_main_def_black_ark
+general	wh2_main_ritual_lzd_awakening	True	wh2_main_lzd_slann_mage_priest
+engineer	wh2_main_ritual_skv_doooom	False	wh2_main_skv_warlock_engineer_ritual
+wizard	wh2_main_ritual_skv_pestilence	False	wh2_main_skv_plague_priest_ritual

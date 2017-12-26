@@ -1,0 +1,7 @@
+character_skills_tables
+5
+image_path	key	localised_description	localised_name	unlocked_at_rank	is_background_skill	is_female_only_background_skill	is_male_only_background_skill	background_weighting	influence_cost
+skill_khorne.png	mark_khorne	This Lord is blessed by Khorne	Mark of Khorne	9	False	False	False	0	0
+skill_slaanesh.png	mark_slaanesh	This Lord is blessed by Slaanesh	Mark of Slaanesh	9	False	False	False	0	0
+skill_tzeentch.png	mark_tzeentch	This Lord is blessed by Tzeentch	Mark of Tzeentch	9	False	False	False	0	0
+skill_nurgle.png	mark_nurgle	This Lord is blessed by Nurgle	Mark of Nurgle	9	False	False	False	0	0

@@ -1,0 +1,29 @@
+cdir_events_dilemma_choice_details_tables
+0
+choice_key	dilemma_key
+FIRST	wh_twh_emp_rule_dilemma
+SECOND	wh_twh_emp_rule_dilemma
+THIRD	wh_twh_emp_rule_dilemma
+FOURTH	wh_twh_emp_rule_dilemma
+FIRST	wh_twh_emp_marienburg
+SECOND	wh_twh_emp_marienburg
+FIRST	wh_twh_dilemma_beer_for_the_fish
+SECOND	wh_twh_dilemma_beer_for_the_fish
+FIRST	wh_twh_dilemma_witchhunters
+SECOND	wh_twh_dilemma_witchhunters
+FIRST	wh_twh_dilemma_mordheim
+SECOND	wh_twh_dilemma_mordheim
+FIRST	wh_twh_dilemma_taxes
+SECOND	wh_twh_dilemma_taxes
+THIRD	wh_twh_dilemma_taxes
+FOURTH	wh_twh_dilemma_taxes
+FIRST	wh_twh_emp_kislev
+SECOND	wh_twh_emp_kislev
+FIRST	wh_twh_emp_pax_imperia
+SECOND	wh_twh_emp_pax_imperia
+FIRST	wh_twh_emp_pax_imperia_AI
+SECOND	wh_twh_emp_pax_imperia_AI
+FIRST	wh_twh_emp_manoeuvres
+SECOND	wh_twh_emp_manoeuvres
+FIRST	wh_twh_emp_skaven
+SECOND	wh_twh_emp_skaven

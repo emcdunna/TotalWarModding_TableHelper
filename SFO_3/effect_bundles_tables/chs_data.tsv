@@ -1,0 +1,7 @@
+effect_bundles_tables
+1
+key	localised_description	localised_title	ui_icon	bundle_target
+wh_main_bundle_horde_raze	Destroying their enemies has strengthened this horde.	Raze for Khorne	weapon_damage_character.png	force
+wh_main_bundle_horde_raze1	Destroying their enemies has strengthened this horde.	Raze for Nurgle	growth.png	force
+wh_main_bundle_horde_raze2	Destroying their enemies has strengthened this horde.	Raze for Slaanesh	campaign_movement.png	force
+wh_main_bundle_horde_raze3	Destroying their enemies has strengthened this horde.	Raze for Tzeentch	replenishment.png	force

@@ -1,0 +1,10 @@
+naval_weapons_tables
+4
+autonomous_engine	key	models_entity_weaponry	type	unknown4	unknown5
+	egyptian_fighting_tower	egyptian_light_tower	fighting_towers		False
+	egyptian_heavy_tower	egyptian_heavy_tower	fighting_towers		False
+	fire_pots	fire_pots	fire_pots		False
+	greek_heavy_tower	greek_heavy_tower	fighting_towers		False
+	greek_light_tower	greek_light_tower	fighting_towers		False
+	persian_fighting_tower	persian_light_fighting_tower	fighting_towers		False
+	roman_fighting_tower	roman_light_fighting_tower	fighting_towers		False

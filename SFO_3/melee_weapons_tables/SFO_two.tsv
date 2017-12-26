@@ -1,0 +1,124 @@
+melee_weapons_tables
+21
+bonus_v_cavalry	bonus_v_large	bonus_v_infantry	key	damage	ap_damage	first_strike	weapon_length	melee_weapon_type	audio_type	splash_attack_target_size	splash_attack_max_attacks	splash_attack_power_multiplier	building_damage	ignition_amount	is_magical	contact_phase	collision_attack_max_targets	collision_attack_max_targets_cooldown	melee_attack_interval
+0	0	0	wh2_main_def_black_dragon	200	400	0	1	axe	claw	large	15	1.5	200	0	False	wh_main_unit_contact_morale	0	10	3.8
+0	0	22	wh2_main_def_cold_one_chariot	14	35	0	3	axe	claw	very_large	4	0.8999999	40	0	False		3	2	4
+0	14	0	wh2_main_def_cold_one_lance	20	30	0	2	lance	spear		1	1	10	0	False		0	10	4.3
+0	0	0	wh2_main_def_cold_one_mace	25	50	0	2	axe	hammer		1	1	10	0	False	wh_main_unit_contact_poison_lethal	0	10	4.3
+0	0	25	wh2_main_def_death_hag	280	120	0	1	sword	sword	large	8	1	100	0	False	wh_main_unit_contact_poison	0	10	4
+0	0	20	wh2_main_def_death_hag_cauldron	180	80	0	2	axe	axe	very_large	5	1	100	0	False	wh_main_unit_contact_poison	3	2	4
+0	0	0	wh2_main_def_dreadlord_black_dragon	200	400	0	1	axe	claw	large	8	1	200	0	False	wh_main_unit_contact_morale	0	10	3.8
+0	0	0	wh2_main_def_dreadlord_cold_one	120	280	0	1	axe	claw	medium	5	1	150	0	False		0	10	4
+0	0	0	wh2_main_def_dreadlord_female_black_dragon	200	400	0	1	axe	claw	large	8	1	200	0	False	wh_main_unit_contact_morale	0	10	3.8
+0	0	0	wh2_main_def_dreadlord_female_cold_one	120	280	0	1	axe	claw	medium	5	1	150	0	False		0	10	4
+0	0	0	wh2_main_def_dreadlord_female_sword	260	140	0	1	sword	sword	medium	5	1	150	0	False		0	10	4
+0	0	0	wh2_main_def_dreadlord_sword	260	140	0	1	sword	sword	medium	5	1	150	0	False		0	10	4
+0	0	10	wh2_main_def_dual_swords	30	10	0	1	sword	sword		3	1	10	0	False		0	10	4.8
+0	0	8	wh2_main_def_dual_swords_shades	22	10	0	1	sword	sword		3	1	10	0	False		0	10	4.6
+0	0	10	wh2_main_def_dual_swords_witch_elves	30	15	0	1	sword	sword		3	1	10	0	False	wh2_main_unit_contact_witch_elf_poison	0	10	4.6
+0	0	12	wh2_main_def_greatsword	25	45	0	1	sword	sword		3	1	10	0	False		0	10	4.3
+0	0	0	wh2_main_def_greatsword_shades	15	30	0	1	sword	sword		3	1	10	0	False		0	10	4.3
+0	24	0	wh2_main_def_halberd	24	36	0	2	spear	halberd		3	1	10	0	False		0	10	4.4
+0	0	0	wh2_main_def_khainite_assassin	230	100	0	1	sword	sword	medium	3	1	1000	0	False	wh_main_unit_contact_poison	0	10	3.8
+0	0	0	wh2_main_def_malekith_black_dragon	200	400	0	1	axe	claw	large	8	1	200	0	False	wh_main_unit_contact_morale	0	10	3.8
+0	0	30	wh2_main_def_malekith_chariot	100	200	0	3	axe	claw	very_large	4	1	150	0	False	wh_main_unit_contact_morale	3	2	4.2
+0	0	0	wh2_main_def_malekith_cold_one	126	294	0	1	axe	claw	medium	5	1	150	0	False	wh_main_unit_contact_morale	0	10	4
+0	0	0	wh2_main_def_malekith_sword	273	147	0	1	sword	sword	medium	6	1	150	0	False	wh_main_unit_contact_morale	0	10	4
+0	15	0	wh2_main_def_morathi_staff	100	240	0	2	sword	staff	medium	5	1	150	0	True	wh_dlc06_unit_contact_blinded	0	10	4
+0	0	0	wh2_main_def_shortsword	24	7	0	1	sword	sword		3	1	10	0	False		0	10	4.3
+0	0	0	wh2_main_def_sorceress_cold_one	85	200	0	1	axe	claw	medium	4	1	150	0	True		0	10	4
+0	0	0	wh2_main_def_sorceress_staff	200	85	0	1	sword	staff	medium	4	1	100	0	True		0	10	4
+0	15	0	wh2_main_def_spear	26	10	0	1	spear	spear		3	1	10	0	False		0	10	4.6
+0	0	8	wh2_main_def_spear_darkriders	26	6	0	1	spear	spear		3	1	10	0	False		0	10	4.5
+0	0	0	wh2_main_def_sword	22	16	0	1	sword	sword		3	1	10	0	False		0	10	4.4
+0	0	0	wh2_main_def_sword_shades	24	12	0	1	sword	sword		3	1	10	0	False		0	10	4.5
+0	0	0	wh2_main_def_war_hydra	180	450	0	2	axe	claw	large	10	1	400	0	False		0	10	3.6
+0	0	0	wh2_main_hef_flamespyre_phoenix	300	100	0	1	axe	claw	medium	6	1	100	1	True		0	10	4
+0	0	0	wh2_main_hef_frostheart_phoenix	100	275	0	1	axe	claw	medium	6	1	100	0	True		0	10	4
+0	0	0	wh2_main_hef_great_eagle	275	200	0	3	axe	claw	large	5	1	100	0	False		0	3	4
+0	0	0	wh2_main_hef_greataxe	20	40	0	1	axe	axe		3	1	14	0	False	wh_dlc06_unit_contact_sundered_armour	0	10	4.4
+0	0	20	wh2_main_hef_greatsword	20	25	0	1	sword	sword		3	1	10	0	False		0	10	4.3
+0	25	0	wh2_main_hef_halberd	40	25	0	2	spear	halberd		3	1	10	0	False		0	10	4.4
+0	0	25	wh2_main_hef_ithilmar_chariot	50	25	0	3	axe	claw	very_large	4	1	40	0	False		3	2	4
+0	0	7	wh2_main_hef_lance	30	14	0	1	lance	spear		1	1	10	0	False		0	10	5
+0	0	0	wh2_main_hef_lance_dragon_princes	40	60	0	1	lance	spear		1	1	10	0	False		0	10	5
+0	0	0	wh2_main_hef_lord_great_eagle	275	200	0	3	axe	claw	large	5	1	100	0	False		0	3	4
+0	0	0	wh2_main_hef_lord_greataxe	140	300	0	1	axe	axe	medium	6	1	100	0	False	wh_dlc06_unit_contact_sundered_armour	0	10	4
+0	0	0	wh2_main_hef_lord_star_dragon	180	460	0	1	axe	claw	large	10	1.5	350	1	False	wh_dlc06_unit_contact_sundered_armour	0	10	3.8
+0	0	0	wh2_main_hef_lord_sun_dragon	440	160	0	1	axe	claw	large	10	1.5	350	1	False		0	10	3.8
+0	0	0	wh2_main_hef_lord_sword	234	126	0	1	sword	sword	medium	5	1	150	0	False		0	10	4
+0	0	20	wh2_main_hef_loremaster_of_hoeth	125	235	0	1	sword	sword	medium	6	1	150	0	True		0	10	4
+0	0	30	wh2_main_hef_mage_chariot	200	85	0	3	axe	claw	very_large	4	1	150	0	True		4	2	4.6
+0	0	0	wh2_main_hef_mage_staff	200	85	0	1	sword	staff	medium	5	1	100	0	True		0	10	4
+0	0	0	wh2_main_hef_moon_dragon	140	380	0	1	axe	claw	large	10	1.5	350	1	False		0	10	3.8
+0	0	20	wh2_main_hef_noble_chariot	90	210	0	3	axe	claw	very_large	4	1	150	0	False		3	2	4.6
+0	0	0	wh2_main_hef_noble_great_eagle	270	150	0	3	axe	claw	large	5	1	100	0	False		0	3	4
+0	35	0	wh2_main_hef_noble_halberd	120	220	0	2	spear	halberd	large	4	1	150	0	False		3	2	4
+0	0	0	wh2_main_hef_prince_sword	260	140	0	1	sword	sword	medium	5	1	150	0	False		0	10	4
+0	0	0	wh2_main_hef_princess_sword	260	140	0	1	sword	sword	medium	5	1	150	0	False		0	10	4
+0	0	0	wh2_main_hef_shortsword	22	5	0	1	sword	sword		3	1	10	0	False		0	10	4.3
+0	12	0	wh2_main_hef_spear	20	15	0	1	spear	spear		3	1	10	0	False		0	10	4.8
+0	8	0	wh2_main_hef_spear_ellyrian_reavers	22	10	0	1	spear	spear		3	1	10	0	False		0	10	4.5
+0	10	0	wh2_main_hef_spear_gate_guard	24	14	0	1	spear	spear		3	1	10	0	False		0	10	4.2
+0	16	0	wh2_main_hef_spear_guard	24	8	0	1	spear	spear		3	1	10	0	False		0	10	4.2
+0	0	0	wh2_main_hef_star_dragon	180	460	0	1	axe	claw	large	15	1.5	350	1	False	wh_dlc06_unit_contact_sundered_armour	0	10	3.8
+0	0	0	wh2_main_hef_sun_dragon	440	160	0	1	axe	claw	large	10	1.5	350	1	False		0	10	3.8
+0	0	0	wh2_main_hef_sword	24	6	0	1	sword	sword		3	1	10	0	False		0	10	4.3
+0	0	0	wh2_main_hef_sword_ellyrian_reaver_archers	20	7	0	1	sword	sword		3	1	10	0	False		0	10	4.5
+0	0	0	wh2_main_hef_teclis_sword	168	112	0	1	sword	sword	medium	5	1	150	0	True		0	10	4
+0	0	20	wh2_main_hef_tiranoc_chariot	35	15	0	3	axe	claw	very_large	4	1	40	0	False		3	2	4
+0	0	0	wh2_main_hef_tyrion_sword	200	300	0	1	sword	sword	medium	5	1	150	1	False		0	10	4
+0	0	15	wh2_main_lzd_ancient_stegadon	140	340	0	3	axe	claw	medium	7	1.5	800	0	False		0	10	3.5
+0	0	15	wh2_main_lzd_bastiladon	90	160	0	4	axe	claw	medium	4	1	500	0	False		0	10	3.7
+0	40	0	wh2_main_lzd_carnosaur_hero	120	360	0	4	axe	claw	large	5	1	500	0	False		0	10	3.4
+0	40	0	wh2_main_lzd_cha_carnosaur_lord	125	375	0	4	axe	claw	large	5	1	500	0	False		0	10	3.4
+0	0	0	wh2_main_lzd_cha_caster_hero	210	70	0	1	spear	staff	medium	5	1	100	0	False		0	10	4
+0	20	0	wh2_main_lzd_cha_cold_one_hero	117	273	0	1	axe	claw	medium	5	1	150	0	False		0	10	4
+0	0	0	wh2_main_lzd_cha_cold_one_lord	130	320	0	1	axe	claw	medium	8	1	150	0	False		0	10	4
+0	15	0	wh2_main_lzd_cha_kroq_gar	145	330	0	1	spear	spear	medium	6	1	150	0	False		0	10	4
+0	40	0	wh2_main_lzd_cha_kroq_gar_grymloq	180	400	0	4	axe	claw	large	7	1	500	0	False		0	10	4
+0	0	0	wh2_main_lzd_cha_mazdamundi_lord	270	90	0	1	spear	staff	very_large	6	1	150	0	True		4	4	4
+0	0	0	wh2_main_lzd_cha_saurus_old_blood	140	290	0	1	axe	club	medium	6	1	150	0	False		0	10	4
+0	35	0	wh2_main_lzd_cha_saurus_scar_veteran	280	120	0	1	spear	spear	medium	5	1	150	0	False		0	10	4
+0	0	0	wh2_main_lzd_cha_slann_lord	240	80	0	4	spear	staff	very_large	6	1	100	0	True		4	4	4
+0	0	0	wh2_main_lzd_cha_terradon_hero	220	80	0	1	spear	claw	medium	5	1	150	0	False		0	10	4
+0	0	0	wh2_main_lzd_cold_one_club	14	32	0	1	axe	claw		1	1	10	0	False		0	10	4.4
+0	8	0	wh2_main_lzd_cold_one_feral	10	30	0	1	sword	claw		1	1	10	0	False		0	10	4.5
+0	14	0	wh2_main_lzd_cold_one_spear	12	28	0	2	spear	spear		1	1	10	0	False		0	10	4.2
+0	40	0	wh2_main_lzd_feral_carnosaur	140	375	0	4	axe	claw	large	5	1	500	0	False		0	10	3.4
+0	0	0	wh2_main_lzd_horned_one_club	30	50	0	2	axe	claw		2	1	14	0	False		0	10	4.5
+0	0	15	wh2_main_lzd_kroxigor	35	75	0	2	axe	club_medium	medium	9	1	100	0	False		0	10	3.8
+0	0	0	wh2_main_lzd_saurus_club	36	20	0	2	axe	club		1	1	10	0	False		0	10	3.7
+0	15	0	wh2_main_lzd_saurus_spear	32	14	0	2	spear	spear		1	1	10	0	False		0	10	4.1
+0	0	0	wh2_main_lzd_skink_chief_hero	230	80	0	1	spear	staff	medium	5	1	150	0	False		0	10	4
+0	0	0	wh2_main_lzd_skink_chief_terradon	230	80	0	1	spear	claw	medium	5	1	150	0	False		0	10	4
+0	0	0	wh2_main_lzd_skink_club	20	5	0	1	axe	club		1	1	10	0	False		0	10	4.3
+0	0	0	wh2_main_lzd_skink_club_poison	20	5	0	1	axe	club		1	1	10	0	False	wh_main_unit_contact_poison	0	10	4.3
+0	0	15	wh2_main_lzd_stegadon	120	300	0	3	axe	claw	medium	7	1.5	600	0	False		0	10	3.5
+0	16	0	wh2_main_lzd_temple_guard_halberd	20	32	0	2	spear	halberd		1	1	14	0	False		0	10	4
+0	0	0	wh2_main_lzd_terradon	52	13	0	2	axe	claw	small	2	1	10	0	False		0	10	4
+0	0	0	wh2_main_skv_censer	13	31	0	1	axe	flail		5	1	10	0	True	wh2_main_unit_contact_plague_monk_censer_morale	0	10	4.4
+0	0	0	wh2_main_skv_cha_assassin	250	225	0	1	sword	sword	medium	3	1	100	0	False		0	10	3.8
+0	0	0	wh2_main_skv_cha_censer_hero	84	196	0	1	axe	flail	medium	5	1	100	0	True	wh2_main_unit_contact_plague_monk_censer_morale	0	10	4
+0	0	20	wh2_main_skv_cha_plague_furnace	60	140	0	4	axe	unarmed	medium	5	1	500	0	True	wh2_main_unit_contact_plague_monk_censer_morale	4	4	5.2
+0	0	24	wh2_main_skv_cha_queek_headtaker	80	340	0	1	sword	sword	medium	5	1	100	0	False		0	10	4
+0	0	20	wh2_main_skv_cha_screaming_bell	60	140	0	3	axe	unarmed	medium	5	1	500	0	False		4	4	5.2
+0	0	0	wh2_main_skv_cha_skrolk	150	250	0	1	axe	staff	medium	5	1	100	0	True	wh2_main_unit_contact_plague_monk_censer_morale	0	10	4
+0	0	0	wh2_main_skv_cha_staff_lord	217	93	0	1	axe	staff	medium	5	1	100	0	True		0	10	4
+0	0	0	wh2_main_skv_cha_warlock_engineer	84	196	0	1	spear	halberd	medium	3	1	100	0	False		0	10	4
+0	0	0	wh2_main_skv_cha_warlord	280	120	0	1	sword	sword	medium	5	1	100	0	False		0	10	4
+0	0	0	wh2_main_skv_cha_warlord_bonebreaker	138	322	0	1	sword	sword	medium	8	1	400	0	False	wh_dlc06_unit_contact_sundered_armour	0	10	4
+0	0	0	wh2_main_skv_claw_blade	21	7	0	1	sword	sword		4	1	10	0	False		0	10	4.3
+0	0	0	wh2_main_skv_claw_blade_poison	21	7	0	1	sword	sword		4	1	10	0	False	wh_main_unit_contact_poison	0	10	4.3
+0	0	30	wh2_main_skv_doomwheel	84	196	0	3	axe	claw	very_large	7	1	150	0	False		3	2	5
+0	0	7	wh2_main_skv_dual_swords	24	8	0	1	sword	sword		4	1	10	0	False	wh_main_unit_contact_poison	0	10	4.5
+0	20	0	wh2_main_skv_halberd	15	25	0	1	spear	halberd		4	1	10	0	False		0	10	4.6
+0	50	0	wh2_main_skv_hell_pit_abomination	225	425	0	3	axe	claw	large	10	1.2	500	0	False		0	10	3.2
+0	0	0	wh2_main_skv_rat_ogre	28	72	0	2	axe	club_medium	medium	4	0.8999999	100	0	False		0	10	3.8
+0	12	0	wh2_main_skv_spear	18	5	0	1	spear	spear		4	1	10	0	False		0	10	4.3
+0	8	0	wh2_main_skv_spear_skavenslaves	12	4	0	1	spear	spear		4	1	10	0	False		0	10	4.6
+0	0	0	wh2_main_skv_sword	20	6	0	1	sword	sword		4	1	10	0	False		0	10	4.3
+0	0	0	wh2_main_skv_sword_skavenslaves	14	4	0	1	sword	sword		4	1	10	0	False		0	10	4.3
+0	0	0	wh2_main_skv_sword_stormvermin	32	12	0	1	sword	sword		4	1	10	0	False		0	10	4.6
+0	0	0	wh2_main_skv_weeping_blade	8	22	0	1	sword	sword		4	1	10	0	False	wh2_main_unit_contact_weeping_blade	0	10	4.3
+0	0	0	wh2_main_skv_sword_lethal_poison	20	6	0	1	sword	sword		4	1	10	0	False	wh_main_unit_contact_poison_lethal	0	10	4.3

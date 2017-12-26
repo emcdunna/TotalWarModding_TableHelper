@@ -1,0 +1,6 @@
+audio_battle_environment_weathers_tables
+0
+unknown0	unknown1	unknown2
+True	rain_heavy	50
+False	rain_light	10
+False	rain_medium	25

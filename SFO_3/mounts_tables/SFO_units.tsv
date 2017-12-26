@@ -1,0 +1,4 @@
+mounts_tables
+10
+key	animation	battle_entities_tables	audio_armour_type	variant	voiceover
+warhorse_panther	hr1_warhorse	wh_emp_knights_panther_horse	plate	warhorse_panther	wh_main_vo_culture_Horse

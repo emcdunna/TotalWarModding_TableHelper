@@ -1,0 +1,6 @@
+ancillaries_tables
+16
+key	type	applies_to	transferrable	unique_to_world	unique_to_faction	precedence	start_date	end_date	avatar_skill	avatar_special_ability	legendary_item	mp_exclusive	is_wife_ancillary	category	min_starting_age	max_starting_age	min_expiry_age	max_expiry_age	immortal	provided_bodyguard_unit	provided_banner	uniqueness_score	turns_before_swap_allowed	subcategory	randomly_dropped
+wh2_main_anc_follower_skv_ratcatcher_zar	wh2_main_anc_skv_servant	.	True	False	False	1	0	9999	False	False	False	False	False	general	1	1	50	75	True			1	0	follower	True
+wh2_main_anc_follower_skv_tunnel_scout_zar	wh2_main_anc_skv_assassin	.	True	False	False	1	0	9999	False	False	False	False	False	general	1	1	50	75	True			1	0	follower	True
+wh2_main_anc_follower_skv_prospector_zar	wh2_main_anc_skv_warplock_engineer	.	True	False	False	1	0	9999	False	False	False	False	False	general	1	1	50	75	True			1	0	follower	True

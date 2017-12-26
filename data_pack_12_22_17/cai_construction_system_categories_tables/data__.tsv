@@ -1,0 +1,5 @@
+cai_construction_system_categories_tables
+0
+cai_construction_system_category_group	cdir_military_generator_unit_group	key
+cai_military_group		cai_category_military
+cai_support_group		cai_category_support

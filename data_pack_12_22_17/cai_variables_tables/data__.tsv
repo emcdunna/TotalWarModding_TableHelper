@@ -1,0 +1,202 @@
+cai_variables_tables
+0
+key	value	description
+CAI_VARIABLE_AGGR_RAMP_CHANCE_BASE	10	(In-game) Base chance per round that an eligible faction will be selected for aggression increase. Base Chance + (Rounds Played * Per Round Chance).
+CAI_VARIABLE_AGGR_RAMP_CHANCE_PER_ROUND	0	(In-game) Additional per round chance that an eligible faction will be selected for aggression increase. Base Chance + (Rounds Played * Per Round Chance).
+CAI_VARIABLE_AGGR_RAMP_ENABLED	0	(In-game) Whether the aggression ramp is enable. 0=no, 1=yes
+CAI_VARIABLE_AGGR_RAMP_FAME_MAX	100	(In-game) Player fame level at which the ramp ends and the maximum level of aggression will be applied.
+CAI_VARIABLE_AGGR_RAMP_FAME_MIN	20	(In-game) Player fame level beyond which the aggression ramp will start to apply.
+CAI_VARIABLE_AGGR_RAMP_LEVEL_MAX	5	(In-game) The ending level for the aggression ramp to use. 1-6. Should be equal to or greater than the minimum level selected. 1=LOW, 2=LOW_TO_MEDIUM, 3=MEDIUM, 4=MEDIUM_TO_HIGH, 5=HIGH, 6=VERY HIGH.
+CAI_VARIABLE_AGGR_RAMP_LEVEL_MIN	1	(In-game) The starting level for the aggression ramp to use. 1-6. 1=LOW, 2=LOW_TO_MEDIUM, 3=MEDIUM, 4=MEDIUM_TO_HIGH, 5=HIGH, 6=VERY HIGH.
+CAI_VARIABLE_AGGR_RAMP_ROUNDS_MAX	100	(In-game) Round at which the ramp should finish (and max level be used for aggression increases).
+CAI_VARIABLE_AGGR_RAMP_ROUNDS_MIN	20	(In-game) Round beyond which the aggression ramp will start (beginning with the minimum aggression level).
+CAI_VARIABLE_ATTACK_ALL_ENEMY_SETTLEMENTS_IF_FACTION_HASNT_EXPANDED_FOR_ROUNDS	5	(In-game) If faction has not gained any region for this many rounds, attack tasks for all settlements is generated.
+CAI_VARIABLE_ATTACK_ALL_ENEMY_SETTLEMENTS_IF_FACTION_HASNT_EXPANDED_MAX_PRIORITY_IN_ROUNDS	20	(In-game) The priority of the attack if havent expanded task goes to maximum if we havent captured territory for CAI_VARIABLE_ATTACK_ALL_ENEMY_SETTLEMENTS_IF_FACTION_HASNT_EXPANDED_FOR_ROUNDS+CAI_VARIABLE_ATTACK_ALL_ENEMY_SETTLEMENTS_IF_FACTION_HASNT_EXPANDED_MAX_PRIORITY_IN_ROUNDS
+CAI_VARIABLE_ATTACK_HUMAN_HORDE_CONTROL_BEGIN_AND_BEFORE_MULTIPLIER	0	(In-game) In generating tasks versus human horde armies the starting priority used.
+CAI_VARIABLE_ATTACK_HUMAN_HORDE_CONTROL_BEGIN_ROUND	1	(In-game) In generating tasks versus human horde armies the round at which to start applying a priority variation.
+CAI_VARIABLE_ATTACK_HUMAN_HORDE_CONTROL_CLOSEST_ROUNDS_DISTANCE	1	(In-game) Multiplier applied to attack human horde armies tasks based on distance to nearest asset, lower distance bound.
+CAI_VARIABLE_ATTACK_HUMAN_HORDE_CONTROL_CLOSEST_ROUNDS_DISTANCE_AND_NEARER_MULTIPLIER	1.25	(In-game) Multiplier applied to attack human horde armies tasks based on distance to nearest asset, lower distance priority multiplier.
+CAI_VARIABLE_ATTACK_HUMAN_HORDE_CONTROL_END_AND_AFTER_MULTIPLIER	1.75	(In-game) In generating tasks versus human horde armies the ending priority used.
+CAI_VARIABLE_ATTACK_HUMAN_HORDE_CONTROL_END_ROUND	100	(In-game) In generating tasks versus human horde armies the round at which to end applying a priority variation.
+CAI_VARIABLE_ATTACK_HUMAN_HORDE_CONTROL_FURTHEST_ROUNDS_DISTANCE	4	(In-game) Multiplier applied to attack human horde armies tasks based on distance to nearest asset, upper distance bound.
+CAI_VARIABLE_ATTACK_HUMAN_HORDE_CONTROL_FURTHEST_ROUNDS_DISTANCE_AND_FURTHER_MULTIPLIER	0	(In-game) Multiplier applied to attack human horde armies tasks based on distance to nearest asset, upper distance priority multiplier.
+CAI_VARIABLE_ATTACK_NONHUMAN_HORDE_CONTROL_CLOSEST_ROUNDS_DISTANCE	1	(In-game) Multiplier applied to attack non-human horde armies tasks based on distance to nearest asset, lower distance bound.
+CAI_VARIABLE_ATTACK_NONHUMAN_HORDE_CONTROL_CLOSEST_ROUNDS_DISTANCE_AND_NEARER_MULTIPLIER	1.25	(In-game) Multiplier applied to attack non- human horde armies tasks based on distance to nearest asset, lower distance priority multiplier.
+CAI_VARIABLE_ATTACK_NONHUMAN_HORDE_CONTROL_FURTHEST_ROUNDS_DISTANCE	4	(In-game) Multiplier applied to attack non-human horde armies tasks based on distance to nearest asset, upper distance bound.
+CAI_VARIABLE_ATTACK_NONHUMAN_HORDE_CONTROL_FURTHEST_ROUNDS_DISTANCE_AND_FURTHER_MULTIPLIER	0	(In-game) Multiplier applied to attack non-human horde armies tasks based on distance to nearest asset, upper distance priority multiplier.
+CAI_VARIABLE_BASIC_CTRL_BUILDING_CONVERSION_BONUS	20	(In-game) Bonus applied to scoring of cultural conversion options in the construction system.
+CAI_VARIABLE_BASIC_CTRL_BUILDING_DEMOLITION_BONUS	60	(In-game) Bonus applied to scoring of demolition options in the construction system.
+CAI_VARIABLE_BASIC_CTRL_BUILDING_REPAIR_BONUS	60	(In-game) Bonus applied to scoring of repair options in the construction system.
+CAI_VARIABLE_BLACK_ARK_SUPPORT_STRENGTH	0	(In-game) Strenght bonus from black ark support
+CAI_VARIABLE_CLIMATE_CHANGE_IMMINENT_CONSTRUCTION_SYSTEM_FOOD_CONTROL_MULTIPLIER	2	(In-game) Multiplier applied to region count values if climate change mitigation is in effect (CAI_VARIABLE_FOOD_CTRL_BUILDING_APPLY_BONUS_AT_OR_BELOW_REGION_ADJUSTMENT, CAI_VARIABLE_FOOD_CTRL_BUILDING_APPLY_PENALTY_BELOW_REGION_ADJUSTMENT).
+CAI_VARIABLE_CLIMATE_CHANGE_IMMINENT_WITHIN	10	(In-game) Rounds from expected climate change that AI's will start to take mitigating action.
+CAI_VARIABLE_CNSTR_PRIORITY_OVER_COST_MODIFICATION	0.1	(In-game) When considering the importance of buildings for a specific context how much should value for money count versus raw priority (0.0, not a bit to 1.0, entirely).
+CAI_VARIABLE_CONSIDER_MAJOR_OVER_REGIONS	3	(In-game) In Gempei targetting and diplomatic adjustments the number of regions a minor faction must own before being considered major.
+CAI_VARIABLE_CONSTRUCTION_SYSTEM_VALUE_FOR_MONEY_CONSIDERATION_MULTIPLIER	1	(In-game) Within the AI construction system the proportion of value for money evaluation that should be applied.
+CAI_VARIABLE_CONSTRUCTION_SYSTEM_VALUE_FOR_MONEY_CONSIDERATION_TARGET	1000	(In-game) In the construction system the target value used when adjusting a buildings evaluation due to value of money effects.
+CAI_VARIABLE_COORDINATOR_MAJOR_FACTION_STRENGTH_BONUS	1.15	(In-game) Multiplier for strength of major factions.
+CAI_VARIABLE_DEFEND_LOCATION_RITUAL_CURRENCY_THRESHOLD	0.95	(In-game) 
+CAI_VARIABLE_DILEMMA_BONUS_LARGE	20	(In-game) Controls for diplomatic effects of some dilemmas.
+CAI_VARIABLE_DILEMMA_BONUS_LARGE_FALLOFF	10	(In-game) Controls for diplomatic effects of some dilemmas.
+CAI_VARIABLE_DILEMMA_BONUS_MEDIUM	10	(In-game) Controls for diplomatic effects of some dilemmas.
+CAI_VARIABLE_DILEMMA_BONUS_MEDIUM_FALLOFF	10	(In-game) Controls for diplomatic effects of some dilemmas.
+CAI_VARIABLE_DILEMMA_BONUS_SMALL	5	(In-game) Controls for diplomatic effects of some dilemmas.
+CAI_VARIABLE_DILEMMA_BONUS_SMALL_FALLOFF	10	(In-game) Controls for diplomatic effects of some dilemmas.
+CAI_VARIABLE_DILEMMA_BONUS_XLARGE	15	(In-game) Controls for diplomatic effects of some dilemmas.
+CAI_VARIABLE_DILEMMA_BONUS_XLARGE_FALLOFF	30	(In-game) Controls for diplomatic effects of some dilemmas.
+CAI_VARIABLE_DILEMMA_BONUS_XXLARGE	20	(In-game) Controls for diplomatic effects of some dilemmas.
+CAI_VARIABLE_DILEMMA_BONUS_XXLARGE_FALLOFF	30	(In-game) Controls for diplomatic effects of some dilemmas.
+CAI_VARIABLE_DILEMMA_BONUS_XXXLARGE	25	(In-game) Controls for diplomatic effects of some dilemmas.
+CAI_VARIABLE_DILEMMA_BONUS_XXXLARGE_FALLOFF	30	(In-game) Controls for diplomatic effects of some dilemmas.
+CAI_VARIABLE_DILEMMA_PENALTY_LARGE	-20	(In-game) Controls for diplomatic effects of some dilemmas.
+CAI_VARIABLE_DILEMMA_PENALTY_LARGE_FALLOFF	10	(In-game) Controls for diplomatic effects of some dilemmas.
+CAI_VARIABLE_DILEMMA_PENALTY_MEDIUM	-10	(In-game) Controls for diplomatic effects of some dilemmas.
+CAI_VARIABLE_DILEMMA_PENALTY_MEDIUM_FALLOFF	10	(In-game) Controls for diplomatic effects of some dilemmas.
+CAI_VARIABLE_DILEMMA_PENALTY_SMALL	-5	(In-game) Controls for diplomatic effects of some dilemmas.
+CAI_VARIABLE_DILEMMA_PENALTY_SMALL_FALLOFF	10	(In-game) Controls for diplomatic effects of some dilemmas.
+CAI_VARIABLE_DILEMMA_PENALTY_XLARGE	-30	(In-game) Controls for diplomatic effects of some dilemmas.
+CAI_VARIABLE_DILEMMA_PENALTY_XLARGE_FALLOFF	10	(In-game) Controls for diplomatic effects of some dilemmas.
+CAI_VARIABLE_DILEMMA_PENALTY_XXLARGE	-40	(In-game) Controls for diplomatic effects of some dilemmas.
+CAI_VARIABLE_DILEMMA_PENALTY_XXLARGE_FALLOFF	10	(In-game) Controls for diplomatic effects of some dilemmas.
+CAI_VARIABLE_DILEMMA_PENALTY_XXXLARGE	-50	(In-game) Controls for diplomatic effects of some dilemmas.
+CAI_VARIABLE_DILEMMA_PENALTY_XXXLARGE_FALLOFF	10	(In-game) Controls for diplomatic effects of some dilemmas.
+CAI_VARIABLE_DIPLOMACY_DISTANCE_GOAL_PRIORITY_MODIFIER	0.75	(In-game) Distance-based modifier for diplomatic goals.
+CAI_VARIABLE_DO_NOT_ENABLE	0	(In-game) Set it to 1 if you dare. DO NOT SET IT ANY HIGHER!!!
+CAI_VARIABLE_EMERGENCY_UNIT_CULL_COST_WEIGHT	2	(In-game) Weight of cost in the emergency unit culling mechanics.
+CAI_VARIABLE_EMERGENCY_UNIT_CULL_FORCE_PERCENTAGE_TO_CULL	20	(In-game) In using the emergency unit culling mechanics what percentage of elligable units should be disbanded to mitigate the problem.
+CAI_VARIABLE_EMERGENCY_UNIT_CULL_PRIORITY_WEIGHT	1	(In-game) Weight of task priority in the emergency unit culling mechanics.
+CAI_VARIABLE_EMERGENCY_UNIT_CULL_REPLENISHMENT_WEIGHT	2	(In-game) Weight of current replenishment in the emergency unit culling mechanics.
+CAI_VARIABLE_EMERGENCY_UNIT_CULL_TIME_WINDOW_MULTIPLIER	1	(In-game) In making use of the emergency unit culling mechanics what multiplier should be allied to the factions corresponding zero_or_negative_net_income_survival_rounds value.
+CAI_VARIABLE_FACTION_MANAGEMENT	0	(In-game) Enables CAI faction controller management.
+CAI_VARIABLE_FACTION_MANAGEMENT_THRESHOLD	0	(In-game) Specifies the CAI faction controller management threshold.
+CAI_VARIABLE_FINANCE_CONST_BIAS_EASY_LEVEL	4	(In-game) CAI Budgeting bias, easy difficulty, levels to apply at.
+CAI_VARIABLE_FINANCE_CONST_BIAS_EASY_TURNS	12	(In-game) CAI Budgeting bias,easy difficulty, rounds to apply for.
+CAI_VARIABLE_FINANCE_CONST_BIAS_HARD_LEVEL	2	(In-game) CAI Budgeting bias, hard difficulty, levels to apply at.
+CAI_VARIABLE_FINANCE_CONST_BIAS_HARD_TURNS	3	(In-game) CAI Budgeting bias, hard difficulty, rounds to apply for.
+CAI_VARIABLE_FINANCE_CONST_BIAS_LEGENDARY_LEVEL	1	(In-game) CAI Budgeting bias, legendary difficulty, levels to apply at.
+CAI_VARIABLE_FINANCE_CONST_BIAS_LEGENDARY_TURNS	0	(In-game) CAI Budgeting bias, legendary difficulty, rounds to apply for.
+CAI_VARIABLE_FINANCE_CONST_BIAS_NORMAL_LEVEL	2	(In-game) CAI Budgeting bias, normal difficulty, levels to apply at.
+CAI_VARIABLE_FINANCE_CONST_BIAS_NORMAL_TURNS	6	(In-game) CAI Budgeting bias, normal difficulty, rounds to apply for.
+CAI_VARIABLE_FINANCE_CONST_BIAS_VERY_HARD_LEVEL	1	(In-game) CAI Budgeting bias, very hard difficulty, levels to apply at.
+CAI_VARIABLE_FINANCE_CONST_BIAS_VERY_HARD_TURNS	0	(In-game) CAI Budgeting bias, very hard difficulty, rounds to apply for.
+CAI_VARIABLE_FNCA_AID_MINOR_ALLY_PADJ	0.25	(In-game) In Gempei diplomatic adjustments the adjustment applied against the desire of a major clan to aid a minor clan ally when being attacked or attacking.
+CAI_VARIABLE_FNCA_ALLY_MINOR_PADJ	0.25	(In-game) In Gempei diplomatic adjustments the adjustment applied against the desire of a major clan allying with a minor clan.
+CAI_VARIABLE_FNCA_JOIN_MINOR_ALLY_WADJ	0.75	(In-game) In Gempei diplomatic adjustments the weighing multiplier applied for a major clan joining a war against a minor clan at the request of a minor clan.
+CAI_VARIABLE_FOOD_CTRL_BUILDING_APPLY_BONUS_AT_OR_BELOW	50	(In-game) The point at or below which bonus will be provided to food producgin buildings.
+CAI_VARIABLE_FOOD_CTRL_BUILDING_APPLY_BONUS_AT_OR_BELOW_REGION_ADJUSTMENT	1	(In-game) Adjustment to the food penalty thresholds based on number of regions owned by a faction.
+CAI_VARIABLE_FOOD_CTRL_BUILDING_APPLY_PENALTY_BELOW	0	(In-game) The point below which a food penalty will be applied to a building option.
+CAI_VARIABLE_FOOD_CTRL_BUILDING_APPLY_PENALTY_BELOW_REGION_ADJUSTMENT	2	(In-game) Adjustment to the food penalty thresholds based on number of regions owned by a faction.
+CAI_VARIABLE_FOOD_CTRL_BUILDING_BONUS	0.9	(In-game) Bonus applied (per food point) for buildings that increase food up to the specified level.
+CAI_VARIABLE_FOOD_CTRL_BUILDING_NEW_BUILDING_BONUS_SCALING	0.5	(In-game) When calculating food based building score adjustements, the discount applied for being a new building.
+CAI_VARIABLE_FOOD_CTRL_BUILDING_PENALTY	3	(In-game) Penalty applied (per food point) for buildings that use food beyond the specified level.
+CAI_VARIABLE_FOOD_CTRL_ONGOING_PROBLEM_CONVERSION_THRESHOLD_BASIC	160	(In-game) Score at or above which the ongoing food detection system will start allowing building conversion to solve the problem.
+CAI_VARIABLE_FOOD_CTRL_ONGOING_PROBLEM_CONVERSION_THRESHOLD_REGION_ADJUSTMENT	0	(In-game) Per region based adjustment to CAI_VARIABLE_FOOD_CTRL_ONGOING_PROBLEM_CONVERSION_THRESHOLD_BASIC.
+CAI_VARIABLE_FOOD_CTRL_ONGOING_PROBLEM_DEMOLITION_THRESHOLD_BASIC	310	(In-game) Score at or above which the ongoing food detection system will start allowing building demolition to solve the problem.
+CAI_VARIABLE_FOOD_CTRL_ONGOING_PROBLEM_DEMOLITION_THRESHOLD_REGION_ADJUSTMENT	0	(In-game) Per region based adjustment to CAI_VARIABLE_FOOD_CTRL_ONGOING_PROBLEM_DEMOLITION_THRESHOLD_BASIC.
+CAI_VARIABLE_FOOD_CTRL_ONGOING_PROBLEM_SCORE_PER_TURN_ACCUMULATION_CAP	50	(In-game) When accruing score for the ongoing food problem detection system the cap applied to the amount being added to the score.
+CAI_VARIABLE_FORTIFIED_SETTLEMENT_FORTIFICATION_BONUS	300000	(In-game) AI strength bonus for fortified settlements.
+CAI_VARIABLE_FORTIFIED_SETTLEMENT_FORTIFICATION_MULTIPLIER	5	(In-game) AI strength multiplier for fortified settlements, modified by Siege engines.
+CAI_VARIABLE_FORTIFIED_SETTLEMENT_FORTIFICATION_MULTIPLIER_PRE_ASSAULT	1.1	(In-game) AI strength multiplier for fortified settlements, pre-assault.
+CAI_VARIABLE_FORTIFIED_SETTLEMENT_FORTIFICATION_MULTIPLIER_SIEGE_ENGINE_DECREASE	1.75	(In-game) Reduction of fortification bonus for each siege engine present.
+CAI_VARIABLE_FORTIFIED_SETTLEMENT_FORTIFICATION_MULTIPLIER_THREAT	1	(In-game) AI strength multiplier for fortified settlements  used for threat detection.
+CAI_VARIABLE_GLOBAL_ENEMY_THREAT_MODIFIER	1	(In-game) Modifier for enemy strength in threat calculations. Cannot be 0.
+CAI_VARIABLE_HORDE_GROUPING_HORDES_TO_SPLIT_FROM_GROUP_ON_OVERSIZE	1	(In-game) When adding a horde to an existing group the number of hordes to split from the group (excluding the new horde) to use in forming a new horde group.
+CAI_VARIABLE_HORDE_GROUPING_MAXIMUM_GROUP_SIZE	3	(In-game) Maximum size of a horde group.
+CAI_VARIABLE_HORDE_GROUPING_MAXIMUM_NEW_GROUP_MEMBERSHIP_DISTANCE	20	(In-game) Maximum acceptable distance from a horde to consider membership - multiplier on the median bordering inter-region distance.
+CAI_VARIABLE_IMPERIUM_ATTITUDE_BONUS_MODIFIER_AI	1	(In-game) Modifier to imperium attitude bonus towards the AI.
+CAI_VARIABLE_IMPERIUM_ATTITUDE_BONUS_MODIFIER_PLAYER	1	(In-game) Modifier to imperium attitude bonus towards the player.
+CAI_VARIABLE_IMPERIUM_ATTITUDE_PENALTY_MODIFIER_AI	1	(In-game) Modifier to imperium attitude penalty towards the AI.
+CAI_VARIABLE_IMPERIUM_ATTITUDE_PENALTY_MODIFIER_PLAYER	1	(In-game) Modifier to imperium attitude penalty towards the player.
+CAI_VARIABLE_INVERT_INTERVENTION_CHANCES_THRESHOLD	2	(In-game) If the vortex ritual we're interrupting is lower than this level, we weight the different intervention ritual levels based on the INVERSE of their casting cost (so low level intervention will have higher chance). Note: ritual index starts from 0, so if it's set to 2 it means we'll use inverted weights at vortex ritual level 1 and 2. THE END
+CAI_VARIABLE_MAX_CONFEDERATION_STRENGTH	1	(In-game) AI will receive a bonus to onfederating when the resulting faction would be under this proportion of human strength.
+CAI_VARIABLE_MAX_GOAL_EVALAUTIONS_PER_FACTION	10	(In-game) Maximum number of goals evaluated by each faction per round.
+CAI_VARIABLE_MAX_GOAL_EVALAUTIONS_PER_ROUND	300	(In-game) Maximum number of goals evaluated by all factions per round.
+CAI_VARIABLE_MAX_REBEL_SIEGE_EQUIP	4	(In-game) Number of siege engines required before rebels assault a highest level fortified settlement.
+CAI_VARIABLE_MIGRATION_ENEMY_STRENGTH_PROBABILITY_LOWER	0.01	(In-game) Probability of migration at the lower threshold.
+CAI_VARIABLE_MIGRATION_ENEMY_STRENGTH_PROBABILITY_UPPER	0.15	(In-game) Probability of migration at and beyond the upper threshold.
+CAI_VARIABLE_MIGRATION_ENEMY_STRENGTH_THRESHOLD_LOWER	2	(In-game) Lower threshold for enemy strength for migration. Expressed as a multiple of our strength.
+CAI_VARIABLE_MIGRATION_ENEMY_STRENGTH_THRESHOLD_UPPER	5	(In-game) Upper threshold for enemy strength for migration. Expressed as a multiple of our strength.
+CAI_VARIABLE_MIGRATION_FERTILITY_PROBABILITY	0.01	(In-game) Probability of migration when fertility is low.
+CAI_VARIABLE_MIGRATION_FERTILITY_THRESHOLD	0.25	(In-game) Fertility level below which migration will be considered.
+CAI_VARIABLE_MIGRATION_THREATENING_HORDE_ATTITUDE_THRESHOLD	-25	(In-game) Hordes below that attitude will be considered a threat when deciding whether to migrate.
+CAI_VARIABLE_MINOR_SETTLEMENT_FIELD_BATTLE_PERCENT	0	(In-game) Percentage chance that the AI will choose to fight you on the field for non-port, minor settlement battles.
+CAI_VARIABLE_MIN_REBEL_SIEGE_EQUIP	2	(In-game) Number of siege engines required before rebels assault a lowest level fortified settlement.
+CAI_VARIABLE_MOBILE_STRENGTH_ARMY_WEIGHT	1	(In-game) Weight of army strength when analyzing strength on sea.
+CAI_VARIABLE_MOBILE_STRENGTH_NAVY_WEIGHT	3	(In-game) Weight of navy strength when analyzing strength on sea.
+CAI_VARIABLE_NIGHT_BATTLE_PERCENT	5	(In-game) Percentage chance that the AI will choose to fight you at night.
+CAI_VARIABLE_OCCUPATION_DECISION_TIME_HORIZON	20	(In-game) Time in rounds beyond which specific occupation decisions information against a settlement will be forgotten.
+CAI_VARIABLE_PLAYER_AP_ADJUSTMENT_DEADZONE_MAX	1	(In-game) Upper bound for player AP deadzone adjustment for threat detection purposes.
+CAI_VARIABLE_PLAYER_AP_ADJUSTMENT_DEADZONE_MIN	1	(In-game) Lower bound for player AP deadzone adjustment for threat detection purposes.
+CAI_VARIABLE_PLAYER_AP_ADJUSTMENT_MAX	1.1	(In-game) Upper bound for player AP adjustment for threat detection purposes.
+CAI_VARIABLE_PLAYER_AP_ADJUSTMENT_MIN	0.9	(In-game) Lower bound for player AP adjustment for threat detection purposes.
+CAI_VARIABLE_PUBLIC_ORDER_CTRL_BUILDING_APPLY_BONUS_AT_OR_BELOW	4	(In-game) The point at or below which bonus will be provided to public order improvement buildings.
+CAI_VARIABLE_PUBLIC_ORDER_CTRL_BUILDING_APPLY_PENALTY_BELOW	4	(In-game) The point below which a public order penalty will be applied to a building option.
+CAI_VARIABLE_PUBLIC_ORDER_CTRL_BUILDING_BONUS	2	(In-game) Bonus applied (per public order point) for buildings that increae public order up to the specified level.
+CAI_VARIABLE_PUBLIC_ORDER_CTRL_BUILDING_NEW_BUILDING_BONUS_SCALING	0.5	(In-game) When calculating public order based building score adjustements, the discount applied for being a new building.
+CAI_VARIABLE_PUBLIC_ORDER_CTRL_BUILDING_PENALTY	4	(In-game) Penalty applied (per public order point) for buildings that use public order beyond the specified level.
+CAI_VARIABLE_PUBLIC_ORDER_CTRL_ONGOING_PROBLEM_CONVERSION_THRESHOLD_BASIC	16	(In-game) The public order problem score for a province beyond which conversion is considered as a solution.
+CAI_VARIABLE_PUBLIC_ORDER_CTRL_ONGOING_PROBLEM_DEMOLITION_THRESHOLD_BASIC	31	(In-game) The public order problem score for a province beyond which demolition is considered as a solution.
+CAI_VARIABLE_PUBLIC_ORDER_CTRL_ONGOING_PROBLEM_SCORE_PER_TURN_ACCUMULATION_CAP	5	(In-game) The maximum public order problem score that can be accumulated in one round for a given province.
+CAI_VARIABLE_REBEL_QUALITY_MULTIPLIER	0.15	(In-game) Limits the rebel unit quality to (([sum of building levels in region] * multiplier) + offset) * [quality of best recruitable unit in faction province].
+CAI_VARIABLE_REBEL_QUALITY_OFFSET	0.75	(In-game) Limits the rebel unit quality to (([sum of building levels in region] * multiplier) + offset) * [quality of best recruitable unit in faction province].
+CAI_VARIABLE_REBEL_WAIT_TIMEOUT_ADJUSTMENT_ON_FURTHER_REBELLION_MAX	-1	(In-game) In the case that an additional rebellion would trigger in a region with an existing rebellion, by how much should that existing rebellions attack time out be adjusted. Maximum adjustment.
+CAI_VARIABLE_REBEL_WAIT_TIMEOUT_ADJUSTMENT_ON_FURTHER_REBELLION_MIN	-1	(In-game) In the case that an additional rebellion would trigger in a region with an existing rebellion, by how much should that existing rebellions attack time out be adjusted. Minimum adjustment.
+CAI_VARIABLE_REBEL_WAIT_TIMEOUT_MAXIMUM	7	(In-game) Maximum timeout used for a rebel faction before it should consider an arbitrary attack.
+CAI_VARIABLE_REBEL_WAIT_TIMEOUT_MINIMUM	2	(In-game) Minimum timeout used for a rebel faction before it should consider an arbitrary attack.
+CAI_VARIABLE_RFB_EASY_NO_BELOW_MIN_UNITS	5	(In-game) Below this number of defending units don't allow retreat (easy difficulty).
+CAI_VARIABLE_RFB_EASY_YES_BELOW_RATIO_NO_SETT_RETREAT	0.2	(In-game) If defender can not retreat to a settlement and defender/attacker strength ratio is below this number, retreat (easy difficulty).
+CAI_VARIABLE_RFB_EASY_YES_BELOW_RATIO_SETT_RETREAT	0.4	(In-game) If defender can retreat to a settlement and defender/attacker strength ratio is below this number, retreat (easy difficulty).
+CAI_VARIABLE_RFB_HARD_NO_BELOW_MIN_UNITS	2	(In-game) Below this number of defending units don't allow retreat (hard difficulty).
+CAI_VARIABLE_RFB_HARD_YES_BELOW_RATIO_NO_SETT_RETREAT	0.4	(In-game) If defender can not retreat to a settlement and defender/attacker strength ratio is below this number, retreat (hardl difficulty).
+CAI_VARIABLE_RFB_HARD_YES_BELOW_RATIO_SETT_RETREAT	0.6	(In-game) If defender can retreat to a settlement and defender/attacker strength ratio is below this number, retreat (hard difficulty).
+CAI_VARIABLE_RFB_NORMAL_NO_BELOW_MIN_UNITS	4	(In-game) Below this number of defending units don't allow retreat (normal difficulty).
+CAI_VARIABLE_RFB_NORMAL_YES_BELOW_RATIO_NO_SETT_RETREAT	0.3	(In-game) If defender can not retreat to a settlement and defender/attacker strength ratio is below this number, retreat (normal difficulty).
+CAI_VARIABLE_RFB_NORMAL_YES_BELOW_RATIO_SETT_RETREAT	0.5	(In-game) If defender can retreat to a settlement and defender/attacker strength ratio is below this number, retreat (normal difficulty).
+CAI_VARIABLE_RFB_TEST_VERSUS_AI	1	(In-game) Above zero, allows AI to consider retreat versus another AI.
+CAI_VARIABLE_RFB_VHARD_NO_BELOW_MIN_UNITS	0	(In-game) Below this number of defending units don't allow retreat (very hard difficulty).
+CAI_VARIABLE_RFB_VHARD_YES_BELOW_RATIO_NO_SETT_RETREAT	0.45	(In-game) If defender can not retreat to a settlement and defender/attacker strength ratio is below this number, retreat (very hard difficulty).
+CAI_VARIABLE_RFB_VHARD_YES_BELOW_RATIO_SETT_RETREAT	0.65	(In-game) If defender can retreat to a settlement and defender/attacker strength ratio is below this number, retreat (very hard difficulty).
+CAI_VARIABLE_SAFE_PATH_STRENGTH_MODIFIER	1	(In-game) Modifier for own strength in safe path calculations.
+CAI_VARIABLE_SETTLEMENT_NIGHT_BATTLE_PERCENT	5	(In-game) Percentage chance that the AI will choose to fight you at night for settlement battles.
+CAI_VARIABLE_SETTLEMENT_STRENGTH_MODIFIER_ASSAULT	1	(In-game) Personality-based modifier for assaulting settlements.
+CAI_VARIABLE_SETTLEMENT_STRENGTH_MODIFIER_DEFEND	1	(In-game) Personality-based modifier for defending settlements.
+CAI_VARIABLE_SQUALOR_CTRL_BUILDING_APPLY_BONUS_AT_OR_BELOW	0	(In-game) The point at or below which bonus will be provided to squalor/sanitation improvement buildings.
+CAI_VARIABLE_SQUALOR_CTRL_BUILDING_APPLY_PENALTY_BELOW	0	(In-game) The point below which a squalor/sanitation penalty will be applied to a building option.
+CAI_VARIABLE_SQUALOR_CTRL_BUILDING_BONUS	2	(In-game) Bonus applied (per positive squalor/sanitation point) for buildings that increase squalor/sanitation up to the specified level.
+CAI_VARIABLE_SQUALOR_CTRL_BUILDING_NEW_BUILDING_BONUS_SCALING	0.5	(In-game) When calculating squalor/sanitation based building score adjustements, the discount applied for being a new building.
+CAI_VARIABLE_SQUALOR_CTRL_BUILDING_PENALTY	10	(In-game) Penalty applied (per negative squalor/sanitation point) for buildings that use squalor/sanitation beyond the specified level.
+CAI_VARIABLE_SQUALOR_CTRL_ONGOING_PROBLEM_CONVERSION_THRESHOLD_BASIC	31	(In-game) The squalor/sanitation problem score for a province beyond which conversion is considered as a solution.
+CAI_VARIABLE_SQUALOR_CTRL_ONGOING_PROBLEM_DEMOLITION_THRESHOLD_BASIC	61	(In-game) The squalor/sanitation problem score for a province beyond which demolition is considered as a solution.
+CAI_VARIABLE_SQUALOR_CTRL_ONGOING_PROBLEM_SCORE_PER_TURN_ACCUMULATION_CAP	5	(In-game) The maximum squalor/sanitation problem score that can be accumulated in one round for a given province.
+CAI_VARIABLE_STRATEGIC_BALANCE_BASE_HEX_VALUE	0.1	(In-game) Parameter for strategic balance calculation.
+CAI_VARIABLE_STRATEGIC_BALANCE_BASE_VALUE	300	(In-game) Parameter for strategic balance calculation.
+CAI_VARIABLE_STRATEGIC_BALANCE_HEX_VALUE_CAP	5	(In-game) Parameter for strategic balance calculation.
+CAI_VARIABLE_STRATEGIC_BALANCE_HEX_VALUE_MULTIPLIER	1E-06	(In-game) Parameter for strategic balance calculation.
+CAI_VARIABLE_STRATEGIC_CONTEXT_ADJUSTMENT_PER_NUM_ENEMIES	1	(In-game) Adjustment to strategic balance is applied for every X enemies.
+CAI_VARIABLE_STRATEGIC_CONTEXT_ADJUSTMENT_VALUE	-0.04	(In-game) Adjustment to strategic balance applied for the purpose of strategic context calculations.
+CAI_VARIABLE_STRATEGIC_STANCE_CONTROL_EXISTING_STANCE_GROUP_SCORE_BONUS_CAP	0.5	(In-game) Strategic stance system control, provides the limit on the 'existing stances' bonus to a given stance group.
+CAI_VARIABLE_STRATEGIC_STANCE_CONTROL_SUBJUGATION_CURRENT_ATTITUDE_ADJUSTMENT_MULTIPLIER	1	(In-game) Strategic stance system control, current attitude adjustment factor reliability multipler.
+CAI_VARIABLE_STRATEGIC_STANCE_CONTROL_SUBJUGATION_FRIENDLY_BIAS	6	(In-game) Strategic stance system control, the bias provided towards the friendly stance in the subjugation case.
+CAI_VARIABLE_STRATEGIC_STANCE_CONTROL_SUBJUGATION_PER_STANCE_DROP_RATE	4	(In-game) Strategic stance system control, the drop rate from friendly.
+CAI_VARIABLE_STRATEGIC_STANCE_CONTROL_WEIGHT_FOR_BEING_HUMAN	0.5	(In-game) Strategic stance system score weighting, impact of being human.
+CAI_VARIABLE_STRATEGIC_STANCE_CONTROL_WEIGHT_FOR_CURRENT_ATTITUDE	3	(In-game) Strategic stance system score weighting, impact of current and historical attitude.
+CAI_VARIABLE_STRATEGIC_STANCE_CONTROL_WEIGHT_FOR_DIPLOMATIC_TREATIES_CORE	0.5	(In-game) Strategic stance system score weighting, impact of basic treaties.
+CAI_VARIABLE_STRATEGIC_STANCE_CONTROL_WEIGHT_FOR_DIPLOMATIC_TREATIES_TRANSITIVE	0.5	(In-game) Strategic stance system score weighting, impact of transitive effects between factions based on basic treaties.
+CAI_VARIABLE_STRATEGIC_STANCE_CONTROL_WEIGHT_FOR_EXISTING_STANCE	0.5	(In-game) Strategic stance system score weighting, impact of existing faction stance.
+CAI_VARIABLE_STRATEGIC_STANCE_CONTROL_WEIGHT_FOR_IMPORTANCE	0	(In-game) Strategic stance system score weighting, impact of 'importance'.
+CAI_VARIABLE_STRATEGIC_STANCE_CONTROL_WEIGHT_FOR_SUBJUGATION	1	(In-game) Strategic stance system score weighting, impact of subjugation.
+CAI_VARIABLE_STRATEGIC_STANCE_CONTROL_WEIGHT_FOR_TASKS	0.5	(In-game) Strategic stance system score weighting, impact of task generation (types and targets).
+CAI_VARIABLE_STRATEGIC_STANCE_CONTROL_WEIGHT_FOR_TREACHERY	1	(In-game) Strategic stance system score weighting, impact of treacheries.
+CAI_VARIABLE_TREACHERY_COMPLEX_EVENT_DETECTION_HORIZON_IN_ROUNDS	10	(In-game) Time horizon in rounds beyond which a 'complex' treachery won't be detected.
+CAI_VARIABLE_TREACHERY_EVENT_FALLOFF_BASE	1	(In-game) Maximum rate of per event drop of for treachery events. Actually drop of moderated by number of current treachery events.
+CAI_VARIABLE_TURNS_TO_IGNORE_SETTLEMENT_AFTER_SACKING	4	(In-game) Number of turns task generation will ignore settlements after sacking it. 0 = ignore for the current turn only.
+CAI_VARIABLE_TURNS_TO_IGNORE_SETTLEMENT_AFTER_SACKING_CRD	4	(In-game) Number of turns coordinator will ignore settlements after sacking. 0 = ignore for the current turn only.
+CAI_VARIABLE_UNFORTIFIED_SETTLEMENT_FORTIFICATION_BONUS	0	(In-game) AI strength bonus for unfortified settlements.
+CAI_VARIABLE_UNFORTIFIED_SETTLEMENT_FORTIFICATION_MULTIPLIER	1	(In-game) AI strength multiplier for unfortified settlements.
+CAI_VARIABLE_UNFORTIFIED_SETTLEMENT_FORTIFICATION_MULTIPLIER_PRE_ASSAULT	1	(In-game) AI strength multiplier for unfortified settlements, pre-assault.
+CAI_VARIABLE_UNFORTIFIED_SETTLEMENT_FORTIFICATION_MULTIPLIER_THREAT	1	(In-game) AI strength multiplier for fortified settlements used for threat detection.
+CAI_VARIABLE_VICTORY_REGION_ADD_STARTING_REGIONS	0	(In-game) If value > 0 all regions in faction's provinces will be added to victory condition regions when the game starts or faction re-emerges.
+CAI_VARIABLE_VICTORY_REGION_MINIMUM_EXTRA	0	(In-game) Minimum number of extra victory regions to be selected at random at campaign start.
+CAI_VARIABLE_VICTORY_REGION_MINIMUM_FERTILITY	4	(In-game) Minimum starting fertility of randomly selected victory regions.
+CAI_VARIABLE_VICTORY_REGION_MINIMUM_TOTAL	0	(In-game) Minimum number of victory regions for each faction. Extra regions will be selected at random at campaign start.
+CAI_VARIABLE_WAAGH_QUALITY_MULTIPLIER	0.5	(In-game) Used for the cap of waags with respect to their parents.  Between 0 and 1, 1 indicates the cap will be higher.

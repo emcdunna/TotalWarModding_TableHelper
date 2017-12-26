@@ -1,0 +1,15 @@
+victory_types_tables
+2
+unknown0	unknown1	unknown2	unknown3	unknown4
+wh2_main_victory_type_vortex_domination	3	0	long	long
+wh2_main_victory_type_vortex_vortex	2	0	short	SHORT
+wh_dlc03_victory_type_major	1	0	long	long
+wh_dlc03_victory_type_minor	0	0	short	short
+wh_dlc03_victory_type_ultimate	2	0	ultimate	long
+wh_dlc05_victory_type_major	1	0	long	long
+wh_dlc05_victory_type_minor	0	0	short	short
+wh_dlc05_victory_type_ultimate	2	0	ultimate	long
+wh_main_victory_type_long	1	0	long	long
+wh_main_victory_type_mp_coop	0	0	short	short
+wh_main_victory_type_mp_versus	0	0	short	short
+wh_main_victory_type_short	0	0	short	short

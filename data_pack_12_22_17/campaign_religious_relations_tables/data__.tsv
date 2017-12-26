@@ -1,0 +1,15 @@
+campaign_religious_relations_tables
+0
+attitude_base	campaign	negative_attitude_multiplier	positive_attitude_multiplier	source	target
+0		1	1	wh2_main_religion_skaven	wh_main_religion_chaos
+0		1	1	wh2_main_religion_skaven	wh_main_religion_undeath
+0		1	1	wh2_main_religion_skaven	wh_main_religion_untainted
+0		1	1	wh_main_religion_chaos	wh2_main_religion_skaven
+0		1	1	wh_main_religion_chaos	wh_main_religion_undeath
+0		1	1	wh_main_religion_chaos	wh_main_religion_untainted
+0		1	1	wh_main_religion_undeath	wh2_main_religion_skaven
+0		1	1	wh_main_religion_undeath	wh_main_religion_chaos
+0		1	1	wh_main_religion_undeath	wh_main_religion_untainted
+0		1	1	wh_main_religion_untainted	wh2_main_religion_skaven
+0		1	1	wh_main_religion_untainted	wh_main_religion_chaos
+0		1	1	wh_main_religion_untainted	wh_main_religion_undeath

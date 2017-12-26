@@ -1,0 +1,9 @@
+audio_abilities_tables
+5
+unknown0	unknown1	unknown2	unknown3	unknown4	unknown5	unknown6	unknown7	unknown8	unknown9	unknown10	unknown11	unknown12	unknown13	unknown14	unknown15
+wh_main_unit_passive_bloodknight_regeneration	UI_BAT_SABL_Regeneration_Enable						False	100	False	False		False	100	False	False
+wh_main_unit_passive_grailknight_regeneration	UI_BAT_SABL_Regeneration_Enable						False	100	False	False		False	100	False	False
+wh_main_unit_passive_trollflesh	UI_BAT_SABL_Regeneration_Enable						False	100	False	False		False	100	False	False
+vmp_black_grail_regeneration	UI_BAT_SABL_Regeneration_Enable						False	100	False	False		False	100	False	False
+we_spell_shadow_dancers_withering	UI_BAT_SABL_Spell_Shadow_The_Withering_Upgraded_Enable		UI_BAT_SABL_Generic_Targetting_Start	UI_BAT_SABL_Generic_Targetting_Stop	Play_WH_UI_Ability_Click_Generic_Shadow		False	100	False	False		False	100	False	False
+wh_main_unit_passive_hydra	UI_BAT_SABL_Regeneration_Enable						False	100	False	False		False	100	False	False

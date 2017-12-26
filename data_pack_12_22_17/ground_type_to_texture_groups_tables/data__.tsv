@@ -1,0 +1,33 @@
+ground_type_to_texture_groups_tables
+0
+unknown0	unknown1
+burnt	brtcity
+grass	dwfcity
+grass	empcity
+forest	forest01
+grass	grass0
+grass	grass01
+grass	grass02
+grass	grncity
+grass	groundrock01
+grass	lava01
+grass	mineral01
+mud	mud01
+mud	mud02
+mud	mud03
+grass	outforest01
+grass	outrock01
+grass	river01
+grass	river02
+rock	rock01
+rock	rock02
+sand	sand01
+grass	scree01
+grass	scree02
+grass	snow01
+grass	snow02
+grass	system_default
+grass	tiles01
+grass	tiles02
+grass	vmpcity
+grass	wetmud01

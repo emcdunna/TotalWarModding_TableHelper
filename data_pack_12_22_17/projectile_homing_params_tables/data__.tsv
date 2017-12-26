@@ -1,0 +1,16 @@
+projectile_homing_params_tables
+0
+unknown0	unknown1	unknown2	unknown3	unknown4
+wh2_main_army_abilities_bolt_of_spite	0.01	120	0.01	50000
+wh2_main_hero_abilities_doomrocket	1	60	2	0.05
+wh2_main_spell_high_magic_soul_quench	0.5	90	0.4	0.25
+wh_chs_hellcannon	0.3	120	1.8	0.25
+wh_dlc03_spell_beasts_amber_spear	0.3	60	1	0.25
+wh_dlc05_spell_arrow_of_kurnous	0.2	180	0.2	0.5
+wh_dlc05_wef_orion_spear	0.3	60	0.2	0.25
+wh_dlc05_wef_trueflight_arrow	0.2	90	0.2	0.5
+wh_grn_doomdiver_goblin	0.5	120	1.5	0.35
+wh_main_bound_spell_solheims_bolt_of_illumination	0.5	90	0.3	0.05
+wh_main_generic	0.5	60	1	0.15
+wh_main_magic_missile	0.3	120	0.4	0.35
+wh_main_spell_fire_fireball	0.3	90	0.2	0.25

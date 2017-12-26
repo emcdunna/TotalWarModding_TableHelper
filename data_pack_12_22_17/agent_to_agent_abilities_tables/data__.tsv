@@ -1,0 +1,5 @@
+agent_to_agent_abilities_tables
+4
+agent	ability
+colonel	command_force
+general	command_force

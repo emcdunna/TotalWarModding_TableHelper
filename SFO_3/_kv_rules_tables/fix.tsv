@@ -1,0 +1,18 @@
+_kv_rules_tables
+0
+key	value
+difficulty_mod_ai_easy_charge_bonus	1.1
+difficulty_mod_ai_easy_melee_attack	1.1
+difficulty_mod_ai_easy_melee_damage	1.1
+difficulty_mod_ai_easy_melee_defence	1.1
+difficulty_mod_ai_easy_missile_reload_additional	10
+difficulty_mod_ai_hard_charge_bonus	0.8
+difficulty_mod_ai_hard_melee_attack	0.8
+difficulty_mod_ai_hard_melee_damage	0.9
+difficulty_mod_ai_hard_melee_defence	0.9
+difficulty_mod_ai_hard_missile_reload_additional	-10
+difficulty_mod_ai_very_hard_charge_bonus	1.15
+difficulty_mod_ai_very_hard_melee_attack	1.15
+difficulty_mod_ai_very_hard_melee_damage	1.15
+difficulty_mod_ai_very_hard_melee_defence	1.2
+difficulty_mod_ai_very_hard_missile_reload_additional	20

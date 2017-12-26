@@ -1,0 +1,9 @@
+government_types_tables
+1
+government_type	unknown1	unknown2
+gov_absolute_monarchy	upper	upper
+gov_constitutional_monarchy	upper	middle
+gov_empire	middle	lower
+gov_jap_clan	lower	lower
+gov_jap_shogunate	lower	lower
+gov_republic	middle	lower

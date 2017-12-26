@@ -1,0 +1,18 @@
+projectile_penetration_junctions_tables
+0
+description	entity_size_cap	key	max_penetration
+Passes through all targets, slows as it passes through entities		all	-1
+Stopped by Large targets, slows as it passes through entities	large	high	10
+Stopped by Large targets, slows as it passes through entities	large	high_magic	20
+Stopped by Large targets, slows as it passes through entities	large	large_2	2
+Stopped by Large targets, slows as it passes through entities	large	large_3	3
+Stopped by Large targets, slows as it passes through entities	large	large_4	4
+Stopped by Small targets, slows as it passes through entities	small	low	2
+Stopped by Small targets, slows as it passes through entities	small	low_magic	4
+Stopped by Medium targets, slows as it passes through entities	medium	medium	5
+Stopped by Medium targets, slows as it passes through entities	medium	medium_magic	10
+Stopped by Very Large targets, slows as it passes through entities	very_large	very_high	20
+Stopped by Very Large targets, slows as it passes through entities	very_large	very_high_low_entity	9
+Stopped by Very Large targets, slows as it passes through entities	very_large	very_high_magic	40
+Stopped by Very Small targets, slows as it passes through entities	very_small	very_low	0
+Stopped by Very Small targets, slows as it passes through entities	very_small	very_low_magic	2

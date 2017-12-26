@@ -1,0 +1,7 @@
+effects_tables
+3
+effect	icon	priority	icon_negative	category	is_positive_value_good
+mark_khorne	skill_khorne.png	0	skill_khorne.png	both	True
+mark_slaanesh	skill_slaanesh.png	0	skill_slaanesh.png	both	True
+mark_tzeentch	skill_tzeentch.png	0	skill_tzeentch.png	both	True
+mark_nurgle	skill_nurgle.png	0	skill_nurgle.png	both	True

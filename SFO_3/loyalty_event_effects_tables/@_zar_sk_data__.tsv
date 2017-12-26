@@ -1,0 +1,5 @@
+loyalty_event_effects_tables
+0
+event	loyalty_change	loaylty_factor	percentage_chance	threshold
+ANCILLARY_GIVEN	1	ancillaries	20	0
+START_OF_TURN	-1	passive	30	0

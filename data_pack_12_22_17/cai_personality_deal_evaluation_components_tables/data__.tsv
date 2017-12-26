@@ -1,0 +1,95 @@
+cai_personality_deal_evaluation_components_tables
+8
+id	max_payment_value	payment_treachery_value	payment_offered_multiplier	payment_requested_multiplier	unknown5	unknown6	unknown7	unknown8	unknown9	unknown10	unknown11	unknown12	unknown13	unknown14	unknown15	unknown16	unknown17	unknown18
+aggressive	50	0	10	2	50	50	15	40	10	0.1	15	-0.1	15	15			0	0
+aggressive_diplomat	50	0	10	2	50	50	15	40	10	0.1	15	-0.1	15	15	personality_desc_short_diplomatic	personality_desc_long_diplomatic	0	0
+aggressive_diplomat_unfriendly	50	0	10	2	50	50	15	40	10	0.1	15	-0.1	15	15	personality_desc_short_diplomatic	personality_desc_long_diplomatic	0	0
+aggressive_joins_strong	50	0	10	2	50	50	15	40	10	0.1	15	-0.1	15	15			0	0
+aggressive_joins_strong_subordinate	50	0	10	2	50	50	15	40	10	0.1	15	-0.1	15	15	personality_desc_short_underdog	personality_desc_long_underdog	0	0
+aggressive_joins_strong_unfriendly	50	0	10	2	50	50	15	40	10	0.1	15	-0.1	15	15			0	0
+aggressive_reliable	30	0	12	1	50	50	15	40	10	0.1	15	-0.1	15	15			0	0
+aggressive_reliable_unfriendly	30	0	12	1	50	50	15	40	10	0.1	15	-0.1	15	15			0	0
+aggressive_repulsive	50	0	300	2	300	50	15	40	10	0.1	15	-0.1	15	15	personality_desc_short_repulsive	personality_desc_long_repulsive	0	0
+aggressive_repulsive_joins_strong	50	0	300	2	300	50	15	40	10	0.1	15	-0.1	15	15	personality_desc_short_repulsive	personality_desc_long_repulsive	0	0
+aggressive_straightforward	50	0	10	1.5	50	50	15	40	10	0.1	15	-0.1	15	15	personality_desc_short_straightforward	personality_desc_long_straightforward	0	0
+aggressive_straightforward_unfriendly	50	0	10	1.5	50	50	15	40	10	0.1	15	-0.1	15	15	personality_desc_short_straightforward	personality_desc_long_straightforward	0	0
+aggressive_unfriendly	50	0	10	2	50	50	15	40	10	0.1	15	-0.1	15	15			0	0
+aggressive_unreliable	70	0	10	4	50	50	15	40	10	0.1	15	-0.1	15	15			0	0
+aggressive_unreliable_joins_strong	70	0	10	4	50	50	15	40	10	0.1	15	-0.1	15	15			0	0
+aggressive_unreliable_joins_strong_lategame	70	0	10	4	50	50	15	40	10	0.1	15	-0.1	15	15			0	0
+aggressive_unreliable_joins_strong_subordinate	70	0	10	4	50	50	15	40	10	0.1	15	-0.1	15	15	personality_desc_short_underdog	personality_desc_long_underdog	0	0
+aggressive_unreliable_joins_strong_unfriendly	70	0	10	4	50	50	15	40	10	0.1	15	-0.1	15	15			0	0
+aggressive_unreliable_joins_strong_unfriendly_lategame	70	0	10	4	50	50	15	40	10	0.1	15	-0.1	15	15			0	0
+aggressive_unreliable_lategame	70	0	10	4	50	50	15	40	10	0.1	15	-0.1	15	15			0	0
+aggressive_unreliable_repulsive	70	0	10	4	50	50	15	40	10	0.1	15	-0.1	15	15	personality_desc_short_repulsive	personality_desc_long_repulsive	0	0
+aggressive_unreliable_schemer_lategame	50	0	10	2	50	50	15	40	10	0.1	15	-0.1	15	15	personality_desc_short_schemer	personality_desc_long_schemer	0	0
+aggressive_unreliable_schemer_unfriendly_lategame	50	0	10	2	50	50	15	40	10	0.1	15	-0.1	15	15	personality_desc_short_schemer	personality_desc_long_schemer	0	0
+aggressive_unreliable_unfriendly	70	0	10	4	50	50	15	40	10	0.1	15	-0.1	15	15			0	0
+aggressive_unreliable_unfriendly_lategame	70	0	10	4	50	50	15	40	10	0.1	15	-0.1	15	15			0	0
+default	50	0	10	2	50	50	10	40	10	0.1	15	-0.1	15	15			0	0
+default_subordinate	50	0	10	2	50	50	10	40	10	0.1	15	-0.1	15	15	personality_desc_short_underdog	personality_desc_long_underdog	0	0
+default_trader	50	0	10	2	50	50	10	40	10	0.1	15	-0.1	15	15			0	0
+default_trader_unfriendly	50	0	10	2	50	50	10	40	10	0.1	15	-0.1	15	15			0	0
+default_unfriendly	50	0	10	2	50	50	10	40	10	0.1	15	-0.1	15	15			0	0
+defensive	50	0	10	2	50	50	10	40	15	0.1	15	-0.1	15	15			0	0
+defensive_diplomat	50	0	10	2	50	50	10	40	15	0.1	15	-0.1	15	15	personality_desc_short_diplomatic	personality_desc_long_diplomatic	0	0
+defensive_diplomat_unfriendly	50	0	10	2	50	50	10	40	15	0.1	15	-0.1	15	15	personality_desc_short_diplomatic	personality_desc_long_diplomatic	0	0
+defensive_passive	50	0	10	2	50	50	10	40	15	0.1	15	-0.1	15	15	personality_desc_short_passive	personality_desc_long_passive	0	0
+defensive_passive_nopeace	50	0	10	2	50	50	10	40	15	0.1	15	-0.1	15	15	personality_desc_short_passive	personality_desc_long_passive	0	0
+defensive_reliable	30	0	12	1	50	50	10	40	15	0.1	15	-0.1	15	15			0	0
+defensive_reliable_passive	30	0	12	1	50	50	10	40	15	0.1	15	-0.1	15	15	personality_desc_short_passive	personality_desc_long_passive	0	0
+defensive_reliable_subordinate	30	0	12	1	50	50	10	40	15	0.1	15	-0.1	15	15	personality_desc_short_underdog	personality_desc_long_underdog	0	0
+defensive_reliable_trader	30	0	12	1	50	50	10	40	15	0.1	15	-0.1	15	15			0	0
+defensive_reliable_trader_unfriendly	30	0	12	1	50	50	10	40	15	0.1	15	-0.1	15	15			0	0
+defensive_reliable_unfriendly	30	0	12	1	50	50	10	40	15	0.1	15	-0.1	15	15			0	0
+defensive_schemer	50	0	10	2	50	50	10	40	15	0.1	15	-0.1	15	15	personality_desc_short_schemer	personality_desc_long_schemer	0	0
+defensive_schemer_unfriendly	50	0	10	2	50	50	10	40	15	0.1	15	-0.1	15	15	personality_desc_short_schemer	personality_desc_long_schemer	0	0
+defensive_subordinate	50	0	10	2	50	50	10	40	15	0.1	15	-0.1	15	15	personality_desc_short_underdog	personality_desc_long_underdog	0	0
+defensive_trader	50	0	10	2	50	50	10	40	15	0.1	15	-0.1	15	15			0	0
+defensive_trader_unfriendly	50	0	10	2	50	50	10	40	15	0.1	15	-0.1	15	15			0	0
+defensive_unfriendly	50	0	10	2	50	50	10	40	15	0.1	15	-0.1	15	15			0	0
+defensive_unreliable	70	0	10	4	50	50	10	40	15	0.1	15	-0.1	15	15			0	0
+defensive_unreliable_passive	70	0	10	4	50	50	10	40	15	0.1	15	-0.1	15	15	personality_desc_short_passive	personality_desc_long_passive	0	0
+defensive_unreliable_schemer	70	0	10	4	50	50	10	40	15	0.1	15	-0.1	15	15	personality_desc_short_schemer	personality_desc_long_schemer	0	0
+defensive_unreliable_schemer_unfriendly	70	0	10	4	50	50	10	40	15	0.1	15	-0.1	15	15	personality_desc_short_schemer	personality_desc_long_schemer	0	0
+defensive_unreliable_unfriendly	70	0	10	4	50	50	10	40	15	0.1	15	-0.1	15	15			0	0
+diplomat	50	0	10	2	50	50	10	40	10	0.1	15	-0.1	15	15	personality_desc_short_diplomatic	personality_desc_long_diplomatic	0	0
+diplomat_unfriendly	50	0	10	2	50	50	10	40	10	0.1	15	-0.1	15	15	personality_desc_short_diplomatic	personality_desc_long_diplomatic	0	0
+dlc03_beastman_friendly	15	0	6	10000	10000	50	15	40	10	0.1	15	-0.1	15	15			0	0
+dlc03_beastman_hostile	15	0	6	10000	10000	50	15	40	10	0.1	15	-0.1	15	15			0	0
+dlc03_beastman_mission_sucess	15	0	6	10000	10000	50	15	40	10	0.1	15	-0.1	15	15			0	0
+dlc03_beastmen_chapter_impressed	15	0	10	10000	10000	50	15	40	10	0.1	15	-0.1	15	15			0	0
+dlc03_beastmen_chapter_unimpressed	15	0	10	10000	10000	50	15	40	10	0.1	15	-0.1	15	15			0	0
+dlc05_wood_elves_default	50	0	10	2	50	50	10	40	10	0.1	15	-0.1	15	15			0	0
+dlc05_wood_elves_default_durthu	50	0	10	2	50	50	10	40	10	0.1	15	-0.1	15	15			0	0
+dlc05_wood_elves_default_durthu_mini	50	0	10	2	50	50	10	40	10	0.1	15	-0.1	15	15			0	0
+dlc05_wood_elves_default_mini	50	0	10	2	50	50	10	40	10	0.1	15	-0.1	15	15			0	0
+dlc05_wood_elves_default_orion	50	0	10	2	50	50	10	40	10	0.1	15	-0.1	15	15			0	0
+dlc05_wood_elves_default_orion_mini	50	0	10	2	50	50	10	40	10	0.1	15	-0.1	15	15			0	0
+dlc05_wood_elves_default_rest	50	0	10	2	50	50	10	40	10	0.1	15	-0.1	15	15			0	0
+dlc05_wood_elves_default_rest_mini	50	0	10	2	50	50	10	40	10	0.1	15	-0.1	15	15			0	0
+friendly	50	0	10	2	50	50	10	40	10	0.1	15	-0.1	15	15			15	0
+friendly_diplomat	50	0	10	2	50	50	10	40	10	0.1	15	-0.1	15	15	personality_desc_short_diplomatic	personality_desc_long_diplomatic	15	0
+friendly_joins_strong	50	0	10	2	50	50	10	40	10	0.1	15	-0.1	15	15			15	0
+joins_strong	50	0	10	2	50	50	10	40	10	0.1	15	-0.1	15	15			0	0
+joins_strong_subordinate	50	0	10	2	50	50	10	40	10	0.1	15	-0.1	15	15	personality_desc_short_underdog	personality_desc_long_underdog	0	0
+joins_strong_unfriendly	50	0	10	2	50	50	10	40	10	0.1	15	-0.1	15	15			0	0
+passive	50	0	10	2	50	50	10	40	10	0.1	15	-0.1	15	15	personality_desc_short_passive	personality_desc_long_passive	0	0
+reliable	30	0	12	1	50	50	10	40	10	0.1	15	-0.1	15	15			0	0
+reliable_subordinate	30	0	12	1	50	50	10	40	10	0.1	15	-0.1	15	15	personality_desc_short_underdog	personality_desc_long_underdog	0	0
+reliable_trader	30	0	12	1	50	50	10	40	10	0.1	15	-0.1	15	15			0	0
+reliable_trader_unfriendly	30	0	12	1	50	50	10	40	10	0.1	15	-0.1	15	15			0	0
+reliable_unfriendly	30	0	12	1	50	50	10	40	10	0.1	15	-0.1	15	15			0	0
+repulsive	50	0	10	2	50	50	10	40	10	0.1	15	-0.1	15	15	personality_desc_short_repulsive	personality_desc_long_repulsive	0	0
+schemer	50	0	10	2	50	50	10	40	10	0.1	15	-0.1	15	15	personality_desc_short_schemer	personality_desc_long_schemer	0	0
+schemer_unfriendly	50	0	10	2	50	50	10	40	10	0.1	15	-0.1	15	15	personality_desc_short_schemer	personality_desc_long_schemer	0	0
+straightforward	50	0	10	1.5	50	50	10	40	10	0.1	15	-0.1	15	15	personality_desc_short_straightforward	personality_desc_long_straightforward	0	0
+straightforward_friendly	50	0	10	1.5	50	50	10	40	10	0.1	15	-0.1	15	15	personality_desc_short_straightforward	personality_desc_long_straightforward	15	0
+straightforward_unfriendly	50	0	10	1.5	50	50	10	40	10	0.1	15	-0.1	15	15	personality_desc_short_straightforward	personality_desc_long_straightforward	0	0
+unreliable	70	0	10	4	50	50	10	40	10	0.1	15	-0.1	15	15			0	0
+unreliable_joins_strong	70	0	10	4	50	50	10	40	10	0.1	15	-0.1	15	15			0	0
+unreliable_joins_strong_subordinate	70	0	10	4	50	50	10	40	10	0.1	15	-0.1	15	15	personality_desc_short_underdog	personality_desc_long_underdog	0	0
+unreliable_joins_strong_unfriendly	70	0	10	4	50	50	10	40	10	0.1	15	-0.1	15	15			0	0
+unreliable_schemer	70	0	10	4	50	50	10	40	10	0.1	15	-0.1	15	15	personality_desc_short_schemer	personality_desc_long_schemer	0	0
+unreliable_schemer_unfriendly	70	0	10	4	50	50	10	40	10	0.1	15	-0.1	15	15	personality_desc_short_schemer	personality_desc_long_schemer	0	0
+unreliable_unfriendly	70	0	10	4	50	50	10	40	10	0.1	15	-0.1	15	15			0	0

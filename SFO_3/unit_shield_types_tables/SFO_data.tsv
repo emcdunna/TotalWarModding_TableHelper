@@ -1,0 +1,39 @@
+unit_shield_types_tables
+6
+key	shield_defence_value	shield_armour_value	unknown3	unknown4
+none	0	0	0	
+wh_missile_block_35_metal	3	4	35	metal
+wh_missile_block_35_wood	3	3	35	wood
+wh_missile_block_55_metal	3	6	55	metal
+wh_missile_block_55_wood	5	4	55	wood
+wh_missile_block_30_metal	3	4	30	metal
+wh_missile_block_30_wood	3	3	30	wood
+wh_missile_block_40_metal	3	5	40	metal
+wh_missile_block_40_wood	3	4	40	wood
+wh_missile_block_50_bret_metal	5	4	50	metal
+wh_missile_block_45_goblin_wood	2	3	45	wood
+wh_missile_block_45_knight_metal	5	5	45	metal
+wh_missile_block_50_chaos_metal	4	6	55	metal
+wh_missile_block_50_knight	5	6	50	metal
+wh_missile_block_50_marauder	3	5	50	wood
+wh_missile_block_50_metal	3	6	50	metal
+wh_missile_block_50_wood	5	4	50	wood
+wh_missile_block_55_dwarf_metal	4	7	55	metal
+wh_missile_block_60_brt_wood	3	6	60	wood
+wh_missile_block_60_metal	5	6	60	metal
+wh_missile_block_60_wood	5	5	60	wood
+wh_missile_block_65_dwarf_metal	6	8	65	metal
+wh_missile_block_25_wood	0	0	25	wood
+wh_missile_block_50_dwarf_wood	5	5	50	wood
+wh_missile_block_60_archaon	7	6	60	metal
+wh_missile_block_70_eternal	6	8	70	metal
+wh_missile_block_65_wild	6	7	65	metal
+wh_missile_block_70_sigvald	6	8	70	metal
+wh_missile_block_50_guardians_metal	5	0	60	metal
+wh_missile_block_45_wood	3	4	45	wood
+wh_missile_block_45_metal	3	5	45	metal
+wh_missile_block_60_wood_chieften	6	5	60	wood
+wh_missile_block_60_black_orc	4	6	60	metal
+wh_missile_block_60_blood_dragon	6	6	50	metal
+wh_missile_block_70_metal	6	10	70	metal
+wh_missile_block_50_metal_knight	3	7	50	metal

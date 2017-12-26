@@ -1,0 +1,7 @@
+religions_tables
+3
+religion_key	unknown1	convertibility	unknown3	unknown4	unknown5	unknown6
+wh2_main_religion_skaven	icon_corruption_skv.png	125	255	0	8	skaven
+wh_main_religion_chaos	icon_corruption_chs.png	255	0	0	3	chaos
+wh_main_religion_undeath	icon_corruption_vmp.png	125	0	255	7	vampire
+wh_main_religion_untainted	icon_corruption_untainted.png	0	255	0	2	

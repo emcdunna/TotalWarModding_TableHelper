@@ -1,0 +1,6 @@
+cai_diplomacy_simple_treacheries_tables
+0
+event	value
+ALLY_REFUSED_TO_JOIN_WAR	15
+BATTLE_ALLY_SUPPORT_REFUSED	4
+HOSTILE_AGENT_ACTION_TOWARDS_ALLY	4

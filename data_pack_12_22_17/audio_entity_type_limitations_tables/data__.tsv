@@ -1,0 +1,9 @@
+audio_entity_type_limitations_tables
+4
+unknown0	unknown1	unknown2	unknown3	unknown4	unknown5	unknown6	unknown7	unknown8	unknown9
+15	10	Lord_Hero	500	5	2	True	400	True	True
+50	7	large	150	5	5	False	180	False	False
+50	7	medium	200	5	5	False	90	False	False
+50	7	small	120	5	5	False	90	False	False
+15	10	veryloud	500	5	2	True	400	True	True
+30	15	war_machine	500	10	5	True	250	False	True

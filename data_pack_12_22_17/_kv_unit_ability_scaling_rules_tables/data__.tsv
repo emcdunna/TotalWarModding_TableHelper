@@ -1,0 +1,8 @@
+_kv_unit_ability_scaling_rules_tables
+0
+key	value
+direct_damage_large	0.92
+direct_damage_medium	0.84
+direct_damage_small	0.76
+direct_damage_ultra	1
+healing_percentage_cap	0.75

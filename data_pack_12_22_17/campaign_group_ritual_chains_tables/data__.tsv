@@ -1,0 +1,7 @@
+campaign_group_ritual_chains_tables
+3
+unknown0	unknown1	unknown2	unknown3	unknown4	unknown5
+wh2_main_ritual_def_playable	wh2_main_ritual_vortex_def	0	False	True	True
+wh2_main_ritual_hef_playable	wh2_main_ritual_vortex_hef	0	False	True	True
+wh2_main_ritual_lzd_playable	wh2_main_ritual_vortex_lzd	0	False	True	True
+wh2_main_ritual_skv_playable	wh2_main_ritual_vortex_skv	0	False	True	True

@@ -1,0 +1,22 @@
+first_person_engines_tables
+3
+auto_target	camera_offset_x	camera_offset_y	camera_offset_z	half_accuracy_arc	half_horizontal_fire_arc	half_vertical_fire_arc_elevation	key	near_clipping_plane	reload_time	track_projectile_distance	turn_delay	half_vertical_fire_arc_declination	unknown13	unknown14
+False	0	8	-12	1	10	1	Generic_2_Crew_Rotate	-1	10	7	0.5	-1	False	True
+False	0	8	-12	1	10	1	Generic_3_Crew	-1	10	7	0.5	-1	False	True
+False	0	8	-12	1	10	1	Generic_3_Crew_Rotate	-1	10	7	0.5	-1	False	True
+False	0	10	-11	1	10	25	brt_field_trebuchet	-1	8	8	0.5	-15	True	False
+False	0	5	-10	1	10	1	chs_hellcannon	-1	10	6	0.5	-1	True	False
+False	0	2.2	-5	1	10	15	dwf_cannon	-1	8	6	0.5	-6	True	False
+False	0	2.2	-5	1	10	17	dwf_flame_cannon	-1	5	9	0.5	-5	True	False
+False	0	2.2	-5	1	10	40	dwf_grudge_thrower	-1	8	8	0.5	-5	True	False
+False	0	2.2	-5	1	10	15	dwf_organ_gun	-1	6	4	0.5	-5	True	False
+False	0	2.2	-5	1	10	14	emp_great_cannon	-1	8	6	0.5	-6	True	False
+False	0	2.3	-5	1	10	15	emp_helblaster_volley_gun	-1	6	4	0.5	-6	True	False
+False	0	2.2	-5	1	10	40	emp_helstorm_rocket_battery	-1	8	8	0.5	-5	True	False
+False	0	2.2	-5	1	10	46	emp_mortar	-1	8	8	0.5	3	True	False
+False	1.9	4.7	-9	1	10	14	emp_steamtank	-1	8	8	0.5	-6	True	False
+False	0	4	-7	1	10	1	grn_doom_diver	-1	10	7	0.5	-1	True	False
+False	0	5.5	-11	1	10	30	grn_goblin_rock_lobber	-1	8	8	0.5	-15	True	False
+False	0	11	-6	1	10	30	wh2_main_skv_art_plagueclaw_catapult	-1	8	14	0.5	-30	True	False
+False	0	6	-6	1	10	15	wh2_main_skv_art_warp_lightning_cannon	-1	8	2	0.5	-20	True	False
+False	0	1.8	-2.3	1	10	22	wh_dlc06_dwf_art_bolt_thrower	-1	6	4	0.5	-7	True	False

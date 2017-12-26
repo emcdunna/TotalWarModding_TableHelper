@@ -1,0 +1,17 @@
+pooled_resource_factors_tables
+3
+unknown0	unknown1	unknown2
+bribes	-2147483647	2147483647
+buildings	0	2147483647
+canibalism	-2147483647	2147483647
+captives	0	2147483647
+colonisation	-2147483647	0
+commandments	0	2147483647
+force_upkeep	-2147483647	0
+looting	-2147483647	2147483647
+raiding	0	2147483647
+regions	-2147483647	0
+scavenging	-2147483647	2147483647
+wh2_main_resource_factor_menace_below	-2147483647	0
+wh2_main_resource_factor_rituals	0	2147483647
+wh2_main_resource_factor_the_dominating_scheme	0	2147483647

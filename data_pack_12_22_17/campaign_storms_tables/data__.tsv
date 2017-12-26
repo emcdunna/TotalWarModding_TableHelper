@@ -1,0 +1,8 @@
+campaign_storms_tables
+3
+unknown0	unknown1	unknown2	unknown3	unknown4
+storm_level_1	1	severe_gale	storm_base	storm_level_1
+storm_level_2	2	storm	storm_base	storm_level_2
+storm_level_3	3	severe_storm	storm_base	storm_level_3
+storm_level_4	4	hurricane	storm_base	storm_level_4
+storm_level_5	5	tempest	storm_base	storm_level_5

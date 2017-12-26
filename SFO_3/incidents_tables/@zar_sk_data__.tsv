@@ -1,0 +1,17 @@
+incidents_tables
+5
+unknown0	key	unknown2	unknown3
+zar_sk_incident_tunnel_scout	messenger	False	Event
+zar_sk_incident_prospector	army_morale_up	False	Event
+zar_sk_incident_warpstone_explosion	settlement_lost	False	Event
+zar_sk_incident_skaven_raid_1	settlement_lost	False	Event
+zar_sk_incident_skaven_raid_2	settlement_lost	False	Event
+zar_sk_incident_skaven_raid_3	besieged	False	Event
+zar_sk_incident_the_skaven_lairs	wh2_skaven_underworld	True	Event
+zar_sk_incident_vermintide_heroes	vermintide_heroes	False	Event
+zar_sk_incident_bad_food	settlement_lost	False	Event
+zar_sk_incident_skaven_raid_1p	settlement_lost	False	Event
+zar_sk_incident_skaven_raid_2p	settlement_lost	False	Event
+zar_sk_incident_skaven_raid_3p	besieged	False	Event
+zar_sk_incident_skavenblight_has_fallen	zar_sk_skavenblight	True	Event
+zar_sk_incident_skaven_lair_support	army_morale_up	False	Event

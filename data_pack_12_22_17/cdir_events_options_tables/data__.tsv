@@ -1,0 +1,555 @@
+cdir_events_options_tables
+0
+unknown0	unknown1
+Is the player faction ALLIED with the key-specified FACTION? Multiple use operator: AND.	CND_ALLIED_WITH
+Is the player faction ALLIED with AT LEAST ONE FACTION belonging to the key-specified SUBCULTURE? Multiple use operator: UNSURE!	CND_ALLIED_WITH_SUBCULTURE
+[OBSOLETE] Is the player faction allied with whichever clan rules the Shogunate?	CND_ALLY_SHOGUN
+Can the player faction sustain ADDITIONAL ARMIES?	CND_ARMY_CAP_FREE
+Does the player faction have AT LEAST ONE ARMY in an ENEMY REGION?	CND_ARMY_IN_ENEMY_REGION
+[OBSOLETE] Does the Ashikaga clan rules the Shogunate?	CND_ASHIKAGA_SHOGUN
+Is the player faction AT WAR with any factions belonging to the key-specified SUBCULTURE?	CND_AT_WAR_SUBCULTURE
+Does the player faction have AT LEAST ONE instance of the key-specified BUILDING CHAIN? Multiple use operator: AND.	CND_BUILDING_CHAIN
+Is the player faction currently able to CONSTRUCT the key-specified BUILDING CHAIN in one of their settlements? Multiple use operator: AND.	CND_BUILDING_CHAIN_AVAILABLE
+Does the player faction have AT LEAST ONE instance of the key-specified BUILDING LEVEL? Multiple use operator: AND.	CND_BUILDING_LEVEL
+Is the player faction currently able to CONSTRUCT the key-specified BUILDING LEVEL in one of their settlements? Multiple use operator: AND.	CND_BUILDING_LEVEL_AVAILABLE
+Does the player faction have an instance of the key-specified BUILDING LEVEL in at least HALF of their REGIONS? Multiple use operator: UNSURE!	CND_BUILDING_LEVEL_HALF_REGIONS
+Does the player faction have an instance of the key-specified BUILDING LEVEL in AT LEAST ONE-QUARTER of their REGIONS? Multiple use operator: UNSURE!	CND_BUILDING_LEVEL_ONE_QUARTER_REGIONS
+Does the player faction have an instance of the key-specified BUILDING LEVEL in at least THREE-QUARTERS of their REGIONS? Multiple use operator: UNSURE!	CND_BUILDING_LEVEL_THREE_QUARTER_REGIONS
+Is the CAMPAIGN being played this key-specified one? Multiple use operator: OR.	CND_CAMPAIGN
+Can the player faction currently RECRUIT the unit_key-specified UNIT? Multiple use operator: UNSURE!	CND_CAN_RECRUIT_UNIT
+Can the player faction currently RECRUIT the unit_caste-specified UNIT? Multiple use operator: UNSURE!	CND_CAN_RECRUIT_UNIT_CASTE
+Can the player faction currently RECRUIT the unit_category-specified UNIT? Multiple use operator: UNSURE!	CND_CAN_RECRUIT_UNIT_CATEGORY
+Can the player faction currently RECRUIT the unit_class-specified UNIT? Multiple use operator: UNSURE!	CND_CAN_RECRUIT_UNIT_CLASS
+Is the player faction currently CONSTRUCTING a building from the key-specified BUILDING CHAIN? Multiple use operator: AND.	CND_CONSTRUCTING_BUILDING_CHAIN
+Is the player faction currently CONSTRUCTING the key-specified BUILDING LEVEL? Multiple use operator: AND.	CND_CONSTRUCTING_BUILDING_LEVEL
+Is the player faction currently NOT CONSTRUCTING a building from the key-specified BUILDING CHAIN? Multiple use operator: AND.	CND_CONSTRUCTING_NOT_BUILDING_CHAIN
+Is the player faction currently NOT CONSTRUCTING the key-specified BUILDING LEVEL? Multiple use operator: AND.	CND_CONSTRUCTING_NOT_BUILDING_LEVEL
+Did the player choose the FIRST OPTION when faced with the key-specified DILEMMA? Multiple use operator: OR. [NOTE: We require additional options for CHOSEN_THIRD and CHOSEN_FOURTH]	CND_DILEMMA_CHOSEN_FIRST
+Did the player choose the SECOND OPTION when faced with the key-specified DILEMMA? Multiple use operator: OR. [NOTE: We require additional options for CHOSEN_THIRD and CHOSEN_FOURTH]	CND_DILEMMA_CHOSEN_SECOND
+Has the key-specified DILEMMA been GENERATED for the player during this campaign? Multiple use operator: OR.	CND_DILEMMA_GENERATED
+Did the player NOT choose the FIRST OPTION when faced with the key-specified DILEMMA? Multiple use operator: OR. [NOTE: We require additional options for CHOSEN_THIRD and CHOSEN_FOURTH]	CND_DILEMMA_NOT_CHOSEN_FIRST
+Did the player NOT choose the SECOND OPTION when faced with the key-specified DILEMMA? Multiple use operator: OR. [NOTE: We require additional options for CHOSEN_THIRD and CHOSEN_FOURTH]	CND_DILEMMA_NOT_CHOSEN_SECOND
+Has the key-specified DILEMMA NOT been GENERATED for the player during this campaign? Multiple use operator: OR.	CND_DILEMMA_NOT_GENERATED
+Is there an ENEMY ARMY in any of the player faction's REGIONS?	CND_ENEMY_ARMY_IN_REGION
+Is the player currently playing as this FACTION? Multiple use operator: OR.	CND_FACTION
+Specify the FIRST ROUND that a random event may be GENERATED during a campaign.	CND_FIRST_ROUND
+Does the player faction have AT LEAST ONE instance of the key-specified AGENT? Multiple use operator: OR (use semi colon).	CND_HAS_AGENT
+Does the player faction have AT LEAST ONE ARMY?	CND_HAS_ARMY
+Does the player faction have AT LEAST ONE NAVY?	CND_HAS_NAVY
+Does the player faction own a port?	CND_HAS_PORT
+Has the key-specified INCIDENT been GENERATED for the player during this campaign? Multiple use operator: OR.	CND_INCIDENT_GENERATED
+Has the key-specified INCIDENT NOT been GENERATED for the player during this campaign? Multiple use operator: OR.	CND_INCIDENT_NOT_GENERATED
+[OBSOLETE] Is the player faction in the process of assuming control of the Shogunate?	CND_IS_BECOMING_SHOGUN
+[OBSOLETE] Does the player faction rule the Shogunate?	CND_IS_SHOGUN
+Specify the LAST ROUND that a random event may be GENERATED during a campaign.	CND_LAST_ROUND
+Is the player faction ALLIED with NO MORE THAN the specified number of FACTIONS?	CND_MAX_ALLIED
+Of all the player faction's UNITS, do NO MORE THAN the specified proportion of them belong to the ARTILLERY category?	CND_MAX_ARTILLERY_CATEGORY_RATIO
+[OBSOLETE] Does the player faction have NO MORE THAN the specified average proportion of Buddhism across their territory?	CND_MAX_BUDDHIST_RATIO
+Of all the player faction's UNITS, do NO MORE THAN the specified proportion of them belong to the CAVALRY category?	CND_MAX_CAVALRY_CATEGORY_RATIO
+[OBSOLETE] Does the player faction have NO MORE THAN the specified average proportion of Christianity across their territory?	CND_MAX_CHRISTIAN_RATIO
+[BROKEN?] Of all the player faction's researched TECHNOLOGIES, are NO MORE THAN the specified proportion CIVIL TECHNOLOGIES? 	CND_MAX_CIVIL_TECHNOLOGY_RATIO
+Does the player faction own NO MORE THAN the specified number of COASTAL REGIONS? (the region borders the sea - does not necessarily have a port!)	CND_MAX_COASTAL_REGIONS_OWNED
+[OBSOLETE] Does the player faction's daimyo have NO MORE THAN the specified amount of Honour.	CND_MAX_DAIMYO_HONOUR
+[BROKEN?] Of all the player faction's researched TECHNOLOGIES, are NO MORE THAN the specified proportion ENGINEERING TECHNOLOGIES? 	CND_MAX_ENGINEERING_TECHNOLOGY_RATIO
+Is the player faction ALLIED with NO MORE THAN the specified number of NEIGHBOURING FACTIONS?	CND_MAX_FACTION_NEIGHBOUR_ALLIED
+[BROKEN?] Has the player faction GIVEN MILITARY ACCESS to NO MORE THAN the specified number of NEIGHBOURING FACTIONS?	CND_MAX_FACTION_NEIGHBOUR_MILITARY_ACCESS_GIVEN
+[BROKEN?] Has the player faction RECEIVED MILITARY ACCESS from NO MORE THAN the specified number of NEIGHBOURING FACTIONS?	CND_MAX_FACTION_NEIGHBOUR_MILITARY_ACCESS_RECEIVED
+Is the player faction NEUTRAL towards NO MORE THAN the specified number of NEIGHBOURING FACTIONS?	CND_MAX_FACTION_NEIGHBOUR_NEUTRAL
+[BROKEN?] Is the player faction the OVERLORD of NO MORE THAN the specified number of NEIGHBOURING FACTIONS?	CND_MAX_FACTION_NEIGHBOUR_PROTECTORATES
+Is the player faction TRADING with NO MORE THAN the specified number of NEIGHBOURING FACTIONS?	CND_MAX_FACTION_NEIGHBOUR_TRADE
+Is the player faction AT WAR with NO MORE THAN the specified number of NEIGHBOURING FACTIONS?	CND_MAX_FACTION_NEIGHBOUR_WAR
+Does the player faction have NO MORE THAN the specified amount of FAME / PRESTIGE / IMPERIUM.	CND_MAX_FAME
+[OBSOLETE] Is the player faction's  FAME / PRESTIGE / IMPERIUM level NO HIGHER THAN the given Shogun-specific fame level?	CND_MAX_FAME_LEVEL
+Is the player faction's  FAME / PRESTIGE / IMPERIUM level NO HIGHER THAN the value specified?	CND_MAX_FAME_RANK
+Does the player faction have NO MORE THAN the specified number of MILITARY FORCES.	CND_MAX_FORCE_COUNT
+[OBSOLETE] Was the player faction's  highest ever FAME / PRESTIGE / IMPERIUM level NO HIGHER THAN the given Shogun-specific fame level?	CND_MAX_HIGHEST_FAME_LEVEL
+Of all the player faction's UNITS, do NO MORE THAN the specified proportion of them belong to the MELEE INFANTRY category?	CND_MAX_INFANTRY_MELEE_CATEGORY_RATIO
+Of all the player faction's UNITS, do NO MORE THAN the specified proportion of them belong to the RANGED INFANTRY category?	CND_MAX_INFANTRY_RANGED_CATEGORY_RATIO
+Does the player faction have NO MORE THAN the specified number of LAND UNITS?	CND_MAX_LAND_UNIT_COUNT
+Does the player faction have NO MORE THAN the specified number of MERCENARY UNITS?	CND_MAX_MERCENARY_UNIT_COUNT
+[BROKEN?] Has the player faction GIVEN MILITARY ACCESS to NO MORE THAN the specified number of FACTIONS?	CND_MAX_MILITARY_ACCESS_GIVEN
+[BROKEN?] Has the player faction RECEIVED MILITARY ACCESS from NO MORE THAN the specified number of FACTIONS?	CND_MAX_MILITARY_ACCESS_RECEIVED
+[BROKEN?] Of all the player faction's researched TECHNOLOGIES, are NO MORE THAN the specified proportion MILITARY TECHNOLOGIES? 	CND_MAX_MILITARY_TECHNOLOGY_RATIO
+Of all the player faction's UNITS, do NO MORE THAN the specified proportion of them belong to the HEAVY NAVAL category?	CND_MAX_NAVAL_HEAVY_CATEGORY_RATIO
+Of all the player faction's UNITS, do NO MORE THAN the specified proportion of them belong to the LIGHT NAVAL category?	CND_MAX_NAVAL_LIGHT_CATEGORY_RATIO
+Of all the player faction's UNITS, do NO MORE THAN the specified proportion of them belong to the MEDIUM NAVAL category?	CND_MAX_NAVAL_MEDIUM_CATEGORY_RATIO
+Does the player faction have NO MORE THAN the specified number of NAVAL UNITS?	CND_MAX_NAVAL_UNIT_COUNT
+Is the player faction NEUTRAL towards NO MORE THAN the specified number of FACTIONS?	CND_MAX_NEUTRAL
+[BROKEN?] Is the player faction the OVERLORD of NO MORE THAN the specified number of FACTIONS?	CND_MAX_PROTECTORATES
+Does the player faction fully own NO MORE THAN the specified number of PROVINCES?	CND_MAX_PROVINCES_FULLY_OWNED
+Does the player faction own NO MORE THAN the specified number of REGIONS?	CND_MAX_REGIONS_OWNED
+Is the player faction ALLIED with the owners of NO MORE THAN the specified number of NEIGHBOURING REGIONS?	CND_MAX_REGION_NEIGHBOUR_ALLIED
+[BROKEN?] Has the player faction GIVEN MILITARY ACCESS to the owners of NO MORE THAN the specified number of NEIGHBOURING REGIONS?	CND_MAX_REGION_NEIGHBOUR_MILITARY_ACCESS_GIVEN
+[BROKEN?] Has the player faction RECEIVED MILITARY ACCESS from the owners of NO MORE THAN the specified number of NEIGHBOURING REGIONS?	CND_MAX_REGION_NEIGHBOUR_MILITARY_ACCESS_RECEIVED
+Is the player faction NEUTRAL towards the owners of NO MORE THAN the specified number of NEIGHBOURING REGIONS?	CND_MAX_REGION_NEIGHBOUR_NEUTRAL
+[BROKEN?] Is the player faction the OVERLORD of the owners of NO MORE THAN the specified number of NEIGHBOURING REGIONS?	CND_MAX_REGION_NEIGHBOUR_PROTECTORATES
+Is the player faction TRADING with the owners of NO MORE THAN the specified number of NEIGHBOURING REGIONS?	CND_MAX_REGION_NEIGHBOUR_TRADE
+Is the player faction AT WAR with the owners of NO MORE THAN the specified number of NEIGHBOURING REGIONS?	CND_MAX_REGION_NEIGHBOUR_WAR
+Is the player faction SPENDING NO MORE THAN the specified amount every turn?	CND_MAX_REGULAR_EXPENDITURE
+[BROKEN?] Is the player faction SPENDING NO MORE THAN the specified amount on DIPLOMACY every turn?	CND_MAX_REGULAR_EXPENDITURE_DIPLOMACY
+[BROKEN?] Is the player faction SPENDING NO MORE THAN the specified amount on POLICING every turn?	CND_MAX_REGULAR_EXPENDITURE_POLICING
+[BROKEN?] Is the player faction SPENDING NO MORE THAN the specified amount on PROTECTORATES / VASSALS / CLIENTS / SATRAPIES every turn?	CND_MAX_REGULAR_EXPENDITURE_PROTECTORATE
+Is the player faction SPENDING NO MORE THAN the specified amount on TOTAL UPKEEP every turn?	CND_MAX_REGULAR_EXPENDITURE_UPKEEP
+Is the player faction SPENDING NO MORE THAN the specified amount on ARMY UPKEEP every turn?	CND_MAX_REGULAR_EXPENDITURE_UPKEEP_ARMY
+Is the player faction SPENDING NO MORE THAN the specified amount on NAVY UPKEEP every turn?	CND_MAX_REGULAR_EXPENDITURE_UPKEEP_NAVY
+Is the player faction EARNING NO MORE THAN the specified amount every turn?	CND_MAX_REGULAR_INCOME
+[BROKEN?] Is the player faction EARNING NO MORE THAN the specified amount from DIPLOMACY every turn?	CND_MAX_REGULAR_INCOME_DIPLOMACY
+[BROKEN?] Is the player faction EARNING NO MORE THAN the specified amount from PROTECTORATES / VASSALS / CLIENTS / SATRAPIES every turn?	CND_MAX_REGULAR_INCOME_PROTECTORATE
+[BROKEN?] Is the player faction EARNING NO MORE THAN the specified amount from RAIDING every turn?	CND_MAX_REGULAR_INCOME_RAIDING
+[BROKEN?] Is the player faction EARNING NO MORE THAN the specified amount from TAXES every turn?	CND_MAX_REGULAR_INCOME_TAXES
+[BROKEN?] Is the player faction EARNING NO MORE THAN the specified amount from TRADE every turn?	CND_MAX_REGULAR_INCOME_TRADE
+Is the player faction TRADING with NO MORE THAN the specified number of FACTIONS?	CND_MAX_TRADE
+[OBSOLETE] Is the player faction occupying NO MORE THAN the specified number of TRADE NODES?	CND_MAX_TRADE_NODE_OCCUPIED
+Does the player faction have NO MORE THAN the specified amount of money in its coffers?	CND_MAX_TREASURY
+Is the player faction AT WAR with NO MORE THAN the specified number of FACTIONS?	CND_MAX_WAR
+Is the player faction ALLIED with AT LEAST the specified number of FACTIONS?	CND_MIN_ALLIED
+Of all the player faction's UNITS, do AT LEAST the specified proportion of them belong to the ARTILLERY category?	CND_MIN_ARTILLERY_CATEGORY_RATIO
+[OBSOLETE] Does the player faction have AT LEAST the specified average proportion of Buddhism across their territory?	CND_MIN_BUDDHIST_RATIO
+Of all the player faction's UNITS, do AT LEAST the specified proportion of them belong to the CAVALRY category?	CND_MIN_CAVALRY_CATEGORY_RATIO
+[OBSOLETE] Does the player faction have AT LEAST the specified average proportion of Christianity across their territory?	CND_MIN_CHRISTIAN_RATIO
+[BROKEN?] Of all the player faction's researched TECHNOLOGIES, are AT LEAST the specified proportion CIVIL TECHNOLOGIES? 	CND_MIN_CIVIL_TECHNOLOGY_RATIO
+Does the player faction own AT LEAST the specified number of COASTAL REGIONS? (the region borders the sea - does not necessarily have a port!)	CND_MIN_COASTAL_REGIONS_OWNED
+[OBSOLETE] Does the player faction's daimyo have AT LEAST the specified amount of Honour.	CND_MIN_DAIMYO_HONOUR
+[BROKEN?] Of all the player faction's researched TECHNOLOGIES, are AT LEAST the specified proportion ENGINEERING TECHNOLOGIES? 	CND_MIN_ENGINEERING_TECHNOLOGY_RATIO
+Is the player faction ALLIED with AT LEAST the specified number of NEIGHBOURING FACTIONS?	CND_MIN_FACTION_NEIGHBOUR_ALLIED
+[BROKEN?] Has the player faction GIVEN MILITARY ACCESS to AT LEAST the specified number of NEIGHBOURING FACTIONS?	CND_MIN_FACTION_NEIGHBOUR_MILITARY_ACCESS_GIVEN
+[BROKEN?] Has the player faction RECEIVED MILITARY ACCESS from AT LEAST the specified number of NEIGHBOURING FACTIONS?	CND_MIN_FACTION_NEIGHBOUR_MILITARY_ACCESS_RECEIVED
+Is the player faction NEUTRAL towards AT LEAST the specified number of NEIGHBOURING FACTIONS?	CND_MIN_FACTION_NEIGHBOUR_NEUTRAL
+[BROKEN?] Is the player faction the OVERLORD of AT LEAST the specified number of NEIGHBOURING FACTIONS?	CND_MIN_FACTION_NEIGHBOUR_PROTECTORATES
+Is the player faction TRADING with AT LEAST the specified number of NEIGHBOURING FACTIONS?	CND_MIN_FACTION_NEIGHBOUR_TRADE
+Is the player faction AT WAR with AT LEAST the specified number of NEIGHBOURING FACTIONS?	CND_MIN_FACTION_NEIGHBOUR_WAR
+Does the player faction have AT LEAST the specified amount of FAME / PRESTIGE / IMPERIUM.	CND_MIN_FAME
+[OBSOLETE] Is the player faction's  FAME / PRESTIGE / IMPERIUM level NO HIGHER THAN the given Shogun-specific fame level?	CND_MIN_FAME_LEVEL
+Is the player faction's  FAME / PRESTIGE / IMPERIUM level NO HIGHER THAN the value specified?	CND_MIN_FAME_RANK
+Does the player faction have AT LEAST the specified number of MILITARY FORCES.	CND_MIN_FORCE_COUNT
+[OBSOLETE] Was the player faction's  highest ever FAME / PRESTIGE / IMPERIUM level NO HIGHER THAN the given Shogun-specific fame level?	CND_MIN_HIGHEST_FAME_LEVEL
+Of all the player faction's UNITS, do AT LEAST the specified proportion of them belong to the MELEE INFANTRY category?	CND_MIN_INFANTRY_MELEE_CATEGORY_RATIO
+Of all the player faction's UNITS, do AT LEAST the specified proportion of them belong to the RANGED INFANTRY category?	CND_MIN_INFANTRY_RANGED_CATEGORY_RATIO
+Does the player faction have AT LEAST the specified number of LAND UNITS?	CND_MIN_LAND_UNIT_COUNT
+Does the player faction have AT LEAST the specified number of MERCENARY UNITS?	CND_MIN_MERCENARY_UNIT_COUNT
+[BROKEN?] Has the player faction GIVEN MILITARY ACCESS to AT LEAST the specified number of FACTIONS?	CND_MIN_MILITARY_ACCESS_GIVEN
+[BROKEN?] Has the player faction RECEIVED MILITARY ACCESS from AT LEAST the specified number of FACTIONS?	CND_MIN_MILITARY_ACCESS_RECEIVED
+[BROKEN?] Of all the player faction's researched TECHNOLOGIES, are AT LEAST the specified proportion MILITARY TECHNOLOGIES? 	CND_MIN_MILITARY_TECHNOLOGY_RATIO
+Of all the player faction's UNITS, do AT LEAST the specified proportion of them belong to the HEAVY NAVAL category?	CND_MIN_NAVAL_HEAVY_CATEGORY_RATIO
+Of all the player faction's UNITS, do AT LEAST the specified proportion of them belong to the LIGHT NAVAL category?	CND_MIN_NAVAL_LIGHT_CATEGORY_RATIO
+Of all the player faction's UNITS, do AT LEAST the specified proportion of them belong to the MEDIUM NAVAL category?	CND_MIN_NAVAL_MEDIUM_CATEGORY_RATIO
+Does the player faction have AT LEAST the specified number of NAVAL UNITS?	CND_MIN_NAVAL_UNIT_COUNT
+Is the player faction NEUTRAL towards AT LEAST the specified number of FACTIONS?	CND_MIN_NEUTRAL
+[BROKEN?] Is the player faction the OVERLORD of AT LEAST the specified number of FACTIONS?	CND_MIN_PROTECTORATES
+Does the player faction fully own AT LEAST the specified number of PROVINCES?	CND_MIN_PROVINCES_FULLY_OWNED
+Does the player faction own AT LEAST the specified number of REGIONS?	CND_MIN_REGIONS_OWNED
+Is the player faction ALLIED with the owners of AT LEAST the specified number of NEIGHBOURING REGIONS?	CND_MIN_REGION_NEIGHBOUR_ALLIED
+[BROKEN?] Has the player faction GIVEN MILITARY ACCESS to the owners of AT LEAST the specified number of NEIGHBOURING REGIONS?	CND_MIN_REGION_NEIGHBOUR_MILITARY_ACCESS_GIVEN
+[BROKEN?] Has the player faction RECEIVED MILITARY ACCESS from the owners of AT LEAST the specified number of NEIGHBOURING REGIONS?	CND_MIN_REGION_NEIGHBOUR_MILITARY_ACCESS_RECEIVED
+Is the player faction NEUTRAL towards the owners of AT LEAST the specified number of NEIGHBOURING REGIONS?	CND_MIN_REGION_NEIGHBOUR_NEUTRAL
+[BROKEN?] Is the player faction the OVERLORD of the owners of AT LEAST the specified number of NEIGHBOURING REGIONS?	CND_MIN_REGION_NEIGHBOUR_PROTECTORATES
+Is the player faction TRADING with the owners of AT LEAST the specified number of NEIGHBOURING REGIONS?	CND_MIN_REGION_NEIGHBOUR_TRADE
+Is the player faction AT WAR with the owners of AT LEAST the specified number of NEIGHBOURING REGIONS?	CND_MIN_REGION_NEIGHBOUR_WAR
+Is the player faction SPENDING AT LEAST the specified amount every turn?	CND_MIN_REGULAR_EXPENDITURE
+[BROKEN?] Is the player faction SPENDING AT LEAST the specified amount on DIPLOMACY every turn?	CND_MIN_REGULAR_EXPENDITURE_DIPLOMACY
+[BROKEN?] Is the player faction SPENDING AT LEAST the specified amount on POLICING every turn?	CND_MIN_REGULAR_EXPENDITURE_POLICING
+[BROKEN?] Is the player faction SPENDING AT LEAST the specified amount on PROTECTORATES / VASSALS / CLIENTS / SATRAPIES every turn?	CND_MIN_REGULAR_EXPENDITURE_PROTECTORATE
+Is the player faction SPENDING AT LEAST the specified amount on TOTAL UPKEEP every turn?	CND_MIN_REGULAR_EXPENDITURE_UPKEEP
+Is the player faction SPENDING AT LEAST the specified amount on ARMY UPKEEP every turn?	CND_MIN_REGULAR_EXPENDITURE_UPKEEP_ARMY
+Is the player faction SPENDING AT LEAST the specified amount on NAVY UPKEEP every turn?	CND_MIN_REGULAR_EXPENDITURE_UPKEEP_NAVY
+Is the player faction EARNING AT LEAST the specified amount every turn?	CND_MIN_REGULAR_INCOME
+[BROKEN?] Is the player faction EARNING AT LEAST the specified amount from DIPLOMACY every turn?	CND_MIN_REGULAR_INCOME_DIPLOMACY
+[BROKEN?] Is the player faction EARNING AT LEAST the specified amount from PROTECTORATES / VASSALS / CLIENTS / SATRAPIES every turn?	CND_MIN_REGULAR_INCOME_PROTECTORATE
+[BROKEN?] Is the player faction EARNING AT LEAST the specified amount from RAIDING every turn?	CND_MIN_REGULAR_INCOME_RAIDING
+[BROKEN?] Is the player faction EARNING AT LEAST the specified amount from TAXES every turn?	CND_MIN_REGULAR_INCOME_TAXES
+[BROKEN?] Is the player faction EARNING AT LEAST the specified amount from TRADE every turn?	CND_MIN_REGULAR_INCOME_TRADE
+Is the player faction TRADING with AT LEAST the specified number of FACTIONS?	CND_MIN_TRADE
+[OBSOLETE] Is the player faction occupying AT LEAST the specified number of TRADE NODES?	CND_MIN_TRADE_NODE_OCCUPIED
+Does the player faction have AT LEAST the specified amount of money in its coffers?	CND_MIN_TREASURY
+Is the player faction AT WAR with AT LEAST the specified number of FACTIONS?	CND_MIN_WAR
+Is the key-specified MISSION currently in play?	CND_MISSION_ACTIVE
+Has the key-specified MISSION been FAILED by the player during this campaign?	CND_MISSION_FAILED
+Has the key-specified MISSION been GENERATED for the player during this campaign? Multiple use operator: OR.	CND_MISSION_GENERATED
+Specify the number of ROUNDS that must elapse before another MISSION associated with the same MISSION ISSUER as this one can be GENERATED.	CND_MISSION_ISSUER_ROUNDS_UNTIL_NEXT
+Is the key-specified MISSION NOT currently in play?	CND_MISSION_NOT_ACTIVE
+Has the key-specified MISSION NOT been GENERATED for the player during this campaign? Multiple use operator: OR.	CND_MISSION_NOT_GENERATED
+Has the key-specified MISSION been SUCCEEDED by the player during this campaign?	CND_MISSION_SUCCEEDED
+Specify the number of ROUNDS that must elapse before another MISSION associated with the same MISSION TYPE as this one can be GENERATED.	CND_MISSION_TYPE_ROUNDS_UNTIL_NEXT
+Is the CAMPAIGN being played a MULTIPLAYER one?	CND_MULTIPLAYER
+Can the player faction sustain ADDITIONAL NAVIES?	CND_NAVY_CAP_FREE
+Is the player faction NEUTRAL towards the key-specified FACTION? Multiple use operator: AND.	CND_NEUTRAL_WITH
+Is the player faction NOT ALLIED with the key-specified FACTION? Multiple use operator: AND.	CND_NOT_ALLIED_WITH
+Is the player faction NOT ALLIED with AT LEAST ONE FACTION belonging to the key-specified SUBCULTURE? Multiple use operator: UNSURE!	CND_NOT_ALLIED_WITH_SUBCULTURE
+[OBSOLETE] Is the player faction not allied with whichever clan rules the Shogunate?	CND_NOT_ALLY_SHOGUN
+Can the player faction NOT sustain ADDITIONAL ARMIES?	CND_NOT_ARMY_CAP_FREE
+Does the player faction NOT have AT LEAST ONE ARMY in an ENEMY REGION?	CND_NOT_ARMY_IN_ENEMY_REGION
+[OBSOLETE] Does the Ashikaga clan not rule the Shogunate?	CND_NOT_ASHIKAGA_SHOGUN
+Is the player faction NOT AT WAR with any factions belonging to the key-specified SUBCULTURE?	CND_NOT_AT_WAR_SUBCULTURE
+Does the player faction NOT have AT LEAST ONE instance of the key-specified BUILDING CHAIN? Multiple use operator: AND.	CND_NOT_BUILDING_CHAIN
+Is the player faction NOT currently able to CONSTRUCT the key-specified BUILDING CHAIN in one of their settlements? Multiple use operator: AND.	CND_NOT_BUILDING_CHAIN_AVAILABLE
+Does the player faction NOT have AT LEAST ONE instance of the key-specified BUILDING LEVEL? Multiple use operator: AND.	CND_NOT_BUILDING_LEVEL
+Is the player faction NOT currently able to CONSTRUCT the key-specified BUILDING LEVEL in one of their settlements? Multiple use operator: AND.	CND_NOT_BUILDING_LEVEL_AVAILABLE
+Can the player faction currently NOT RECRUIT the unit_key-specified UNIT? Multiple use operator: UNSURE!	CND_NOT_CAN_RECRUIT_UNIT
+Can the player faction currently NOT RECRUIT the unit_caste-specified UNIT? Multiple use operator: UNSURE!	CND_NOT_CAN_RECRUIT_UNIT_CASTE
+Can the player faction currently NOT RECRUIT the unit_category-specified UNIT? Multiple use operator: UNSURE!	CND_NOT_CAN_RECRUIT_UNIT_CATEGORY
+Can the player faction currently NOT RECRUIT the unit_class-specified UNIT? Multiple use operator: UNSURE!	CND_NOT_CAN_RECRUIT_UNIT_CLASS
+Is there NOTan ENEMY ARMY in any of the player faction's REGIONS?	CND_NOT_ENEMY_ARMY_IN_REGION
+Does the player faction NOT have AT LEAST ONE instance of the key-specified AGENT? Multiple use operator: UNSURE!	CND_NOT_HAS_AGENT
+Does the player faction NOT have AT LEAST ONE ARMY?	CND_NOT_HAS_ARMY
+Does the player faction NOT have AT LEAST ONE NAVY?	CND_NOT_HAS_NAVY
+[OBSOLETE] Is the player faction not in the process of assuming control of the Shogunate?	CND_NOT_IS_BECOMING_SHOGUN
+[OBSOLETE] Does the player faction not rule the Shogunate?	CND_NOT_IS_SHOGUN
+Is the CAMPAIGN being played NOT a MULTIPLAYER one?	CND_NOT_MULTIPLAYER
+Can the player faction NOT sustain ADDITIONAL NAVIES?	CND_NOT_NAVY_CAP_FREE
+Is the player faction NOT NEUTRAL towards the key-specified FACTION? Multiple use operator: AND.	CND_NOT_NEUTRAL_WITH
+Does the player faction NOT OWN their HOME REGION?	CND_NOT_OWNS_HOME_REGION
+Does the player faction NOT OWN the key-specified REGION?	CND_NOT_OWNS_REGION
+Does the player NOT belong to the key-specified POLITICAL PARTY?	CND_NOT_POLITICAL_PARTY
+Is the player faction NOT currently suffering from a BLOCKADE somewhere?	CND_NOT_PORT_BLOCKADED
+[OBSOLETE] Has the player faction NOT experienced realm divide yet?	CND_NOT_REALM_DIVIDE
+Is the player faction NOT currently experiencing a REBELLION somewhere?	CND_NOT_REBELLION
+Does the player faction NOT belong to a key-specified RELIGION? Multiple use operator: OR.	CND_NOT_RELIGION
+Is the player faction NOT currently RESEARCHING a CIVIL TECHNOLOGY?	CND_NOT_RESEARCHING_TECHNOLOGY_CIVIL
+Is the player faction NOT currently RESEARCHING an ENGINEERING TECHNOLOGY?	CND_NOT_RESEARCHING_TECHNOLOGY_ENGINEERING
+Is the player faction NOT currently RESEARCHING a MILITARY TECHNOLOGY?	CND_NOT_RESEARCHING_TECHNOLOGY_MILITARY
+Is it NOT currently the key-specified SEASON? Multiple use operator: OR.	CND_NOT_SEASON
+[OBSOLETE?] Does the player faction own an instance of the key-specified slot type?	CND_NOT_SLOT_TYPE
+Has the player NOT RESEARCHED the key-specified TECHNOLOGY?	CND_NOT_TECHNOLOGY_RESEARCHED
+[OBSOLETE] Is the player NOT currently occupying a key-specified trade node group?	CND_NOT_TRADE_NODE_GROUP_OCCUPIED
+[OBSOLETE] Is the player NOT currently occupying a key-specified trade node?	CND_NOT_TRADE_NODE_OCCUPIED
+Is the player faction NOT TRADING with the key-specified FACTION? Multiple use operator: AND.	CND_NOT_TRADE_WITH
+[OBSOLETE] Is the player faction NOT at war with the Shogunate?	CND_NOT_WAR_SHOGUN
+Is the player faction NOT AT WAR with the key-specified FACTION? Multiple use operator: AND.	CND_NOT_WAR_WITH
+Does the player faction OWN their HOME REGION?	CND_OWNS_HOME_REGION
+Does the player faction OWN the key-specified REGION?	CND_OWNS_REGION
+Does the player faction OWN all of the key-specified REGIONS?	CND_OWNS_REGION_ALL_OF
+Does the player faction OWN any of the key-specified REGIONS?	CND_OWNS_REGION_ANY_OF
+Does the player belong to the key-specified POLITICAL PARTY?	CND_POLITICAL_PARTY
+Is the player faction currently suffering from a BLOCKADE somewhere?	CND_PORT_BLOCKADED
+[BROKEN?] Is the player faction currently somebody else's PROTECTORATE?	CND_PROTECTED
+Specify a further PERCENTAGE CHANCE that this EVENT will be GENERATED in spite of all its OPTIONS / CONDITIONS being satisfied. Used mainly for PRIORITISED EVENTS (always triggering).	CND_RANDOM
+[OBSOLETE] Has the player faction experienced realm divide yet?	CND_REALM_DIVIDE
+Is the player faction currently experiencing a REBELLION somewhere?	CND_REBELLION
+Does the player faction belong to a key-specified RELIGION? Multiple use operator: OR.	CND_RELIGION
+Is the player faction currently RESEARCHING a CIVIL TECHNOLOGY?	CND_RESEARCHING_TECHNOLOGY_CIVIL
+Is the player faction currently RESEARCHING an ENGINEERING TECHNOLOGY?	CND_RESEARCHING_TECHNOLOGY_ENGINEERING
+Is the player faction currently RESEARCHING a MILITARY TECHNOLOGY?	CND_RESEARCHING_TECHNOLOGY_MILITARY
+Specify that a ritual must be available to be performed immdeiately.	CND_RITUAL_AVAILABLE
+Specify that a ritual in a chain must be available to be performed immdediately. Format "Ritual|Chain"	CND_RITUAL_AVAILABLE_IN_CHAIN
+Specify that a faction, or one of the other members of its ritual group, must have compeleted the specified ritual chain stage (rituals_to_ritual_chains record key)	CND_RITUAL_CHAIN_STAGE_COMPLETED
+Specify that a faction, or one of the other members of its ritual group, must NOT have compeleted the specified ritual chain stage (rituals_to_ritual_chains record key)	CND_RITUAL_CHAIN_STAGE_NOT_COMPLETED
+Specify the number of ROUNDS that must elapse before the SAME EVENT can be GENERATED again. The EVENT cannot be UNIQUE.	CND_ROUNDS_UNTIL_NEXT
+Is it NOT currently the key-specified SEASON? Multiple use operator: OR.	CND_SEASON
+[OBSOLETE?] Does the player faction own an instance of the key-specified slot type?	CND_SLOT_TYPE
+Has the player RESEARCHED the key-specified TECHNOLOGY?	CND_TECHNOLOGY_RESEARCHED
+[OBSOLETE] Is the player NOT currently occupying a key-specified trade node group?	CND_TRADE_NODE_GROUP_OCCUPIED
+[OBSOLETE] Is the player NOT currently occupying a key-specified trade node?	CND_TRADE_NODE_OCCUPIED
+Is the player faction TRADING with the key-specified FACTION? Multiple use operator: AND.	CND_TRADE_WITH
+Specify that the EVENT is UNIQUE. Once GENERATED, it will NEVER be GENERATED again.	CND_UNIQUE
+[OBSOLETE] Is the player faction at war with the Shogunate?	CND_WAR_SHOGUN
+Is the player faction AT WAR with the key-specified FACTION? Multiple use operator: AND.	CND_WAR_WITH
+Is the EVENT TARGET CHARACTER an AGENT?	GEN_CND_AGENT
+[OBSOLETE] Is the EVENT TARGET CHARACTER a Metsuke?	GEN_CND_AGENT_METSUKE
+[OBSOLETE] Is the EVENT TARGET CHARACTER a Missionary?	GEN_CND_AGENT_MISSIONARY
+[OBSOLETE] Is the EVENT TARGET CHARACTER a Monk?	GEN_CND_AGENT_MONK
+[OBSOLETE] Is the EVENT TARGET CHARACTER a Ninja?	GEN_CND_AGENT_NINJA
+Specify that a EVENT TARGET CHARACTER must be the specified Agent Subtype.	GEN_CND_AGENT_SUBTYPE
+Is the EVENT TARGET FACTION (or the FACTION that OWNS the EVENT TARGET) ALLIED with AN ALLY of the player faction?	GEN_CND_ALLIED_WITH_ALLY
+Is the EVENT TARGET FACTION (or the FACTION that OWNS the EVENT TARGET) ALLIED with AN ENEMY of the player faction?	GEN_CND_ALLIED_WITH_ENEMY
+Speify that you allow tageting of rebel regions for region target generation... Only work in conjuction with GEN_CND_REGION	GEN_CND_ALLOW_REBELS
+[OBSOLETE] Is the event target or its owner an ally of the Shogunate?	GEN_CND_ALLY_SHOGUN
+Does the player have at least ONE ARMY in the EVENT TARGET REGION (or the REGION where the EVENT TARGET IS LOCATED) ?	GEN_CND_ARMY_IN_REGION
+[OBSOLETE] Is the EVENT TARGET FACTION assuming control of the Shogunate?	GEN_CND_BECOMING_SHOGUN
+Does the EVENT TARGET REGION (or the REGION where the EVENT TARGET IS LOCATED)  contain a FACTION CAPITAL?	GEN_CND_CAPITAL_REGION
+Of the BATTLES FOUGHT by this EVENT TARGET CHARACTER, have the specified PERCENTAGE of VICTORIES been achieved?	GEN_CND_CHARACTER_BATTLE_VICTORY_PERCENT
+The character Id given to them in the startpos data	GEN_CND_CHARACTER_ID
+Does the EVENT TARGET CHARACTER NOT have the key-specified TRAIT.	GEN_CND_CHARACTER_NOT_TRAIT
+Does the EVENT TARGET CHARACTER have the key-specified TRAIT.	GEN_CND_CHARACTER_TRAIT
+Specify that a EVENT TARGET CHARACTER must be a key-specified CHARACTER TYPE.	GEN_CND_CHARACTER_TYPE
+Does the event target character / region / settlement / military_force / faction belonging to the key-specified culture?	GEN_CND_CULTURE
+[OBSOLETE] Is the event target character a Daimyo?	GEN_CND_DAIMYO
+Is the EVENT TARGET FACTION (or the FACTION that OWNS the EVENT TARGET) DEFENSIVE ALLIES with the player faction?	GEN_CND_DEFENSIVE_ALLIED
+Can the EVENT TARGET FACTION (or the FACTION that OWNS the EVENT TARGET) engage in diplomacy with the player faction?	GEN_CND_DIPLOMACY_AVAILABLE
+Is the EVENT TARGET embarked upon the sea? Used primarily for ARMY targets.	GEN_CND_EMBARKED
+Is the EVENT TARGET FACTION (or the FACTION that OWNS the EVENT TARGET) an ENEMY of one of the player faction's ALLIES that belongs to the key-specified SUBCULTURE.	GEN_CND_ENEMY_OF_YOUR_ALLY_WITH_SUBCULTURE
+The key of the targeted faction	GEN_CND_FACTION
+Does the EVENT TARGET FACTION (or the FACTION that OWNS the EVENT TARGET) possess an instance of the key-specified BUILDING CHAIN? Multiple use operator: AND.	GEN_CND_FACTION_BUILDING_CHAIN
+Can the EVENT TARGET FACTION (or the FACTION that OWNS the EVENT TARGET) currently CONSTRUCT the key-specified BUILDING CHAIN? Multiple use operator: AND.	GEN_CND_FACTION_BUILDING_CHAIN_AVAILABLE
+Does the EVENT TARGET FACTION (or the FACTION that OWNS the EVENT TARGET) possess an instance of the key-specified BUILDING LEVEL? Multiple use operator: AND.	GEN_CND_FACTION_BUILDING_LEVEL
+Does the EVENT TARGET FACTION (or the FACTION that OWNS the EVENT TARGET) currently hold a COASTAL REGION?	GEN_CND_FACTION_COASTAL
+Is the EVENT TARGET FACTION (or the FACTION that OWNS the EVENT TARGET) currently in the process of CONSTRUCTING a BUILDING?	GEN_CND_FACTION_CONSTRUCTING
+Does the EVENT TARGET FACTION (or the FACTION that OWNS the EVENT TARGET) currently have an ARMY?	GEN_CND_FACTION_HAS_ARMY
+Does the EVENT TARGET FACTION (or the FACTION that OWNS the EVENT TARGET) currently have a NAVY?	GEN_CND_FACTION_HAS_NAVY
+Is the EVENT TARGET CHARACTER a FACTION LEADER?	GEN_CND_FACTION_LEADER
+Has the EVENT TARGET FACTION (or the FACTION that OWNS the EVENT TARGET) managed to CONSTRUCT the maximum level of the key-specified BUILDING CHAIN? Multiple use operator: AND.	GEN_CND_FACTION_MAXED_BUILDING_CHAIN
+Is the EVENT TARGET FACTION (or the FACTION that OWNS the EVENT TARGET) a NEIGHBOUR of the player faction?	GEN_CND_FACTION_NEIGHBOURS
+Does the EVENT TARGET FACTION (or the FACTION that OWNS the EVENT TARGET) NOT possess an instance of the key-specified BUILDING CHAIN? Multiple use operator: AND.	GEN_CND_FACTION_NOT_BUILDING_CHAIN
+Can the EVENT TARGET FACTION (or the FACTION that OWNS the EVENT TARGET) currently NOT CONSTRUCT the key-specified BUILDING CHAIN? Multiple use operator: AND.	GEN_CND_FACTION_NOT_BUILDING_CHAIN_AVAILABLE
+Does the EVENT TARGET FACTION (or the FACTION that OWNS the EVENT TARGET) NOT possess an instance of the key-specified BUILDING LEVEL? Multiple use operator: AND.	GEN_CND_FACTION_NOT_BUILDING_LEVEL
+Does the EVENT TARGET FACTION (or the FACTION that OWNS the EVENT TARGET) currently NOT hold a COASTAL REGION?	GEN_CND_FACTION_NOT_COASTAL
+Is the EVENT TARGET FACTION (or the FACTION that OWNS the EVENT TARGET) currently NOT in the process of CONSTRUCTING a BUILDING?	GEN_CND_FACTION_NOT_CONSTRUCTING
+Does the EVENT TARGET FACTION (or the FACTION that OWNS the EVENT TARGET) currently NOT have an ARMY?	GEN_CND_FACTION_NOT_HAS_ARMY
+Does the EVENT TARGET FACTION (or the FACTION that OWNS the EVENT TARGET) currently NOT have a NAVY?	GEN_CND_FACTION_NOT_HAS_NAVY
+Has the EVENT TARGET FACTION (or the FACTION that OWNS the EVENT TARGET) NOT managed to CONSTRUCT the maximum level of the key-specified BUILDING CHAIN? Multiple use operator: AND.	GEN_CND_FACTION_NOT_MAXED_BUILDING_CHAIN
+Is the EVENT TARGET FACTION (or the FACTION that OWNS the EVENT TARGET) NOT a NEIGHBOUR of the player faction?	GEN_CND_FACTION_NOT_NEIGHBOURS
+Is the EVENT TARGET FACTION (or the FACTION that OWNS the EVENT TARGET) NOT currently experiencing a REBELLION somewhere?	GEN_CND_FACTION_NOT_REBELLION
+Is the EVENT TARGET FACTION (or the FACTION that OWNS the EVENT TARGET) currently NOT RECRUITING any UNITS?	GEN_CND_FACTION_NOT_RECRUITING
+Does the EVENT TARGET FACTION (or the FACTION that OWNS the EVENT TARGET) NOT belong to the key-specified RELIGION?	GEN_CND_FACTION_NOT_RELIGION
+Is the EVENT TARGET FACTION (or the FACTION that OWNS the EVENT TARGET) NOT the same RELIGION as the player faction?	GEN_CND_FACTION_NOT_SAME_RELIGION
+Does the EVENT TARGET FACTION (or the FACTION that OWNS the EVENT TARGET) NOT possess an instance of the key-specified SLOT TYPE. Multiple use operator: AND.	GEN_CND_FACTION_NOT_SLOT_TYPE
+Is the EVENT TARGET FACTION (or the FACTION that OWNS the EVENT TARGET) currently experiencing a REBELLION somewhere?	GEN_CND_FACTION_REBELLION
+Is the EVENT TARGET FACTION (or the FACTION that OWNS the EVENT TARGET) currently RECRUITING any UNITS?	GEN_CND_FACTION_RECRUITING
+Does the EVENT TARGET FACTION (or the FACTION that OWNS the EVENT TARGET) belong to the key-specified RELIGION?	GEN_CND_FACTION_RELIGION
+Is the EVENT TARGET FACTION (or the FACTION that OWNS the EVENT TARGET) the same RELIGION as the player faction?	GEN_CND_FACTION_SAME_RELIGION
+Does the EVENT TARGET FACTION (or the FACTION that OWNS the EVENT TARGET) possess an instance of the key-specified SLOT TYPE. Multiple use operator: AND.	GEN_CND_FACTION_SLOT_TYPE
+Is the EVENT TARGET CHARACTER a FEMALE?	GEN_CND_FEMALE
+Does the EVENT TARGET MILITARY FORCE (or a MILITARY FORCE within the EVENT TARGET REGION) currently have a key-specified EFFECT BUNDLE applied to it?	GEN_CND_FORCE_HAS_EFFECT_BUNDLE
+Does the EVENT TARGET REGION contain a MILITARY FORCE belonging to the player faction? Note that despite referring to PROVINCE, I think that this only works with REGIONS - we can't yet target PROVINCES.	GEN_CND_FORCE_IN_PROVINCE
+Specify that a settlement must be exposed to the target faction to be valid	GEN_CND_GARRISON_RESIDENCE_EXPOSED
+Specify that a settlement must NOT be exposed to the target faction to be valid	GEN_CND_GARRISON_RESIDENCE_NOT_EXPOSED
+Is the EVENT TARGET FACTION (or the FACTION that OWNS the EVENT TARGET) AT WAR with any faction?	GEN_CND_HAS_ENEMIES
+Specify that a faction must have atleast one enemy with a region that the player can occupy to be a valid target	GEN_CND_HAS_ENEMIES_WITH_OCCUPIABLE_REGIONS
+Specify that a faction must have atleast one enemy with a region to be a valid target	GEN_CND_HAS_ENEMIES_WITH_REGIONS
+Is the EVENT TARGET FACTION (or the FACTION that OWNS the EVENT TARGET) NOT AT WAR with any faction?	GEN_CND_HAS_NO_ENEMIES
+Is the EVENT TARGET REGION (or the REGION where the EVENT TARGET IS LOCATED)  a FACTION'S HOME REGION?	GEN_CND_HOME_REGION
+Is the EVENT TARGET FACTION (or the FACTION that OWNS the EVENT TARGET) a HUMAN player?	GEN_CND_HUMAN
+Is the EVENT TARGET CHARACTER or MILITARY FORCE currently standing within an ENEMY REGION?	GEN_CND_IN_ENEMY_REGION
+Does the EVENT TARGET CHARACTER have the lowest loyalty (or inter-factional loyalty) of all characters in the GEN_CND_SUBCULTURE key (must specify this)?	GEN_CND_LOWEST_LOYALTY
+Is the EVENT TARGET CHARACTER a MALE?	GEN_CND_MALE
+Specify that a CHARACTER event requires a married character	GEN_CND_MARRIED
+Has the EVENT TARGET CHARACTER fought NO MORE THAN the specified number of BATTLES?	GEN_CND_MAX_BATTLES
+Has the EVENT TARGET CHARACTER fought NO MORE THAN the specified number of LOSING BATTLES?	GEN_CND_MAX_BATTLES_LOST
+Has the EVENT TARGET CHARACTER fought and NO MORE THAN the specified number of WINNING BATTLES?	GEN_CND_MAX_BATTLES_WON
+Does the EVENT TARGET CHARACTER have NO MORE THAN the specified amount of AMBITION?	GEN_CND_MAX_CHARACTER_AMBITION
+Does the EVENT TARGET CHARACTER have NO MORE THAN the specified amount of GRAVITAS?	GEN_CND_MAX_CHARACTER_GRAVITAS
+Is the EVENT TARGET CHARACTER of RANK NO HIGHER THAN that specified?	GEN_CND_MAX_CHARACTER_LEVEL
+[OBSOLETE PENDING RE-USE FOR FAMILY GAMEPLAY] Does the EVENT TARGET CHARACTER have NO MORE THAN the specified amount of LOYALTY / FAMILY ATTITUDE?	GEN_CND_MAX_CHARACTER_LOYALTY
+Does the EVENT TARGET CHARACTER'S POLITICAL PARTY have NO MORE THAN the specified PERCENTAGE of POLITICAL POWER / INFLUENCE?	GEN_CND_MAX_CHARACTER_PARTY_POWER_PERCENTAGE
+[OBSOLETE] Does the event target faction or owning faction's daimyo have NO MORE THAN the specified amount of honour?	GEN_CND_MAX_DAIMYO_HONOUR
+[BROKEN?] Does the EVENT TARGET FACTION (or the FACTION that OWNS the EVENT TARGET) have a DIPLOMATIC STANDING of NO MORE THAN the specified amount with the player faction?	GEN_CND_MAX_DIPLOMATIC_RELATION
+Does the EVENT TARGET FACTION (or the FACTION that OWNS the EVENT TARGET) have NO MORE THAN the specified amount of FAME / PRESTIGE / IMPERIUM?	GEN_CND_MAX_FAME
+[OBSOLETE] Does the EVENT TARGET FACTION (or the FACTION that OWNS the EVENT TARGET) have NO MORE THAN the given Shogun-specific fame level?	GEN_CND_MAX_FAME_LEVEL
+Does the EVENT TARGET FACTION (or the FACTION that OWNS the EVENT TARGET) have a FAME / PRESTIGE / IMPERIUM LEVEL which is NO HIGHER THAN the specified amount?	GEN_CND_MAX_FAME_RANK
+Has the EVENT TARGET FACTION (or the FACTION that OWNS the EVENT TARGET) had a FAME / PRESTIGE / IMPERIUM LEVEL which is NO HIGHER THAN that specified ever during the course of a campaign?	GEN_CND_MAX_HIGHEST_FAME_LEVEL
+Is the EVENT TARGET'S distance (in terms of NUMBER OF REGIONS) from the player faction's ORIGINAL HOME REGION NO FURTHER THAN that specified?	GEN_CND_MAX_ORIGINAL_HOME_REGION_DISTANCE
+Has the EVENT TARGET FACTION (or the FACTION that OWNS the EVENT TARGET) fought NO MORE THAN the specified number of BATTLES against the player faction?	GEN_CND_MAX_PLAYER_BATTLES
+Has the EVENT TARGET FACTION (or the FACTION that OWNS the EVENT TARGET) fought NO MORE THAN the specified number of LOSING BATTLES against the player faction?	GEN_CND_MAX_PLAYER_BATTLES_LOST
+Has the EVENT TARGET FACTION (or the FACTION that OWNS the EVENT TARGET) fought NO MORE THAN the specified number of WINNING BATTLES against the player faction?	GEN_CND_MAX_PLAYER_BATTLES_WON
+Does the PROVINCE to which the EVENT TARGET REGION (or the REGION where the EVENT TARGET IS LOCATED) belongs have NO MORE THAN the specified SLAVE PERCENTAGE?	GEN_CND_MAX_PROVINCE_SLAVE_PERCENTAGE
+Does the EVENT TARGET FACTION (or the FACTION that OWNS the EVENT TARGET) OWN NO MORE THAN the specified number of REGIONS?	GEN_CND_MAX_REGIONS_OWNED
+Is the EVENT TARGET REGION (or the REGION where the EVENT TARGET IS LOCATED) NO FURTHER THAN the specified distance (in terms of NUMBER OF REGIONS) from the player faction's BORDERS (0 = neighbouring).	GEN_CND_MAX_REGION_DISTANCE
+[BROKEN?] Does the PROVINCE to which the EVENT TARGET REGION (or the REGION where the EVENT TARGET IS LOCATED) belongs have NO MORE THAN the specified amount of PUBLIC ORDER?	GEN_CND_MAX_REGION_PUBLIC_ORDER
+Does the SETTLEMENT within the EVENT TARGET REGION (or the REGION where the EVENT TARGET IS LOCATED) contain NO MORE THAN the specified NUMBER OF UNITS.	GEN_CND_MAX_SETTLEMENT_UNITS
+Does the EVENT TARGET REGION (or the REGION where the EVENT TARGET IS LOCATED) contain NO MORE THAN the specified NUMBER OF UNITS.	GEN_CND_MAX_UNITS_IN_REGION
+[BROKEN?] Has the EVENT TARGET FACTION (or the FACTION that OWNS the EVENT TARGET) GIVEN MILITARY ACCESS to the player faction?	GEN_CND_MILITARY_ACCESS_GIVEN
+[BROKEN?] Has the EVENT TARGET FACTION (or the FACTION that OWNS the EVENT TARGET) RECEIVED MILITARY ACCESS from the player faction?	GEN_CND_MILITARY_ACCESS_RECEIVED
+Is the EVENT TARGET FACTION (or the FACTION that OWNS the EVENT TARGET) MILITARY ALLIES with the player faction?	GEN_CND_MILITARY_ALLIED
+Has the EVENT TARGET CHARACTER fought AT LEAST the specified number of BATTLES?	GEN_CND_MIN_BATTLES
+Has the EVENT TARGET CHARACTER fought AT LEAST the specified number of LOSING BATTLES?	GEN_CND_MIN_BATTLES_LOST
+Has the EVENT TARGET CHARACTER fought and AT LEAST the specified number of WINNING BATTLES?	GEN_CND_MIN_BATTLES_WON
+Does the EVENT TARGET CHARACTER have AT LEAST the specified amount of AMBITION?	GEN_CND_MIN_CHARACTER_AMBITION
+Does the EVENT TARGET CHARACTER have AT LEAST the specified amount of GRAVITAS?	GEN_CND_MIN_CHARACTER_GRAVITAS
+Is the EVENT TARGET CHARACTER of RANK NO HIGHER THAN that specified?	GEN_CND_MIN_CHARACTER_LEVEL
+[OBSOLETE PENDING RE-USE FOR FAMILY GAMEPLAY] Does the EVENT TARGET CHARACTER have AT LEAST the specified amount of LOYALTY / FAMILY ATTITUDE?	GEN_CND_MIN_CHARACTER_LOYALTY
+Does the EVENT TARGET CHARACTER'S POLITICAL PARTY have AT LEAST the specified PERCENTAGE of POLITICAL POWER / INFLUENCE?	GEN_CND_MIN_CHARACTER_PARTY_POWER_PERCENTAGE
+[OBSOLETE] Does the event target faction or owning faction's daimyo have AT LEAST the specified amount of honour?	GEN_CND_MIN_DAIMYO_HONOUR
+[BROKEN?] Does the EVENT TARGET FACTION (or the FACTION that OWNS the EVENT TARGET) have a DIPLOMATIC STANDING of AT LEAST the specified amount with the player faction?	GEN_CND_MIN_DIPLOMATIC_RELATION
+Does the EVENT TARGET FACTION (or the FACTION that OWNS the EVENT TARGET) have AT LEAST the specified amount of FAME / PRESTIGE / IMPERIUM?	GEN_CND_MIN_FAME
+[OBSOLETE] Does the EVENT TARGET FACTION (or the FACTION that OWNS the EVENT TARGET) have AT LEAST the given Shogun-specific fame level?	GEN_CND_MIN_FAME_LEVEL
+Does the EVENT TARGET FACTION (or the FACTION that OWNS the EVENT TARGET) have a FAME / PRESTIGE / IMPERIUM LEVEL which is NO HIGHER THAN the specified amount?	GEN_CND_MIN_FAME_RANK
+Has the EVENT TARGET FACTION (or the FACTION that OWNS the EVENT TARGET) had a FAME / PRESTIGE / IMPERIUM LEVEL which is NO HIGHER THAN that specified ever during the course of a campaign?	GEN_CND_MIN_HIGHEST_FAME_LEVEL
+Is the EVENT TARGET'S distance (in terms of NUMBER OF REGIONS) from the player faction's ORIGINAL HOME REGION NO FURTHER THAN that specified?	GEN_CND_MIN_ORIGINAL_HOME_REGION_DISTANCE
+Has the EVENT TARGET FACTION (or the FACTION that OWNS the EVENT TARGET) fought AT LEAST the specified number of BATTLES against the player faction?	GEN_CND_MIN_PLAYER_BATTLES
+Has the EVENT TARGET FACTION (or the FACTION that OWNS the EVENT TARGET) fought AT LEAST the specified number of LOSING BATTLES against the player faction?	GEN_CND_MIN_PLAYER_BATTLES_LOST
+Has the EVENT TARGET FACTION (or the FACTION that OWNS the EVENT TARGET) fought AT LEAST the specified number of WINNING BATTLES against the player faction?	GEN_CND_MIN_PLAYER_BATTLES_WON
+Does the PROVINCE to which the EVENT TARGET REGION (or the REGION where the EVENT TARGET IS LOCATED) belongs have AT LEAST the specified SLAVE PERCENTAGE?	GEN_CND_MIN_PROVINCE_SLAVE_PERCENTAGE
+Does the EVENT TARGET FACTION (or the FACTION that OWNS the EVENT TARGET) OWN AT LEAST the specified number of REGIONS?	GEN_CND_MIN_REGIONS_OWNED
+Is the EVENT TARGET REGION (or the REGION where the EVENT TARGET IS LOCATED) NO FURTHER THAN the specified distance (in terms of NUMBER OF REGIONS) from the player faction's BORDERS (0 = neighbouring).	GEN_CND_MIN_REGION_DISTANCE
+[BROKEN?] Does the PROVINCE to which the EVENT TARGET REGION (or the REGION where the EVENT TARGET IS LOCATED) belongs have AT LEAST the specified amount of PUBLIC ORDER?	GEN_CND_MIN_REGION_PUBLIC_ORDER
+Does the SETTLEMENT within the EVENT TARGET REGION (or the REGION where the EVENT TARGET IS LOCATED) contain AT LEAST the specified NUMBER OF UNITS.	GEN_CND_MIN_SETTLEMENT_UNITS
+Does the EVENT TARGET REGION (or the REGION where the EVENT TARGET IS LOCATED) contain AT LEAST the specified NUMBER OF UNITS.	GEN_CND_MIN_UNITS_IN_REGION
+Is the EVENT TARGET FORCE a NAVY?	GEN_CND_NAVY
+Is the EVENT TARGET FACTION (or the FACTION that OWNS the EVENT TARGET) NEUTRAL towards the player faction?	GEN_CND_NEUTRAL
+Specify that a EVENT TARGET CHARACTER must NOT be the specified Agent Subtype.	GEN_CND_NOT_AGENT_SUBTYPE
+Is the EVENT TARGET FACTION (or the FACTION that OWNS the EVENT TARGET) NOT ALLIED with AN ALLY of the player faction?	GEN_CND_NOT_ALLIED_WITH_ALLY
+Is the EVENT TARGET FACTION (or the FACTION that OWNS the EVENT TARGET) NOT ALLIED with AN ENEMY of the player faction?	GEN_CND_NOT_ALLIED_WITH_ENEMY
+[OBSOLETE] Is the event target or its owner NOT an ally of the Shogunate?	GEN_CND_NOT_ALLY_SHOGUN
+Does the player faction NOT have at least ONE ARMY in the EVENT TARGET REGION (or the REGION where the EVENT TARGET IS LOCATED) ?	GEN_CND_NOT_ARMY_IN_REGION
+[OBSOLETE] Is the EVENT TARGET FACTION NOT assuming control of the Shogunate?	GEN_CND_NOT_BECOMING_SHOGUN
+Does the EVENT TARGET REGION (or the REGION where the EVENT TARGET IS LOCATED) NOT contain a FACTION CAPITAL?	GEN_CND_NOT_CAPITAL_REGION
+Specify that a EVENT TARGET CHARACTER must NOT be a key-specified CHARACTER TYPE.	GEN_CND_NOT_CHARACTER_TYPE
+Does the event target character / region / settlement / military_force / faction NOT belonging to the key-specified culture?	GEN_CND_NOT_CULTURE
+[OBSOLETE] Is the event target character not a Daimyo?	GEN_CND_NOT_DAIMYO
+Is the EVENT TARGET FACTION (or the FACTION that OWNS the EVENT TARGET) NOT DEFENSIVE ALLIES with the player faction?	GEN_CND_NOT_DEFENSIVE_ALLIED
+Can the EVENT TARGET FACTION (or the FACTION that OWNS the EVENT TARGET) NOT engage in DIPLOMACY with the player faction?	GEN_CND_NOT_DIPLOMACY_AVAILABLE
+Is the EVENT TARGET NOT embarked upon the sea? Used primarily for ARMY targets.	GEN_CND_NOT_EMBARKED
+Is the EVENT TARGET FACTION (or the FACTION that OWNS the EVENT TARGET)NOT an ENEMY of one of the player faction's ALLIES that belongs to the key-specified SUBCULTURE.	GEN_CND_NOT_ENEMY_OF_YOUR_ALLY_WITH_SUBCULTURE
+Is the EVENT TARGET FACTION not THIS FACTION	GEN_CND_NOT_FACTION
+Is the EVENT TARGET CHARACTER NOT a FACTION LEADER?	GEN_CND_NOT_FACTION_LEADER
+Does the EVENT TARGET MILITARY FORCE (or a MILITARY FORCE within the EVENT TARGET REGION) NOT currently have a key-specified EFFECT BUNDLE applied to it?	GEN_CND_NOT_FORCE_HAS_EFFECT_BUNDLE
+Does the EVENT TARGET REGION NOT contain a MILITARY FORCE belonging to the player faction? Note that despite referring to PROVINCE, I think that this only works with REGIONS - we can't yet target PROVINCES.	GEN_CND_NOT_FORCE_IN_PROVINCE
+Is the EVENT TARGET REGION (or the REGION where the EVENT TARGET IS LOCATED) NOT a FACTION'S HOME REGION?	GEN_CND_NOT_HOME_REGION
+Is the EVENT TARGET FACTION (or the FACTION that OWNS the EVENT TARGET) NOT a HUMAN player?	GEN_CND_NOT_HUMAN
+Is the EVENT TARGET CHARACTER or MILITARY FORCE NOT currently standing within an ENEMY REGION?	GEN_CND_NOT_IN_ENEMY_REGION
+Specify that a CHARACTER event requires a not married character	GEN_CND_NOT_MARRIED
+[BROKEN?] Has the EVENT TARGET FACTION (or the FACTION that OWNS the EVENT TARGET) NOT GIVEN MILITARY ACCESS to the player faction?	GEN_CND_NOT_MILITARY_ACCESS_GIVEN
+[BROKEN?] Has the EVENT TARGET FACTION (or the FACTION that OWNS the EVENT TARGET) NOT RECEIVED MILITARY ACCESS from the player faction?	GEN_CND_NOT_MILITARY_ACCESS_RECEIVED
+Is the EVENT TARGET FACTION (or the FACTION that OWNS the EVENT TARGET) NOT MILITARY ALLIES with the player faction?	GEN_CND_NOT_MILITARY_ALLIED
+Is the EVENT TARGET FACTION (or the FACTION that OWNS the EVENT TARGET) NOT NEUTRAL towards the player faction?	GEN_CND_NOT_NEUTRAL
+Does the EVENT TARGET REGION (or the REGION where the EVENT TARGET IS LOCATED) NOT belong to the player faction?	GEN_CND_NOT_OWNS
+Does the EVENT TARGET FACTION (or the FACTION that OWNS the EVENT TARGET) NOT currently OWN their HOME REGION?	GEN_CND_NOT_OWNS_HOME_REGION
+Does the REGION where an EVENT TARGET CHARACTER or MILITARY FORCE is located NOT belong to the player faction?	GEN_CND_NOT_OWNS_REGION
+Does the player faction NOT currently have an ARMY within a REGION belonging to the EVENT TARGET FACTION (or the FACTION that OWNS the EVENT TARGET)?	GEN_CND_NOT_PLAYER_ARMY_IN_ANY_REGION
+Does the EVENT TARGET CHARACTER NOT belong to the key-specified POLITICAL PARTY?	GEN_CND_NOT_POLITICAL_PARTY
+Is the EVENT TARGET FACTION (or the FACTION that OWNS the EVENT TARGET) NOT currently experiencing a BLOCKADE?	GEN_CND_NOT_PORT_BLOCKADED
+Is the EVENT TARGET FACTION (or the FACTION that OWNS the EVENT TARGET) NOT currently a PROTECTORATE / CLIENT / VASSAL / SATRAPY of the player faction?	GEN_CND_NOT_PROTECTED
+Is the EVENT TARGET FACTION (or the FACTION that OWNS the EVENT TARGET) NOT currently the OVERLORD of the player faction?	GEN_CND_NOT_PROTECTOR
+Does the EVENT TARGET FACTION (or the FACTION that OWNS the EVENT TARGET) NOT belong to a PROVINCE which is ENTIRELY OWNED by the player faction?	GEN_CND_NOT_PROVINCE_COMPLETE
+Is the EVENT TARGET REGION (or the REGION where the EVENT TARGET IS LOCATED) NOT the key-specified REGION? Multiple use operator: UNSURE! Should be AND, I guess?	GEN_CND_NOT_REGION
+Does the EVENT TARGET REGION (or a REGION where the EVENT TARGET MILITARY FORCE IS LOCATED) NOT currently have a key-specified EFFECT BUNDLE applied to it?	GEN_CND_NOT_REGION_HAS_EFFECT_BUNDLE
+Does the EVENT TARGET REGION (or a REGION where the EVENT TARGET IS LOCATED) NOT have a NEIGHBOURING REGION which currently has a key-specified EFFECT BUNDLE applied to it?	GEN_CND_NOT_REGION_NEIGHBOURING_HAS_EFFECT_BUNDLE
+Is the EVENT TARGET REGION (or a REGION where the EVENT TARGET IS LOCATED) NOT NEIGHBOURING the player faction?	GEN_CND_NOT_REGION_NEIGHBOURS
+Is the EVENT TARGET TECHNOLOGY NOT currently RESEARCHABLE?	GEN_CND_NOT_RESEARCHABLE
+Has the EVENT TARGET TECHNOLOGY NOT yet been RESEARCHED?	GEN_CND_NOT_RESEARCHED
+Is the EVENT TARGET TECHNOLOGY NOT currently being RESEARCHED?	GEN_CND_NOT_RESEARCHING
+[OBSOLETE] Does the EVENT TARGET FACTION (or the FACTION that OWNS the EVENT TARGET) NOT currently rule the shogunate?	GEN_CND_NOT_SHOGUN
+[OBSOLETE?] Is the EVENT TARGET SLOT NOT of the key-specified SLOT TYPE?	GEN_CND_NOT_SLOT_TYPE
+Is the EVENT TARGET MILITARY FORCE NOT currently in the key-specified STANCE?	GEN_CND_NOT_STANCE
+Does the event target character / region / settlement / military_force / faction NOT belong to the key-specified subculture?	GEN_CND_NOT_SUBCULTURE
+Does the EVENT TARGET FACTION (or the FACTION that OWNS the EVENT TARGET) NOT currently have an ARMY in one of the player faction's REGIONS?	GEN_CND_NOT_TARGET_ARMY_IN_ANY_REGION
+Does the EVENT TARGET FACTION (or the FACTION that OWNS the EVENT TARGET) NOT currently have an ARMY in the palyer faction's HOME REGION or one of its NEIGHBOURING REGIONS?	GEN_CND_NOT_TARGET_ARMY_NEAR_ORIGINAL_HOME_REGION
+Is the EVENT TARGET FACTION (or the FACTION that OWNS the EVENT TARGET) NOT TRADING with the player faction?	GEN_CND_NOT_TRADE
+Can the EVENT TARGET FACTION (or the FACTION that OWNS the EVENT TARGET) NOT be seen by the player faction?	GEN_CND_NOT_VISIBLE
+Specify that a faction, region, settlement or force must not belong to or be the WAAAGH! faction	GEN_CND_NOT_WAAAGH
+Is the EVENT TARGET FACTION (or the FACTION that OWNS the EVENT TARGET) NOT AT WAR with the player faction?	GEN_CND_NOT_WAR
+[OBSOLETE] Is the EVENT TARGET FACTION (or the FACTION that OWNS the EVENT TARGET) NOT AT WAR with the Shogunate?	GEN_CND_NOT_WAR_SHOGUN
+Is the EVENT TARGET FACTION (or the FACTION that OWNS the EVENT TARGET) NOT AT WAR with an ALLY of the player faction?	GEN_CND_NOT_WAR_WITH_ALLY
+Is the EVENT TARGET FACTION (or the FACTION that OWNS the EVENT TARGET) NOT AT WAR with an ENEMY of the player faction?	GEN_CND_NOT_WAR_WITH_ENEMY
+Does the EVENT TARGET REGION (or the REGION where the EVENT TARGET IS LOCATED) belong to the player faction?	GEN_CND_OWNS
+Does the EVENT TARGET FACTION (or the FACTION that OWNS the EVENT TARGET) currently OWN their HOME REGION?	GEN_CND_OWNS_HOME_REGION
+Does the REGION where an EVENT TARGET CHARACTER or MILITARY FORCE is located belong to the player faction?	GEN_CND_OWNS_REGION
+Does the player faction currently have an ARMY within a REGION belonging to the EVENT TARGET FACTION (or the FACTION that OWNS the EVENT TARGET)?	GEN_CND_PLAYER_ARMY_IN_ANY_REGION
+Does the EVENT TARGET CHARACTER belong to the key-specified POLITICAL PARTY?	GEN_CND_POLITICAL_PARTY
+Is the EVENT TARGET FACTION (or the FACTION that OWNS the EVENT TARGET) currently experiencing a BLOCKADE?	GEN_CND_PORT_BLOCKADED
+Is the EVENT TARGET FACTION (or the FACTION that OWNS the EVENT TARGET) currently a PROTECTORATE / CLIENT / VASSAL / SATRAPY of the player faction?	GEN_CND_PROTECTED
+Is the EVENT TARGET FACTION (or the FACTION that OWNS the EVENT TARGET) currently the OVERLORD of the player faction?	GEN_CND_PROTECTOR
+Does the EVENT TARGET FACTION (or the FACTION that OWNS the EVENT TARGET) belong to a PROVINCE which is ENTIRELY OWNED by the player faction?	GEN_CND_PROVINCE_COMPLETE
+Is the EVENT TARGET REGION (or the REGION where the EVENT TARGET IS LOCATED) the key-specified REGION? Multiple use operator: UNSURE! Should be OR, I guess?	GEN_CND_REGION
+Specify that a target region must be abandoned	GEN_CND_REGION_ABANDONED
+Is the EVENT TARGET REGION one of the many key-specified (and semicolon-separated) REGIONS? OPTION_VALUE example: rom_italia_etruria; rom_italia_latium; rom_italia_picenum; etc...	GEN_CND_REGION_ANY_OF
+Does the EVENT TARGET REGION (or the REGION where the EVENT TARGET IS LOCATED) possess an instance of the key-specified BUILDING CHAIN? Multiple use operator: AND.	GEN_CND_REGION_BUILDING_CHAIN
+Can the EVENT TARGET REGION (or the REGION where the EVENT TARGET IS LOCATED) currently CONSTRUCT the key-specified BUILDING CHAIN? Multiple use operator: AND.	GEN_CND_REGION_BUILDING_CHAIN_AVAILABLE
+Does the EVENT TARGET REGION (or the REGION where the EVENT TARGET IS LOCATED) possess an instance of the key-specified BUILDING LEVEL? Multiple use operator: AND.	GEN_CND_REGION_BUILDING_LEVEL
+Is the EVENT TARGET REGION (or the REGION where the EVENT TARGET IS LOCATED) a COASTAL REGION?	GEN_CND_REGION_COASTAL
+Is the EVENT TARGET REGION (or the REGION where the EVENT TARGET IS LOCATED) currently in the process of CONSTRUCTING a BUILDING?	GEN_CND_REGION_CONSTRUCTING
+Does the EVENT TARGET REGION (or the REGION where the EVENT TARGET IS LOCATED) currently contain a CHARACTER with the ket-defined MINISTERIAL POSITION.	GEN_CND_REGION_CONTAINS_OFFICIAL
+Is the EVENT TARGET REGION (or a REGION where the EVENT TARGET MILITARY FORCE IS LOCATED) NEIGHBOURING an ENEMY FACTION?	GEN_CND_REGION_ENEMY_NEIGHBOURS
+Does the EVENT TARGET REGION (or a REGION where the EVENT TARGET MILITARY FORCE IS LOCATED) currently have a key-specified EFFECT BUNDLE applied to it?	GEN_CND_REGION_HAS_EFFECT_BUNDLE
+Has the EVENT TARGET REGION (or a REGION where the EVENT TARGET IS LOCATED)  managed to CONSTRUCT the maximum level of the key-specified BUILDING CHAIN? Multiple use operator: AND.	GEN_CND_REGION_MAXED_BUILDING_CHAIN
+Does the EVENT TARGET REGION (or a REGION where the EVENT TARGET MILITARY FORCE IS LOCATED) contain a ratio of the player faction's RELIGION which is NO GREATER THAN that specified?	GEN_CND_REGION_MAX_FACTION_RELIGION_RATIO
+Does the EVENT TARGET REGION (or a REGION where the EVENT TARGET MILITARY FORCE IS LOCATED) contain a ratio of the player faction's RELIGION which is AT LEAST that specified?	GEN_CND_REGION_MIN_FACTION_RELIGION_RATIO
+Does the EVENT TARGET REGION (or a REGION where the EVENT TARGET IS LOCATED) have a NEIGHBOURING REGION which currently has a key-specified EFFECT BUNDLE applied to it?	GEN_CND_REGION_NEIGHBOURING_HAS_EFFECT_BUNDLE
+Is the EVENT TARGET REGION (or a REGION where the EVENT TARGET IS LOCATED) NEIGHBOURING the player faction?	GEN_CND_REGION_NEIGHBOURS
+Specify that a target region must not be abandoned	GEN_CND_REGION_NOT_ABANDONED
+Is the EVENT TARGET REGION NOT one of the many key-specified (and semicolon-separated) REGIONS? OPTION_VALUE example: rom_italia_etruria; rom_italia_latium; rom_italia_picenum; etc...	GEN_CND_REGION_NOT_ALL_OF
+Does the EVENT TARGET REGION (or the REGION where the EVENT TARGET IS LOCATED) NOT possess an instance of the key-specified BUILDING CHAIN? Multiple use operator: AND.	GEN_CND_REGION_NOT_BUILDING_CHAIN
+Can the EVENT TARGET REGION (or the REGION where the EVENT TARGET IS LOCATED) NOT currently CONSTRUCT the key-specified BUILDING CHAIN? Multiple use operator: AND.	GEN_CND_REGION_NOT_BUILDING_CHAIN_AVAILABLE
+Does the EVENT TARGET REGION (or the REGION where the EVENT TARGET IS LOCATED) NOT possess an instance of the key-specified BUILDING LEVEL? Multiple use operator: AND.	GEN_CND_REGION_NOT_BUILDING_LEVEL
+Is the EVENT TARGET REGION (or the REGION where the EVENT TARGET IS LOCATED) NOT a COASTAL REGION?	GEN_CND_REGION_NOT_COASTAL
+Is the EVENT TARGET REGION (or the REGION where the EVENT TARGET IS LOCATED) NOT currently in the process of CONSTRUCTING a BUILDING?	GEN_CND_REGION_NOT_CONSTRUCTING
+Does the EVENT TARGET REGION (or the REGION where the EVENT TARGET IS LOCATED) NOT currently contain a CHARACTER with the ket-defined MINISTERIAL POSITION.	GEN_CND_REGION_NOT_CONTAINS_OFFICIAL
+Is the EVENT TARGET REGION (or a REGION where the EVENT TARGET MILITARY FORCE IS LOCATED) NOT NEIGHBOURING an ENEMY FACTION?	GEN_CND_REGION_NOT_ENEMY_NEIGHBOURS
+Has the EVENT TARGET REGION (or a REGION where the EVENT TARGET IS LOCATED) NOT managed to CONSTRUCT the maximum level of the key-specified BUILDING CHAIN? Multiple use operator: AND.	GEN_CND_REGION_NOT_MAXED_BUILDING_CHAIN
+Is the EVENT TARGET REGION (or a REGION where the EVENT TARGET IS LOCATED) NOT currently experiencing a REBELLION?	GEN_CND_REGION_NOT_REBELLION
+Is the EVENT TARGET REGION (or a REGION where the EVENT TARGET IS LOCATED) NOT currently RECRUITING any UNITS?	GEN_CND_REGION_NOT_RECRUITING
+Does the EVENT TARGET REGION (or a REGION where the EVENT TARGET IS LOCATED) NOT belong to the key-specified RELIGION?	GEN_CND_REGION_NOT_RELIGION
+Does the EVENT TARGET REGION (or a REGION where the EVENT TARGET IS LOCATED) NOT belong to the SAME RELIGION as the player faction?	GEN_CND_REGION_NOT_SAME_RELIGION
+Does the EVENT TARGET REGION (or a REGION where the EVENT TARGET IS LOCATED) NOT possess an instance of the key-specified SLOT TYPE. Multiple use operator: AND.	GEN_CND_REGION_NOT_SLOT_TYPE
+Is the EVENT TARGET REGION (or a REGION where the EVENT TARGET IS LOCATED) currently experiencing a REBELLION?	GEN_CND_REGION_REBELLION
+Is the EVENT TARGET REGION (or a REGION where the EVENT TARGET IS LOCATED)  currently RECRUITING any UNITS?	GEN_CND_REGION_RECRUITING
+Does the EVENT TARGET REGION (or a REGION where the EVENT TARGET IS LOCATED) belong to the key-specified RELIGION?	GEN_CND_REGION_RELIGION
+Does the EVENT TARGET REGION (or a REGION where the EVENT TARGET IS LOCATED) belong to the SAME RELIGION as the player faction?	GEN_CND_REGION_SAME_RELIGION
+Does the EVENT TARGET REGION (or a REGION where the EVENT TARGET IS LOCATED) possess an instance of the key-specified SLOT TYPE. Multiple use operator: AND.	GEN_CND_REGION_SLOT_TYPE
+Is the EVENT TARGET TECHNOLOGY currently RESEARCHABLE?	GEN_CND_RESEARCHABLE
+Has the EVENT TARGET TECHNOLOGY been RESEARCHED?	GEN_CND_RESEARCHED
+Is the EVENT TARGET TECHNOLOGY currently being RESEARCHED?	GEN_CND_RESEARCHING
+Specify that a event targets the owners faction	GEN_CND_SELF
+[OBSOLETE] Does the EVENT TARGET FACTION (or the FACTION that OWNS the EVENT TARGET) currently rule the shogunate?	GEN_CND_SHOGUN
+[OBSOLETE?] Is the EVENT TARGET SLOT of the key-specified SLOT TYPE?	GEN_CND_SLOT_TYPE
+Is the EVENT TARGET MILITARY FORCE currently in the key-specified STANCE?	GEN_CND_STANCE
+Does the event target character / region / settlement / military_force / faction belong to the key-specified subculture?	GEN_CND_SUBCULTURE
+Does the EVENT TARGET FACTION (or the FACTION that OWNS the EVENT TARGET) currently have an ARMY in one of the player faction's REGIONS?	GEN_CND_TARGET_ARMY_IN_ANY_REGION
+Does the EVENT TARGET FACTION (or the FACTION that OWNS the EVENT TARGET) currently have an ARMY in the palyer faction's HOME REGION or one of its NEIGHBOURING REGIONS?	GEN_CND_TARGET_ARMY_NEAR_ORIGINAL_HOME_REGION
+The key of the event target faction we're looking for. (Multiple use operator OR)	GEN_CND_TARGET_FACTION_SUBCULTURE
+The key of the targeted technology	GEN_CND_TECHNOLOGY
+Is the EVENT TARGET TECHNOLOGY a CIVIL TECHNOLOGY?	GEN_CND_TECHNOLOGY_CIVIL
+Is the EVENT TARGET TECHNOLOGY an ENGINEERING TECHNOLOGY?	GEN_CND_TECHNOLOGY_ENGINEERING
+Is the EVENT TARGET TECHNOLOGY a MILITARY TECHNOLOGY?	GEN_CND_TECHNOLOGY_MILITARY
+Is the EVENT TARGET TECHNOLOGY NOT a CIVIL TECHNOLOGY?	GEN_CND_TECHNOLOGY_NOT_CIVIL
+Is the EVENT TARGET TECHNOLOGY NOT an ENGINEERING TECHNOLOGY?	GEN_CND_TECHNOLOGY_NOT_ENGINEERING
+Is the EVENT TARGET TECHNOLOGY NOT a MILITARY TECHNOLOGY?	GEN_CND_TECHNOLOGY_NOT_MILITARY
+Is the EVENT TARGET FACTION (or the FACTION that OWNS the EVENT TARGET) TRADING with the player faction?	GEN_CND_TRADE
+Is trade available between the target faction and this faction	GEN_CND_TRADE_AVAILABLE
+Is trade unavailable between the target faction and this faction	GEN_CND_TRADE_NOT_AVAILABLE
+Can the EVENT TARGET FACTION (or the FACTION that OWNS the EVENT TARGET) be seen by the player faction?	GEN_CND_VISIBLE
+Is the EVENT TARGET FACTION (or the FACTION that OWNS the EVENT TARGET) AT WAR with the player faction?	GEN_CND_WAR
+[OBSOLETE] Is the EVENT TARGET FACTION (or the FACTION that OWNS the EVENT TARGET) AT WAR with the Shogunate?	GEN_CND_WAR_SHOGUN
+Is the EVENT TARGET FACTION (or the FACTION that OWNS the EVENT TARGET) AT WAR with an ALLY of the player faction?	GEN_CND_WAR_WITH_ALLY
+Is the EVENT TARGET FACTION (or the FACTION that OWNS the EVENT TARGET) AT WAR with an ENEMY of the player faction?	GEN_CND_WAR_WITH_ENEMY
+Specifies that the EVENT TARGET must be a CHARACTER. (May not be used in conjunction with other GEN_TARGET OPTIONS. All EVENTS must have a GEN_TARGET OPTION.)	GEN_TARGET_CHARACTER
+Specifies that the EVENT TARGET must be a FACTION. (May not be used in conjunction with other GEN_TARGET OPTIONS. All EVENTS must have a GEN_TARGET OPTION.)	GEN_TARGET_FACTION
+Specifies that the EVENT TARGET must be a MILITARY FORCE. (May not be used in conjunction with other GEN_TARGET OPTIONS. All EVENTS must have a GEN_TARGET OPTION.)	GEN_TARGET_MILITARY_FORCE
+Specifies that the EVENT TARGET is defined by campaign model context	GEN_TARGET_MODEL
+Specifies that there is NO EVENT TARGET. (May not be used in conjunction with other GEN_TARGET OPTIONS. All EVENTS must have a GEN_TARGET OPTION.)	GEN_TARGET_NONE
+Specifies that the EVENT TARGET is INHERITED from the PARENT EVENT. This is only applicable to FOLLOWUP EVENTS. (May not be used in conjunction with other GEN_TARGET OPTIONS. All EVENTS must have a GEN_TARGET OPTION.)	GEN_TARGET_PARENT
+Specifies that the EVENT TARGET comes from a political event (CAN ONLY BE USED WITH POLITICAL EVENT GENERATED EVENTS)	GEN_TARGET_POLITICAL_EVENT
+Specifies that the EVENT TARGET must be an actor in a political event (CAN ONLY BE USED WITH POLITICAL EVENT GENERATED EVENTS)	GEN_TARGET_POLITICAL_EVENT_ACTOR
+Specifies that the EVENT TARGET must be a target in a political event (CAN ONLY BE USED WITH POLITICAL EVENT GENERATED EVENTS)	GEN_TARGET_POLITICAL_EVENT_TARGET
+Specifies that the EVENT TARGET must be a REGION. (May not be used in conjunction with other GEN_TARGET OPTIONS. All EVENTS must have a GEN_TARGET OPTION.)	GEN_TARGET_REGION
+Specifies that the EVENT TARGET must be a SETTLEMENT. (May not be used in conjunction with other GEN_TARGET OPTIONS. All EVENTS must have a GEN_TARGET OPTION.)	GEN_TARGET_SETTLEMENT
+Specifies that the EVENT TARGET must be a SLOT. (May not be used in conjunction with other GEN_TARGET OPTIONS. All EVENTS must have a GEN_TARGET OPTION.)	GEN_TARGET_SLOT
+Specifies that the EVENT TARGET must be a TECHNOLOGY. (May not be used in conjunction with other GEN_TARGET OPTIONS. All EVENTS must have a GEN_TARGET OPTION.)	GEN_TARGET_TECHNOLOGY
+Specifies the relative chance that an EVENT that satisfies its EVENT OPTIONS will be GENERATED. A WEIGHTING, NOT an actual PERCENTAGE.	VAR_CHANCE
+Specifies the MAXIMUM number of turns before a FOLLOWUP EVENT will be triggered after its PARENT EVENT has fired. I *think* this is a required parameter.	VAR_DELAY_MAX
+Specifies the MINIMUM number of turns before a FOLLOWUP EVENT will be triggered after its PARENT EVENT has fired. I *think* this is a required parameter.	VAR_DELAY_MIN
+Specifies the PERCENTAGE CHANCE of GENERATING one of the associated FOLLOWUP EVENTS.	VAR_FOLLOWUP_CHANCE
+Specifies the MAXIMUM number of turns which may be RANDOMLY ADDED to a MISSION turn allowance.	VAR_MISSION_LENGTH_ADDITIONAL_MAX
+Specifies the MINIMUM number of turns which must be RANDOMLY ADDED to a MISSION turn allowance.	VAR_MISSION_LENGTH_ADDITIONAL_MIN
+Specifies a MISSION length is infinite.	VAR_MISSION_LENGTH_INFINITE
+Specifies a MISSION's MAXIMUM turn allowance.	VAR_MISSION_LENGTH_MAX
+Specifies a MISSION's MINIMUM turn allowance.	VAR_MISSION_LENGTH_MIN
+Multiplies the final MISSION turn allowance for EASY CAMPAIGNS. MUST have a decimal (1.0, 1.5, 2.0, etc).	VAR_MISSION_LENGTH_MOD_EASY
+Multiplies the final MISSION turn allowance for HARD CAMPAIGNS. MUST have a decimal (1.0, 1.5, 2.0, etc).	VAR_MISSION_LENGTH_MOD_HARD
+Multiplies the final MISSION turn allowance for NORMAL CAMPAIGNS. MUST have a decimal (1.0, 1.5, 2.0, etc).	VAR_MISSION_LENGTH_MOD_NORMAL
+Multiplies the final MISSION turn allowance for VERY HARD and LEGENDARY CAMPAIGNS. MUST have a decimal (1.0, 1.5, 2.0, etc).	VAR_MISSION_LENGTH_MOD_VERY_HARD
+Makes the mission objective additive (additional to the current total)	VAR_OBJECTIVE_ADDITIVE
+Specify that a CHARACTER-RELATED MISSION OBJECTIVE must be a key-specified AGENT.	VAR_OBJECTIVE_AGENT
+Specify that a CHARACTER-RELATED MISSION OBJECTIVE must be a key-specified AGENT SUBTYPE.	VAR_OBJECTIVE_AGENT_SUBTYPE
+The amount of the variable that the mission objective requires, expressed as a float value.	VAR_OBJECTIVE_AMOUNT_FLOAT
+The amount of the variable that the mission objective requires, expressed as an integer value.	VAR_OBJECTIVE_AMOUNT_INT
+Specify that an FORCE-RELATED MISSION OBJECTIVE must be an ARMY.	VAR_OBJECTIVE_ARMIES_ONLY
+Specify that a BUILDING-RELATED MISSION OBJECTIVE must be a key-specified BUILDING CHAIN.	VAR_OBJECTIVE_BUILDING_CHAIN
+Specify that a BUILDING-RELATED MISSION OBJECTIVE must be a key-specified BUILDING LEVEL.	VAR_OBJECTIVE_BUILDING_LEVEL
+The id of the character	VAR_OBJECTIVE_CHARACTER_ID
+Specify that the MISSION OBJECTIVE associated with the mission will involve acting against an ENEMY of the TARGET FACTION.	VAR_OBJECTIVE_ENEMY_OF_FACTION
+Specify that a FORCE-RELATED MISSION OBJECTIVE must be invading the PLAYER FACTION's REGIONS.	VAR_OBJECTIVE_INVADING_ONLY
+Specify that any MISSION OBJECTIVE may be complete by either co op partner	VAR_OBJECTIVE_IS_CO_OP_COMPLETEABLE
+Specify that an FORCE-RELATED MISSION OBJECTIVE must be an NAVY.	VAR_OBJECTIVE_NAVIES_ONLY
+The number of agents the mission objective requires	VAR_OBJECTIVE_NUM_AGENTS
+The number of armies the mission objective requires	VAR_OBJECTIVE_NUM_ARMIES
+The number of characters to complete the objective	VAR_OBJECTIVE_NUM_CHARACTERS
+The number of provinces	VAR_OBJECTIVE_NUM_PROVINCES
+The number of regions the mission objective requires	VAR_OBJECTIVE_NUM_REGIONS
+The number of settlements the mission objective requires	VAR_OBJECTIVE_NUM_SETTLEMENTS
+The number of turns to complete the objective	VAR_OBJECTIVE_NUM_TURNS
+The number of units the mission objective requires	VAR_OBJECTIVE_NUM_UNITS
+The province that is an objective of this event	VAR_OBJECTIVE_PROVINCE
+The province initiative ths is an objective of this event	VAR_OBJECTIVE_PROVINCE_INITIATIVE
+Specify that a RELIGION-RELATED MISSION OBJECTIVE must be the specified percentage of the PLAYER FACTION'S RELIGION.	VAR_OBJECTIVE_RELIGION_PCT
+Specify that a FORCE-RELATED MISSION OBJECTIVE must conclude in a VICTORY.	VAR_OBJECTIVE_REQUIRES_VICTORY
+The resources type of the resource related objective	VAR_OBJECTIVE_RESOURCE_TYPE
+The ritual that is an objective of this event	VAR_OBJECTIVE_RITUAL
+The ritual chain that is an objective of this event	VAR_OBJECTIVE_RITUAL_CHAIN
+Specify that a FACTION-RELATED MISSION OBJECTIVE must involve a key-specified SUBCULTURE	VAR_OBJECTIVE_SUBCULTURE
+Specify target technologies. Technology record keys, can be multiple seperated by a ;	VAR_OBJECTIVE_TECHNOLOGY
+Specify that a TECHNOLOGY-RELATED MISSION OBJECTIVE must involve research of a TECHNOLOGY from the key-specified CATEGORY.	VAR_OBJECTIVE_TECH_CATEGORY
+Specify that a RECRUITMENT-RELATED MISSION OBJECTIVE must involve recruitment of a key-specified UNIT.	VAR_OBJECTIVE_UNIT
+Specify that a RECRUITMENT-RELATED MISSION OBJECTIVE must involve recruitment of a UNIT from a key-specified CASTE.	VAR_OBJECTIVE_UNIT_CASTE
+Specify that a RECRUITMENT-RELATED MISSION OBJECTIVE must involve recruitment of a UNIT from a key-specified CATEGORY.	VAR_OBJECTIVE_UNIT_CATEGORY
+Specify that a RECRUITMENT-RELATED MISSION OBJECTIVE must involve recruitment of a UNIT from a key-specified CLASS.	VAR_OBJECTIVE_UNIT_CLASS
+placeholder	default

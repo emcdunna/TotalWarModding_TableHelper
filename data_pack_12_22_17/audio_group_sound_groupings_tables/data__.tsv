@@ -1,0 +1,4 @@
+audio_group_sound_groupings_tables
+1
+unknown0	unknown1	unknown2	unknown3	unknown4	unknown5	unknown6
+Battle_Group_Movement_Sync_Play	Battle_Group_Movement_Sync_Stop	32	wh_grp_movement_sync	Entity_Steps_Per_Second	Battle_Group_Movement_Steps_Per_Second	0.4

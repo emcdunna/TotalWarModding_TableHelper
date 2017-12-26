@@ -1,0 +1,19 @@
+campaigns_campaign_variables_junctions_tables
+2
+variable_key	campaign_name	value	optional_difficulty_level	unknown4
+display_vortex_enabled	main_warhammer	1		
+display_vortex_enabled	wh2_main_great_vortex	1		
+display_vortex_position_x	main_warhammer	147.5		
+display_vortex_position_z	main_warhammer	254		
+province_development_threshold_calc_points_multiplier	main_warhammer	125	-2	
+province_development_threshold_calc_points_multiplier	main_warhammer	125	-3	
+province_development_threshold_calc_points_multiplier	wh2_main_great_vortex	125	-2	
+province_development_threshold_calc_points_multiplier	wh2_main_great_vortex	125	-3	
+rebel_army_additional_units_per_turn_size	main_warhammer	6	-1	
+rebel_army_additional_units_per_turn_size	main_warhammer	6	-2	
+rebel_army_additional_units_per_turn_size	main_warhammer	6	-3	
+rebel_army_additional_units_per_turn_size	main_warhammer	2	1	
+rebel_initial_army_size	main_warhammer	8	-1	
+rebel_initial_army_size	main_warhammer	8	-2	
+rebel_initial_army_size	main_warhammer	8	-3	
+rebel_initial_army_size	main_warhammer	4	1	

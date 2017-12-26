@@ -1,0 +1,72 @@
+campaign_vfx_lookups_tables
+0
+unknown	unknown2	unknown3	key	unknown5	vfx_description	vfx_event
+			103	0	2xtime_navy	navy_double_time
+			104	0	attrition_navy	navy_generic_attrition
+			109	0	level_up	navy_level_up
+			111	0	raid_navy	navy_raiding
+			1119882155	0	settlement_produces_ritual_currency	settlement_produces_ritual_currency
+			113	0	select_navy	navy_selection
+			1154020156	0	settlement_ruins_searchable	settlement_ruins_searchable
+			122	0	navy_war_coordination_target	navy_war_coordination_target
+			126	0	under_attack	settlement_besieged
+			128	0	under_attack	settlement_blockaded
+			13	0	debuff_army	agent_debuffed
+	wh2_main_sc_lzd_lizardmen		1471021812	0	settlement_produces_ritual_currency_lzd	settlement_produces_ritual_currency
+			155	0	settle_devpoint	settlement_development_point_available
+			1567021314	0	look_at_tutorial	ping_look_at_vfx
+			160	0	disease	settlement_disease
+			17	0	level_up	agent_level_up
+			171	0	looted	settlement_looted
+			173	0	raze	settlement_raze
+			183	0	settlement_war_coordination_target	settlement_war_coordination_target
+			1889816407	0	move_to_tutorial	ping_move_to_vfx
+			196	0	settle_select	settlement_selection
+	wh_main_sc_brt_bretonnia		1975681762	0	blessing_of_the_lady	scripted_effect
+			20	0	select_army	agent_selection
+			203	0	edict_money	settlement_province_edict_money
+	wh2_main_sc_skv_skaven		204610815	0	skv_faction	scripted_effect
+			21	0	ambush	army_ambushing
+			212	0	select_tutorial	tutorial_marker
+			218	0	patrol_navy	navy_patrol
+			228	0	edict_army	settlement_province_edict_military
+			23	0	attacking	army_besieging
+			231	0	edict_population	settlement_province_edict_population
+			246	0	destruction_fire	settlement_abandoned
+			247	0	destruction_fire_res	settlement_abandoned_residual_fire
+			256	0	destruction_smoke_res	settlement_abandoned_residual_smoke
+			284	0	zone_of_control	zone_of_control
+			293	0	movement_extents	movement_extents
+wizard			303	0	agent_deployed	agent_deployed
+			321	0	army_waaagh_army	army_waaagh_army
+			33	0	defence_army	army_border_defence
+			331	0	army_low_morale	army_low_morale
+	wh2_main_sc_def_dark_elves		331234251	0	settlement_produces_ritual_currency_def	settlement_produces_ritual_currency
+wizard			350	0	agent_deployed_foreign_region	agent_deployed_foreign_region
+			357	0	agent_deployed_generic	agent_deployed
+			365	0	agent_deployed_foreign_region_generic	agent_deployed_foreign_region
+			371	0	army_vampire_recruitement	army_vampire_recruitement
+			375	0	advice_character_highlight	advice_character_marker
+			38	0	buff_army	army_buffed
+			381	0	advice_settlement_highlight	advice_settlement_marker
+			387	0	army_war_coordination_target_generic	army_war_coordination_target
+			388	0	post_battle_winner	post_battle_winner
+			389	0	post_battle_looser	post_battle_loser
+		wh_dlc03_bst_mini_khazrak_herd_brayherd	393	0	army_war_coordination_target	army_war_coordination_target
+		wh_dlc03_bst_beastmen_brayherd	400	0	army_war_coordination_target	army_war_coordination_target
+			44	0	debuff_army	army_debuffed
+			5	0	buff_army	agent_buffed
+			50	0	desertion	army_desertion
+			52	0	disease	army_disease
+			527765176	0	select_tutorial	ping_select_vfx
+			53	0	2xtime_army	army_forced_march
+			58	0	attrition_army	army_generic_attrition
+			64	0	level_up	army_level_up
+			66	0	raid_army	army_raiding
+			67	0	sabotage	army_sabotage
+			70	0	select_army	army_selection
+		wh_main_grn_greenskins_waaagh	76	0	army_war_coordination_target	army_war_coordination_target
+			84	0	attacking	navy_blockading
+			87	0	buff_navy	navy_buffed
+			93	0	debuff_navy	navy_debuffed
+	wh2_main_sc_hef_high_elves		966027295	0	settlement_produces_ritual_currency_hef	settlement_produces_ritual_currency

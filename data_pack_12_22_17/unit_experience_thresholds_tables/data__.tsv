@@ -1,0 +1,21 @@
+unit_experience_thresholds_tables
+0
+key	value
+land_level_01	1000
+land_level_02	1600
+land_level_03	2400
+land_level_04	3600
+land_level_05	5000
+land_level_06	7000
+land_level_07	10600
+land_level_08	15500
+land_level_09	22000
+naval_level_01	500
+naval_level_02	1000
+naval_level_03	1600
+naval_level_04	2400
+naval_level_05	3400
+naval_level_06	4600
+naval_level_07	6600
+naval_level_08	9800
+naval_level_09	15000

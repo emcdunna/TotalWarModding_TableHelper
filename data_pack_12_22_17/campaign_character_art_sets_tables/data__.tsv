@@ -1,0 +1,344 @@
+campaign_character_art_sets_tables
+6
+agent_type	art_set_id	culture	subculture	faction	is_custom	is_male	group	unknown8
+general	wh2_main_art_set_def_black_ark	wh2_main_def_dark_elves			False	True	wh2_main_def_black_ark	1
+dignitary	wh2_main_art_set_def_death_hag_01	wh2_main_def_dark_elves			False	False	wh2_main_def_death_hag	1
+dignitary	wh2_main_art_set_def_death_hag_02	wh2_main_def_dark_elves			False	False	wh2_main_def_death_hag	1
+dignitary	wh2_main_art_set_def_death_hag_03	wh2_main_def_dark_elves			False	False	wh2_main_def_death_hag	1
+general	wh2_main_art_set_def_dreadlord_01				False	True	wh2_main_def_dreadlord	1
+general	wh2_main_art_set_def_dreadlord_02				False	True	wh2_main_def_dreadlord	1
+general	wh2_main_art_set_def_dreadlord_03				False	True	wh2_main_def_dreadlord	1
+general	wh2_main_art_set_def_dreadlord_fem_01				False	True	wh2_main_def_dreadlord_fem	1
+general	wh2_main_art_set_def_dreadlord_fem_02				False	True	wh2_main_def_dreadlord_fem	1
+general	wh2_main_art_set_def_dreadlord_fem_03				False	True	wh2_main_def_dreadlord_fem	1
+spy	wh2_main_art_set_def_khainite_assassin_01	wh2_main_def_dark_elves			False	True	wh2_main_def_khainite_assassin	1
+spy	wh2_main_art_set_def_khainite_assassin_02	wh2_main_def_dark_elves			False	True	wh2_main_def_khainite_assassin	1
+spy	wh2_main_art_set_def_khainite_assassin_03	wh2_main_def_dark_elves			False	True	wh2_main_def_khainite_assassin	1
+spy	wh2_main_art_set_def_khainite_assassin_04	wh2_main_def_dark_elves			False	True	wh2_main_def_khainite_assassin	1
+general	wh2_main_art_set_def_malekith	wh2_main_def_dark_elves			False	True	wh2_main_def_malekith	1
+general	wh2_main_art_set_def_morathi	wh2_main_def_dark_elves			False	True	wh2_main_def_morathi	1
+wizard	wh2_main_art_set_def_sorceress_01	wh2_main_def_dark_elves			False	False		1
+wizard	wh2_main_art_set_def_sorceress_02	wh2_main_def_dark_elves			False	False		1
+wizard	wh2_main_art_set_def_sorceress_03	wh2_main_def_dark_elves			False	False		1
+wizard	wh2_main_art_set_def_sorceress_04	wh2_main_def_dark_elves			False	False		1
+runesmith	wh2_main_art_set_hef_loremaster_of_hoeth_01	wh2_main_hef_high_elves			False	True	wh2_main_hef_loremaster_of_hoeth	1
+runesmith	wh2_main_art_set_hef_loremaster_of_hoeth_02	wh2_main_hef_high_elves			False	True	wh2_main_hef_loremaster_of_hoeth	1
+runesmith	wh2_main_art_set_hef_loremaster_of_hoeth_03	wh2_main_hef_high_elves			False	True	wh2_main_hef_loremaster_of_hoeth	1
+wizard	wh2_main_art_set_hef_mage_01	wh2_main_hef_high_elves			False	False		1
+wizard	wh2_main_art_set_hef_mage_02	wh2_main_hef_high_elves			False	False		1
+wizard	wh2_main_art_set_hef_mage_03	wh2_main_hef_high_elves			False	False		1
+champion	wh2_main_art_set_hef_noble_01	wh2_main_hef_high_elves			False	True	wh2_main_hef_noble	1
+champion	wh2_main_art_set_hef_noble_02	wh2_main_hef_high_elves			False	True	wh2_main_hef_noble	1
+champion	wh2_main_art_set_hef_noble_03	wh2_main_hef_high_elves			False	True	wh2_main_hef_noble	1
+general	wh2_main_art_set_hef_prince_01				False	True	wh2_main_hef_prince	1
+general	wh2_main_art_set_hef_prince_02				False	True	wh2_main_hef_prince	1
+general	wh2_main_art_set_hef_prince_03				False	True	wh2_main_hef_prince	1
+general	wh2_main_art_set_hef_prince_04				False	True	wh2_main_hef_prince	1
+general	wh2_main_art_set_hef_prince_alastar				False	True	wh2_main_hef_prince_alastar	1
+general	wh2_main_art_set_hef_princess_01				False	True	wh2_main_hef_princess	1
+general	wh2_main_art_set_hef_princess_02				False	True	wh2_main_hef_princess	1
+general	wh2_main_art_set_hef_princess_03				False	True	wh2_main_hef_princess	1
+general	wh2_main_art_set_hef_teclis	wh2_main_hef_high_elves			False	True	wh2_main_hef_teclis	1
+general	wh2_main_art_set_hef_tyrion	wh2_main_hef_high_elves			False	True	wh2_main_hef_tyrion	1
+general	wh2_main_art_set_lzd_kroq_gar	wh2_main_lzd_lizardmen			False	True	wh2_main_lzd_kroq_gar	1
+general	wh2_main_art_set_lzd_lord_mazdamundi	wh2_main_lzd_lizardmen			False	True	wh2_main_lzd_lord_mazdamundi	1
+general	wh2_main_art_set_lzd_saurus_old_blood_01				False	True	wh2_main_lzd_saurus_old_blood	1
+general	wh2_main_art_set_lzd_saurus_old_blood_02				False	True	wh2_main_lzd_saurus_old_blood	1
+general	wh2_main_art_set_lzd_saurus_old_blood_03				False	True	wh2_main_lzd_saurus_old_blood	1
+champion	wh2_main_art_set_lzd_saurus_scar_veteran_01	wh2_main_lzd_lizardmen			False	True	wh2_main_lzd_saurus_scar_veteran	1
+champion	wh2_main_art_set_lzd_saurus_scar_veteran_02	wh2_main_lzd_lizardmen			False	True	wh2_main_lzd_saurus_scar_veteran	1
+champion	wh2_main_art_set_lzd_saurus_scar_veteran_03	wh2_main_lzd_lizardmen			False	True	wh2_main_lzd_saurus_scar_veteran	1
+spy	wh2_main_art_set_lzd_skink_chief_01	wh2_main_lzd_lizardmen			False	True	wh2_main_lzd_skink_chief	1
+spy	wh2_main_art_set_lzd_skink_chief_02	wh2_main_lzd_lizardmen			False	True	wh2_main_lzd_skink_chief	1
+spy	wh2_main_art_set_lzd_skink_chief_03	wh2_main_lzd_lizardmen			False	True	wh2_main_lzd_skink_chief	1
+wizard	wh2_main_art_set_lzd_skink_priest_01	wh2_main_lzd_lizardmen			False	True		1
+wizard	wh2_main_art_set_lzd_skink_priest_02	wh2_main_lzd_lizardmen			False	True		1
+wizard	wh2_main_art_set_lzd_skink_priest_03	wh2_main_lzd_lizardmen			False	True		1
+general	wh2_main_art_set_lzd_slann_mage_priest_01	wh2_main_lzd_lizardmen			False	True	wh2_main_lzd_slann_mage_priest	1
+general	wh2_main_art_set_lzd_slann_mage_priest_02	wh2_main_lzd_lizardmen			False	True	wh2_main_lzd_slann_mage_priest	1
+general	wh2_main_art_set_lzd_slann_mage_priest_03	wh2_main_lzd_lizardmen			False	True	wh2_main_lzd_slann_mage_priest	1
+general	wh2_main_art_set_lzd_slann_mage_priest_04	wh2_main_lzd_lizardmen			False	True	wh2_main_lzd_slann_mage_priest	1
+general	wh2_main_art_set_lzd_slann_mage_priest_05	wh2_main_lzd_lizardmen			False	True	wh2_main_lzd_slann_mage_priest	1
+spy	wh2_main_art_set_skv_assassin_01	wh2_main_skv_skaven			False	True	wh2_main_skv_assassin	1
+spy	wh2_main_art_set_skv_assassin_02	wh2_main_skv_skaven			False	True	wh2_main_skv_assassin	1
+spy	wh2_main_art_set_skv_assassin_03	wh2_main_skv_skaven			False	True	wh2_main_skv_assassin	1
+general	wh2_main_art_set_skv_grey_seer_plague_01	wh2_main_skv_skaven			False	True	wh2_main_skv_grey_seer_plague	1
+general	wh2_main_art_set_skv_grey_seer_plague_02	wh2_main_skv_skaven			False	True	wh2_main_skv_grey_seer_plague	1
+general	wh2_main_art_set_skv_grey_seer_plague_03	wh2_main_skv_skaven			False	True	wh2_main_skv_grey_seer_plague	1
+general	wh2_main_art_set_skv_grey_seer_plague_04	wh2_main_skv_skaven			False	True	wh2_main_skv_grey_seer_plague	1
+general	wh2_main_art_set_skv_grey_seer_ruin_01	wh2_main_skv_skaven			False	True	wh2_main_skv_grey_seer_ruin	1
+general	wh2_main_art_set_skv_grey_seer_ruin_02	wh2_main_skv_skaven			False	True	wh2_main_skv_grey_seer_ruin	1
+general	wh2_main_art_set_skv_grey_seer_ruin_03	wh2_main_skv_skaven			False	True	wh2_main_skv_grey_seer_ruin	1
+general	wh2_main_art_set_skv_grey_seer_ruin_04	wh2_main_skv_skaven			False	True	wh2_main_skv_grey_seer_ruin	1
+general	wh2_main_art_set_skv_lord_skrolk	wh2_main_skv_skaven			False	True	wh2_main_skv_lord_skrolk	1
+wizard	wh2_main_art_set_skv_plague_priest_01	wh2_main_skv_skaven			False	True		1
+wizard	wh2_main_art_set_skv_plague_priest_02	wh2_main_skv_skaven			False	True		1
+wizard	wh2_main_art_set_skv_plague_priest_03	wh2_main_skv_skaven			False	True		1
+general	wh2_main_art_set_skv_queek_headtaker	wh2_main_skv_skaven			False	True	wh2_main_skv_queek_headtaker	1
+engineer	wh2_main_art_set_skv_warlock_engineer_01	wh2_main_skv_skaven			False	True		1
+engineer	wh2_main_art_set_skv_warlock_engineer_02	wh2_main_skv_skaven			False	True		1
+engineer	wh2_main_art_set_skv_warlock_engineer_03	wh2_main_skv_skaven			False	True		1
+general	wh2_main_art_set_skv_warlord_01				False	True	wh2_main_skv_warlord	1
+general	wh2_main_art_set_skv_warlord_02				False	True	wh2_main_skv_warlord	1
+general	wh2_main_art_set_skv_warlord_03				False	True	wh2_main_skv_warlord	1
+general	wh_dlc03_art_set_bst_beastlord_01				False	True	dlc03_bst_beastlord	1
+general	wh_dlc03_art_set_bst_beastlord_02				False	True	dlc03_bst_beastlord	1
+general	wh_dlc03_art_set_bst_beastlord_03				False	True	dlc03_bst_beastlord	1
+general	wh_dlc03_art_set_bst_beastlord_04				False	True	dlc03_bst_beastlord	1
+wizard	wh_dlc03_art_set_bst_bray_shaman_01	wh_dlc03_bst_beastmen			False	True		1
+wizard	wh_dlc03_art_set_bst_bray_shaman_02	wh_dlc03_bst_beastmen			False	True		1
+wizard	wh_dlc03_art_set_bst_bray_shaman_03	wh_dlc03_bst_beastmen			False	True		1
+wizard	wh_dlc03_art_set_bst_bray_shaman_04	wh_dlc03_bst_beastmen			False	True		1
+champion	wh_dlc03_art_set_bst_gorebull_01	wh_dlc03_bst_beastmen			False	True	dlc03_bst_gorebull	0.7
+champion	wh_dlc03_art_set_bst_gorebull_02	wh_dlc03_bst_beastmen			False	True	dlc03_bst_gorebull	0.7
+champion	wh_dlc03_art_set_bst_gorebull_03	wh_dlc03_bst_beastmen			False	True	dlc03_bst_gorebull	0.7
+general	wh_dlc03_art_set_bst_khazrak	wh_dlc03_bst_beastmen			False	True	dlc03_bst_khazrak	1
+general	wh_dlc03_art_set_bst_malagor	wh_dlc03_bst_beastmen			False	True	dlc03_bst_malagor	1
+wizard	wh_dlc03_art_set_emp_amber_wizard_01		wh_main_sc_emp_empire		False	True	dlc03_emp_amber_wizard	1
+wizard	wh_dlc03_art_set_emp_amber_wizard_02		wh_main_sc_emp_empire		False	True	dlc03_emp_amber_wizard	1
+general	wh_dlc03_art_set_emp_boris_todbringer				False	True	dlc03_emp_boris_todbringer	1
+general	wh_dlc03_art_set_emp_boris_todbringer_visor				False	True	dlc03_emp_boris_todbringer	1
+general	wh_dlc04_art_set_emp_arch_lector_01	wh_main_emp_empire			False	True	dlc04_emp_arch_lector	1
+general	wh_dlc04_art_set_emp_arch_lector_02	wh_main_emp_empire			False	True	dlc04_emp_arch_lector	1
+general	wh_dlc04_art_set_emp_arch_lector_03	wh_main_emp_empire			False	True	dlc04_emp_arch_lector	1
+general	wh_dlc04_art_set_emp_arch_lector_04	wh_main_emp_empire			False	True	dlc04_emp_arch_lector	1
+general	wh_dlc04_art_set_emp_volkmar	wh_main_emp_empire			False	True	dlc04_emp_volkmar	1
+general	wh_dlc04_art_set_grn_vlad_von_carstein	wh_main_vmp_vampire_counts			False	True	dlc04_vmp_vlad_con_carstein	1
+general	wh_dlc04_art_set_vmp_helman_ghorst	wh_main_vmp_vampire_counts			False	True	dlc04_vmp_helman_ghorst	1
+general	wh_dlc04_art_set_vmp_strigoi_ghoul_king_01				False	True	dlc04_vmp_strigoi_ghoul_king	1
+general	wh_dlc04_art_set_vmp_strigoi_ghoul_king_02				False	True	dlc04_vmp_strigoi_ghoul_king	1
+general	wh_dlc04_art_set_vmp_strigoi_ghoul_king_03				False	True	dlc04_vmp_strigoi_ghoul_king	1
+general	wh_dlc05_art_set_bst_morghur	wh_dlc03_bst_beastmen			False	True	dlc05_bst_morghur	1
+wizard	wh_dlc05_art_set_emp_grey_wizard_01		wh_main_sc_emp_empire		False	True	dlc05_emp_grey_wizard	1
+wizard	wh_dlc05_art_set_emp_grey_wizard_02		wh_main_sc_emp_empire		False	True	dlc05_emp_grey_wizard	1
+wizard	wh_dlc05_art_set_emp_jade_wizard_01		wh_main_sc_emp_empire		False	True	dlc05_emp_jade_wizard	1
+wizard	wh_dlc05_art_set_emp_jade_wizard_02		wh_main_sc_emp_empire		False	True	dlc05_emp_jade_wizard	1
+general	wh_dlc05_art_set_vmp_red_duke_01	wh_main_vmp_vampire_counts			False	True	wh_dlc05_vmp_red_duke	1
+general	wh_dlc05_art_set_wef_ancient_treeman				False	True	dlc05_wef_ancient_treeman	0.5799999
+general	wh_dlc05_art_set_wef_durthu	wh_dlc05_wef_wood_elves			True	True	dlc05_wef_durthu	0.5799999
+general	wh_dlc05_art_set_wef_glade_lord_01				False	True	dlc05_wef_glade_lord	1
+general	wh_dlc05_art_set_wef_glade_lord_02				False	True	dlc05_wef_glade_lord	1
+general	wh_dlc05_art_set_wef_glade_lord_03				False	True	dlc05_wef_glade_lord	1
+general	wh_dlc05_art_set_wef_glade_lord_04				False	True	dlc05_wef_glade_lord	1
+general	wh_dlc05_art_set_wef_glade_lord_05				False	True	dlc05_wef_glade_lord	1
+general	wh_dlc05_art_set_wef_glade_lord_fem_01				False	True	dlc05_wef_glade_lord_fem	1
+general	wh_dlc05_art_set_wef_glade_lord_fem_02				False	True	dlc05_wef_glade_lord_fem	1
+general	wh_dlc05_art_set_wef_glade_lord_fem_03				False	True	dlc05_wef_glade_lord_fem	1
+general	wh_dlc05_art_set_wef_glade_lord_fem_04				False	True	dlc05_wef_glade_lord_fem	1
+general	wh_dlc05_art_set_wef_glade_lord_fem_05				False	True	dlc05_wef_glade_lord_fem	1
+general	wh_dlc05_art_set_wef_orion	wh_dlc05_wef_wood_elves			True	True	dlc05_wef_orion	1
+wizard	wh_dlc05_art_set_wef_spellsinger_01	wh_dlc05_wef_wood_elves			False	False		1
+wizard	wh_dlc05_art_set_wef_spellsinger_02	wh_dlc05_wef_wood_elves			False	False		1
+wizard	wh_dlc05_art_set_wef_spellsinger_03	wh_dlc05_wef_wood_elves			False	False		1
+wizard	wh_dlc05_art_set_wef_spellsinger_04	wh_dlc05_wef_wood_elves			False	False		1
+wizard	wh_dlc05_art_set_wef_spellsinger_05	wh_dlc05_wef_wood_elves			False	False		1
+spy	wh_dlc05_art_set_wef_waystalker_01	wh_dlc05_wef_wood_elves			False	True	dlc05_wef_waystalker	1
+spy	wh_dlc05_art_set_wef_waystalker_02	wh_dlc05_wef_wood_elves			False	True	dlc05_wef_waystalker	1
+spy	wh_dlc05_art_set_wef_waystalker_03	wh_dlc05_wef_wood_elves			False	True	dlc05_wef_waystalker	1
+spy	wh_dlc05_art_set_wef_waystalker_04	wh_dlc05_wef_wood_elves			False	True	dlc05_wef_waystalker	1
+spy	wh_dlc05_art_set_wef_waystalker_05	wh_dlc05_wef_wood_elves			False	True	dlc05_wef_waystalker	1
+champion	wh_dlc05_wef_branchwraith	wh_dlc05_wef_wood_elves			False	True	wh_dlc05_wef_branchwraith	1
+general	wh_dlc06_art_set_dwf_belegar	wh_main_dwf_dwarfs			False	True	dlc06_dwf_belegar	1
+engineer	wh_dlc06_art_set_dwf_engineer_ghost_01	wh_main_dwf_dwarfs			True	True	dlc06_dwf_master_engineer_ghost	1
+general	wh_dlc06_art_set_dwf_runelord_01	wh_main_dwf_dwarfs			False	True	dlc06_dwf_runelord	1
+general	wh_dlc06_art_set_dwf_runelord_02	wh_main_dwf_dwarfs			False	True	dlc06_dwf_runelord	1
+general	wh_dlc06_art_set_dwf_runelord_03	wh_main_dwf_dwarfs			False	True	dlc06_dwf_runelord	1
+general	wh_dlc06_art_set_dwf_runelord_04	wh_main_dwf_dwarfs			False	True	dlc06_dwf_runelord	1
+runesmith	wh_dlc06_art_set_dwf_runesmith_ghost_01	wh_main_dwf_dwarfs			True	True	dlc06_dwf_runesmith_ghost	1
+champion	wh_dlc06_art_set_dwf_thane_ghost_01	wh_main_dwf_dwarfs			True	True	dlc06_dwf_thane_ghost_1	1
+champion	wh_dlc06_art_set_dwf_thane_ghost_02	wh_main_dwf_dwarfs			True	True	dlc06_dwf_thane_ghost_2	1
+general	wh_dlc06_art_set_grn_night_goblin_warboss_01				False	True	dlc06_grn_night_goblin_warboss	1
+general	wh_dlc06_art_set_grn_night_goblin_warboss_02				False	True	dlc06_grn_night_goblin_warboss	1
+general	wh_dlc06_art_set_grn_night_goblin_warboss_03				False	True	dlc06_grn_night_goblin_warboss	1
+general	wh_dlc06_art_set_grn_night_goblin_warboss_04				False	True	dlc06_grn_night_goblin_warboss	1
+general	wh_dlc06_art_set_grn_skarsnik	wh_main_grn_greenskins			False	True	dlc06_grn_skarsnik	1
+general	wh_dlc06_art_set_grn_wurrzag_da_green_prophet	wh_main_grn_greenskins			False	True	dlc06_grn_wurrzag_da_great_prophet	1
+general	wh_dlc07_art_set_brt_alberic	wh_main_brt_bretonnia			False	True	dlc07_brt_alberic	1
+general	wh_dlc07_art_set_brt_fay_enchantress	wh_main_brt_bretonnia			False	True	dlc07_brt_fay_enchantress	1
+champion	wh_dlc07_art_set_brt_green_knight	wh_main_brt_bretonnia			False	True	dlc07_brt_green_knight	1
+general	wh_dlc07_art_set_brt_prophetess_beasts_01	wh_main_brt_bretonnia			False	True	dlc07_brt_prophetess_beasts	1
+general	wh_dlc07_art_set_brt_prophetess_beasts_02	wh_main_brt_bretonnia			False	True	dlc07_brt_prophetess_beasts	1
+general	wh_dlc07_art_set_brt_prophetess_beasts_03	wh_main_brt_bretonnia			False	True	dlc07_brt_prophetess_beasts	1
+general	wh_dlc07_art_set_brt_prophetess_beasts_04	wh_main_brt_bretonnia			False	True	dlc07_brt_prophetess_beasts	1
+general	wh_dlc07_art_set_brt_prophetess_heavens_01	wh_main_brt_bretonnia			False	True	dlc07_brt_prophetess_heavens	1
+general	wh_dlc07_art_set_brt_prophetess_heavens_02	wh_main_brt_bretonnia			False	True	dlc07_brt_prophetess_heavens	1
+general	wh_dlc07_art_set_brt_prophetess_heavens_03	wh_main_brt_bretonnia			False	True	dlc07_brt_prophetess_heavens	1
+general	wh_dlc07_art_set_brt_prophetess_heavens_04	wh_main_brt_bretonnia			False	True	dlc07_brt_prophetess_heavens	1
+general	wh_dlc07_art_set_brt_prophetess_life_01	wh_main_brt_bretonnia			False	True	dlc07_brt_prophetess_life	1
+general	wh_dlc07_art_set_brt_prophetess_life_02	wh_main_brt_bretonnia			False	True	dlc07_brt_prophetess_life	1
+general	wh_dlc07_art_set_brt_prophetess_life_03	wh_main_brt_bretonnia			False	True	dlc07_brt_prophetess_life	1
+general	wh_dlc07_art_set_brt_prophetess_life_04	wh_main_brt_bretonnia			False	True	dlc07_brt_prophetess_life	1
+general	wh_dlc07_art_set_chs_sorcerer_lord_shadow_01		wh_main_sc_chs_chaos		False	True	dlc07_chs_sorcerer_lord_shadow	1
+general	wh_dlc07_art_set_chs_sorcerer_lord_shadow_02		wh_main_sc_chs_chaos		False	True	dlc07_chs_sorcerer_lord_shadow	1
+general	wh_dlc07_art_set_chs_sorcerer_lord_shadow_03		wh_main_sc_chs_chaos		False	True	dlc07_chs_sorcerer_lord_shadow	1
+general	wh_dlc07_art_set_chs_sorcerer_lord_shadow_04		wh_main_sc_chs_chaos		False	True	dlc07_chs_sorcerer_lord_shadow	1
+wizard	wh_dlc07_art_set_chs_sorcerer_shadow_01		wh_main_sc_chs_chaos		False	True	dlc07_chs_chaos_sorcerer_shadow	1
+wizard	wh_dlc07_art_set_chs_sorcerer_shadow_02		wh_main_sc_chs_chaos		False	True	dlc07_chs_chaos_sorcerer_shadow	1
+wizard	wh_dlc07_art_set_chs_sorcerer_shadow_03		wh_main_sc_chs_chaos		False	True	dlc07_chs_chaos_sorcerer_shadow	1
+wizard	wh_dlc07_art_set_chs_sorcerer_shadow_04		wh_main_sc_chs_chaos		False	True	dlc07_chs_chaos_sorcerer_shadow	1
+wizard	wh_main_art_set_brt_damsel_01	wh_main_brt_bretonnia			False	False		1
+wizard	wh_main_art_set_brt_damsel_02	wh_main_brt_bretonnia			False	False		1
+general	wh_main_art_set_brt_lord_01				False	True	brt_lord	1
+general	wh_main_art_set_brt_lord_02				False	True	brt_lord	1
+general	wh_main_art_set_brt_lord_03				False	True	brt_lord	1
+general	wh_main_art_set_brt_lord_04				False	True	brt_lord	1
+general	wh_main_art_set_brt_louen_leoncoeur	wh_main_brt_bretonnia			True	True	brt_louen_leoncouer	1
+champion	wh_main_art_set_brt_paladin_01	wh_main_brt_bretonnia			False	True	brt_paladin	1
+champion	wh_main_art_set_brt_paladin_02	wh_main_brt_bretonnia			False	True	brt_paladin	1
+champion	wh_main_art_set_brt_paladin_03	wh_main_brt_bretonnia			False	True	brt_paladin	1
+champion	wh_main_art_set_brt_paladin_04	wh_main_brt_bretonnia			False	True	brt_paladin	1
+general	wh_main_art_set_chs_archaon	wh_main_chs_chaos			False	True	chs_archaon	1
+champion	wh_main_art_set_chs_exalted_hero_01	wh_main_chs_chaos			False	True	chs_exalted_hero	1
+champion	wh_main_art_set_chs_exalted_hero_02	wh_main_chs_chaos			False	True	chs_exalted_hero	1
+champion	wh_main_art_set_chs_exalted_hero_03	wh_main_chs_chaos			False	True	chs_exalted_hero	1
+champion	wh_main_art_set_chs_exalted_hero_04	wh_main_chs_chaos			False	True	chs_exalted_hero	1
+champion	wh_main_art_set_chs_exalted_hero_05	wh_main_chs_chaos			False	True	chs_exalted_hero	1
+general	wh_main_art_set_chs_kholek_suneater	wh_main_chs_chaos			True	True	chs_kholek_suneater	0.46
+general	wh_main_art_set_chs_lord_01				False	True	chs_lord	1
+general	wh_main_art_set_chs_lord_02				False	True	chs_lord	1
+general	wh_main_art_set_chs_lord_03				False	True	chs_lord	1
+general	wh_main_art_set_chs_lord_of_change				False	True	chs_lord_of_change	0.75
+general	wh_main_art_set_chs_prince_sigvald	wh_main_chs_chaos			True	True	chs_prince_sigvald	1
+wizard	wh_main_art_set_chs_sorcerer_death_01		wh_main_sc_chs_chaos		False	True	chs_chaos_sorcerer_death	1
+general	wh_main_art_set_chs_sorcerer_death_01_general		wh_main_sc_chs_chaos		True	True	chs_chaos_sorcerer_death	1
+wizard	wh_main_art_set_chs_sorcerer_death_02		wh_main_sc_chs_chaos		False	True	chs_chaos_sorcerer_death	1
+wizard	wh_main_art_set_chs_sorcerer_death_03		wh_main_sc_chs_chaos		False	True	chs_chaos_sorcerer_death	1
+wizard	wh_main_art_set_chs_sorcerer_death_04		wh_main_sc_chs_chaos		False	True	chs_chaos_sorcerer_death	1
+wizard	wh_main_art_set_chs_sorcerer_fire_01		wh_main_sc_chs_chaos		False	True	chs_chaos_sorcerer_fire	1
+wizard	wh_main_art_set_chs_sorcerer_fire_02		wh_main_sc_chs_chaos		False	True	chs_chaos_sorcerer_fire	1
+wizard	wh_main_art_set_chs_sorcerer_fire_03		wh_main_sc_chs_chaos		False	True	chs_chaos_sorcerer_fire	1
+wizard	wh_main_art_set_chs_sorcerer_fire_04		wh_main_sc_chs_chaos		False	True	chs_chaos_sorcerer_fire	1
+general	wh_main_art_set_chs_sorcerer_lord_death_01		wh_main_sc_chs_chaos		False	True	chs_sorcerer_lord_death	1
+general	wh_main_art_set_chs_sorcerer_lord_death_02		wh_main_sc_chs_chaos		False	True	chs_sorcerer_lord_death	1
+general	wh_main_art_set_chs_sorcerer_lord_death_03		wh_main_sc_chs_chaos		False	True	chs_sorcerer_lord_death	1
+general	wh_main_art_set_chs_sorcerer_lord_death_04		wh_main_sc_chs_chaos		False	True	chs_sorcerer_lord_death	1
+general	wh_main_art_set_chs_sorcerer_lord_fire_01		wh_main_sc_chs_chaos		False	True	chs_sorcerer_lord_fire	1
+general	wh_main_art_set_chs_sorcerer_lord_fire_02		wh_main_sc_chs_chaos		False	True	chs_sorcerer_lord_fire	1
+general	wh_main_art_set_chs_sorcerer_lord_fire_03		wh_main_sc_chs_chaos		False	True	chs_sorcerer_lord_fire	1
+general	wh_main_art_set_chs_sorcerer_lord_fire_04		wh_main_sc_chs_chaos		False	True	chs_sorcerer_lord_fire	1
+general	wh_main_art_set_chs_sorcerer_lord_metal_01		wh_main_sc_chs_chaos		False	True	chs_sorcerer_lord_metal	1
+general	wh_main_art_set_chs_sorcerer_lord_metal_02		wh_main_sc_chs_chaos		False	True	chs_sorcerer_lord_metal	1
+general	wh_main_art_set_chs_sorcerer_lord_metal_03		wh_main_sc_chs_chaos		False	True	chs_sorcerer_lord_metal	1
+general	wh_main_art_set_chs_sorcerer_lord_metal_04		wh_main_sc_chs_chaos		False	True	chs_sorcerer_lord_metal	1
+wizard	wh_main_art_set_chs_sorcerer_metal_01		wh_main_sc_chs_chaos		False	True	chs_chaos_sorcerer_metal	1
+wizard	wh_main_art_set_chs_sorcerer_metal_02		wh_main_sc_chs_chaos		False	True	chs_chaos_sorcerer_metal	1
+wizard	wh_main_art_set_chs_sorcerer_metal_03		wh_main_sc_chs_chaos		False	True	chs_chaos_sorcerer_metal	1
+wizard	wh_main_art_set_chs_sorcerer_metal_04		wh_main_sc_chs_chaos		False	True	chs_chaos_sorcerer_metal	1
+engineer	wh_main_art_set_dwf_engineer_01	wh_main_dwf_dwarfs			False	True	dwf_master_engineer	1
+engineer	wh_main_art_set_dwf_engineer_02	wh_main_dwf_dwarfs			False	True	dwf_master_engineer	1
+general	wh_main_art_set_dwf_lord_01				False	True	dwf_lord	1
+general	wh_main_art_set_dwf_lord_02				False	True	dwf_lord	1
+general	wh_main_art_set_dwf_lord_03				False	True	dwf_lord	1
+general	wh_main_art_set_dwf_lord_04				False	True	dwf_lord	1
+general	wh_main_art_set_dwf_lord_05				False	True	dwf_lord	1
+runesmith	wh_main_art_set_dwf_runesmith_01	wh_main_dwf_dwarfs			False	True	dwf_runesmith	1
+runesmith	wh_main_art_set_dwf_runesmith_02	wh_main_dwf_dwarfs			False	True	dwf_runesmith	1
+runesmith	wh_main_art_set_dwf_runesmith_03	wh_main_dwf_dwarfs			False	True	dwf_runesmith	1
+runesmith	wh_main_art_set_dwf_runesmith_04	wh_main_dwf_dwarfs			False	True	dwf_runesmith	1
+runesmith	wh_main_art_set_dwf_runesmith_05	wh_main_dwf_dwarfs			False	True	dwf_runesmith	1
+champion	wh_main_art_set_dwf_thane_01	wh_main_dwf_dwarfs			False	True	dwf_thane	1
+champion	wh_main_art_set_dwf_thane_02	wh_main_dwf_dwarfs			False	True	dwf_thane	1
+champion	wh_main_art_set_dwf_thane_03	wh_main_dwf_dwarfs			False	True	dwf_thane	1
+general	wh_main_art_set_dwf_thorgrim_grudgebearer	wh_main_dwf_dwarfs			True	True	dwf_thorgrim_grudgebearer	0.8999999
+general	wh_main_art_set_dwf_ungrim_ironfist	wh_main_dwf_dwarfs			True	True	dwf_ungrim_ironfist	1
+general	wh_main_art_set_emp_balthasar_gelt	wh_main_emp_empire			True	True	emp_balthasar_gelt	1
+wizard	wh_main_art_set_emp_bright_wizard_01	wh_main_emp_empire			False	True	emp_bright_wizard	1
+wizard	wh_main_art_set_emp_bright_wizard_02	wh_main_emp_empire			False	True	emp_bright_wizard	1
+wizard	wh_main_art_set_emp_bright_wizard_03	wh_main_emp_empire			False	True	emp_bright_wizard	1
+champion	wh_main_art_set_emp_captain_01		wh_main_sc_emp_empire		False	True	emp_captain	1
+champion	wh_main_art_set_emp_captain_02		wh_main_sc_emp_empire		False	True	emp_captain	1
+champion	wh_main_art_set_emp_captain_of_the_empire		wh_main_sc_emp_empire		False	True	emp_captain	1
+wizard	wh_main_art_set_emp_celestial_wizard		wh_main_sc_emp_empire		False	True	emp_celestial_wizard	1
+general	wh_main_art_set_emp_general_01				False	True	emp_lord	1
+general	wh_main_art_set_emp_general_02				False	True	emp_lord	1
+general	wh_main_art_set_emp_general_03				False	True	emp_lord	1
+general	wh_main_art_set_emp_general_04				False	True	emp_lord	1
+general	wh_main_art_set_emp_general_05				False	True	emp_lord	1
+general	wh_main_art_set_emp_karl_franz	wh_main_emp_empire			True	True	emp_karl_franz	1
+wizard	wh_main_art_set_emp_light_wizard_01		wh_main_sc_emp_empire		False	True	emp_light_wizard	1
+wizard	wh_main_art_set_emp_light_wizard_02		wh_main_sc_emp_empire		False	True	emp_light_wizard	1
+wizard	wh_main_art_set_emp_light_wizard_03		wh_main_sc_emp_empire		False	True	emp_light_wizard	1
+dignitary	wh_main_art_set_emp_warrior_priest_01	wh_main_emp_empire			False	True	emp_warrior_priest	1
+dignitary	wh_main_art_set_emp_warrior_priest_02	wh_main_emp_empire			False	True	emp_warrior_priest	1
+dignitary	wh_main_art_set_emp_warrior_priest_03	wh_main_emp_empire			False	True	emp_warrior_priest	1
+dignitary	wh_main_art_set_emp_warrior_priest_04	wh_main_emp_empire			False	True	emp_warrior_priest	1
+spy	wh_main_art_set_emp_witch_hunter_01	wh_main_emp_empire			False	True	emp_witch_hunter	1
+spy	wh_main_art_set_emp_witch_hunter_02	wh_main_emp_empire			False	True	emp_witch_hunter	1
+spy	wh_main_art_set_emp_witch_hunter_03	wh_main_emp_empire			False	True	emp_witch_hunter	1
+spy	wh_main_art_set_emp_witch_hunter_04	wh_main_emp_empire			False	True	emp_witch_hunter	1
+spy	wh_main_art_set_emp_witch_hunter_05	wh_main_emp_empire			False	True	emp_witch_hunter	1
+general	wh_main_art_set_grn_azhag_the_slaughterer	wh_main_grn_greenskins			True	True	grn_azhag_the_slaughterer	1
+spy	wh_main_art_set_grn_goblin_big_boss_01	wh_main_grn_greenskins			False	True	grn_goblin_big_boss	1.1
+spy	wh_main_art_set_grn_goblin_big_boss_02	wh_main_grn_greenskins			False	True	grn_goblin_big_boss	1.1
+spy	wh_main_art_set_grn_goblin_big_boss_03	wh_main_grn_greenskins			False	True	grn_goblin_big_boss	1.1
+general	wh_main_art_set_grn_goblin_great_shaman_01				False	True	grn_goblin_great_shaman	1.1
+general	wh_main_art_set_grn_goblin_great_shaman_02				False	True	grn_goblin_great_shaman	1.1
+general	wh_main_art_set_grn_goblin_great_shaman_03				False	True	grn_goblin_great_shaman	1.1
+general	wh_main_art_set_grn_goblin_great_shaman_04				False	True	grn_goblin_great_shaman	1.1
+general	wh_main_art_set_grn_goblin_great_shaman_05				False	True	grn_goblin_great_shaman	1.1
+general	wh_main_art_set_grn_goblin_great_shaman_06				False	True	grn_goblin_great_shaman	1.1
+general	wh_main_art_set_grn_grimgor_ironhide	wh_main_grn_greenskins			True	True	grn_grimgor_ironhide	1
+wizard	wh_main_art_set_grn_night_goblin_shaman_01	wh_main_grn_greenskins			False	True	grn_night_goblin_shaman	1.1
+wizard	wh_main_art_set_grn_night_goblin_shaman_02	wh_main_grn_greenskins			False	True	grn_night_goblin_shaman	1.1
+wizard	wh_main_art_set_grn_night_goblin_shaman_03	wh_main_grn_greenskins			False	True	grn_night_goblin_shaman	1.1
+wizard	wh_main_art_set_grn_night_goblin_shaman_04	wh_main_grn_greenskins			False	True	grn_night_goblin_shaman	1.1
+wizard	wh_main_art_set_grn_night_goblin_shaman_05	wh_main_grn_greenskins			False	True	grn_night_goblin_shaman	1.1
+wizard	wh_main_art_set_grn_night_goblin_shaman_06	wh_main_grn_greenskins			False	True	grn_night_goblin_shaman	1.1
+wizard	wh_main_art_set_grn_orc_shaman_01	wh_main_grn_greenskins			False	True	grn_orc_shaman	1
+wizard	wh_main_art_set_grn_orc_shaman_02	wh_main_grn_greenskins			False	True	grn_orc_shaman	1
+wizard	wh_main_art_set_grn_orc_shaman_03	wh_main_grn_greenskins			False	True	grn_orc_shaman	1
+wizard	wh_main_art_set_grn_orc_shaman_04	wh_main_grn_greenskins			False	True	grn_orc_shaman	1
+general	wh_main_art_set_grn_orc_warboss_01				False	True	grn_orc_warboss	1
+general	wh_main_art_set_grn_orc_warboss_02				False	True	grn_orc_warboss	1
+general	wh_main_art_set_grn_orc_warboss_03				False	True	grn_orc_warboss	1
+general	wh_main_art_set_grn_orc_warboss_04				False	True	grn_orc_warboss	1
+general	wh_main_art_set_grn_orc_warboss_05				False	True	grn_orc_warboss	1
+champion	wh_main_art_set_ksl_captain		wh_main_sc_ksl_kislev		False	True	ksl_captain	1
+wizard	wh_main_art_set_ksl_celestial_wizard		wh_main_sc_ksl_kislev		False	True	ksl_celestial_wizard	1
+general	wh_main_art_set_ksl_general_01	wh_main_emp_empire			False	True	ksl_lord	1
+general	wh_main_art_set_ksl_general_02	wh_main_emp_empire			False	True	ksl_lord	1
+general	wh_main_art_set_ksl_general_03	wh_main_emp_empire			False	True	ksl_lord	1
+general	wh_main_art_set_ksl_general_04	wh_main_emp_empire			False	True	ksl_lord	1
+general	wh_main_art_set_ksl_general_05	wh_main_emp_empire			False	True	ksl_lord	1
+wizard	wh_main_art_set_nor_chaos_sorcerer_metal		wh_main_sc_nor_norsca		False	True	nor_chaos_sorcerer_metal	1
+general	wh_main_art_set_nor_marauder_chieftain_01				False	True	nor_marauder_chieftain	1
+general	wh_main_art_set_nor_marauder_chieftain_02				False	True	nor_marauder_chieftain	1
+general	wh_main_art_set_nor_marauder_chieftain_03				False	True	nor_marauder_chieftain	1
+general	wh_main_art_set_nor_marauder_chieftain_04				False	True	nor_marauder_chieftain	1
+general	wh_main_art_set_nor_sorcerer_lord_metal		wh_main_sc_nor_norsca		False	True	nor_sorcerer_lord_metal	1
+wizard	wh_main_art_set_teb_bright_wizard		wh_main_sc_teb_teb		False	True	teb_bright_wizard	1
+champion	wh_main_art_set_teb_captain		wh_main_sc_teb_teb		False	True	teb_captain	1
+general	wh_main_art_set_teb_general_01	wh_main_emp_empire			False	True	teb_lord	1
+general	wh_main_art_set_teb_general_02	wh_main_emp_empire			False	True	teb_lord	1
+general	wh_main_art_set_teb_general_03	wh_main_emp_empire			False	True	teb_lord	1
+general	wh_main_art_set_teb_general_04	wh_main_emp_empire			False	True	teb_lord	1
+general	wh_main_art_set_teb_general_05	wh_main_emp_empire			False	True	teb_lord	1
+spy	wh_main_art_set_vmp_banshee_01	wh_main_vmp_vampire_counts			False	False	vmp_banshee	1
+spy	wh_main_art_set_vmp_banshee_02	wh_main_vmp_vampire_counts			False	False	vmp_banshee	1
+spy	wh_main_art_set_vmp_banshee_03	wh_main_vmp_vampire_counts			False	False	vmp_banshee	1
+general	wh_main_art_set_vmp_heinrich_kemmler	wh_main_vmp_vampire_counts			True	True	vmp_heinrich_kemmler	1
+general	wh_main_art_set_vmp_lord_01				False	True	vmp_lord	1
+general	wh_main_art_set_vmp_lord_02				False	True	vmp_lord	1
+general	wh_main_art_set_vmp_lord_03				False	True	vmp_lord	1
+general	wh_main_art_set_vmp_lord_04				False	True	vmp_lord	1
+general	wh_main_art_set_vmp_lord_05				False	True	vmp_lord	1
+general	wh_main_art_set_vmp_mannfred_von_carstein	wh_main_vmp_vampire_counts			True	True	vmp_mannfred_von_carstein	1
+general	wh_main_art_set_vmp_master_necromancer_01				False	True	vmp_master_necromancer	1
+general	wh_main_art_set_vmp_master_necromancer_02				False	True	vmp_master_necromancer	1
+general	wh_main_art_set_vmp_master_necromancer_03				False	True	vmp_master_necromancer	1
+general	wh_main_art_set_vmp_master_necromancer_04				False	True	vmp_master_necromancer	1
+wizard	wh_main_art_set_vmp_necromancer_01	wh_main_vmp_vampire_counts			False	True	vmp_necromancer	1
+wizard	wh_main_art_set_vmp_necromancer_02	wh_main_vmp_vampire_counts			False	True	vmp_necromancer	1
+wizard	wh_main_art_set_vmp_necromancer_03	wh_main_vmp_vampire_counts			False	True	vmp_necromancer	1
+dignitary	wh_main_art_set_vmp_vampire_01	wh_main_vmp_vampire_counts			False	False		1
+dignitary	wh_main_art_set_vmp_vampire_02	wh_main_vmp_vampire_counts			False	False		1
+dignitary	wh_main_art_set_vmp_vampire_03	wh_main_vmp_vampire_counts			False	False		1
+champion	wh_main_art_set_vmp_wight_king_01	wh_main_vmp_vampire_counts			False	True	vmp_wight_king	1
+champion	wh_main_art_set_vmp_wight_king_02	wh_main_vmp_vampire_counts			False	True	vmp_wight_king	1
+champion	wh_main_art_set_vmp_wight_king_03	wh_main_vmp_vampire_counts			False	True	vmp_wight_king	1
+champion	wh_main_art_set_vmp_wight_king_04	wh_main_vmp_vampire_counts			False	True	vmp_wight_king	1
+general	wh_main_qb_art_set_emp_captain_01_general	wh_main_emp_empire			True	True	emp_captain	1
+general	wh_main_qb_art_set_emp_light_wizard_general	wh_main_emp_empire			True	True	emp_light_wizard	1
+general	wh_main_qb_art_set_grn_goblin_big_boss_01_general	wh_main_grn_greenskins			True	True	grn_goblin_big_boss	1.1
+general	wh_pro01_art_set_dwf_grombrindal	wh_main_dwf_dwarfs			False	True	pro01_dwf_grombrindal	1
+general	wh_pro02_art_set_vmp_isabella	wh_main_vmp_vampire_counts			False	True	pro02_vmp_isabella_von_carstein	1

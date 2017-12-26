@@ -1,0 +1,14 @@
+dilemmas_tables
+5
+generate	key	localised_description	localised_title	ui_image	prioritized	event_category	sound_popup_override	sound_click_override
+True	wh_twh_emp_rule_dilemma	placeholder	The Emperors Choice	politics	True	Event		
+True	wh_twh_emp_marienburg	placeholder	Marienburg	politics	True	Event		
+True	wh_twh_dilemma_beer_for_the_fish	placeholder	Beer for the Fish	messenger	False	Event		
+True	wh_twh_dilemma_witchhunters	placeholder	Witchhunters	messenger	False	Event		
+True	wh_twh_dilemma_mordheim	placeholder	Mordheim	messenger	False	Event		
+True	wh_twh_dilemma_taxes	placeholder	Taxes	politics	True	Event		
+True	wh_twh_emp_kislev	placeholder	Kislev	politics	True	Event		
+True	wh_twh_emp_pax_imperia	placeholder	Pax Imperia	politics	True	Event		
+True	wh_twh_emp_pax_imperia_AI	placeholder	Pax Imperia	messenger	True	Event		
+True	wh_twh_emp_manoeuvres	placeholder	placeholder	army_morale_up	False	Event		
+True	wh_twh_emp_skaven	placeholder	placeholder	messenger	False	Event		

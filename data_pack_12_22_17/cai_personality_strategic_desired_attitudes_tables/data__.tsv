@@ -1,0 +1,33 @@
+cai_personality_strategic_desired_attitudes_tables
+1
+best_friends_attitude	best_friends_positive_factor	bitter_enemies_attitude	unknown4	friendly_attitude	friendly_positive_factor	unknown7	neutral_positive_factor	strategic_component	unfriendly_attitude	unfriendly_positive_factor	very_friendly_attitude	very_friendly_positive_factor	very_unfriendly_attitude	very_unfriendly_positive_factor	best_friends_negative_factor	very_friendly_negative_factor	friendly_negative_factor	neutral_negative_factor	unfriendly_negative_factor	very_unfriendly_negative_factor	unknown22
+90	0.26	-90	0	30	0.12	0	0.02	aggressive	-30	0	60	0.2	-60	0	0.4	0.3	0.2	0.06	0	0	0
+90	0.26	-90	0	30	0.12	0	0.02	aggressive_darkelf	-30	0	60	0.2	-60	0	0.4	0.3	0.2	0.06	0	0	0
+90	0.26	-90	0	30	0.12	0	0.02	aggressive_frenzied	-30	0	60	0.2	-60	0	0.4	0.3	0.2	0.06	0	0	0
+90	0.26	-90	0	30	0.12	0	0.02	aggressive_holds_grudges	-30	0	60	0.2	-60	0	0.4	0.3	0.2	0.06	0	0	0
+90	0.26	-90	0	30	0.12	0	0.02	aggressive_holds_grudges_late_game	-30	0	60	0.2	-60	0	0.4	0.3	0.2	0.06	0	0	0
+90	0	-90	0	30	0	0	0	aggressive_home_defender	-30	0	60	0	-60	0	0	0	0	0	0	0	0
+90	0.26	-90	0	30	0.12	0	0.02	aggressive_horde	-30	0	60	0.2	-60	0	0.4	0.3	0.2	0.06	0	0	0
+90	0.26	-90	0	30	0.12	0	0.02	aggressive_late_game	-30	0	60	0.2	-60	0	0.4	0.3	0.2	0.06	0	0	0
+90	0.26	-90	0	30	0.12	0	0.02	aggressive_opportunist	-30	0	60	0.2	-60	0	0.2	0.15	0.05	0	0	0	0
+90	0.26	-90	0	30	0.12	0	0.02	aggressive_opportunist_late_game	-30	0	60	0.2	-60	0	0.2	0.15	0.05	0	0	0	0
+90	0.26	-90	0	30	0.12	0	0.02	aggressive_opportunist_vamp	-30	0	60	0.2	-60	0	0.2	0.15	0.05	0	0	0	0
+90	0.26	-90	0	30	0.12	0	0.02	aggressive_opportunist_vamp_late_game	-30	0	60	0.2	-60	0	0.2	0.15	0.05	0	0	0	0
+90	0	-90	0	30	0	0	0	aggressive_straightforward	-30	0	60	0	-60	0	0	0	0	0	0	0	0
+90	0.26	-90	0	30	0.12	0	0.02	cowardly	-30	0	60	0.2	-60	0	0.4	0.3	0.2	0.06	0	0	0
+90	0.26	-90	0	30	0.12	0	0.02	darkelf	-30	0	60	0.2	-60	0	0.4	0.3	0.2	0.06	0	0	0
+90	0.26	-90	0	30	0.12	0	0.02	default	-30	0	60	0.2	-60	0	0.4	0.3	0.2	0.06	0	0	0
+90	0.26	-90	0	30	0.12	0	0.02	default_late_game	-30	0	60	0.2	-60	0	0.4	0.3	0.2	0.06	0	0	0
+90	0.26	-90	0	30	0.12	0	0.02	defensive	-30	0	60	0.2	-60	0	0.4	0.3	0.2	0.06	0	0	0
+90	0.26	-90	0	30	0.12	0	0.02	defensive_holds_grudges	-30	0	60	0.2	-60	0	0.4	0.3	0.2	0.06	0	0	0
+90	0.26	-90	0	30	0.12	0	0.02	defensive_holds_grudges_late_game	-30	0	60	0.2	-60	0	0.4	0.3	0.2	0.06	0	0	0
+90	0.26	-90	0	30	0.12	0	0.02	defensive_late_game	-30	0	60	0.2	-60	0	0.4	0.3	0.2	0.06	0	0	0
+90	0.26	-90	0	30	0.12	0	0.02	foolishly_brave	-30	0	60	0.2	-60	0	0.4	0.3	0.2	0.06	0	0	0
+90	0.26	-90	0	30	0.12	0	0.02	holds_grudges	-30	0	60	0.2	-60	0	0.4	0.3	0.2	0.06	0	0	0
+90	0	-90	0	30	0	0	0	home_defender	-30	0	60	0	-60	0	0	0	0	0	0	0	0
+90	0.26	-90	0	30	0.12	0	0.02	ignore_threat	-30	0	60	0.2	-60	0	0.4	0.3	0.2	0.06	0	0	0
+90	0.26	-90	0	30	0.12	0	0.02	opportunist	-30	0	60	0.2	-60	0	0.2	0.15	0.05	0	0	0	0
+90	0.26	-90	0	30	0.12	0	0.02	opportunist_vamp	-30	0	60	0.2	-60	0	0.2	0.15	0.05	0	0	0	0
+90	0.26	-90	0	30	0.12	0	0.02	opportunist_vamp_late_game	-30	0	60	0.2	-60	0	0.2	0.15	0.05	0	0	0	0
+90	0	-90	0	30	0	0	0	straightforward	-30	0	60	0	-60	0	0	0	0	0	0	0	0
+90	0.26	-90	0	30	0.12	0	0.02	survivor	-30	0	60	0.2	-60	0	0.4	0.3	0.2	0.06	0	0	0

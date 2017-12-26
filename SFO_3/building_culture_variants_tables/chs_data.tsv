@@ -1,0 +1,10 @@
+building_culture_variants_tables
+4
+building	culture	battlefield_building	artpiece	artpiece_animated	faction	disables	flavour	display_tooltip
+chs_nurgle	wh_main_chs_chaos	wh_main_PLACEHOLDER	nurgle_shire			False	chs_nurgle	True
+chs_khorne	wh_main_chs_chaos	wh_main_PLACEHOLDER	khorne_shire			False	chs_khorne	True
+chs_tzeentch	wh_main_chs_chaos	wh_main_PLACEHOLDER	tzeentch_shire			False	chs_tzeentch	True
+chs_slaanesh	wh_main_chs_chaos	wh_main_PLACEHOLDER	slaanesh_shire			False	chs_slaanesh	True
+chs_fort	wh_main_chs_chaos	wh_main_PLACEHOLDER	chs_fort			False	chs_fort	True
+chs_fort1	wh_main_chs_chaos	wh_main_PLACEHOLDER	chs_fort1			False	chs_fort1	True
+chs_fort2	wh_main_chs_chaos	wh_main_PLACEHOLDER	chs_fort2			False	chs_fort2	True
