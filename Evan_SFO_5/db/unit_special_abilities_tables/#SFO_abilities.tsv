@@ -1,0 +1,45 @@
+unit_special_abilities_tables
+45
+key	active_time	recharge_time	num_uses	effect_range	affect_self	num_effected_friendly_units	num_effected_enemy_units	update_targets_every_frame	initial_recharge	activated_projectile	target_friends	target_enemies	target_ground	target_intercept_range	assume_specific_behaviour	clear_current_order	wind_up_time	passive	unique_id	-	bombardment	spawned_unit	wind_up_stance	mana_cost	min_range	targetting_aoe	passive_aoe	active_aoe	activation_effect	vortex	miscast_chance	miscast_explosion	ai_usage	audio	special_ability_display	voiceover_state	additional_melee_cp	additional_missile_cp	parent_ability	spawn_type	spawn_proxy_vfx	target_ground_1	target_ground_2	miscast_global_	target_self
+bst_tzaangor_magic_aura	-1	-1	-1	40	False	0	-1	True	-1		False	False	False	0		False	0	True	4	0				0	0	wh_abilities_generic_debuff					0					vo_battle_special_ability_spell_cast_negative	38	38				False	False	True	False
+unit_ability_dwf_engineers_aura	-1	-1	-1	40	False	-1	0	True	-1		False	False	False	0		False	0	True	15	0				0	0	wh_abilities_generic_buff					0						0	160				False	False	True	False
+unit_ability_dwf_shieldbearer_aura	-1	-1	-1	25	False	-1	0	True	-1		False	False	False	0		False	0	True	16	0				0	0	wh_abilities_generic_buff					0						109	53				False	False	True	False
+unit_ability_grn_black_orc_bellow_aura	-1	-1	-1	30	False	-1	0	True	-1		False	False	False	0		False	0	True	17	0				0	0	wh_abilities_generic_buff					0						109	53				False	False	True	False
+unit_ability_leadership_boost_aura	-1	-1	-1	45	True	-1	0	True	-1		False	False	False	0		False	0	True	18	0				0	0	wh_abilities_generic_buff					0						109	53				False	False	True	False
+vmp_black_grail_regeneration	-1	-1	-1	0	True	0	0	False	-1		False	False	False	0		False	0	True	19	0				0	0						0					vo_battle_special_ability_generic_response	79	79				False	False	True	False
+vmp_unit_terrorgheist_shreik	10	70	-1	25	False	0	-1	False	30		False	False	False	0		False	0	False	21	0				0	0	wh_abilities_generic_debuff					0		threatened	wh_dlc03_spell_wild_bray_scream			119	119				False	False	True	False
+we_spell_passive_shadow_dancers_mana_regen	-1	-1	-1	0	True	1	0	False	-1		False	False	False	0		False	0	True	22	0				0	0						0					vo_battle_special_ability_generic_response	0	81				False	False	True	False
+we_spell_shadow_dancers_withering	40	25	-1	25	False	0	-1	True	0		False	True	True	200		False	2	False	23	0			cast_up_short	6	0	wh_abilities_generic_debuff	wh_abilities_generic_debuff	wh_abilities_generic_debuff			0		hex_morale_area	wh_dlc05_spell_shadow_the_withering	shadow_medium	vo_battle_special_ability_spell_cast_wef_shadow	81	81				False	False	True	False
+wh_emp_last_stand	30	-1	1	0	True	0	0	False	-1		False	False	False	0		False	0	True	27	0				0	0						0			wh_main_spell_bound_shield_of_faith		vo_battle_special_ability_generic_response	109	53				False	False	True	False
+wh_emp_prayer_of_binding	20	115	-1	0	False	0	0	True	20		False	True	False	140		False	0	False	28	0				0	0	wh_abilities_generic_debuff	wh_abilities_generic_debuff				0		hex_melee	wh_main_hero_abilities_accusation		vo_battle_special_ability_generic_response	109	54				False	False	True	False
+wh_emp_sigmarite_aura_faith	-1	-1	-1	35	True	-1	0	True	-1		False	False	False	0		False	0	True	29	0				0	0	wh_abilities_generic_buff					0					vo_battle_special_ability_generic_response	116	116				False	False	True	False
+wh_main_impetuous	-1	-1	-1	0	True	0	0	False	-1		False	False	False	0		False	0	True	33	0				0	0						0					vo_battle_special_ability_spell_cast_negative	50	0				False	False	True	False
+wh_hef_dragon_prince	-1	-1	-1	0	True	0	0	False	-1		False	False	False	0		False	0	True	30	0				0	0						0						81	81				False	False	True	False
+wh_main_lord_passive_kemmler	-1	-1	-1	40	False	0	-1	True	-1		False	False	False	0		False	0	True	35	0				0	0	wh_abilities_generic_debuff					0						119	119				False	False	True	False
+wh_main_unit_passive_bloodknight_regeneration	-1	-1	-1	0	True	0	0	False	-1		False	False	False	0		False	0	True	36	0				0	0						0					vo_battle_special_ability_generic_response	79	79				False	False	True	False
+wh_main_unit_passive_grailknight_regeneration	-1	-1	-1	0	True	0	0	False	-1		False	False	False	0		False	0	True	37	0				0	0						0					vo_battle_special_ability_generic_response	79	79				False	False	True	False
+wh_main_unit_passive_stormrage	-1	-1	-1	0	True	0	0	False	-1		False	False	False	0		False	0	True	39	0				0	0						0					vo_battle_special_ability_generic_response	50	0				False	False	True	False
+wh_main_unit_passive_trollflesh	-1	-1	-1	0	True	0	0	False	-1		False	False	False	0		False	0	True	40	0				0	0						0					vo_battle_special_ability_generic_response	79	79				False	False	True	False
+chs_passive_regeneration	-1	-1	-1	0	True	0	0	False	-1		False	False	False	0		False	0	True	7	0				0	0						0					vo_battle_special_ability_generic_response	79	79				False	False	True	False
+chs_zealot_dark_healing	15	60	-1	30	True	-1	0	False	0		True	False	True	160		True	3	False	9	0			cast_up_short	0	0	wh_abilities_generic_buff	wh_abilities_generic_buff				0		healing	wh_dlc05_lord_abilities_spirit_essence_of_chaos	vampires_short	vo_battle_special_ability_generic_response	0	76				False	False	True	False
+chs_soul_drain	25	60	-1	0	False	0	-1	False	0		False	True	True	125		False	0	False	8	0			cast_up_short	0	0	wh_abilities_generic_debuff	wh_abilities_generic_debuff				0		aoe	wh_dlc05_lord_abilities_spirit_essence_of_chaos	shadow_short	vo_battle_special_ability_generic_response	27	55				False	False	True	False
+wh_main_unit_passive_hydra	-1	-1	-1	0	True	0	0	False	-1		False	False	False	0		False	0	True	38	0				0	0						0					vo_battle_special_ability_generic_response	79	79				False	False	True	False
+wh_lzd_solar	5	5	-1	35	True	-1	0	True	-1		False	False	False	0		False	0	True	32	0				0	0	wh_abilities_generic_buff					0					vo_battle_special_ability_generic_response	116	116				False	False	True	False
+wh_main_lord_passive_dorghar	-1	-1	-1	0	True	0	0	False	-1		False	False	False	0		False	0	True	34	0				0	0						0						81	81				False	False	True	False
+wh_lzd_slann	-1	-1	-1	-1	True	-1	0	True	-1		False	False	False	0		False	0	True	31	0				0	0	wh_abilities_generic_buff					0					vo_battle_special_ability_generic_response	116	116				False	False	True	False
+wh_def_dread_glory	-1	-1	-1	35	True	-1	0	True	-1		False	False	False	0		False	0	True	26	0				0	0	wh_abilities_generic_buff					0					vo_battle_special_ability_generic_response	116	116				False	False	True	False
+chs_main1	-1	-1	-1	0	True	0	0	False	-1		False	False	False	0		False	0	True	5	0				0	0						0						81	81				False	False	True	False
+chs_main2	-1	-1	-1	0	True	0	0	False	-1		False	False	False	0		False	0	True	6	0				0	0						0						81	81				False	False	True	False
+bst_main2	-1	-1	-1	0	True	0	0	False	-1		False	False	False	0		False	0	True	3	0				0	0						0						81	81				False	False	True	False
+dwf_main1	-1	-1	-1	0	True	0	0	False	-1		False	False	False	0		False	0	True	10	0				0	0						0						81	81				False	False	True	False
+dwf_main2	-1	-1	-1	20	False	-1	0	True	-1		False	False	False	0		False	0	True	11	0				0	0	wh_abilities_generic_buff					0						50	0				False	False	True	False
+grn_main1	30	30	-1	0	True	0	0	False	-1		False	False	False	0		False	0	True	13	0				0	0						0						81	81				False	False	True	False
+grn_main2	45	30	-1	40	True	-1	0	True	-1		False	False	False	0		False	0	True	14	0				0	0	wh_abilities_generic_buff					0						50	0				False	False	True	False
+vmp_main1	-1	-1	-1	50	False	-1	0	True	-1		False	False	False	0		False	0	True	20	0				0	0	wh_abilities_generic_buff					0						50	0				False	False	True	False
+brt_main1	-1	-1	1	0	True	0	0	False	-1		False	False	False	0		False	0	True	1	0				0	0						0						81	81				False	False	True	False
+brt_main2	-1	-1	1	0	True	0	0	False	-1		False	False	False	0		False	0	True	2	0				0	0						0						81	81				False	False	True	False
+wef_main1	-1	-1	-1	0	True	0	0	False	-1		False	False	False	0		False	0	True	24	0				0	0						0						81	81				False	False	True	False
+wef_main2	-1	-1	-1	0	True	0	0	False	-1		False	False	False	0		False	0	True	25	0				0	0						0						81	81				False	False	True	False
+emp_main1	-1	-1	-1	50	False	-1	0	True	-1		False	False	False	0		False	0	True	12	0				0	0	wh_abilities_generic_buff					0						50	0				False	False	True	False
+hef_phoenix_guard	-1	-1	-1	15	False	0	-1	True	-1		False	False	False	0		False	0	True	41	0				0	0	wh_abilities_generic_debuff					0						50	0				False	False	True	False
+skv_overcharge	20	75	-1	0	True	1	0	False	-1		False	False	False	0		False	0	False	42	0				0	0						0.45	wh2_main_skaven_miscast				vo_battle_special_ability_generic_response	100	100				False	False	True	False

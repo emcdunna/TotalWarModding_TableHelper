@@ -1,12 +1,12 @@
 import sys
-from warhammer2_table_config import *
+import warhammer2_table_config
 import os
 
 """
 A table obj holds a mapping of keys to values for each entry, and a set of entries
 -- an entry is like a line in the table
 -- each Key,value pair is a column name and the value at that column
--- entryKeyOffset defaults to 0, meaning the first column holds the key value for entries
+-- entryKey will be a list of column names to use as key columns
 """
 class Table:
     def __init__(self):
@@ -15,17 +15,33 @@ class Table:
         self.separator = ","
         self.name = "Default"
         self.lineTwo = "" # 34, for example saying there are 34 columns
-        self.entryKeyOffset = 0 # 4 would mean the key column is the 5th one in from the left
+        self.entryKey = [None]
         self.folder = ""
 
     def __str__(self):
         word = ""
         word += self.name + "\n"
-        word += "KeyOffset: " + str(self.entryKeyOffset) + "\n"
+        word += "Key Column(s): " + str(self.entryKey) + "\n"
         word += stringify_list(self.columns, self.separator) + "\n"
         for ek in self.entries.keys():
             word += self.stringify_entry(ek) + "\n"
         return word
+
+    # returns the entry key for a particular entry based off the table's entry key metadata
+    def get_entry_key(self, entry):
+        print "Entry " + str(entry)
+        ek = "EK__"
+        i = 1
+        print "Key columns " + str(self.entryKey)
+
+        for keyCol in self.entryKey: # iterate through each entry key column, add the value of that column to the key string
+            if keyCol == None:
+                return "NULL_ENTRY_KEY"
+            ek += entry[keyCol]
+            if i < len(self.entryKey):
+                ek += "_TO_"
+                i +=1
+        return ek
 
     def get_file_extension(self):
         if(self.separator == ","):
@@ -119,37 +135,43 @@ class TableDiff:
                     pass
                 else:
                     sys.stderr.write(self.oldTable.name + " (old) is missing " + c + "\n")
-            #continue
-        if True:
-            for entryKey in entryKeySet:
-                oldEntry = None
-                newEntry = None
+
+        # even if columns are different, continue
+        for entryKey in entryKeySet:
+            oldEntry = None
+            newEntry = None
+            try:
+                oldEntry = self.oldTable.entries[entryKey]
+            except KeyError as e:
                 try:
-                    oldEntry = self.oldTable.entries[entryKey]
-                except KeyError as e:
                     newEntry = self.newTable.entries[entryKey]
                     diff = Diff(entryKey, "ENTIRE_ENTRY", "MISSING", str(newEntry))
                     self.differences |= {diff}
-
-                try:
-                    newEntry = self.newTable.entries[entryKey]
                 except KeyError as e:
+                    sys.stderr.write("ERROR processing entry with key " + entryKey + "\n")
+
+            try:
+                newEntry = self.newTable.entries[entryKey]
+            except KeyError as e:
+                try:
                     oldEntry = self.newTable.entries[entryKey]
                     diff = Diff(entryKey, "ENTIRE_ENTRY", str(oldEntry), "MISSING")
                     self.differences |= {diff}
+                except KeyError as e:
+                    sys.stderr.write("ERROR processing entry with key " + entryKey + "\n")
 
-                if(oldEntry != None and newEntry != None):
-                    for col in self.oldTable.columns: #TODO dont just iterate through oldTable
+            if(oldEntry != None and newEntry != None):
+                for col in self.oldTable.columns: #TODO dont just iterate through oldTable
 
 
-                        oldv = oldEntry[col]
-                        try:
-                            newv = newEntry[col]
-                        except KeyError as e:
-                            newv = "MISSING"
-                        if(oldv != newv):
-                            diff = Diff(entryKey, col, oldv, newv)
-                            self.differences = self.differences | {diff}
+                    oldv = oldEntry[col]
+                    try:
+                        newv = newEntry[col]
+                    except KeyError as e:
+                        newv = "MISSING"
+                    if(oldv != newv):
+                        diff = Diff(entryKey, col, oldv, newv)
+                        self.differences = self.differences | {diff}
 
     def __str__(self):
         word = ""
@@ -201,9 +223,12 @@ Takes in a CSV/TSV File, stores the results to a table object.
 -- assumes 3rd line is column-keys, and 4+ lines are all data (no blanks at the end)
 -- assumes .tsv means will be tab separated, else comma separated
 """
-def file_loader(csvFile, keyoffset):
+def file_loader(csvFile):
     table = Table()
-    table.entryKeyOffset = keyoffset
+    if (csvFile.name[-4:] != ".tsv") and (csvFile.name[-4:] != ".csv"):
+        sys.stderr.write("Invalid file: " + csvFile.name + "\n")
+        return None
+
     if (".tsv" in csvFile.name):
         table.separator = "\t"
     i = 0
@@ -214,17 +239,14 @@ def file_loader(csvFile, keyoffset):
             lst = parse_line_to_list(line, table.separator)
             if(len(lst) > 0):
                 table.name = lst[0]
-            if table.entryKeyOffset == None:
                 try:
-                    table.entryKeyOffset = int(keyOffsetDict[table.name]) # reference config library
+                    table.entryKey = warhammer2_table_config.keyDict[table.name] # reference config library
                 except KeyError as e:
-                    sys.stderr.write("EntryKeyOffset not found for table: " + table.name + "\n")
-
-                    #sys.stderr.write("Must be manually added to warhammer2_table_config.py with keyOffset value!\n")
-                    #sys.stderr.write("The table will NOT be loaded. Will remain empty/default table. \n")
+                    sys.stderr.write("EntryKey not found for table: " + table.name + "\n")
                     return None
-                except TypeError as e:
-                    table.entryKeyOffset = keyOffsetDict[table.name]
+            else:
+                sys.stderr.write("Empty first line in file: " + csvFile.name + "\n")
+
         elif(i==1):
             table.lineTwo = line
         elif(i==2):
@@ -232,14 +254,11 @@ def file_loader(csvFile, keyoffset):
         else:
             lst = parse_line_to_list(line, table.separator)
             if (len(lst) == len(table.columns)):
-                try:
-                    entry_key = lst[table.entryKeyOffset]
-                except TypeError as e:
-                    entry_key = lst[table.entryKeyOffset[0]] + "_TO_" + lst[table.entryKeyOffset[1]]
                 j = 0
                 for col in table.columns:
                     entry[col] = lst[j]
                     j+=1
+                entry_key = table.get_entry_key(entry) # contains a dict of col_name: value pairs
                 table.entries[entry_key] = entry
             else:
                 sys.stderr.write("Mismatched entry: " + line + "\n")
@@ -300,7 +319,7 @@ def merge_tables(bot_table, top_table):
 Looks for every tsv/csv file in a folder, runs file loader on them, and adds then runs
 the merge table command to merge them into one table object
 """
-def concatTablesInFolder(folder, keyOffset):
+def concatTablesInFolder(folder):
     lst = os.listdir(folder)
     lstTSV = []
     # remove non tsv/csv files
@@ -310,19 +329,18 @@ def concatTablesInFolder(folder, keyOffset):
 
     # sort the way the launcher loads, where alphanumerically lower names supercede higher names
     lst = sorted(lstTSV, key=str.lower, reverse=True)
+    # TODO CHECK THIS ORDER!
 
-
-    #print folder +  " " + str(lst)
     i = 0
     baseTable = None
     for tsvFile in lst:
         tmpFile = open(folder + "\\" + lst[i], 'r')
         if i == 0:
-            baseTable = file_loader(tmpFile, keyOffset)
+            baseTable = file_loader(tmpFile)
             if baseTable == None:
                 return None
         else:
-            tmpTable = file_loader(tmpFile, keyOffset)
+            tmpTable = file_loader(tmpFile)
             baseTable = merge_tables(baseTable,tmpTable)
         i += 1
     return baseTable
@@ -334,9 +352,9 @@ def concatTablesInFolder(folder, keyOffset):
 Runs a diff for the single table (ex. "main_units_tables") folder, to generate diff of
 mod table against base table.
 """
-def run_diff(baseTableFolder, modTableFolder, keyOffset):
-    baseTable = concatTablesInFolder(baseTableFolder, keyOffset)
-    modTable = concatTablesInFolder(modTableFolder, keyOffset)
+def run_diff(baseTableFolder, modTableFolder):
+    baseTable = concatTablesInFolder(baseTableFolder)
+    modTable = concatTablesInFolder(modTableFolder)
 
     tablediff = TableDiff(baseTable, modTable) # detects differences between two tables
 

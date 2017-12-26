@@ -1,0 +1,49 @@
+special_ability_phases_tables
+31
+duration	effect_type	id	requested_stance	unbreakable	cant_move	freeze_fatigue	fatigue_change_ratio	inspiration_aura_change_mod	ability_recharge_change	hp_change_frequency	heal_amount	damage_chance	damage_amount	max_damaged_entites	heal_amount_duplicate	resurrect	mana_regen_mod	mana_max_depletion_mod	imbue_magical	imbue_ignition	imbue_contact	phase_display	phase_audio	recharge_time	is_hidden_in_ui	affects_allies	affects_enemies
+-1	positive	wh_main_unit_passive_bloodknight_regeneration		False	False	False	0	0	0	0.45	2	0	0	0	2	False	0	0	False	0				-1	False	True	True
+-1	positive	wh_main_unit_passive_grailknight_regeneration		False	False	False	0	0	0	0.5	2	0	0	0	3	False	0	0	False	0				-1	False	True	True
+-1	positive	wh_main_unit_passive_stormrage		False	False	False	0	0	0	0	0	0	0	-1	0	False	0	0	False	0				-1	False	True	True
+-1	positive	wh_main_unit_passive_trollflesh		False	False	False	0	0	0	0.5	5	0	0	0	2	False	0	0	False	0				-1	False	True	True
+-1	positive	unit_ability_leadership_boost_aura		False	False	False	0	0	0	0	0	0	0	0	0	False	0	0	False	0		wh_main_generic_buff_morale_passive		-1	False	True	True
+-1	positive	vmp_black_grail_regeneration		False	False	False	0	0	0	0.4	3	0	0	0	3	False	0	0	False	0				-1	False	True	True
+10	negative	vmp_unit_terrorgheist_shreik		False	False	False	0	0	0	0.5	0	0.75	3	6	0	False	0	0	False	0		wh_main_spell_death_doom_and_darkness		-1	False	True	True
+-1	positive	we_spell_passive_shadow_dancers_mana_regen		False	False	False	0	0	0	0	0	0	0	-1	0	False	0.3	10	False	0				-1	False	True	True
+40	negative	we_spell_shadow_dancers_withering		False	False	False	0	0	0	0.36	0	0.5	1	24	0	False	0	0	False	0		wh_dlc05_spell_shadow_the_withering	wh_dlc05_spell_shadow_the_withering	-1	False	True	True
+-1	negative	bst_tzaangor_magic_aura		False	False	False	0	0	0	0	0	0	0	-1	0	False	0	0	False	0				-1	False	True	True
+-1	positive	unit_ability_dwf_engineers_aura		False	False	False	0	0	0	0	0	0	0	0	0	False	0	0	False	0		wh_main_generic_buff_morale_passive		-1	False	True	True
+-1	positive	unit_ability_dwf_shieldbearer_aura		False	False	False	0	0	0	0	0	0	0	0	0	False	0	0	False	0		wh_main_generic_buff_morale_passive		-1	False	True	True
+-1	positive	unit_ability_grn_black_orc_bellow_aura		False	False	False	0	0	0	0	0	0	0	-1	0	False	0	0	False	0		wh_main_generic_buff_morale_passive		-1	False	True	True
+-1	positive	wh_main_lord_passive_dorghar		False	False	False	0	0	0	0.75	6	0	0	0	2	False	0	0	False	0				-1	False	True	True
+-1	negative	wh_main_lord_passive_kemmler		False	False	False	0	0	0	1.08	0	0.5	2	10	0	False	0	0	False	0		wh_dlc05_spell_shadow_the_withering	wh_dlc05_spell_shadow_melkoths_mystifying_miasma	-1	False	True	True
+16	negative	wh_main_unit_contact_poison_lethal		False	False	False	0	0	0	1.1	0	1	2	5	0	False	0	0	False	0		wh_main_generic_hp_damage_passive		-1	False	True	True
+10	negative	wh_main_unit_contact_searing_fire		False	False	False	0	0	0	1	0	0.5	5	5	0	False	0	0	False	5				-1	False	True	True
+-1	positive	wh_main_impetuous		False	False	False	0	0	0	0	0	0	0	-1	0	False	0	0	False	0				-1	False	True	True
+30	positive	wh_emp_last_stand		True	False	False	0	0	0	0	0	0	0	-1	0	False	0	0	False	0		wh_main_generic_buff_defence	wh_ability_positive	-1	False	True	True
+20	negative	wh_emp_prayer_of_binding		False	False	False	0	0	0	0	0	0	0	-1	0	False	0	0	False	0		wh_main_hero_abilities_accusation	wh_ability_negative	-1	False	True	True
+-1	positive	wh_emp_sigmarite_aura_faith		False	False	False	0	0	0	0	0	0	0	-1	0	False	0	0	False	0		wh_main_generic_buff_morale_passive		-1	False	True	True
+-1	positive	chs_passive_regeneration		False	False	False	0	0	0	0.5	2	0	0	0	2	False	0	0	False	0				-1	False	True	True
+15	positive	chs_zealot_dark_healing		False	False	False	0	0	0	0.5	25	0	0	0	20	False	0	0	False	0		wh_main_spell_vampires_vanhels_danse_macabre	wh_dlc03_spell_beasts_curse_of_anraheir	-1	False	True	True
+25	negative	chs_soul_drain		False	False	False	0	0	0	1	0	0.75	10	12	0	False	0	0	False	0		wh_dlc05_spell_shadow_the_withering	wh_main_spell_death_doom_and_darkness	-1	False	True	True
+-1	positive	wh_main_unit_passive_hydra		False	False	False	0	0	0	0.25	2	0	0	0	2	False	0	0	False	0				-1	False	True	True
+5	positive	wh_lzd_solar		False	False	False	-0.1	0	0	0	0	0	0	-1	0	False	0	0	False	0		wh_main_generic_hp_regen_passive		-1	False	True	True
+-1	positive	wh_hef_dragon_prince		False	False	False	0	0	0	0	0	0	0	0	0	False	0	0	False	0				-1	False	True	True
+-1	positive	wh_def_dread_glory		False	False	False	0	0	0	0	0	0	0	-1	0	False	0	0	False	0		wh_main_generic_buff_morale_passive		-1	False	True	True
+-1	positive	wh_lzd_slann		False	False	False	0	0	0	0	0	0	0	-1	0	False	0	0	False	0		wh_main_generic_buff_morale_passive		-1	False	True	True
+-1	positive	chs_main1		False	False	False	-0.1	0	0	0	0	0	0	0	0	False	0	0	False	0				-1	False	True	True
+-1	positive	chs_main2		False	False	False	-0.2	0	0	0	0	0	0	0	0	False	0	0	False	0				-1	False	True	True
+-1	positive	bst_main2		False	False	False	0	0	0	0	0	0	0	0	0	False	0	0	False	0				-1	False	True	True
+-1	positive	dwf_main1		False	False	False	0	0	0	0	0	0	0	0	0	False	0	0	False	0				-1	False	True	True
+-1	positive	dwf_main2		False	False	False	0	0	0	0	0	0	0	-1	0	False	0	0	False	0		wh_main_generic_buff_morale_passive		-1	False	True	True
+30	positive	grn_main1		False	False	False	0	0	0	0	0	0	0	0	0	False	0	0	False	0		wh_main_generic_buff_attack		-1	False	True	True
+45	positive	grn_main2		False	False	False	0	0	0	0	0	0	0	-1	0	False	0	0	False	0		wh_main_generic_buff_attack		-1	False	True	True
+-1	positive	vmp_main1		False	False	False	0	0	0	0	0	0	0	-1	0	False	0	0	False	0		wh_main_generic_buff_morale_passive		-1	False	True	True
+-1	positive	brt_main1		False	False	False	0	0	0	0	0	0	0	0	0	False	0	0	False	0		wh_main_generic_buff_attack		-1	False	True	True
+-1	positive	brt_main2		False	False	False	0	0	0	0	0	0	0	0	0	False	0	0	False	0		wh_main_generic_buff_attack		-1	False	True	True
+-1	positive	wef_main1		False	False	False	0	0	0	0	0	0	0	0	0	False	0	0	False	0		wh_main_generic_buff_attack		-1	False	True	True
+-1	positive	wef_main2		False	False	False	0	0	0	0	0	0	0	0	0	False	0	0	False	0				-1	False	True	True
+-1	positive	emp_main1		False	False	False	0	0	0	0	0	0	0	-1	0	False	0	0	False	0		wh_main_generic_buff_attack		-1	False	True	True
+-1	negative	hef_phoenix_guard		False	False	False	0	0	0	0	0	0	0	-1	0	False	0	0	False	0		wh_main_hero_abilities_accusation		-1	False	True	True
+30	positive	grn_main1_1		False	False	False	0	0	0	0	0	0	0	0	0	False	0	0	False	0		wh_main_generic_buff_attack		-1	False	True	True
+30	positive	grn_main1_2		False	False	False	0	0	0	0	0	0	0	0	0	False	0	0	False	0		wh_main_generic_buff_attack		-1	False	True	True
+20	positive	skv_overcharge		False	False	False	0	0	0	0	0	0	0	0	0	False	0	0	False	0		wh_main_generic_buff_attack		-1	False	True	True

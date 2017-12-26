@@ -57,7 +57,7 @@ def main(args):
                 baseTableFolder = baseDirectory + "\\" + folder
                 modTableFolder = modDirectory + "\\" + folder
 
-                table_module.run_diff(baseTableFolder, modTableFolder, None) # TODO: is there a way to know what the offset will be?
+                table_module.run_diff(baseTableFolder, modTableFolder)
         else:
             sys.stderr.write("No shared folder names in both mod directory and base directory!\n")
 
