@@ -15,7 +15,7 @@ class Table:
         self.separator = ","
         self.name = "Default"
         self.lineTwo = "" # 34, for example saying there are 34 columns
-        self.entryKey = [None]
+        self.entryKey = [None] # a list of every column name that acts as part of the key
         self.folder = ""
 
     def __str__(self):
@@ -29,10 +29,10 @@ class Table:
 
     # returns the entry key for a particular entry based off the table's entry key metadata
     def get_entry_key(self, entry):
-        print "Entry " + str(entry)
+        #print "Entry " + str(entry)
         ek = "EK__"
         i = 1
-        print "Key columns " + str(self.entryKey)
+        #print "Key columns " + str(self.entryKey)
 
         for keyCol in self.entryKey: # iterate through each entry key column, add the value of that column to the key string
             if keyCol == None:

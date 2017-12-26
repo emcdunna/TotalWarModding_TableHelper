@@ -12,8 +12,9 @@ def main(args):
         sys.stderr.write("Example: \'python run_compress_tables.py mod_directory\'\n")
         return -1
     else:
-        directory = args[0]
-        newDirectory = directory + "_COMPRESSED"
+        root_directory = args[0]
+        newDirectory = os.path.join(root_directory,"db_COMPRESSED")
+        directory = os.path.join(root_directory, "db")
         try:
             os.mkdir(newDirectory)
         except WindowsError as e:
@@ -22,19 +23,19 @@ def main(args):
 
         for folder in folderList:
 
-            tableFolder = directory + "\\" + folder
-            table = table_module.concatTablesInFolder(tableFolder,None)
+            tableFolder = os.path.join(directory,folder)
+            table = table_module.concatTablesInFolder(tableFolder)
             if(table != None):
                 if(len(table.entries) == 0):
                     sys.stderr.write("Ignoring table: " + table.name + " because it contains no entries.\n")
                 else:
                     output = table.get_fileprint_string()
-                    o_folder = newDirectory + "\\" + folder
+                    o_folder = os.path.join(newDirectory,folder)
                     try:
                         os.mkdir(o_folder)
                     except WindowsError as e:
                         pass
-                    o_name = o_folder + "\\NEW_" + table.name + table.get_file_extension()
+                    o_name = os.path.join(o_folder, table.name + table.get_file_extension())
                     o_file = open(o_name,'w')
                     o_file.write(output)
 
