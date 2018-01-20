@@ -1,0 +1,82 @@
+Changes between .\Exports\tmp\db\effect_bundles_to_effects_junctions_tables\effect_bundles_to_effects.tsv (old) and .\Exports\tmp\db\effect_bundles_to_effects_junctions_tables\spreadsheet.tsv (new)
+Entry	Column	Old Value	New Value
+EK:  wh_main_edict_high_kings_tribute  TO  wh_main_effect_public_order_edict	ENTIRE_ENTRY	MISSING	{'advancement_stage': 'start_turn_completed', 'effect_key': 'wh_main_effect_public_order_edict', 'effect_bundle_key': 'wh_main_edict_high_kings_tribute', 'value': '-3', 'effect_scope': 'province_to_province_own'}
+EK:  wh_main_bundle_stance_army_fortification  TO  wh_main_effect_force_all_campaign_stance_ap_cost	value	50	25
+EK:  wh_main_bundle_stance_army_channelling  TO  wh_main_effect_force_all_campaign_stance_ap_cost	value	50	25
+EK:  wh_main_bundle_stance_navy_raiding  TO  wh_main_effect_force_all_campaign_stance_ap_cost	value	50	25
+EK:  wh2_main_edict_skv_devious_planning  TO  wh_main_effect_province_tax_rate	value	-30	-50
+EK:  wh2_main_edict_skv_martial_planning  TO  wh_main_effect_force_army_campaign_recruitment_cost_land	value	-5	-25
+EK:  wh2_main_edict_def_enforce_tribute  TO  wh_main_effect_province_tax_rate	value	5	7
+EK:  wh2_pooled_resource_skaven_food_plentiful  TO  wh_main_effect_force_all_campaign_upkeep	ENTIRE_ENTRY	MISSING	{'advancement_stage': 'start_turn_completed', 'effect_key': 'wh_main_effect_force_all_campaign_upkeep', 'effect_bundle_key': 'wh2_pooled_resource_skaven_food_plentiful', 'value': '-10', 'effect_scope': 'faction_to_character_own_factionwide'}
+EK:  wh2_main_edict_skv_devious_planning  TO  wh_main_effect_religion_conversion_skaven	value	2	4
+EK:  wh2_pooled_resource_skaven_food_starvation  TO  wh2_main_effect_force_all_campaign_sacking_income	value	-25	-50
+EK:  wh2_main_edict_hef_rebuild_lost_splendour  TO  wh_main_effect_province_growth_province	value	20	15
+EK:  wh_main_edict_evocation_of_nagash  TO  wh_main_effect_force_all_campaign_experience_base_all	value	1	2
+EK:  wh_main_edict_foster_terror  TO  wh_main_effect_religion_conversion_undeath	value	1	2
+EK:  wh_main_edict_venerate_the_lady  TO  wh_main_effect_religion_conversion_untainted	value	2	3
+EK:  wh_main_bundle_stance_army_channelling_vmp  TO  wh_main_effect_force_all_campaign_stance_ap_cost	value	50	25
+EK:  wh2_main_edict_hef_rebuild_lost_splendour  TO  wh_main_effect_building_construction_cost_mod	value	-10	-15
+EK:  wh2_main_edict_skv_efficient_planning  TO  wh_main_effect_religion_conversion_untainted	value	1	2
+EK:  wh2_pooled_resource_skaven_food_starvation  TO  wh_main_effect_force_all_campaign_upkeep	ENTIRE_ENTRY	MISSING	{'advancement_stage': 'start_turn_completed', 'effect_key': 'wh_main_effect_force_all_campaign_upkeep', 'effect_bundle_key': 'wh2_pooled_resource_skaven_food_starvation', 'value': '30', 'effect_scope': 'faction_to_character_own_factionwide'}
+EK:  wh_main_bundle_stance_army_raiding  TO  wh_main_effect_force_all_campaign_stance_ap_cost	value	50	25
+EK:  wh_main_edict_brag_about_da_boss  TO  wh_main_effect_unit_recruitment_points	value	1	2
+EK:  wh2_pooled_resource_skaven_food_plentiful  TO  wh_main_effect_province_food_shortage_public_order_happiness	value	2	6
+EK:  wh2_pooled_resource_skaven_food_starvation  TO  wh_main_effect_force_all_campaign_raid_income	value	-25	-50
+EK:  wh_main_edict_realm_of_chivalry  TO  wh_main_effect_technology_research_points_mod	value	10	15
+EK:  wh_main_edict_host_festag  TO  wh_main_effect_public_order_edict	value	4	6
+EK:  wh2_pooled_resource_skaven_food_starvation  TO  wh_main_effect_force_all_campaign_post_battle_loot_mod	value	-25	-50
+EK:  wh_dlc05_edict_hunt_of_kurnous  TO  wh_main_effect_force_army_campaign_recruitment_cost_land	value	-5	-15
+EK:  wh2_main_edict_hef_reaver_patrols  TO  wh_main_effect_force_army_campaign_ambush_attack_success_chance	value	10	20
+EK:  wh2_main_edict_skv_devious_planning  TO  wh2_main_pooled_resource_skaven_food_commandments	value	2	4
+EK:  wh2_main_edict_skv_expansionist_planning  TO  wh_main_effect_building_construction_cost_mod	value	-10	-15
+EK:  wh2_main_edict_hef_rally_citizen_militia  TO  wh_main_effect_force_army_campaign_recruitment_cost_land	ENTIRE_ENTRY	MISSING	{'advancement_stage': 'start_turn_completed', 'effect_key': 'wh_main_effect_force_army_campaign_recruitment_cost_land', 'effect_bundle_key': 'wh2_main_edict_hef_rally_citizen_militia', 'value': '-25', 'effect_scope': 'province_to_province_own'}
+EK:  wh2_pooled_resource_skaven_food_shortage  TO  wh_main_effect_province_growth_food	value	-5	-25
+EK:  wh2_main_edict_def_read_portents  TO  wh_main_effect_force_army_campaign_ambush_attack_success_chance	value	10	25
+EK:  wh_main_edict_state_troop_levy  TO  wh_main_effect_unit_recruitment_points	value	1	2
+EK:  wh2_pooled_resource_skaven_food_starvation  TO  wh_main_effect_province_food_shortage_public_order_happiness	value	-2	-10
+EK:  wh_dlc05_edict_might_of_vaul  TO  wh_main_effect_building_construction_cost_mod	value	-10	-15
+EK:  wh2_main_edict_def_sacrifices_for_khaine  TO  wh_main_effect_religion_conversion_untainted	value	1	3
+EK:  wh2_main_edict_hef_reaver_patrols  TO  wh2_main_effect_force_enemy_campaign_movement_range	value	-10	-20
+EK:  wh_main_edict_realm_of_chivalry  TO  wh_main_effect_building_construction_cost_mod	value	-10	-15
+EK:  wh_main_edict_sigmarite_dogma  TO  wh_main_effect_religion_conversion_untainted	value	1	3
+EK:  wh_dlc05_edict_wisdom_of_hoeth  TO  wh_main_effect_public_order_edict	value	2	3
+EK:  wh2_main_edict_hef_banish_corruption  TO  wh_main_effect_religion_conversion_untainted	value	2	4
+EK:  wh2_pooled_resource_skaven_food_surplus  TO  wh_main_effect_force_all_campaign_upkeep	ENTIRE_ENTRY	MISSING	{'advancement_stage': 'start_turn_completed', 'effect_key': 'wh_main_effect_force_all_campaign_upkeep', 'effect_bundle_key': 'wh2_pooled_resource_skaven_food_surplus', 'value': '-5', 'effect_scope': 'faction_to_character_own_factionwide'}
+EK:  wh2_pooled_resource_skaven_food_average  TO  wh_main_effect_province_growth_food	value	3	0
+EK:  wh_main_edict_brag_about_da_boss  TO  wh_main_effect_force_army_campaign_recruitment_cost_land	value	-5	-15
+EK:  wh_main_edict_harvest_corpses  TO  wh_main_effect_province_growth_province	ENTIRE_ENTRY	MISSING	{'advancement_stage': 'start_turn_completed', 'effect_key': 'wh_main_effect_province_growth_province', 'effect_bundle_key': 'wh_main_edict_harvest_corpses', 'value': '-20', 'effect_scope': 'province_to_province_own'}
+EK:  wh_main_edict_imperial_taxation  TO  wh_main_effect_public_order_edict	ENTIRE_ENTRY	MISSING	{'advancement_stage': 'start_turn_completed', 'effect_key': 'wh_main_effect_public_order_edict', 'effect_bundle_key': 'wh_main_edict_imperial_taxation', 'value': '-3', 'effect_scope': 'province_to_province_own'}
+EK:  wh_main_edict_foster_independence  TO  wh_main_effect_religion_conversion_untainted	value	1	2
+EK:  wh_main_edict_repress_mortals  TO  wh_main_effect_public_order_edict	value	4	5
+EK:  wh_main_edict_venerate_the_lady  TO  wh_main_effect_public_order_edict	value	10	6
+EK:  wh2_main_edict_hef_tribute_for_the_king  TO  wh_main_effect_economy_trade_tariff_mod	value	4	3
+EK:  wh2_main_edict_hef_tribute_for_the_king  TO  wh_main_effect_province_tax_rate	value	3	5
+EK:  wh2_main_edict_def_enforce_tribute  TO  wh_main_effect_public_order_edict	ENTIRE_ENTRY	MISSING	{'advancement_stage': 'end_turn_completed', 'effect_key': 'wh_main_effect_public_order_edict', 'effect_bundle_key': 'wh2_main_edict_def_enforce_tribute', 'value': '-4', 'effect_scope': 'province_to_province_own'}
+EK:  wh2_pooled_resource_skaven_food_starvation  TO  wh_main_effect_province_growth_food	value	-20	-60
+EK:  wh2_pooled_resource_skaven_food_shortage  TO  wh_main_effect_province_food_shortage_public_order_happiness	value	-1	-4
+EK:  wh2_main_edict_def_festivals_of_hedonism  TO  wh_main_effect_military_force_winds_of_magic_depletion_mod_other	value	2	5
+EK:  wh2_pooled_resource_skaven_food_plentiful  TO  wh_main_effect_province_growth_food	value	20	25
+EK:  wh_dlc05_edict_hand_of_asuryan  TO  wh_main_effect_province_growth_province	value	20	25
+EK:  wh_dlc05_edict_protection_of_isha  TO  wh_main_effect_religion_conversion_untainted	value	1	3
+EK:  wh2_pooled_resource_skaven_food_shortage  TO  wh_main_effect_force_all_campaign_upkeep	ENTIRE_ENTRY	MISSING	{'advancement_stage': 'start_turn_completed', 'effect_key': 'wh_main_effect_force_all_campaign_upkeep', 'effect_bundle_key': 'wh2_pooled_resource_skaven_food_shortage', 'value': '15', 'effect_scope': 'faction_to_character_own_factionwide'}
+EK:  wh_main_edict_state_troop_levy  TO  wh_main_effect_force_army_campaign_recruitment_cost_land	value	-5	-20
+EK:  wh_main_edict_venerate_the_ancestors  TO  wh_main_effect_public_order_edict	value	2	4
+EK:  wh2_main_edict_def_read_portents  TO  wh_main_effect_agent_action_outcome_target_defence_success_chance_enemy_hidden	value	-15	-20
+EK:  wh_main_bundle_stance_army_raiding_camp  TO  wh_main_effect_force_all_campaign_stance_ap_cost	value	50	25
+EK:  wh2_main_edict_skv_efficient_planning  TO  wh_main_effect_public_order_edict	value	2	4
+EK:  wh_main_edict_extensive_patrols  TO  wh_main_effect_force_army_campaign_recruitment_cost_land	value	-10	-15
+EK:  wh_main_edict_levy_conscripts  TO  wh_main_effect_unit_recruitment_points	value	1	2
+EK:  wh_main_edict_stimulate_trade  TO  wh_main_effect_economy_trade_tariff_mod	value	5	10
+EK:  wh2_main_edict_skv_martial_planning  TO  wh_main_effect_unit_recruitment_points	value	1	2
+EK:  wh2_main_edict_def_increase_production  TO  wh_main_effect_province_growth_province	value	20	25
+EK:  wh_main_edict_the_peasants_duty  TO  wh_main_effect_province_growth_province	value	15	25
+EK:  wh_dlc05_edict_hunt_of_kurnous  TO  wh_main_effect_force_all_campaign_experience_base_all	value	1	2
+EK:  wh2_pooled_resource_skaven_food_surplus  TO  wh_main_effect_province_food_shortage_public_order_happiness	value	1	3
+EK:  wh_main_edict_camp_ruckus  TO  wh_main_effect_public_order_edict	value	2	4
+EK:  wh2_main_bundle_stance_army_channelling_hef  TO  wh_main_effect_force_all_campaign_stance_ap_cost	value	50	25
+EK:  wh_main_bundle_stance_army_raiding_skaven  TO  wh_main_effect_force_all_campaign_stance_ap_cost	value	50	25
+EK:  wh_main_bundle_stance_army_raiding_horde  TO  wh_main_effect_force_all_campaign_stance_ap_cost	value	50	25
+EK:  wh_main_bundle_stance_army_raiding_bretonnia  TO  wh_main_effect_force_all_campaign_stance_ap_cost	value	50	25
+EK:  wh_dlc05_edict_wisdom_of_hoeth  TO  wh_main_effect_technology_research_points_mod	value	5	10
+EK:  wh2_main_edict_skv_expansionist_planning  TO  wh_main_effect_province_growth_province	value	20	25
+
