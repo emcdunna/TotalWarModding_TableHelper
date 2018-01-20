@@ -1,8 +1,0 @@
-cai_personalities_income_allocation_policies_tables
-2
-unknown0	unknown1
-default	income_allocation_medium_spending
-militarist	income_allocation_high_spending
-peaceful	income_allocation_low_spending
-small_military	income_allocation_low_spending
-small_military_no_ovespend	income_allocation_low_spending_no_overspend

@@ -1,9 +1,0 @@
-incidents_tables
-5
-unknown0	key	unknown2	unknown3	unknown4
-False	wh_twh_incident_nordland_pleased	diplomacy	False	Diplomatic
-False	wh_twh_incident_nordland_angry	diplomacy	False	Diplomatic
-False	wh_twh_incident_marienburg_angry	diplomacy	False	Diplomatic
-True	wh_twh_incident_state_of_the_empire	politics	True	Domestic
-True	wh_twh_emp_incident_for_sigmar	army_morale_up	True	Religious
-False	wh_twh_emp_incident_refugees	civilisation_down	False	Domestic

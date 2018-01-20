@@ -1,5 +1,0 @@
-formations_tables
-2
-formation	icon_name	is_army	is_naval	order
-test_melee_forward_simple	melee_front.png	False	False	1
-test_missile_forward_simple	missile_front.png	False	False	2

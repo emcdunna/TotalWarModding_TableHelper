@@ -1,7 +1,0 @@
-deployables_abilities_tables
-4
-unknown0	unknown1	unknown2	unknown3	unknown4	unknown5	unknown6	unknown7	unknown8	unknown9
-barricades	deployable_barricade	0	0	3	30	0	0		
-brimstones	deployable_brimstone	4	0	3	60	0	0		
-sharp_stones	deployable_sharp_stones	10	0	3	60	0	0		
-spike_traps	deployable_spiketrap	9	0	3	60	0	0		

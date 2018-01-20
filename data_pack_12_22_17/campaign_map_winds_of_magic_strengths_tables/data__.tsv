@@ -1,8 +1,0 @@
-campaign_map_winds_of_magic_strengths_tables
-2
-unknown0	unknown1	unknown2	unknown3	unknown4
-False	wom_strength_0	-50	1	
-False	wom_strength_1	-20	3	
-True	wom_strength_2	0	5	winds_of_magic_3
-False	wom_strength_3	20	3	winds_of_magic_4
-False	wom_strength_4	50	1	winds_of_magic_5

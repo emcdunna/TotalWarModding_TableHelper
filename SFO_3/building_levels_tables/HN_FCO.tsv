@@ -1,4 +1,0 @@
-building_levels_tables
-16
-level_name	chain	level	create_time	create_cost	upkeep_cost	commodity	commodity_vol	only_in_capital	military_prestige	naval_prestige	unknown11	unknown12	unknown13	unknown14	unknown15	unknown16	unknown17	unknown18	can_convert	building_instance_key	should_show_building_level_in_ui_for_technology	unknown22	unknown23	unknown24	unknown25	development_point_cost	can_be_damaged	primary_slot_building_building_level_requirement	audio_building_type	visible_in_ui	food_cost	slave_cap_contribution
-wh2_main_lzd_coldones_0	wh2_main_lzd_coldones	0	1	750	0		0	False	0	0	False	False	False	False	False	False	False		True	wh2_main_lzd_coldones	False	False	False	False	False	0	True	1		True	0	0

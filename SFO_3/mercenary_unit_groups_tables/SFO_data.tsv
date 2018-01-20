@@ -1,7 +1,0 @@
-mercenary_unit_groups_tables
-0
-chance_to_replenish	key	max_count	max_replenish_per_turn	unit_record
-100	grn_black_orc_boss	1	1	grn_black_orc_boss
-100	vmp_black_grail	1	1	vmp_black_grail
-100	wef_shadowdancer	1	1	wef_shadowdancer
-100	brt_tournament	1	1	brt_tournament

@@ -1,7 +1,0 @@
-deployment_area_displays_tables
-3
-unknown0	unknown1	unknown2	unknown3	unknown4
-default	6	1280		materials\ui\deployment_zone_generic.xml.material
-wh_main_dwf_dwarfs	6	2560		materials\ui\deployment_zone_generic.xml.material
-wh_main_grn_greenskins	6	2560		materials\ui\deployment_zone_generic.xml.material
-wh_playable_area	6	1280		materials\ui\playable_area_generic.xml.material

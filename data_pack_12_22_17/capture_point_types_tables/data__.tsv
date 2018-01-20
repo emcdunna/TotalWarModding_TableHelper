@@ -1,9 +1,0 @@
-capture_point_types_tables
-1
-icon_name	key	unknown2
-placeholder	a_default_capture_point	0
-gate_tower	capture_point_gate_and_towers	0
-gate	capture_point_gate_only	0
-tower	capture_point_tower_only	0
-towers	capture_point_towers	0
-placeholder	victory_point_plaza	0

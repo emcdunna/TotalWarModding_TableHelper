@@ -1,8 +1,0 @@
-building_set_to_building_junctions_tables
-0
-building_chain	building_level	building_set	exclude
-chs_nurgle		wh_main_set_chaos_shrine	False
-chs_khorne		wh_main_set_chaos_shrine	False
-chs_tzeentch		wh_main_set_chaos_shrine	False
-chs_slaanesh		wh_main_set_chaos_shrine	False
-chs_fort		wh_main_set_chaos_shrine	False

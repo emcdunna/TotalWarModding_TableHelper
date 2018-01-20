@@ -1,9 +1,0 @@
-effect_bundles_tables
-1
-key	localised_description	localised_title	ui_icon	bundle_target
-wh_main_bundle_stance_army_channelling_chs	Increases the favourability of the Winds of Magic when fighting battles.	Stance: Summoning	wizard.png	force
-wh_main_bundle_stance_army_channelling_def	Increases the favourability of the Winds of Magic when fighting battles and allows for a small amount of replenishment.	Stance: Channelling	wizard.png	force
-wh_main_bundle_stance_army_raiding_bretonnia	Raids wealth from the local region.	Stance: Spread The Word	icon_effects_raiding.png	force
-wh_main_bundle_stance_army_fortification_skv	Sets up a defensive camp, allowing for recruitment and replenishment, regardless of territory.	Stance: Encamp	icon_effects_fortify.png	force
-wh_main_payload_event_the_eye_opens_wider_first	For the Father Plague.	Nurgle	military_spending.png	faction
-wh_main_payload_event_the_eye_opens_wider_second	For the Dark Prince.	Slaanesh	campaign_movement.png	faction

@@ -1,9 +1,0 @@
-missile_weapons_tables
-11
-key	precursor	default_projectile	weapon_type	can_fire_at_buildings
-brt_crossbow	False	brt_crossbow	bow	False
-dwf_grenade_gun	False	dwf_grenade	grenade_launcher	False
-emp_huntsmen	False	emp_huntsmen	bow	False
-emp_witch_squad	False	emp_witch_squad	crossbow	False
-emp_nuln_ironsides	False	emp_nuln_ironsides	repeater_gun	False
-emp_general_pistol	False	emp_general_pistol	pistol	False

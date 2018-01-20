@@ -1,9 +1,0 @@
-audio_materials_tables
-0
-unknown0	unknown1	unknown2	unknown3
-True		earth	earth
-True	rock	metal	metal
-True	earth	rock	rock
-True	earth	sand	sand
-False		water	water
-True	rock	wood	wood

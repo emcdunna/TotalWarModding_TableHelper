@@ -1,4 +1,0 @@
-cai_personality_deal_generation_generator_priorities_tables
-2
-component_key	generator_key	last_stand_priority	param1	param2	param3	param4	peace_priority	tension_priority	total_war_priority	war_priority	failure_timeout	min_payment_cap	max_payment_cap	max_payment_pct
-subjugator	FORM_CONFEDERATION	400	0	-500	0	0	400	400	400	400	5	0	10000	10

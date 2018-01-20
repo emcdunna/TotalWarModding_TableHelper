@@ -1,7 +1,0 @@
-cai_personality_negotiation_components_tables
-3
-angry_reject_max	angry_reject_min	id	initial_counter	initial_decline	irrelevant_accept	irrelevant_counter_last	irrelevant_counter_new	irrelevant_decline	max_interactions	max_steps_above_acceptable	no_offer_chance	no_payment_chance	num_goals_generated	unknown14	unknown15
-4	2	active	1	1	3	0	1	0	3	1	40	60	2	30000	5
-4	2	default	1	1	3	0	1	0	3	1	70	60	2	30000	5
-4	2	non_diplomatic	1	1	3	0	1	0	3	1	85	60	2	30000	5
-4	2	offers_money	1	1	3	0	1	0	3	1	60	10	2	30000	5

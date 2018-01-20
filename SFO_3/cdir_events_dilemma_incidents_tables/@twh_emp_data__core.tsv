@@ -1,5 +1,0 @@
-cdir_events_dilemma_incidents_tables
-0
-choice_key	dilemma_key	incident_key
-FIRST	wh_twh_emp_marienburg	wh_twh_incident_nordland_angry
-SECOND	wh_twh_emp_marienburg	wh_twh_incident_nordland_pleased

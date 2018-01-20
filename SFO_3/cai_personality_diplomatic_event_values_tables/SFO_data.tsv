@@ -1,9 +1,0 @@
-cai_personality_diplomatic_event_values_tables
-0
-component_id	event_id	falloff	value
-default	RAIDING	25	-15
-default	VASSALAGE	50	25
-default	VASSALAGE_FORCED	50	20
-holds_grudges	RAIDING	100	-25
-holds_grudges	VASSALAGE	50	25
-holds_grudges	VASSALAGE_FORCED	50	20

@@ -1,6 +1,0 @@
-destruction_zone_mask_types_tables
-2
-unknown0	unknown1	unknown2	unknown3	unknown4	unknown5	unknown6
-chaos	chaos_creep0	chaos_creep1	chaos_creep2	chaos_creep3	terrain/textures/battle/creep/chaos/chaos_creep_diffuse.dds	terrain/textures/battle/creep/chaos/chaos_creep_normal.dds
-skaven	vampire_creep0	vampire_creep1	vampire_creep2	vampire_creep3	terrain/textures/battle/creep/vampire/vampire_creep_diffuse.dds	terrain/textures/battle/creep/vampire/vampire_creep_normal.dds
-vampire	vampire_creep0	vampire_creep1	vampire_creep2	vampire_creep3	terrain/textures/battle/creep/vampire/vampire_creep_diffuse.dds	terrain/textures/battle/creep/vampire/vampire_creep_normal.dds

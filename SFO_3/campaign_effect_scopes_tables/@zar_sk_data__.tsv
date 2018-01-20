@@ -1,4 +1,0 @@
-campaign_effect_scopes_tables
-2
-key	location	ownership	source	target	territory
-character_to_force_forcewide_enemy	forcewide	yours	character	force	enemy

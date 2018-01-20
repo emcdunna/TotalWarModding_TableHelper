@@ -1,6 +1,0 @@
-_kv_battle_ai_ability_usage_variables_tables
-0
-key	value
-mana_saving_max_added_amount	0.5
-mana_saving_threshold	0.4
-min_score_for_activation	0.5

@@ -1,7 +1,0 @@
-culture_settlement_occupation_options_tables
-8
-option	acting_army_faction_effect_bundle	acting_army_faction_effect_bundle_turns	target_settlement_faction_effect_bundle	target_settlement_faction_effect_bundle_turns	group	acting_army_effect_bundle	acting_army_effect_bundle_turns	unknown8	unknown9	unknown10	unknown11	unknown12	unknown13
-occupation_decision_raze_without_occupy		0		0	wh2_main_sc_chs_chaos_occupation_decision_raze_without_occupy	wh_main_bundle_horde_raze	5	7771	0	Raze for Khorne||All buildings are destroyed and the settlement is torched.	sfo_chaos_bundle_god_khorne	100	1
-occupation_decision_raze_without_occupy		0		0	wh2_main_sc_chs_chaos_occupation_decision_raze_without_occupy	wh_main_bundle_horde_raze1	5	7772	0	Raze for Nurgle||All buildings are destroyed and the settlement is torched.	sfo_chaos_bundle_god_nurgle	100	1
-occupation_decision_raze_without_occupy		0		0	wh2_main_sc_chs_chaos_occupation_decision_raze_without_occupy	wh_main_bundle_horde_raze2	5	7773	0	Raze for Slaanesh||All buildings are destroyed and the settlement is torched.	sfo_chaos_bundle_god_slaanesh	100	1
-occupation_decision_raze_without_occupy		0		0	wh2_main_sc_chs_chaos_occupation_decision_raze_without_occupy	wh_main_bundle_horde_raze3	5	7774	0	Raze for Tzeentch||All buildings are destroyed and the settlement is torched.	sfo_chaos_bundle_god_tzeentch	100	1

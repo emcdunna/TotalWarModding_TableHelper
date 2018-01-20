@@ -1,8 +1,0 @@
-effects_tables
-3
-effect	icon	priority	icon_negative	category	is_positive_value_good
-skv_queek_k8p	military_spending.png	0	military_spending.png	campaign	False
-brt_green	paladin.png	0	paladin.png	campaign	True
-chs_raze	religion_chaos.png	0	religion_chaos.png	campaign	True
-emp_empire	office.png	0	office.png	campaign	True
-skv_queek_k8p_1	loyalty.png	1	loyalty.png	campaign	True

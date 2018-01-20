@@ -1,9 +1,0 @@
-cdir_events_incident_payloads_tables
-1
-id	unknown1	incident_key	payload_key	value
-90001	0	wh_twh_incident_nordland_pleased	DIPLOMATIC_STANDING	AMOUNT[3]
-90002	0	wh_twh_incident_nordland_angry	DIPLOMATIC_STANDING	AMOUNT[-3]
-90004	0	wh_twh_incident_marienburg_angry	DIPLOMATIC_STANDING	AMOUNT[-3]
-90006	0	wh_twh_emp_incident_for_sigmar	wh_twh_payload_for_sigmar	DURATION[6];GLOBAL
-90007	0	wh_twh_emp_incident_refugees	wh_twh_payload_refugees	DURATION[5];GLOBAL
-90008	0	wh_twh_emp_incident_refugees	TARGET	EVENT

@@ -1,9 +1,0 @@
-campaign_map_roads_tables
-0
-campaign	key	movement_cost	threshold	unknown	unknown6
-wh2_main_great_vortex	wh2_main_road_lv_1	80	0	1	1
-wh2_main_great_vortex	wh2_main_road_lv_2	65	10	1	1
-wh2_main_great_vortex	wh2_main_road_lv_3	50	40	1	1
-main_warhammer	wh_main_road_lv_1	80	0	1	1
-main_warhammer	wh_main_road_lv_2	65	10	1	1
-main_warhammer	wh_main_road_lv_3	50	40	1	1

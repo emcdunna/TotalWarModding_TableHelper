@@ -1,8 +1,0 @@
-ui_unit_bullet_point_enums_tables
-3
-key	state	sort_order
-lethal_poison	positive	21
-knockback_hit_resist	positive	140
-vigorous	positive	141
-resilience	positive	142
-legendary	positive	0

@@ -1,8 +1,0 @@
-ancillary_uniqueness_groupings_tables
-3
-col_b	col_g	col_r	group_key	uniqueness_max	uniqueness_min	ui_state
-200	200	200	wh_main_anc_group_common	29	0	common
-0	128	128	wh_main_anc_group_crafted	150	101	crafted
-193	43	32	wh_main_anc_group_rare	100	50	rare
-45	13	55	wh_main_anc_group_uncommon	49	30	uncommon
-159	28	131	wh_main_anc_group_unique	999	151	legendary

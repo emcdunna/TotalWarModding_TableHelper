@@ -1,8 +1,0 @@
-mission_category_age_multipliers_tables
-1
-unknown0	unknown1	unknown2	unknown3
-Grudges	ANCESTRAL_GRUDGE	50	10
-Grudges	ANCIENT_GRUDGE	20	4
-Grudges	NEW_GRUDGE	0	1
-Grudges	OLDER_GRUDGE	10	2
-Grudges	OLD_GRUDGE	5	1.5

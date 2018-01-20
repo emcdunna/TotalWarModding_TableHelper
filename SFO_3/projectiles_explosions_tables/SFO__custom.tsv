@@ -1,4 +1,0 @@
-projectiles_explosions_tables
-18
-key	detonator_type	detonation_type	detonation_radius	detonation_duration	detonation_speed	detonation_damage	projectile_name	explosion_particle_effect	distance_from_target	explosion_particle_effect_on_ground	explosion_audio	contact_phase_effect	ignition_amount	is_magical	detonation_damage_ap	shrapnel	fuse_distance_from_target	fuse_fixed_time	affects_allies
-dwf_grenade_explosion	percussive	shockwave	3.2	0	13	34		wh_main_generic_spherical_explosion_small	0		wh_grenade		1	False	15	wh_main_unit_explosion_light	180	-1	True

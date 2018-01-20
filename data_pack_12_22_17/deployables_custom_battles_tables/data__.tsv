@@ -1,9 +1,0 @@
-deployables_custom_battles_tables
-0
-cap	deployable	probability
-3	deployable_barricade	200
-3	deployable_brimstone	50
-3	deployable_caltrop	100
-3	deployable_sharp_stones	100
-3	deployable_spiketrap	100
-3	deployable_stakes	200
