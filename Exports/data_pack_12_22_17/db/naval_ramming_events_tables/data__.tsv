@@ -1,0 +1,12 @@
+naval_ramming_events_tables
+0
+base_damage	key	rammed_ship	ramming_ship
+533	heavy_heavy	heavy_ship	heavy_ship
+585	heavy_light	light_ship	heavy_ship
+559	heavy_medium	medium_ship	heavy_ship
+208	light_heavy	heavy_ship	light_ship
+260	light_light	light_ship	light_ship
+234	light_medium	medium_ship	light_ship
+403	medium_heavy	heavy_ship	medium_ship
+455	medium_light	light_ship	medium_ship
+429	medium_medium	medium_ship	medium_ship

@@ -1,0 +1,19 @@
+commodities_tables
+1
+key	baseline_price_per_unit
+res_amber	14
+res_animals	15
+res_dyes	12
+res_gems	18
+res_medicine	12
+res_obsidian	10
+res_rom_furs	12
+res_rom_glass	15
+res_rom_iron	10
+res_rom_lead	12
+res_rom_marble	10
+res_rom_textiles	10
+res_rom_timber	10
+res_rom_wine	15
+res_spices	16
+res_trinkets	18

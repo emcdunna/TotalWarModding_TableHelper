@@ -1,0 +1,41 @@
+fame_levels_tables
+6
+fame_threshold_ai	army_cap	champion_cap	priest_cap	fame_level	fleet_cap	unknown6	unknown7	unknown8	unknown9	unknown10	unknown11	unknown12	unknown13
+70	9999	10	0	70	9999	main_warhammer	imperium_07_description	wh_main_bundle_faction_imperium_level_7	imperium_07_title	imperium_tooltip_07	1059676367	0	0
+110	9999	14	0	110	9999	wh2_main_great_vortex	imperium_07_description	wh_main_bundle_faction_imperium_level_7	imperium_07_title	imperium_tooltip_07	1060601369	0	0
+150	9999	18	0	150	9999	main_warhammer	imperium_07_description	wh_main_bundle_faction_imperium_level_7	imperium_07_title	imperium_tooltip_07	1070599439	0	0
+150	9999	18	0	150	9999	wh2_main_great_vortex	imperium_07_description	wh_main_bundle_faction_imperium_level_7	imperium_07_title	imperium_tooltip_07	137319115	0	0
+90	9999	12	0	90	9999	wh2_main_great_vortex	imperium_07_description	wh_main_bundle_faction_imperium_level_7	imperium_07_title	imperium_tooltip_07	1375248703	0	0
+100	9999	13	0	100	9999	wh2_main_great_vortex	imperium_07_description	wh_main_bundle_faction_imperium_level_7	imperium_07_title	imperium_tooltip_07	1624263050	0	0
+0	9999	0	0	0	9999	wh2_main_great_vortex	imperium_01_description		imperium_01_title	imperium_tooltip_01	182	0	0
+140	9999	17	0	140	9999	wh2_main_great_vortex	imperium_07_description	wh_main_bundle_faction_imperium_level_7	imperium_07_title	imperium_tooltip_07	1905902017	0	0
+6	9999	1	0	6	9999	wh2_main_great_vortex	imperium_02_description	wh_main_bundle_faction_imperium_level_1	imperium_02_title	imperium_tooltip_02	192	0	0
+110	9999	14	0	110	9999	main_warhammer	imperium_07_description	wh_main_bundle_faction_imperium_level_7	imperium_07_title	imperium_tooltip_07	193323227	0	0
+12	9999	2	0	12	9999	wh2_main_great_vortex	imperium_03_description	wh_main_bundle_faction_imperium_level_2	imperium_03_title	imperium_tooltip_03	194	0	0
+18	9999	3	0	18	9999	wh2_main_great_vortex	imperium_04_description	wh_main_bundle_faction_imperium_level_3	imperium_04_title	imperium_tooltip_04	200	0	0
+80	9999	11	0	80	9999	wh2_main_great_vortex	imperium_07_description	wh_main_bundle_faction_imperium_level_7	imperium_07_title	imperium_tooltip_07	2008061905	0	0
+24	9999	4	0	24	9999	wh2_main_great_vortex	imperium_05_description	wh_main_bundle_faction_imperium_level_4	imperium_05_title	imperium_tooltip_05	203	0	0
+130	9999	16	0	130	9999	main_warhammer	imperium_07_description	wh_main_bundle_faction_imperium_level_7	imperium_07_title	imperium_tooltip_07	209353989	0	0
+30	9999	5	0	30	9999	wh2_main_great_vortex	imperium_06_description	wh_main_bundle_faction_imperium_level_5	imperium_06_title	imperium_tooltip_06	213	0	0
+36	9999	6	0	36	9999	wh2_main_great_vortex	imperium_07_description	wh_main_bundle_faction_imperium_level_6	imperium_07_title	imperium_tooltip_07	216	0	0
+42	9999	7	0	42	9999	wh2_main_great_vortex	imperium_07_description	wh_main_bundle_faction_imperium_level_7	imperium_07_title	imperium_tooltip_07	217	0	0
+60	9999	9	0	60	9999	main_warhammer	imperium_07_description	wh_main_bundle_faction_imperium_level_7	imperium_07_title	imperium_tooltip_07	220610500	0	0
+140	9999	17	0	140	9999	main_warhammer	imperium_07_description	wh_main_bundle_faction_imperium_level_7	imperium_07_title	imperium_tooltip_07	339626653	0	0
+80	9999	11	0	80	9999	main_warhammer	imperium_07_description	wh_main_bundle_faction_imperium_level_7	imperium_07_title	imperium_tooltip_07	397625103	0	0
+90	9999	12	0	90	9999	main_warhammer	imperium_07_description	wh_main_bundle_faction_imperium_level_7	imperium_07_title	imperium_tooltip_07	407704676	0	0
+50	9999	8	0	50	9999	wh2_main_great_vortex	imperium_07_description	wh_main_bundle_faction_imperium_level_7	imperium_07_title	imperium_tooltip_07	504843562	0	0
+120	9999	15	0	120	9999	wh2_main_great_vortex	imperium_07_description	wh_main_bundle_faction_imperium_level_7	imperium_07_title	imperium_tooltip_07	534436560	0	0
+0	9999	0	0	0	9999	main_warhammer	imperium_01_description		imperium_01_title	imperium_tooltip_01	60	0	0
+120	9999	15	0	120	9999	main_warhammer	imperium_07_description	wh_main_bundle_faction_imperium_level_7	imperium_07_title	imperium_tooltip_07	621936552	0	0
+130	9999	16	0	130	9999	wh2_main_great_vortex	imperium_07_description	wh_main_bundle_faction_imperium_level_7	imperium_07_title	imperium_tooltip_07	640675972	0	0
+100	9999	13	0	100	9999	main_warhammer	imperium_07_description	wh_main_bundle_faction_imperium_level_7	imperium_07_title	imperium_tooltip_07	665548356	0	0
+6	9999	1	0	6	9999	main_warhammer	imperium_02_description	wh_main_bundle_faction_imperium_level_1	imperium_02_title	imperium_tooltip_02	68	0	0
+12	9999	2	0	12	9999	main_warhammer	imperium_03_description	wh_main_bundle_faction_imperium_level_2	imperium_03_title	imperium_tooltip_03	69	0	0
+50	9999	8	0	50	9999	main_warhammer	imperium_07_description	wh_main_bundle_faction_imperium_level_7	imperium_07_title	imperium_tooltip_07	702840754	0	0
+18	9999	3	0	18	9999	main_warhammer	imperium_04_description	wh_main_bundle_faction_imperium_level_3	imperium_04_title	imperium_tooltip_04	74	0	0
+24	9999	4	0	24	9999	main_warhammer	imperium_05_description	wh_main_bundle_faction_imperium_level_4	imperium_05_title	imperium_tooltip_05	75	0	0
+70	9999	10	0	70	9999	wh2_main_great_vortex	imperium_07_description	wh_main_bundle_faction_imperium_level_7	imperium_07_title	imperium_tooltip_07	819028788	0	0
+30	9999	5	0	30	9999	main_warhammer	imperium_06_description	wh_main_bundle_faction_imperium_level_5	imperium_06_title	imperium_tooltip_06	82	0	0
+60	9999	9	0	60	9999	wh2_main_great_vortex	imperium_07_description	wh_main_bundle_faction_imperium_level_7	imperium_07_title	imperium_tooltip_07	858629976	0	0
+36	9999	6	0	36	9999	main_warhammer	imperium_07_description	wh_main_bundle_faction_imperium_level_6	imperium_07_title	imperium_tooltip_07	88	0	0
+42	9999	7	0	42	9999	main_warhammer	imperium_07_description	wh_main_bundle_faction_imperium_level_7	imperium_07_title	imperium_tooltip_07	93	0	0

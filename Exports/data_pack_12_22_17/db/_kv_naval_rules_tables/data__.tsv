@@ -1,0 +1,30 @@
+_kv_naval_rules_tables
+0
+key	value
+boarding_bonus_time	60
+boarding_melee_attack_bonus	10
+boarding_melee_defense_bonus	10
+broadsides_accuracy_modifier	0.1
+broadsides_damage_modifier	1.25
+ship_backwater_minimum_distance	50
+ship_backwater_radius_modifier_default	12
+ship_backwater_speed_percentage_default	0.5
+ship_backwater_vector_degrees_default	30
+ship_beaching_location_offset	10
+ship_boarding_pipes_max_length_default	10
+ship_chance_of_fire_rain_multiplier	0.5
+ship_combustion_rain_multiplier	2
+ship_douse_fire_absolute_per_tick	0
+ship_douse_fire_percentage_pre_tick	0.0001
+ship_fire_damage_rain_modifier	0.75
+ship_landing_location_offset	75
+ship_marker_mouse_over_offset_back	-3
+ship_marker_mouse_over_offset_front	6
+ship_marker_mouse_over_padding	8
+ship_marker_padding_length	5
+ship_marker_padding_width	10
+ship_on_fire_combustion_modifier	0.5
+ship_on_fire_hit_points_per_second_multiplier	0.01
+ship_repair_max_percentage	0.75
+ship_repair_percentage_per_update	0.125
+ship_repair_rate	4

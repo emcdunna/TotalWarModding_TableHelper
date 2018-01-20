@@ -1,0 +1,6 @@
+unit_required_technology_junctions_tables
+0
+unit_key	technology_key
+wh_dlc06_grn_cav_squig_hoppers_0	tech_grn_main_squigs
+wh_main_grn_art_doom_diver_catapult	tech_grn_unlock_doomdiver
+wh_main_grn_mon_arachnarok_spider_0	tech_grn_unlock_arachnarok

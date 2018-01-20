@@ -1,0 +1,68 @@
+area_of_effect_displays_tables
+8
+unknown0	unknown1	unknown2	unknown3	unknown4	unknown5	unknown6	unknown7	unknown8	unknown9	unknown10	unknown11	unknown12	unknown13	unknown14	unknown15	unknown16	unknown17	unknown18
+False	wh2_main_army_abilities_channeling_spire	False		wh2_main_abilities_channeling_spire_segment	2	255	255	255	255	255	255	False	0	64	composite_scene\spells_and_abilities\wh2_main_abilities_channeling_spire.csc	False	-1	False
+False	wh2_main_army_abilities_eshin_clanstone	False		wh2_main_army_abilities_eshin_clanstone_segment	2	255	255	255	255	255	255	False	0	64	composite_scene\spells_and_abilities\wh2_main_army_abilities_eshin_clanstone.csc	False	-1	False
+False	wh2_main_army_abilities_feral_cold_ones	False			2	255	255	255	255	255	255	False	0	1	composite_scene\spells_and_abilities\wh2_main_abilities_feral_cold_ones.csc	False	-1	False
+False	wh2_main_army_abilities_geomantic_nexus	False			2	255	255	255	255	255	255	False	0	1	composite_scene\spells_and_abilities\wh2_main_abilities_geomantic_nexus.csc	False	-1	False
+False	wh2_main_army_abilities_holy_stela	False		wh2_main_abilities_holy_stela_segment	2	255	255	255	255	255	255	False	0	64	composite_scene\spells_and_abilities\wh2_main_abilities_holy_stela.csc	False	-1	False
+False	wh2_main_army_abilities_mors_clanstone	False		wh2_main_army_abilities_mors_clanstone_segment	2	255	255	255	255	255	255	False	0	64	composite_scene\spells_and_abilities\wh2_main_army_abilities_mors_clanstone.csc	False	-1	False
+False	wh2_main_army_abilities_moulder_clanstone	False		wh2_main_army_abilities_moulder_clanstone_segment	2	255	255	255	255	255	255	False	0	64	composite_scene\spells_and_abilities\wh2_main_army_abilities_moulder_clanstone.csc	False	-1	False
+False	wh2_main_army_abilities_pestilens_clanstone	False		wh2_main_army_abilities_pestilens_clanstone_segment	2	255	255	255	255	255	255	False	0	64	composite_scene\spells_and_abilities\wh2_main_army_abilities_pestilens_clanstone.csc	False	-1	False
+False	wh2_main_army_abilities_skyre_clanstone	False		wh2_main_army_abilities_skyre_clanstone_segment	2	255	255	255	255	255	255	False	0	64	composite_scene\spells_and_abilities\wh2_main_army_abilities_skyre_clanstone.csc	False	-1	False
+False	wh2_main_army_abilities_temple_of_mists	False		wh2_main_abilities_temple_of_mists_segment	2	255	255	255	255	255	255	False	0	64	composite_scene\spells_and_abilities\wh2_main_abilities_temple_of_mists.csc	False	-1	False
+False	wh2_main_character_abilities_slann_forcefield	False	wh2_main_abilities_slann_forcefield		2	255	255	255	255	255	255	False	50	64		False	5	True
+False	wh2_main_character_passive_aura_of_pestilence	False	wh2_main_abilities_aura_of_pestilence_area		2	255	255	255	255	255	255	False	50	1		False	-1	False
+False	wh2_main_unit_passive_the_rats_emerge	False	wh2_main_unit_rebirth_hellpit		2	255	255	255	255	255	255	False	0	1		False	-1	False
+False	wh2_vermintide_decal	False			2	255	255	255	255	255	255	False	0	1	composite_scene\spells_and_abilities\wh2_main_vermintide.csc	False	-1	False
+False	wh_abilities_bomb_drop	False	wh_main_targeting_entity_ui_central		2	255	255	255	255	255	255	False	50	24		True	-1	False
+False	wh_abilities_bomb_small_drop	False	wh_main_targeting_entity_small_ui_central		2	255	255	255	255	255	255	False	50	24		True	-1	False
+False	wh_abilities_generic_breath	False	wh_main_targeting_pre_breath_ui_central		2	255	255	255	255	255	255	False	50	1		False	-1	False
+False	wh_abilities_generic_breath_long	False	wh_main_targeting_pre_breath_long_ui_central		2	255	255	255	255	255	255	False	50	1		False	-1	False
+False	wh_abilities_generic_breath_short	False	wh_main_targeting_pre_breath_short_ui_central		2	255	255	255	255	255	255	False	50	1		False	-1	False
+False	wh_abilities_generic_buff	False	wh_main_targeting_pre_buff_ui_central	wh_main_generic_ui_segment_buff	2	255	255	255	255	255	255	False	50	64		False	5	False
+False	wh_abilities_generic_buff_active	False	wh_main_targeting_buff_ui_central	wh_main_generic_ui_segment_buff	2	255	255	255	255	255	255	False	50	64		False	5	False
+False	wh_abilities_generic_buff_no_ring	False	wh_main_targeting_pre_buff_ui_central		2	255	255	255	255	255	255	False	50	1		False	-1	False
+False	wh_abilities_generic_buff_wom	False	wh_main_targeting_pre_winds_augment_ui_central	wh_main_generic_ui_segment_buff	2	255	255	255	255	255	255	False	50	64		False	5	False
+False	wh_abilities_generic_buff_wom_no_ring	False	wh_main_targeting_pre_winds_augment_ui_central		2	255	255	255	255	255	255	False	50	64		False	5	False
+False	wh_abilities_generic_debuff	False	wh_main_targeting_pre_debuff_ui_central	wh_main_generic_ui_segment_debuff	2	255	255	255	255	255	255	False	50	64		False	5	False
+False	wh_abilities_generic_debuff_active	False	wh_main_targeting_pre_debuff_ui_central	wh_main_generic_ui_segment_debuff	2	255	255	255	255	255	255	False	50	64		False	5	False
+False	wh_abilities_generic_debuff_active_large	False	wh_main_targeting_pre_debuff_ui_central	wh_main_generic_ui_segment_debuff	2	255	255	255	255	255	255	False	50	112		False	-1	False
+False	wh_abilities_generic_debuff_large	False	wh_main_targeting_pre_debuff_ui_central	wh_main_generic_ui_segment_debuff	2	255	255	255	255	255	255	False	50	112		False	-1	False
+False	wh_abilities_generic_debuff_no_ring	False	wh_main_targeting_pre_debuff_ui_central		2	255	255	255	255	255	255	False	50	1		False	-1	False
+False	wh_abilities_generic_debuff_wom	False	wh_main_targeting_pre_winds_hex_ui_central	wh_main_generic_ui_segment_debuff	2	255	255	255	255	255	255	False	50	64		False	5	False
+False	wh_abilities_generic_debuff_wom_no_ring	False	wh_main_targeting_pre_winds_hex_ui_central		2	255	255	255	255	255	255	False	50	64		False	5	False
+False	wh_abilities_generic_direct_damage	False	wh_main_targeting_pre_direct_damage_area_ui_central	wh_main_generic_ui_segment_debuff	2	255	255	255	255	255	255	False	0	64		False	5	False
+False	wh_abilities_generic_direct_damage_active	False	wh_main_targeting_pre_direct_damage_area_ui_central	wh_main_generic_ui_segment_debuff	2	255	255	255	255	255	255	False	0	64		False	5	False
+False	wh_abilities_generic_direct_damage_no_ring	False	wh_main_targeting_pre_direct_damage_ui_central		2	255	255	255	255	255	255	False	0	1		False	-1	False
+False	wh_abilities_generic_explosion	False	wh_main_targeting_pre_explosion_ui_central	wh_main_generic_ui_segment_short	2	255	255	255	255	255	255	False	50	24		False	2	False
+False	wh_abilities_generic_explosion_no_ring	False	wh_main_targeting_pre_explosion_ui_central		2	255	255	255	255	255	255	False	50	24		False	2	False
+False	wh_abilities_generic_full_hide	False	wh_main_targeting_pre_hiding_ui_central		2	255	255	255	255	255	255	False	0	1		False	-1	False
+False	wh_abilities_generic_regeneration	False	wh_main_targeting_pre_regeneration_area_ui_central	wh_main_generic_ui_segment_buff	2	255	255	255	255	255	255	False	0	64		False	5	False
+False	wh_abilities_generic_regeneration_active	False	wh_main_targeting_pre_regeneration_area_ui_central	wh_main_generic_ui_segment_buff	2	255	255	255	255	255	255	False	0	64		False	5	False
+False	wh_abilities_generic_regeneration_no_ring	False	wh_main_targeting_pre_regeneration_ui_central		2	255	255	255	255	255	255	False	0	1		False	-1	False
+False	wh_abilities_generic_spawn	False	wh_main_targeting_pre_spawn_ui_central		2	255	255	255	255	255	255	False	50	64		False	-1	False
+False	wh_abilities_generic_spawn_skaven	False	wh_main_targeting_pre_spawn_skaven_ui_central		2	255	255	255	255	255	255	False	50	64		False	-1	False
+False	wh_abilities_generic_vortex	False	wh_main_targeting_pre_vortex_ui_central	wh_main_generic_ui_segment_short	2	255	255	255	255	255	255	False	50	24		False	2	False
+False	wh_abilities_generic_vortex_large	False	wh_main_targeting_pre_vortex_ui_central	wh_main_generic_ui_segment_short	2	255	255	255	255	255	255	False	50	24		False	2	False
+False	wh_abilities_generic_wind	False	wh_main_targeting_pre_wind_ui_central		2	255	255	255	255	255	255	False	50	24		False	-1	False
+False	wh_abilities_generic_wind_random	False	wh_main_targeting_pre_wind_ui_central_random		2	255	255	255	255	255	255	False	50	24		False	-1	False
+False	wh_army_abilities_generic_augment	False	wh_main_targeting_pre_aa_buff_ui_central	wh_main_generic_ui_aa_segment_buff	2	255	255	255	255	255	255	False	50	64		False	-1	False
+False	wh_army_abilities_generic_bombardment	False	wh_main_targeting_pre_aa_bombardment_ui_central	wh_main_generic_ui_aa_segment_short	2	255	255	255	255	255	255	False	50	64		False	-1	False
+False	wh_army_abilities_generic_bombardment_active	False	wh_main_targeting_pre_aa_bombardment_ui_central	wh_main_generic_ui_aa_segment_short	2	255	255	255	255	255	255	False	50	64		False	-1	False
+False	wh_army_abilities_generic_breath	False	wh_main_targeting_pre_aa_breath_ui_central		2	255	255	255	255	255	255	False	50	64		False	-1	False
+False	wh_army_abilities_generic_buff_wom	False	wh_main_targeting_pre_aa_winds_augment_ui_central	wh_main_generic_ui_aa_segment_buff	2	255	255	255	255	255	255	False	50	64		False	5	False
+False	wh_army_abilities_generic_direct_damage	False	wh_main_targeting_pre_aa_direct_damage_ui_central	wh_main_generic_ui_aa_segment_debuff	2	255	255	255	255	255	255	False	50	64		False	-1	False
+False	wh_army_abilities_generic_direct_damage_area	False	wh_main_targeting_pre_aa_direct_damage_area_ui_central	wh_main_generic_ui_aa_segment_debuff	2	255	255	255	255	255	255	False	50	64		False	-1	False
+False	wh_army_abilities_generic_explosion	False	wh_main_targeting_pre_aa_explosion_ui_central	wh_main_generic_ui_aa_segment_short	2	255	255	255	255	255	255	False	50	64		False	-1	False
+False	wh_army_abilities_generic_explosion_no_ring	False	wh_main_targeting_pre_aa_explosion_ui_central		2	255	255	255	255	255	255	False	50	64		False	-1	False
+False	wh_army_abilities_generic_hex	False	wh_main_targeting_pre_aa_debuff_ui_central	wh_main_generic_ui_aa_segment_debuff	2	255	255	255	255	255	255	False	50	64		False	-1	False
+False	wh_army_abilities_generic_regeneration	False	wh_main_targeting_pre_aa_regeneration_ui_central	wh_main_generic_ui_aa_segment_buff	2	255	255	255	255	255	255	False	50	64		False	-1	False
+False	wh_army_abilities_generic_spawn	False	wh_main_targeting_pre_spawn_ui_central		2	255	255	255	255	255	255	False	50	64		False	-1	False
+False	wh_spell_earthblood	False	wh_main_targeting_pre_buff_ui_central	wh_main_generic_ui_segment_buff	2	255	255	255	255	255	255	False	50	64		False	5	False
+False	wh_spell_generic_bombardment	False	wh_main_targeting_pre_bombardment_ui_central	wh_main_generic_ui_segment_short	2	255	255	255	255	255	255	False	50	24		False	2	False
+False	wh_spell_generic_bombardment_active	False	wh_main_targeting_bombardment_ui_central	wh_main_generic_ui_segment_short	2	255	255	255	255	255	255	False	50	24		False	2	False
+False	wh_spell_generic_bombardment_active_small	False	wh_main_targeting_bombardment_ui_central		2	255	255	255	255	255	255	False	50	24		False	2	False
+False	wh_spell_generic_bombardment_small	False	wh_main_targeting_pre_bombardment_ui_central		2	255	255	255	255	255	255	False	50	24		False	2	False
+False	wh_spell_generic_missile	False	wh_main_targeting_pre_singular_ui_central		2	255	255	255	255	255	255	False	50	24		False	-1	False
+False	wh_spell_generic_missiles	False	wh_main_targeting_pre_magicmissile_ui_central		2	255	255	255	255	255	255	False	50	24		False	-1	False

@@ -1,0 +1,17 @@
+technology_category_modules_tables
+0
+effect_bundle	max_tier	min_tier	technology_node_set
+wh_main_bundle_dummy	12	10	brt_mil
+wh_main_bundle_dummy	3	1	brt_mil
+wh_main_bundle_dummy	6	4	brt_mil
+wh_main_bundle_dummy	9	7	brt_mil
+wh_main_bundle_dummy	1	0	dwf_civ
+wh_main_bundle_dummy	3	2	dwf_civ
+wh_main_bundle_dummy	5	4	dwf_civ
+wh_main_bundle_dummy	1	0	dwf_mil
+wh_main_bundle_dummy	3	2	dwf_mil
+wh_main_bundle_dummy	5	4	dwf_mil
+wh_main_bundle_dummy	12	10	grn_mil
+wh_main_bundle_dummy	3	1	grn_mil
+wh_main_bundle_dummy	6	4	grn_mil
+wh_main_bundle_dummy	9	7	grn_mil

@@ -1,0 +1,9 @@
+deployables_tables
+14
+hitpoints	unknown1	unknown2	unknown3	unknown4	unknown5	unknown6	unknown7	unknown8	unknown9	unknown10	unknown11	unknown12	unknown13	unknown14	unknown15	unknown16	unknown17	unknown18	unknown19	unknown20
+5000	barricade	deployable_barricade	0	1	1	deployable_barricade	10	0	0	0	0	-1	1	deployable_barricade_2	100	deployable_barricade	boiling_oil_splash		wood	False
+1000	brimstone	deployable_brimstone	0.5	2	1	deployable_brimstone	15	2	0	0	40	-1	5		1	deployable_brimstone	boiling_oil_splash		wood	False
+100	caltrops	deployable_caltrop	0.75	2	2	deployable_caltrop	25	3	2	2	20	-1	5		0	deployable_caltrop	boiling_oil_splash		wood	False
+-1	sharp_stones	deployable_sharp_stones	0	8	2	deployable_sharpstones_1	30	0	0	0	0	-1	5	deployable_sharpstones_2	0	deployable_sharp_stones	boiling_oil_splash		wood	False
+50	spike_trap	deployable_spiketrap	1	2	1	deployable_spiketrap	15	5	4	4	100	-1	5		0	deployable_spiketrap	boiling_oil_splash		wood	False
+150	stakes	deployable_stakes	0.95	3	1	deployable_stakes	12	0.5	0.6	0.6	20	-1	5		0	deployable_stakes	boiling_oil_splash		wood	False

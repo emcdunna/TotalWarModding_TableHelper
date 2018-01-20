@@ -1,0 +1,21 @@
+character_skill_categories_tables
+2
+unknown0	unknown1	unknown2	unknown3	unknown4	unknown5	unknown6	unknown7
+battle	4	4	1	241	65	61	
+battle_ancient_treeman	4	3	1	241	65	61	dlc05_wef_ancient_treeman
+battle_durthu	4	3	1	241	65	61	dlc05_wef_durthu
+battle_glade_lord	4	3	1	241	65	61	dlc05_wef_glade_lord
+battle_glade_lord_fem	4	3	1	241	65	61	dlc05_wef_glade_lord_fem
+battle_glade_lord_orion	4	3	1	241	65	61	dlc05_wef_orion
+campaign	5	5	2	67	221	248	
+campaign_ancient_treemnan	5	5	2	67	221	248	dlc05_wef_ancient_treeman
+campaign_durthu	5	5	2	67	221	248	dlc05_wef_durthu
+campaign_glade_lord	5	5	2	67	221	248	dlc05_wef_glade_lord
+campaign_glade_lord_fem	5	5	2	67	221	248	dlc05_wef_glade_lord_fem
+campaign_glade_lord_orion	5	5	2	67	221	248	dlc05_wef_orion
+character	3	0	0	255	182	47	
+character_ancient_treeman	2	0	0	255	182	47	dlc05_wef_ancient_treeman
+character_durthu	2	0	0	255	182	47	dlc05_wef_durthu
+character_glade_lord	2	0	0	255	182	47	dlc05_wef_glade_lord
+character_glade_lord_fem	2	0	0	255	182	47	dlc05_wef_glade_lord_fem
+character_glade_lord_orion	2	0	0	255	182	47	dlc05_wef_orion

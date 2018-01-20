@@ -1,0 +1,31 @@
+bmd_export_types_tables
+1
+unknown0	unknown1	unknown2	unknown3
+attacker_direction_east	attacker_direction_east	attacker_direction	False
+attacker_direction_north	attacker_direction_north	attacker_direction	False
+attacker_direction_south	attacker_direction_south	attacker_direction	False
+attacker_direction_west	attacker_direction_west	attacker_direction	False
+new catchment system zone 1	catchment_01		False
+new catchment system zone 2	catchment_02		False
+new catchment system zone 3	catchment_03		False
+new catchment system zone 4	catchment_04		False
+new catchment system zone 5	catchment_05		False
+new catchment system zone 6	catchment_06		False
+new catchment system zone 7	catchment_07		False
+new catchment system zone 8	catchment_08		False
+new catchment system zone 9	catchment_09		False
+quest_battle_1: Optional Layer for quest battles	quest_battle_1	battle_scenario	False
+quest_battle_2: Optional Layer for quest battles	quest_battle_2	battle_scenario	False
+quest_battle_3: Optional Layer for quest battles	quest_battle_3	battle_scenario	False
+quest_battle_default: Default Layer for quest battles	quest_battle_default	battle_scenario	True
+Razed Settlement Layers	razed_settlement_generic	razed_settlements	False
+settlement_level_1	settlement_level_1	settlement_levels	False
+settlement_level_2	settlement_level_2	settlement_levels	False
+settlement_level_3	settlement_level_3	settlement_levels	False
+settlement_level_4	settlement_level_4	settlement_levels	False
+settlement_level_default	settlement_level_default	settlement_levels	False
+settlement_towers_default	settlement_towers_default	settlement_towers	True
+settlement_towers_level_1	settlement_towers_level_1	settlement_towers	False
+settlement_towers_level_2	settlement_towers_level_2	settlement_towers	False
+settlement_towers_level_3	settlement_towers_level_3	settlement_towers	False
+settlement_towers_prelude	settlement_towers_prelude	settlement_towers	False

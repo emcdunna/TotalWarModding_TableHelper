@@ -1,0 +1,11 @@
+effect_bundle_advancement_stages_tables
+0
+key
+end_round_completed
+end_round_initiated
+end_turn_completed
+end_turn_initiated
+start_round_completed
+start_round_initiated
+start_turn_completed
+start_turn_initiated

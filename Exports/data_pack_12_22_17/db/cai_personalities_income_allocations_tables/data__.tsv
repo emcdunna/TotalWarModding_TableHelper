@@ -1,0 +1,10 @@
+cai_personalities_income_allocations_tables
+0
+key	positive_net_income_survival_rounds	proportion_of_net_income_to_spend	zero_or_negative_net_income_survival_rounds
+income_allocation_high_spending	10	0.75	20
+income_allocation_low_spending	10	0.65	20
+income_allocation_low_spending_no_overspend	1000	0.65	1000
+income_allocation_medium_spending	10	0.7	20
+income_allocation_very_high_spending	10	0.8	20
+income_allocation_very_low_spending	10	0.55	20
+income_allocation_very_low_spending_no_overspend	1000	0.55	1000

@@ -1,0 +1,65 @@
+campaign_payload_ui_details_tables
+0
+unknown0	unknown1
+add_mercenary_to_faction_pool	ui/campaign ui/effect_bundles/spawning.png
+add_province_development_point	
+adopt	
+ambition_change	
+assign_character_to_post	
+become_retainer	
+building_restriction_change	
+character_experience_change	ui/campaign ui/effect_bundles/experience.png
+damage_buildings	ui/campaign ui/effect_bundles/construction.png
+damage_buildings_home_region	ui/campaign ui/effect_bundles/construction.png
+damage_character	
+demolish_building_chain	ui/campaign ui/effect_bundles/settlement.png
+diplomatic_attitude_change	ui/campaign ui/effect_bundles/diplomacy.png
+divorce	
+dummy_chivalry_decrease	ui/campaign ui/effect_bundles/chivalry_negative.png
+dummy_chivalry_increase	ui/campaign ui/effect_bundles/chivalry_positive.png
+dummy_diplomatic_attitude_change	ui/campaign ui/effect_bundles/diplomacy.png
+dummy_do_nothing	ui/campaign ui/effect_bundles/icon_effects_army.png
+dummy_take_no_action	ui/campaign ui/effect_bundles/icon_effects_army.png
+dummy_wh2_main_campaign_encounter	ui/campaign ui/effect_bundles/campaign_movement.png
+dummy_wh2_main_combat_encounter	ui/campaign ui/effect_bundles/army.png
+dummy_wh2_main_encounter_at_sea_2	ui/campaign ui/effect_bundles/experience.png
+dummy_wh2_main_incident_intercontinental_diplomacy	ui/campaign ui/effect_bundles/diplomacy.png
+dummy_wh_dlc03_moon_chance	ui/campaign ui/effect_bundles/icon_effects_army.png
+dummy_wh_dlc03_moon_chance_none	ui/campaign ui/effect_bundles/icon_effects_army.png
+dummy_wh_dlc04_vmp_vlad_von_carstein_the_carstein_ring_stage_2_3	ui/skins/wh_main_vmp_vampire_counts/icon_treasury.png
+dummy_wh_main_dwf_thorgrim_grudgebearer_axe_of_grimnir_stage_1	ui/skins/default/icon_treasury.png
+dummy_wh_main_dwf_thorgrim_grudgebearer_dragon_crown_of_karaz_stage_2.3	ui/skins/default/icon_treasury.png
+dummy_wh_main_emp_karl_franz_ghal_maraz_stage_2	ui/skins/default/icon_treasury.png
+dummy_wh_main_vmp_mannfred_von_carstein_sword_of_unholy_power_stage_2	ui/skins/wh_main_vmp_vampire_counts/icon_treasury.png
+embezzle	
+faction_slaves_change	
+faction_wide_loyalty_change	ui/skins/default/icon_fealty_high.png
+gain_ancillary	
+gain_trait	ui/campaign ui/effect_bundles/personality.png
+give_region	
+gravitas_change	
+honour_change_negative	
+honour_change_positive	
+influence_change	ui/skins/default/icon_intrigue.png
+issue_mission	
+kill_character	
+lose_ancillary	
+lose_trait	ui/campaign ui/skills/trait_personality.png
+loyalty_change	ui/skins/default/icon_fealty_high.png
+marriage	
+marriage_random	
+party_power_change	
+play_movie	
+province_slaves_change	
+rebellion	ui/campaign ui/effect_bundles/religion.png
+ritual_currency_change	ui/skins/default/icon_ritual_currency.png
+seek_wife	
+spawn_agent	ui/campaign ui/effect_bundles/agent.png
+spawn_agent_home_region	ui/campaign ui/effect_bundles/agent.png
+spawn_agent_home_region_unknown	
+spawn_unit	
+spawn_unit_home_region	
+treasury_change	ui/skins/default/icon_treasury.png
+unit_restriction_change	
+unlock_state_religion_change	
+wound_character	ui/campaign ui/effect_bundles/wound_time.png

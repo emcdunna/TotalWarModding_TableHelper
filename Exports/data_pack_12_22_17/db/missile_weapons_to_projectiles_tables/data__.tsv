@@ -1,0 +1,5 @@
+missile_weapons_to_projectiles_tables
+0
+missile_weapon	projectile
+wh2_main_def_reaper_bolt_thrower_bolt	wh2_main_def_reaper_bolt_thrower_bolt_spread
+wh2_main_hef_eagle_claw_bolt	wh2_main_hef_eagle_claw_bolt_spread

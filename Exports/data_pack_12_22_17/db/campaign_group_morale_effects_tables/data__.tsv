@@ -1,0 +1,11 @@
+campaign_group_morale_effects_tables
+0
+unknown0	unknown1	unknown2	unknown3
+	wh_dlc03_beastmen_morale_high	HIGH_MORALE_EFFECT_BEASTMEN	[PH] Beastmen: High Morale
+	wh_greenskins_morale_high	HIGH_MORALE_EFFECT_GRNSKIN	[PH] Greenskins: High Morale
+wh_dlc03_bundle_morale_low_bloodlust	wh_dlc03_beastmen_morale_low	LOW_MORALE_EFFECT_BEASTMEN	[PH] Beastmen: Low Morale
+wh_main_payload_morale_low_fightiness	wh_greenskins_morale_low	LOW_MORALE_EFFECT_GRNSKIN	[PH] Greenskins: Low Morale
+	wh_dlc03_beastmen_morale_mid	MID_MORALE_EFFECT_BEASTMEN	[PH] Beastmen: Mid Morale
+	wh_greenskins_morale_mid	MID_MORALE_EFFECT_GRNSKIN	[PH] Greenskins: Mid Morale
+wh_dlc03_bundle_morale_very_low_bloodlust	wh_dlc03_beastmen_morale_very_low	VERY_LOW_MORALE_EFFECT_BEASTMEN	[PH] Beastmen: Very Low Morale
+wh_main_payload_morale_very_low_fightiness	wh_greenskins_morale_very_low	VERY_LOW_MORALE_EFFECT_GRNSKIN	[PH] Greenskins: Very Low Morale

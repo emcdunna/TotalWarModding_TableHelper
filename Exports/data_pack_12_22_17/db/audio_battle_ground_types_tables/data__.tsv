@@ -1,0 +1,8 @@
+audio_battle_ground_types_tables
+0
+unknown0	unknown1	unknown2	unknown3	unknown4
+earth	True		earth	earth
+rock	True	earth	rock	rock
+sand	True	earth	sand	sand
+water	False		water	water
+wood	True	rock	wood	wood

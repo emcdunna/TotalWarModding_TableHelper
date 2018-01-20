@@ -4,34 +4,36 @@ import sys
 import os
 
 """
-Runs the run_diff commands for every file in a tree, given the following folder format:
+Runs the apply_differences commands for every file in a tree, given the following folder format:
 
-<arg_1>\<table_name>\<table.tsv files>
-<arg_2>\<table_name>\<other table.tsv files>
+<arg_1>\db\<table_name>\<table.tsv files>
+<arg_2>\db\<table_name>\<other table.tsv files>
+<arg_3>\db\<table_name>\<new table.tsv files>
 
-for example, you pass in "\mod_files" and "\base_files" where mod files holds the "new"
-changes, compared to the "\base_files" folder (normally base_files would be the unedited
-CA files exported for comparison)
+Note the "db" required subdirectory. This is because this should run off of the folder structure
+that will be created when using "export all as TSV" from PFM.
 
-This will look at each table name subfolder (such as "main_units_tables") in mod_files directory,
-then concatenate that into one table object, and compare it against the corresponding table object
-generated from the base_files directory (against the old, or pre-changed version of those files)
+This program will look at all of the changes between oldBaseDir and oldModDir, and re-apply those changes to
+the newBaseDir files, and save them to a new directory called "APPLY_DIFF_OUTPUT_DIR".
 
-Then all diff results will be outputted to a Results folder, specifying what changes were made to
-each table based on table name (so a separate file for changes made to main_units_tables).
+The point of this would be to take an overhaul mod and run it with the old data.pack export, against the new data.pack
+export, to get an overhaul mod working again.
 
-No CSV will be generated if there are no changes
+For example if you had an overhaul mod exported at "mod_pack", the old data.pack exported at "old_data" and the new data.pack
+exported at "new_data", you would just run "python apply_differences.py old_data mod_pack new_data" to get all of the changes
+between mod_pack and old_data applied to the new_data files, leaving all other stuff unchanged.
+
+Ideally this would allow you to carry over edits to melee_attack (for example), without caring about voice_actor name changes. 
 """
 def main(args):
     if len(args) != 3:
         sys.stderr.write("Error!\nUsage is \'python apply_differences.py oldBaseDir oldModDir newBaseDir\'\n")
-        sys.stderr.write("Example: \'python apply_differences.py base_files mod_files\'\n")
         return -1
     else:
         oldBaseDir = args[0]
         oldModDir = args[1]
         newBaseDir = args[2]
-        outputDir = newBaseDir + "_UPDATED"
+        outputDir = "APPLY_DIFF_OUTPUT_DIR"
 
         oldBaseLst = os.listdir(oldBaseDir)
         oldModLst = os.listdir(oldModDir)
@@ -59,7 +61,7 @@ def main(args):
             for d in modNotBase:
                 sys.stderr.write("\t- " + d + "\n")
 
-        print allDirs
+        #print allDirs
         try:
             os.makedirs(outputDir)
         except:
@@ -67,11 +69,19 @@ def main(args):
 
         if len(allDirs) > 0:
             for folder in allDirs:
-                baseTableFolder = oldBaseDir + "\\" + folder
-                modTableFolder = oldModDir + "\\" + folder
-                newTableFolder = newBaseDir + "\\" + folder
+                baseTableFolder = os.path.join(oldBaseDir,folder)
+                modTableFolder = os.path.join(oldModDir,folder)
+                newTableFolder = os.path.join(newBaseDir,folder)
 
-                apply_diff_tree(baseTableFolder, modTableFolder, newTableFolder, outputDir)
+                # compresses all tables in each folder, and applies differences to a this table object
+                updatedTable = apply_diff_tree(baseTableFolder, modTableFolder, newTableFolder)
+                if updatedTable != None:
+                    try:
+                        os.makedirs(os.path.join(outputDir,folder))
+                    except:
+                        pass
+                    o_file = open(os.path.join(outputDir,folder,"updated" + updatedTable.get_file_extension()),'w')
+                    o_file.write(updatedTable.get_fileprint_string())
 
 
 

@@ -1,0 +1,24 @@
+campaign_map_attrition_damages_tables
+1
+key	unknown1
+attrition_athel_loren	0.005
+attrition_besieged	50
+attrition_chaos_wastes	0.03
+attrition_desertion	10
+attrition_disease	20
+attrition_event	50
+attrition_heavy	0.005
+attrition_horde_infighting	5
+attrition_hostile_territory	7.5
+attrition_light	0.005
+attrition_maelstrom	0.08000001
+attrition_medium	0.005
+attrition_morale	10
+attrition_morale_very_low	20
+attrition_sieging	10
+attrition_storm_level_1	4
+attrition_storm_level_2	8
+attrition_storm_level_3	12
+attrition_storm_level_4	16
+attrition_storm_level_5	20
+attrition_vampire_territory	11

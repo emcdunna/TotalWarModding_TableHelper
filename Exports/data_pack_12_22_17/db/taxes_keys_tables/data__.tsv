@@ -1,0 +1,8 @@
+taxes_keys_tables
+0
+tax_class	tax_level	tax_lookup
+lower_classes	tax_extortionate	lower_extortionate
+lower_classes	tax_high	lower_high
+lower_classes	tax_low	lower_low
+lower_classes	tax_minimal	lower_minimal
+lower_classes	tax_normal	lower_normal

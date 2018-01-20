@@ -1,0 +1,9 @@
+cai_construction_system_synergy_levels_tables
+0
+absolute_effect	key	priority	relative_effect
+0	cai_cs_negative_level_high	30	-2.5
+0	cai_cs_negative_level_low	10	-0.15
+0	cai_cs_negative_level_medium	20	-0.75
+0	cai_cs_synergy_level_high	30	2.5
+0	cai_cs_synergy_level_low	10	0.15
+0	cai_cs_synergy_level_medium	20	0.75

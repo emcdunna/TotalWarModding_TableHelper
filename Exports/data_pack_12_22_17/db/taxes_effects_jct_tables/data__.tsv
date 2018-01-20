@@ -1,0 +1,23 @@
+taxes_effects_jct_tables
+2
+tax_name	effect	effect_scope	ai_only	ai_only5	ai_only6	value	unknown7
+lower_extortionate	wh_main_effect_province_growth_taxes	province_to_province_own				-3	False
+lower_extortionate	wh_main_effect_public_order_tax_rate	province_to_province_own				-25	False
+lower_extortionate	wh_main_effect_unit_recruitment_points_naval	province_to_sea_region_own				1	False
+lower_extortionate	wh_main_effect_unit_recruitment_points	province_to_province_own				1	False
+lower_high	wh_main_effect_province_growth_taxes	province_to_province_own				-1	False
+lower_high	wh_main_effect_public_order_tax_rate	province_to_province_own				-10	False
+lower_high	wh_main_effect_unit_recruitment_points_naval	province_to_sea_region_own				1	False
+lower_high	wh_main_effect_unit_recruitment_points	province_to_province_own				1	False
+lower_low	wh_main_effect_province_growth_taxes	province_to_province_own				2	False
+lower_low	wh_main_effect_public_order_tax_rate	province_to_province_own				-1	False
+lower_low	wh_main_effect_unit_recruitment_points_naval	province_to_sea_region_own				1	False
+lower_low	wh_main_effect_unit_recruitment_points	province_to_province_own				1	False
+lower_minimal	wh_main_effect_province_growth_taxes	province_to_province_own				4	False
+lower_minimal	wh_main_effect_public_order_tax_rate	province_to_province_own				0	False
+lower_minimal	wh_main_effect_unit_recruitment_points_naval	province_to_sea_region_own				1	False
+lower_minimal	wh_main_effect_unit_recruitment_points	province_to_province_own				1	False
+lower_normal	wh_main_effect_province_growth_taxes	province_to_province_own				0	False
+lower_normal	wh_main_effect_public_order_tax_rate	province_to_province_own				-4	False
+lower_normal	wh_main_effect_unit_recruitment_points_naval	province_to_sea_region_own				1	False
+lower_normal	wh_main_effect_unit_recruitment_points	province_to_province_own				1	False

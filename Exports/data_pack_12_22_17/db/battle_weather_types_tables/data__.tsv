@@ -1,0 +1,7 @@
+battle_weather_types_tables
+3
+key	level	precipitation_type	num_particles	particle_size	particle_speed	list_order	naval_appropriate	unknown8	unknown9	unknown10
+dry	0	0	0	0	0	0	True	1	0	0
+fog	0	3	0	0	0	0	True	1	0	0
+rain	0	1	0	0	0	0	True	1	0	-6
+snow	0	2	0	0	0	0	True	1	0	0

@@ -1,0 +1,4 @@
+unique_agents_tables
+2
+agent_subtype	clan_name	forename	other_name	surname	agent_type	spawn_behaviour
+dlc07_brt_green_knight	2147359018	2147358939	2147359018	2147359018	champion	FACTION_LEADER

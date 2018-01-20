@@ -1,0 +1,8 @@
+slot_types_tables
+0
+unknown0	unknown1	unknown2
+True	False	horde_primary
+True	True	horde_secondary
+True	False	port
+True	False	primary
+True	True	secondary

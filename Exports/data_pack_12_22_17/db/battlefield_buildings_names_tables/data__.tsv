@@ -1,0 +1,18 @@
+battlefield_buildings_names_tables
+0
+key	onscreen_name	global_effects_description	local_effects_description
+arrow_tower	Arrow Tower		Fires arrows on nearby enemies
+bridge	Bridge		
+building	Building		
+explosive_tower	Explosive Tower		Short range, high damage, reasonable firing rate & accuracy
+fort_tower	Fort Tower		While a unit is occupying the tower's capture point, it will fire on nearby enemies.
+fort_wall	Fort Wall		
+gate	Gatehouse		Allows passage to and from the settlement
+gate_oil	Boiling Oil Gatehouse		Pours boiling oil onto nearby enemies
+house	House		
+magic_tower	Magic Tower		Slow firing rate, low damage, reasonable accuracy
+rapid_tower	Rapid-Firing Tower		Fast firing rate, low damage, reasonable accuracy
+ruin	Ruin		
+scorpio_tower	Scorpion Tower		Fires bolts on nearby enemies
+sniper_tower	Sniper Tower		Slow firing rate, high damage, high accuracy
+watchtower	Watchtower		Fires rubble on nearby enemies

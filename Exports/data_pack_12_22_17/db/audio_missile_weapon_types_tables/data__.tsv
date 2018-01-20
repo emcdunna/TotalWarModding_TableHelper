@@ -1,0 +1,30 @@
+audio_missile_weapon_types_tables
+4
+unknown0	unknown1	unknown2	unknown3	unknown4	unknown5	unknown6	unknown7	unknown8	unknown9	unknown10
+Battle_Individual_Artillery_Bolt_Thrower_Release		250		bolt_large	bolt_large	0	False	False		
+		250		bolt_launcher_eagle_claw	bolt_large	0	False	False		
+Battle_Individual_Artillery_Eagle_Claw_Bolt_Thrower_Launch		250		bolt_mounted	bolt_large	0	False	False		
+Battle_Individual_Small_Arms_Bow_Release		120		bow	bow	0	False	False		
+Battle_Individual_Small_Arms_Brinstone_Fire		300	wh_grp_projectile_brinstone_gun_fire	brinstone_gun	brinstone_gun	256	False	False		
+Battle_Individual_Artillery_Cannon_Fire		400		cannon	cannon	256	False	False		
+Battle_Individual_Artillery_Copter_Clattergun_Fire		200		clattergun	clattergun	256	False	False		
+Battle_Individual_Small_Arms_Crossbow_Release		120	wh_grp_projectile_crossbow_fire	crossbow	crossbow	0	False	False		
+		200		dragons_breath	 	0	False	False		
+		200		drakegun	drakegun	0	False	False	wh_grp_drakegun_fire_start	wh_grp_drakegun_fire_stop
+Battle_Individual_Artillery_Flame_Cannon_Fire		150		flame_cannon	flame_cannon	256	False	False		
+Battle_Individual_Artillery_Gatling_Gun_Fire		350		gatling_gun	gatling_gun	256	False	False		
+Battle_Individual_Small_Arms_Giant_Blowpipe_Fire		120		giant_blowpipe	bolt_large	0	False	False		
+Battle_Individual_Artillery_Great_Cannon_Fire		400		great_cannon	great_cannon	256	False	False		
+Battle_Individual_Small_Arms_Grenade_Launcher_Fire		200	wh_grp_projectile_grenade_launcher_fire	grenade_launcher	grenade_launcher	256	False	False		
+Battle_Individual_Artillery_Hell_Cannon_Fire		350		hell_cannon	hell_cannon	256	False	False		
+Battle_Individual_Artillery_Mortar_Fire		350		mortar	mortar	256	False	False		
+		0		none	none	0	False	False		
+Battle_Individual_Artillery_Orgun_Gun_Fire		400		orgun_gun	organ_gun	257	False	False		
+Battle_Individual_Small_Arms_Pistol_Fire		300	wh_grp_projectile_pistol_fire	pistol	pistol	257	False	False		
+Battle_Individual_Small_Arms_Repeater_Gun_Fire		300	wh_grp_projectile_repeater_gun_fire	repeater_gun	repeater_gun	256	False	False		
+Battle_Individual_Small_Arms_Repeater_Rifle_Fire		300	wh_grp_projectile_repeater_rifle_fire	repeater_rifle	repeater_rifle	256	False	False		
+Battle_Individual_Artillery_Rocket_Launch		350		rocket_battery	rocket_battery	256	False	False		
+Battle_Individual_Artillery_Copter_Steamgun_Fire		100		steamgun_copter	steamgun	0	False	False		
+Battle_Individual_Artillery_Steam_Tank_Steamgun_Fire		100		steamgun_tank	steamgun	0	False	False		
+Battle_Individual_Small_Arms_Troll_Hammer_Fire		200		troll_hammer	troll_hammer	256	False	False		
+		200		warpfiregun	drakegun	0	False	False	wh2_grp_warpfiregun_fire_start	wh2_grp_warpfiregun_fire_stop

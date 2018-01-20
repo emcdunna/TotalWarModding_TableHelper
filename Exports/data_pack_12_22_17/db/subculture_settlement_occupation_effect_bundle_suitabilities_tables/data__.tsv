@@ -1,0 +1,6 @@
+subculture_settlement_occupation_effect_bundle_suitabilities_tables
+0
+climate	suitability
+wh2_main_climate_suitable	suitability_good
+wh2_main_climate_uninhabitable	suitability_verypoor
+wh2_main_climate_unsuitable	suitability_poor

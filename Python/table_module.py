@@ -1,6 +1,7 @@
 import sys
 import warhammer2_table_config
 import os
+import copy
 
 """
 A table obj holds a mapping of keys to values for each entry, and a set of entries
@@ -30,7 +31,7 @@ class Table:
     # returns the entry key for a particular entry based off the table's entry key metadata
     def get_entry_key(self, entry):
         #print "Entry " + str(entry)
-        ek = "EK__"
+        ek = "EK:  "
         i = 1
         #print "Key columns " + str(self.entryKey)
 
@@ -39,7 +40,7 @@ class Table:
                 return "NULL_ENTRY_KEY"
             ek += entry[keyCol]
             if i < len(self.entryKey):
-                ek += "_TO_"
+                ek += "  TO  "
                 i +=1
         return ek
 
@@ -72,13 +73,14 @@ class Table:
             word += (self.stringify_entry(ek) + "\n")
         return word
 
-    def print_to_file(self):
+    def print_to_file(self, directory):
         ftype = ".csv"
         if(self.separator != ","):
             ftype = ".tsv"
-        fname = self.name + ftype
+        fname = os.path.join(directory, self.name + ftype)
+
         f = open(fname,"w")
-        f.write(get_fileprint_string())
+        f.write(self.get_fileprint_string())
 
     def __len__(self):
         return len(entries)
@@ -113,11 +115,7 @@ class TableDiff:
         self.compare_tables() # run compare tables on itself to update differences
 
     def compare_tables(self):
-        entryKeySet = set()
-        for ek in self.oldTable.entries.keys():
-            entryKeySet |= {ek}
-        for ek in self.newTable.entries.keys():
-            entryKeySet |= {ek}
+        entryKeySet = set(self.oldTable.entries.keys()) | set(self.newTable.entries.keys())
 
         if(self.oldTable.name != self.newTable.name):
             sys.stderr.write("Tables have different names! \n")
@@ -162,7 +160,6 @@ class TableDiff:
 
             if(oldEntry != None and newEntry != None):
                 for col in self.oldTable.columns: #TODO dont just iterate through oldTable
-
 
                     oldv = oldEntry[col]
                     try:
@@ -286,13 +283,16 @@ def apply_differences(tablediff, patchtable):
     ftype = ".csv"
     if(patchtable.separator != ","):
         ftype = ".tsv"
-    updatedFile = open(patchtable.name + "_UPDATED" + ftype, "w")
 
     for diff in tablediff.differences:
-        entry = patchtable.entries[diff.entryKey]
-        entry[diff.column] = diff.newValue
+        try:
+            entry = patchtable.entries[diff.entryKey]
+            entry[diff.column] = diff.newValue
+        # the key doesnt exist in the new base, ignore it
+        except KeyError:
+            sys.stderr.write(patchtable.name + " -\tMissing key in patch table: " + diff.entryKey + "\n")
 
-    updatedFile.write(patchtable.get_fileprint_string())
+    return patchtable
 
 
 
@@ -346,6 +346,95 @@ def concatTablesInFolder(folder):
     return baseTable
 
 
+"""
+Loads all tables in this folder, returns a map of table file's name to its table objects
+"""
+def load_folder_Tables(folder):
+    lst = os.listdir(folder)
+    lstTSV = []
+    # remove non tsv/csv files
+    for l in lst:
+        if (".tsv" in l) or (".csv" in l):
+            lstTSV.append(l)
+
+    # sort the way the launcher loads, where alphanumerically lower names supercede higher names
+    lst = sorted(lstTSV, key=str.lower, reverse=True)
+
+    baseTableMap = dict()
+    for tsvFile in lst:
+        tmpFile = open(folder + "\\" + tsvFile, 'r')
+        baseTable = file_loader(tmpFile)
+        baseTableMap[tsvFile.split(".")[0]] = baseTable
+    return baseTableMap
+
+"""
+returns a set of differneces if the entry exists in both tables and has been edited
+"""
+def get_entry_diff(ek, basetable, modtable):
+    differences = set()
+    baseentry = basetable.entries[ek]
+    modentry = modtable.entries[ek]
+
+    for col in basetable.columns:
+        baseval = baseentry[col]
+        modval = modentry[col]
+        if(baseval != modval):
+            diff = Diff(ek, col, baseval, modval)
+            differences |= {diff}
+    return differences
+
+"""
+rebases a table object onto another table object
+
+if overwrite = true then the rebase will not add any entries that were deleted in the mod table
+also, if overwrite = false, then the rebase will remove any entire etnries that are not edited in mod table
+
+OVERWRITES MOD TABLE AND RETURNS IT EDITED
+"""
+def rebase_table(oldTable, modTable, newTable, overwrite=False):
+    ot_entries = set(oldTable.entries.keys())
+    mt_entries = set(modTable.entries.keys())
+    nt_entries = set(newTable.entries.keys())
+
+    possible_edits = ot_entries & mt_entries
+    added_entries = mt_entries - ot_entries
+    mod_removed_entries = ot_entries - mt_entries
+    new_removed_entries = ot_entries - nt_entries
+    new_entries = nt_entries - ot_entries
+    if (len(new_removed_entries) > 0) and (overwrite == True or (len(new_removed_entries & mt_entries) > 0)):
+        sys.stderr.write("ERROR Newly removed entries: \n" + str(new_removed_entries) + "\n")
+        return None
+
+    # Must add every new entry in newTable
+    if overwrite == True:
+        for ek in new_entries:
+            modTable.entries[ek] = copy.copy(new_entries.entries[ek])
+            # TODO: LOG THIS: sys.stderr.write("Added entry from new data.pack: " + ek + "\n")
+
+    # must KEEP every entry found in Mod table not found in old base table (since it got added)
+    # pass: they already exist in mod_table...
+    # TODO: When supporting certain situations (like column changes), added entries will cause errors
+
+    # apply changes to all edited entries to the new table's version of that entry
+    for ek in possible_edits:
+        differences = get_entry_diff(ek, oldTable, modTable)
+        modTable.entries[ek] = copy.copy(newTable.entries[ek])
+        entry = modTable.entries[ek]
+        # leave unedited lines in the mod table
+        for df in differences:
+            entry[df.column] = df.newValue
+            # TODO: Log all of these edits!
+        # Now the entry has only the pack's changed things edited
+
+    # TODO: SAFE MODE! report any time a mod edits a value also changed in the update!
+
+
+
+    # TODO: Test that removed entries stay removed!
+    # TODO: Test everything else!
+
+    return modTable
+
 
 
 """
@@ -368,30 +457,40 @@ def run_diff(baseTableFolder, modTableFolder):
 
 
 """
-Applies differences from one folder's
+Applies differences for one folder set (run once for each folder)
+
+Writes the entire combined folder to the output directory
 """
-def apply_diff_tree(baseTableFolder, modTableFolder, newBaseTableFolder, outputDir):
-    baseTable = concatTablesInFolder(baseTableFolder, None)
-    modTable = concatTablesInFolder(modTableFolder, None)
-    newTable = concatTablesInFolder(newBaseTableFolder, None)
+def apply_diff_tree(baseTableFolder, modTableFolder, newBaseTableFolder):
+    baseTable = concatTablesInFolder(baseTableFolder)
+    modTable = concatTablesInFolder(modTableFolder)
+    newTable = concatTablesInFolder(newBaseTableFolder)
 
     tablediff = TableDiff(baseTable, modTable) # detects differences between two tables
 
     if(len(tablediff.differences) == 0):
         sys.stderr.write("Not applying changes for file for: " + baseTable.name + " because there are no differences.\n")
+        return None
     else:
-        print "Applying differences for " + newTable.name
-        apply_differences(tablediff, newTable)
-        o_folder = outputDir + "/" + newTable.name
-        try:
-            os.makedirs(o_folder)
-        except:
-            pass
-        f = open( o_folder + "/updated.tsv", 'w')
-        f.write(newTable.get_fileprint_string())
+        #print "Applying differences for " + newTable.name
+        updated_table =apply_differences(tablediff, newTable)
+        return updated_table
 
-        #print "Running post diff"
-        #run_diff(baseTableFolder, o_folder, None)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 # Give me some space, goddamn atom

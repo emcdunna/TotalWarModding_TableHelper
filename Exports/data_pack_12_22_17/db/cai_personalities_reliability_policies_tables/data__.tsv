@@ -1,0 +1,9 @@
+cai_personalities_reliability_policies_tables
+5
+key	join_ally_bias	short_description	long_description	no_war_declaration_gift_threshold_min	no_war_declaration_gift_threshold_max	no_war_declaration_gift_bonus	no_raiding_gift_threshold
+cai_prp_default	15			5	40	-15	20
+cai_prp_high	30	personality_desc_short_reliable	personality_desc_long_reliable	0	40	-30	10
+cai_prp_low	5	personality_desc_short_unreliable	personality_desc_long_unreliable	15	40	-5	30
+cai_prp_medium	15			5	40	-15	20
+cai_prp_very_high	1000			0	40	-30	10
+cai_prp_very_low	0	personality_desc_short_unreliable	personality_desc_long_unreliable	15	40	-5	30

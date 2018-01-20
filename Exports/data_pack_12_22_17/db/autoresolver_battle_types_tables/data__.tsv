@@ -1,0 +1,11 @@
+autoresolver_battle_types_tables
+0
+unknown0	unknown1	unknown2	unknown3	unknown4
+False	land_ambush		False	ambush_generic
+False	land_bridge		False	bridge_generic
+False		true	False	fortify_battle
+False			False	generic_battle
+False	settlement_unfortified		False	minor_settlement_generic_land
+False	unfortified_port		False	minor_settlement_generic_naval
+False	settlement_standard		False	settlement_generic_land
+False	port_assault		False	settlement_generic_naval

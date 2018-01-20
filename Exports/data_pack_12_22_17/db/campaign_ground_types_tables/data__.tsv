@@ -1,0 +1,23 @@
+campaign_ground_types_tables
+9
+type	movement_cost	can_ambush	icon	unknown4	unknown5	unknown6
+dense_forest	240	False	terrain_dense_forest.png	earth	terrain_forest_noselect	terrain_forest
+desert	112	False	terrain_desert.png	sand	terrain_desert_noselect	terrain_desert
+grassland	80	False	terrain_grassland_plains.png	earth	terrain_scrub_noselect	terrain_scrub
+hills	144	False	terrain_hills.png	earth		
+hilly_light_forest	176	False	terrain_hilly_light_forest.png	earth		
+jungle	192	False	terrain_dense_forest.png	earth	terrain_forest_noselect	terrain_forest
+light_forest	112	False	terrain_light_forest.png	earth	terrain_forest_noselect	terrain_forest
+marsh	192	False	terrain_marsh.png	water	terrain_marsh_noselect	terrain_marsh
+mountain	240	False	terrain_mountains.png	rock	terrain_mountain_noselect	terrain_mountain
+plains	80	False	terrain_grassland_plains.png	earth	terrain_plains_noselect	terrain_plains
+river	2160	False	terrain_shallow_water_lake_coast.png	water	terrain_softground_noselect	terrain_softground
+sea_coast	64	True	terrain_shallow_water_lake_coast.png	water	terrain_softground_noselect	terrain_softground
+sea_lake	60	True	terrain_shallow_water_lake_coast.png	water	terrain_softground_noselect	terrain_softground
+sea_maelstrom	64	True	terrain_ocean.png	water	terrain_ocean_noselect	terrain_ocean
+sea_ocean	128	True	terrain_ocean.png	water	terrain_ocean_noselect	terrain_ocean
+sea_reef	192	True	terrain_ocean.png	water	terrain_ocean_noselect	terrain_ocean
+sea_river	64	True	terrain_shallow_water_lake_coast.png	water	terrain_softground_noselect	terrain_softground
+swamp	240	False	terrain_marsh.png	water	terrain_marsh_noselect	terrain_marsh
+tundra	96	False	terrain_tundra.png	sand		
+wasteland	112	False	terrain_desert.png	sand	terrain_desert_noselect	terrain_desert

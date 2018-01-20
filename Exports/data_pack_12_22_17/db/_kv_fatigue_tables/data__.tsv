@@ -1,0 +1,32 @@
+_kv_fatigue_tables
+0
+key	value
+charging	34
+climbing_ladders	10000
+climbing_walls	10000
+combat	20
+gradient_shallow_movement_multiplier	50
+gradient_steep_movement_multiplier	100
+gradient_very_steep_movement_multiplier	150
+idle	-16
+idle_in_building	-16
+idle_rain	-8
+idle_snow	-8
+limbering	6
+ready	-4
+running	4
+running_artillery_horse	6
+running_cavalry	6
+running_cavalry_light	6
+shooting	18
+threshold_active	2800
+threshold_exhausted	27000
+threshold_fresh	0
+threshold_max	30000
+threshold_tired	12600
+threshold_very_tired	17600
+threshold_winded	6600
+walking	-1
+walking_artillery	12
+walking_horse_artillery	2
+working	20

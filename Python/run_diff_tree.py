@@ -5,8 +5,8 @@ import os
 """
 Runs the run_diff commands for every file in a tree, given the following folder format:
 
-<arg_1>\<table_name>\<table.tsv files>
-<arg_2>\<table_name>\<other table.tsv files>
+<arg_1>\db\<table_name>\<table.tsv files>
+<arg_2>\db\<table_name>\<other table.tsv files>
 
 for example, you pass in "\mod_files" and "\base_files" where mod files holds the "new"
 changes, compared to the "\base_files" folder (normally base_files would be the unedited
@@ -24,11 +24,11 @@ No CSV will be generated if there are no changes
 def main(args):
     if len(args) != 2:
         sys.stderr.write("Error!\nUsage is \'python run_diff_tree.py baseDirectory modDirectory\'\n")
-        sys.stderr.write("Example: \'python run_diff.py base_files mod_files\'\n")
+
         return -1
     else:
-        baseDirectory = args[0]
-        modDirectory = args[1]
+        baseDirectory = os.path.join(args[0],"db")
+        modDirectory = os.path.join(args[1],"db")
 
         baseLst = os.listdir(baseDirectory)
         modLst = os.listdir(modDirectory)
@@ -49,15 +49,16 @@ def main(args):
             for d in baseNotMod:
                 sys.stderr.write("\t- " + d + "\n")
         if len(modNotBase) > 0:
-            sys.stderr.write("Mod directory has some folders not present in base directory: \n" + str(modNotBase) + "\n")
+            sys.stderr.write("Mod directory has some folders not present in base directory: \n")
             for d in modNotBase:
                 sys.stderr.write("\t- " + d + "\n")
         if len(bothDirs) > 0:
             for folder in bothDirs:
-                baseTableFolder = baseDirectory + "\\" + folder
-                modTableFolder = modDirectory + "\\" + folder
+                baseTableFolder = os.path.join(baseDirectory,folder)
+                modTableFolder = os.path.join(modDirectory,folder)
 
                 table_module.run_diff(baseTableFolder, modTableFolder)
+                sys.stderr.write("Output under Results folder\n")
         else:
             sys.stderr.write("No shared folder names in both mod directory and base directory!\n")
 

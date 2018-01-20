@@ -1,0 +1,17 @@
+land_unit_articulated_vehicles_tables
+4
+unknown0	unknown1	unknown2	unknown3	unknown4	unknown5	unknown6	unknown7	unknown8	unknown9	unknown10	unknown11	unknown12	unknown13
+	vmp_black_coach_01			wh_main_vehicle_vmp_black_coach_chariot	articulated	1.25	1.75	4	0.95	6	0.95	45	2.2
+	vmp_black_coach_01			wh2_main_def_cold_one_chariot_articulation	wh2_main_def_cold_one_chariot	0.5	1.75	3.2	0.25	5	1.5	75	1.8
+	vmp_black_coach_01			wh2_main_hef_ithilmar_chariot_articulation	wh2_main_hef_ithilmar_chariot	0.5	1.75	2.9	0.25	5	1.75	70	2.6
+	vmp_black_coach_01			wh2_main_hef_tiranoc_chariot_articulation	wh2_main_hef_tiranoc_chariot	0.5	1.75	2.9	0.25	5	1.75	70	2.6
+	vmp_black_coach_01			wh_dlc01_vehicle_chs_chariot_gorebeast_articulation	wh_dlc01_chs_chariot_gorebeast	0.5	1.75	3.2	0.25	5	1.5	75	2
+	vmp_black_coach_01			wh_dlc03_vehicle_bst_chariot_razorgor_articulation	wh_dlc03_bst_razorgor_chariot	0.5	1.75	3.2	0.25	5	1.5	75	2
+	vmp_black_coach_01			wh_dlc04_vehicle_war_altar_articulation	wh_dlc04_emp_war_altar	1.25	2.15	3.7	0.25	6	1.9	57	2.2
+	vmp_black_coach_01			wh_dlc04_vehicle_vmp_corpse_cart_articulation	wh_dlc04_vmp_corpse_cart	1.25	1.75	4	0.95	6	0.95	45	2
+	vmp_black_coach_01			wh_dlc04_vehicle_vmp_mortis_engine_articulation	wh_dlc04_vmp_mortis_engine	1.25	1.75	4	0.95	6	0.95	45	2
+	vmp_black_coach_01			wh_main_vehicle_chs_chariot_articulation	wh_main_chs_chariot_horse	0.5	1.75	3.2	0.25	5	1.5	75	1.8
+	vmp_black_coach_01			wh_main_vehicle_luminark_articulation	wh_main_emp_luminark	1.25	2.15	3.7	0.25	6	1.9	57	2.2
+ 	vmp_black_coach_01			wh_main_vehicle_grn_boar_chariot_articulation	wh_main_grn_boar_chariot	1.25	2	3.5	0.22	5.45	1.7	50	2
+	vmp_black_coach_01			wh_main_vehicle_grn_wolf_chariot_articulation	wh_main_grn_wolf_chariot	0.65	1.45	2.3	0.15	3.5	1	35	1.3
+	vmp_black_coach_01			wh_main_vehicle_vmp_black_coach_articulation	wh_main_vmp_black_coach	1.25	1.75	4	0.95	6	0.95	45	2

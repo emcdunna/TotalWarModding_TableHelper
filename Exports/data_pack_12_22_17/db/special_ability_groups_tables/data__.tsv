@@ -1,0 +1,31 @@
+special_ability_groups_tables
+8
+ability_group	icon_path	special_edition_mask	sort_order	is_naval	colour_r	colour_g	colour_b	button_name	sound_event	is_composite_group
+wh2_main_lore_dark_magic	UI\Battle UI\ability_icons\wh2_main_lore_passive_spiteful_conjuration.png	0	15	False	135	25	131	lore_dark_magic	Play_WH_UI_Ability_Click_Generic_Light	False
+wh2_main_lore_grey_seer_plague	UI\Battle UI\ability_icons\wh2_main_lore_passive_plague_rash.png	0	0	False	120	125	50	lore_plague	Play_WH_UI_Ability_Click_Generic_Light	True
+wh2_main_lore_grey_seer_ruin	UI\Battle UI\ability_icons\wh2_main_lore_passive_musk_of_fear.png	0	0	False	255	255	255	lore_ruin	Play_WH_UI_Ability_Click_Generic_Light	True
+wh2_main_lore_high_magic	UI\Battle UI\ability_icons\wh2_main_lore_passive_shield_of_saphery.png	0	14	False	0	207	246	lore_high_magic	Play_WH_UI_Ability_Click_Generic_Light	False
+wh2_main_lore_loremaster	UI\Battle UI\ability_icons\wh2_main_lore_passive_combined.png	0	0	False	97	91	87	lore_death	Play_WH_UI_Ability_Click_Generic_Light	True
+wh2_main_lore_morathi	UI\Battle UI\ability_icons\wh2_main_lore_passive_combined.png	0	0	False	97	91	87	lore_death	Play_WH_UI_Ability_Click_Generic_Light	True
+wh2_main_lore_plague	UI\Battle UI\ability_icons\wh2_main_lore_passive_plague_rash.png	0	17	False	120	125	50	lore_plague	Play_WH_UI_Ability_Click_Generic_Light	False
+wh2_main_lore_ruin	UI\Battle UI\ability_icons\wh2_main_lore_passive_musk_of_fear.png	0	16	False	199	143	67	lore_ruin	Play_WH_UI_Ability_Click_Generic_Light	False
+wh2_main_lore_skink_priest_avatar	UI\Battle UI\ability_icons\wh_main_lore_passive_roiling_skies.png	0	3	False	29	134	178	lore_heavens	Play_WH_UI_Ability_Click_Generic_Heavens	True
+wh2_main_lore_slann	UI\Battle UI\ability_icons\wh2_main_lore_passive_combined.png	0	0	False	97	91	87	lore_death	Play_WH_UI_Ability_Click_Generic_Light	True
+wh2_main_lore_slann_generic	UI\Battle UI\ability_icons\wh2_main_lore_passive_combined.png	0	0	False	97	91	87	lore_death	Play_WH_UI_Ability_Click_Generic_Light	True
+wh2_main_lore_teclis	UI\Battle UI\ability_icons\wh2_main_lore_passive_combined.png	0	0	False	97	91	87	lore_death	Play_WH_UI_Ability_Click_Generic_Light	True
+wh_dlc03_lore_beasts	UI\Battle UI\ability_icons\wh_dlc03_lore_passive_wild_heart.png	0	10	False	255	183	0	lore_beasts	Play_WH_UI_Ability_Click_Generic_Beasts	False
+wh_dlc03_lore_wild	UI\Battle UI\ability_icons\wh_dlc03_lore_passive_bestial_surge.png	0	9	False	134	181	92	lore_wild	Play_WH_UI_Ability_Click_Generic_Wild	False
+wh_dlc04_lore_helman_ghorst	UI\Battle UI\ability_icons\wh_main_lore_passive_the_curse_of_undeath.png	0	12	False	119	1	1	lore_vampire	Play_WH_UI_Ability_Click_Generic_Vampire	False
+wh_dlc04_lore_strigoi	UI\Battle UI\ability_icons\wh_main_lore_passive_the_curse_of_undeath.png	0	13	False	119	1	1	lore_vampire	Play_WH_UI_Ability_Click_Generic_Vampire	False
+wh_dlc05_lore_branchwraith	UI\Battle UI\ability_icons\wh_dlc05_lore_passive_smoke_and_mirrors.png	0	14	False	71	81	139	lore_shadow	Play_WH_UI_Ability_Click_Generic_Shadow	False
+wh_dlc05_lore_life	UI\Battle UI\ability_icons\wh_dlc05_spell_life_life_bloom.png	0	11	False	112	165	87	lore_life	Play_WH_UI_Ability_Click_Generic_Life	False
+wh_dlc05_lore_shadows	UI\Battle UI\ability_icons\wh_dlc05_lore_passive_smoke_and_mirrors.png	0	8	False	71	81	139	lore_shadow	Play_WH_UI_Ability_Click_Generic_Shadow	False
+wh_main_lore_big_waaagh	UI\Battle UI\ability_icons\wh_main_lore_passive_power_of_da_waaagh.png	0	1	False	52	108	0	lore_big_waaagh	Play_WH_UI_Ability_Click_Generic_Big_Waaagh	False
+wh_main_lore_death	UI\Battle UI\ability_icons\wh_main_lore_passive_life_leeching.png	0	5	False	70	0	59	lore_death	Play_WH_UI_Ability_Click_Generic_Death	False
+wh_main_lore_fire	UI\Battle UI\ability_icons\wh_main_lore_passive_kindleflame.png	0	4	False	211	95	18	lore_fire	Play_WH_UI_Ability_Click_Generic_Fire	False
+wh_main_lore_heavens	UI\Battle UI\ability_icons\wh_main_lore_passive_roiling_skies.png	0	3	False	29	134	178	lore_heavens	Play_WH_UI_Ability_Click_Generic_Heavens	False
+wh_main_lore_light	UI\Battle UI\ability_icons\wh_main_lore_passive_exorcism.png	0	2	False	230	232	229	lore_light	Play_WH_UI_Ability_Click_Generic_Light	False
+wh_main_lore_lil_waaagh	UI\Battle UI\ability_icons\wh_main_lore_passive_sneaky_stealin.png	0	0	False	108	139	79	lore_lil_waaagh	Play_WH_UI_Ability_Click_Generic_Lil_Waaagh	False
+wh_main_lore_metal	UI\Battle UI\ability_icons\wh_main_lore_passive_metalshifting.png	0	7	False	146	41	0	lore_metal	Play_WH_UI_Ability_Click_Generic_Metal	False
+wh_main_lore_vampires	UI\Battle UI\ability_icons\wh_main_lore_passive_the_curse_of_undeath.png	0	6	False	119	1	1	lore_vampire	Play_WH_UI_Ability_Click_Generic_Vampire	False
+wh_pro03_lore_kemmler	UI\Battle UI\ability_icons\wh_main_lore_passive_the_curse_of_undeath.png	0	14	False	119	1	1	lore_vampire		False

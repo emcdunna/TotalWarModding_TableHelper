@@ -1,0 +1,14 @@
+ui_unit_group_parents_tables
+1
+unknown0	unknown1	unknown2	unknown3
+cannon	artillery_war_machines	9	6
+cavalry	cavalry_chariots	5	10
+commander	commander	1	0
+dwf_gyrocopter	flying_war_machine	8	4
+hero	heroes_agents	2	2
+infantry_sword	infantry	3	0
+missile_cavalry_bow	missile_cavalry_chariots	6	5
+missile_infantry_bow	missile_infantry	4	10
+wh2_main_lzd_dinosaur_missile	missile_monster_beasts	10	4
+monstrous_infantry	monster_beasts	7	10
+giant	rare_monsters_beasts	11	3

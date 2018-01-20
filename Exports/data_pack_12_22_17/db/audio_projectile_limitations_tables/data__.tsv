@@ -1,0 +1,7 @@
+audio_projectile_limitations_tables
+0
+unknown0	unknown1	unknown2	unknown3	unknown4	unknown5	unknown6
+large	6	4	14	6	False	400
+magic	10	5	20	10	False	800
+medium	4	2	8	4	False	250
+small	4	2	8	4	False	120

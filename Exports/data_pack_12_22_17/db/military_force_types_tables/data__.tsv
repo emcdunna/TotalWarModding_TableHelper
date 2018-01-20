@@ -1,0 +1,8 @@
+military_force_types_tables
+2
+unknown0	unknown1	unknown2	unknown3	unknown4	unknown5
+ARMY					True
+HORDE	horde_primary	horde_secondary	horde_primary	horde_primary	True
+NAVAL_HORDE	horde_primary	horde_secondary	horde_primary	horde_primary	True
+NAVY					True
+SEA_LOCKED_HORDE	horde_primary	horde_secondary	horde_primary	horde_primary	False

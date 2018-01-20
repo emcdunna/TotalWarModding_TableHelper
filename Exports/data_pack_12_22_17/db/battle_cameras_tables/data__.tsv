@@ -1,0 +1,8 @@
+battle_cameras_tables
+2
+key	max_height_large	max_height_small	min_fort_max_height	min_height	move_speed_max_multiplier	move_speed_min_multiplier	turn_speed_multiplier	move_fast_multiplier	unknown9
+land	85	85	70	2	1.5	0.1	1.5	0	0
+mixed	160	160	70	4	1.5	0.15	1.5	0	0
+naval	140	140	70	6.5	1.5	0.15	1.5	0	0
+settlement_standard	80	80	70	2	1.5	0.1	1.5	0	0
+underground_intercept	80	80	50	2	1.5	0.1	1.5	0	0

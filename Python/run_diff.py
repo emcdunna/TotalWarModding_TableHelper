@@ -1,5 +1,6 @@
 import table_module
 import sys
+import os
 
 #ex = "..\Warhammer\main_units_tables\"
 
@@ -23,7 +24,7 @@ def main(args):
 
     tablediff = table_module.TableDiff(oldTable, newTable) # detects differences between two tables
 
-    diff_file = open("Results\\" + newTable.name + "_CHANGES.tsv","w")
+    diff_file = open(os.path.join("Results",newTable.name + "_CHANGES.tsv"),"w")
     diff_file.write("Changes between " + oldFileN + " (old) and " + newFileN + " (new)\n")
     diff_file.write(tablediff.to_tsv() + "\n")
 

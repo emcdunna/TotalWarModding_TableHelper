@@ -1,0 +1,17 @@
+pdlc_tables
+3
+id	steam_id	description	release_order
+TW_WH2_GRAND_CAMPAIGN	617810	Mortal Empires	1
+TW_WH_BEASTMEN	404012	Call of the Beastmen	-1
+TW_WH_BLOODPACK	594591	Blood for the Blood God II	2
+TW_WH_BRETONNIA_FREE	534330	Bretonnia	-1
+TW_WH_CHAOS	404010	Chaos Warriors	-1
+TW_WH_GREY_WIZARD_FREE	551821	Grey Wizard	-1
+TW_WH_GROMBRINDAL	506190	Grombrindal	-1
+TW_WH_ISABELLA_FREE	455041	Isabella von Carstein	-1
+TW_WH_JADE_WIZARD_FREE	551820	Jade Wizard	-1
+TW_WH_KRELL_FREE	455042	Krell	-1
+TW_WH_LORDS_AND_UNITS_1	404013	The Grim & The Grave	-1
+TW_WH_LORDS_AND_UNITS_2	404014	The King & The Warlord	-1
+TW_WH_LORDS_AND_UNITS_2_FREE	404015	Wurrzag	-1
+TW_WH_WOOD_ELVES	534331	Realm of the Wood Elves	-1

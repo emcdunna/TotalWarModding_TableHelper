@@ -1,0 +1,8 @@
+campaign_movement_spline_materials_tables
+1
+unknown0	unknown1	unknown2
+materials/ui/arrow_head_turn_1.xml.material	materials/ui/arrow_shaft_turn_1.xml.material	1
+materials/ui/arrow_head_turn_2.xml.material	materials/ui/arrow_shaft_turn_2.xml.material	2
+materials/ui/arrow_head_turn_3.xml.material	materials/ui/arrow_shaft_turn_3.xml.material	3
+materials/ui/arrow_head_turn_4.xml.material	materials/ui/arrow_shaft_turn_4.xml.material	4
+materials/ui/arrow_head_turn_5.xml.material	materials/ui/arrow_shaft_turn_5.xml.material	5

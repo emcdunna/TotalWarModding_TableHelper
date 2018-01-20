@@ -1,0 +1,24 @@
+trait_categories_tables
+0
+category	icon_path
+agent	ui/campaign ui/skills/trait_agent.png
+beastmen	ui/campaign ui/skills/trait_beastmen.png
+bretonnia	ui/campaign ui/skills/trait_bretonnia.png
+chaos	ui/campaign ui/skills/trait_chaos.png
+chivalry_negative	ui/campaign ui/skills/virtue_negative.png
+chivalry_positive	ui/campaign ui/skills/virtue_positive.png
+dark_elves	ui/campaign ui/skills/trait_dark_elves.png
+dwarf	ui/campaign ui/skills/trait_dwarf.png
+greenskin	ui/campaign ui/skills/trait_greenskins.png
+high_elves	ui/campaign ui/skills/trait_high_elves.png
+human	ui/campaign ui/skills/trait_human.png
+lizardmen	ui/campaign ui/skills/trait_lizardmen.png
+military	ui/campaign ui/skills/trait_military.png
+navy	ui/campaign ui/skills/trait_navy.png
+personality	ui/campaign ui/skills/trait_personality.png
+physical	ui/campaign ui/skills/trait_physical.png
+skaven	ui/campaign ui/skills/trait_skaven.png
+trait_bad	ui/campaign ui/effect_bundles/trait_battle_negative.png
+trait_good	ui/campaign ui/effect_bundles/trait_campaign_positive.png
+vampire_counts	ui/campaign ui/skills/trait_vampire_counts.png
+wood_elf	ui/campaign ui/skills/trait_wood_elves.png
