@@ -6,7 +6,7 @@ chain_to_building_file = open("D:/Lorehammer2/garrisons/chain_to_building_level.
 units_races_file = open("D:/Lorehammer2/garrisons/settlement_garrisons.txt","r")
 data_garrisons = open("D:/Lorehammer2/Exports/data_pack_12_22_17/db/building_level_armed_citizenry_junctions_tables/data__.tsv","r")
 
-new_data_garrisons = open("D:/Lorehammer2/garrisons/new_data__.tsv",'w')
+new_data_garrisons = open("D:/Lorehammer2/garrisons/data__.tsv",'w')
 settlement_file = open("D:/Lorehammer2/garrisons/new_settlement_garrisons.tsv",'w')
 num_map = [4,2,3,1,1]
 
@@ -59,8 +59,11 @@ for chain in chains_to_buildings.keys():
             for faction in faction_units.keys():
 
                 s = "_" + faction.lower()
-                if (s in building) and ("ruin" not in building) and ("horde" not in building):
+
+                if (s in building) and ("ruin" not in building) and ("horde" not in building) and (done == False):
                     k = 0
+                    if "wurrzag" in building:
+                        faction = "wurrzag"
                     # each unit in that faction's list
                     for unit in faction_units[faction]:
                         # more than one of each unit
@@ -70,6 +73,7 @@ for chain in chains_to_buildings.keys():
                         k += 1
                     done = True
                     done_buildings |= {building}
+
             if done == False:
                 faction = "NONE"
                 if ("ruin" not in building) and ("horde" not in building):
@@ -112,7 +116,7 @@ for chain in chains_to_buildings.keys():
                         settlement_file.write( building + "\t" + str(index) + "\t0\t" + unit + "\n")
                         index +=1
 
-
+                    done = True
                     done_buildings |= {building}
 
 base_garrisons_table = table_module.file_loader(data_garrisons)
