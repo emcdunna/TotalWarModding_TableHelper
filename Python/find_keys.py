@@ -76,7 +76,7 @@ def eval_table_list(table_list):
             return [key], warning
         else:
             warning = "# \'key\' column is not unique"
-            sys.stderr.write("WARNING: " + str(folder) + " has a \'key\' column but it is not unique.\n")
+            #sys.stderr.write("WARNING: " + str(folder) + " has a \'key\' column but it is not unique.\n")
 
     key = None
     unique_columns = []
@@ -86,7 +86,7 @@ def eval_table_list(table_list):
             unique_columns.append(coldata[0])
     if len(unique_columns) == 0:
         warning = "# has no unique columns, will check column groups instead"
-        sys.stderr.write("WARNING: " + str(folder) + " has no unique columns!\n")
+        #sys.stderr.write("WARNING: " + str(folder) + " has no unique columns!\n")
         itools = itertools.combinations(columns,2)
         col_groups = list(itools) # a list of tuples, like [(A,B),(B,C),(C,A)] if unique columns had [A,B,C]
         #print "col_groups " + str(col_groups)
@@ -107,7 +107,7 @@ def eval_table_list(table_list):
         key = unique_columns[0]
         return [key], warning
     else:
-        sys.stderr.write("WARNING: " + str(folder) + " has too many unique columns!\n")
+        #sys.stderr.write("WARNING: " + str(folder) + " has too many unique columns!\n")
         warning = "# Too many unique columns, will use them all"
         return unique_columns, warning
 
@@ -143,14 +143,15 @@ evaluate it a simple list of lists, looking for uniqueness.
 """
 def main(args):
     sys.stderr.write("WARNING: Only run this on an export of the DB directory for CA's data.pack, not a directory exported by a mod.------\n")
-    output_file = open("warhammer2_table_config.py",'w')
+    output_file = open("Python/warhammer2_table_config_NEW.py",'w')
     if len(args) != 1:
         sys.stderr.write("Error: Invalid number of arguments. \n")
-        sys.stderr.write("Usage: python find_keys.py <baseDirectory> > output.txt \n")
+        sys.stderr.write("Usage: python find_keys.py <baseDirectory>\n")
         sys.stderr.write("Directory structure should be \'db/main_units_tables/main.tsv\' for example/\n")
     else:
 
-        table_dir = args[0]
+        table_dir = os.path.join(args[0], "db")
+
         db_folders = os.listdir(table_dir)
         output_file.write( "# UPDATED AT: " + str(datetime.datetime.now()) + "\n")
         output_file.write( "keyDict = {" + "\n")
@@ -162,13 +163,13 @@ def main(args):
             for f in folder_files:
                 if ".tsv" == f[-4:]:
                     if pick_file != None:
-                        sys.stderr.write("!!! WARNING: Ignoring older pick_file " + str(pick_file) + " for " + folder + "\n")
+                        sys.stderr.write("!!! WARNING: Ignoring older TSV file " + str(pick_file) + " for " + folder + "\n")
                     pick_file = f
                     file_path = os.path.join(table_dir,folder,pick_file)
                     file_key, warning = find_key(file_path)
 
             if pick_file == None:
-                sys.stderr.write("No tsv files found in folder " + str(folder) + "\n")
+                sys.stderr.write("WARNING: No tsv files found in folder " + str(folder) + "\n")
                 file_key = [None]
                 warning = "# NO TSV FILES FOUND IN FOLDER"
             output_file.write( "\"" + folder + "\": "  + str(file_key) + ", " + str(warning) + "\n")

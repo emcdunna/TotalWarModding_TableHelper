@@ -14,10 +14,14 @@ class Table:
         self.entries = dict() # entries["wh_main_emp_inf_swordsmen"] -> {"key":"wh_main_emp_inf_swordsmen","meleeAttack":"32" ...}
         self.columns = [] # ["key", "meleeAttack", "meleeDefense", ...]
         self.separator = ","
-        self.name = "Default"
-        self.lineTwo = "" # 34, for example saying there are 34 columns
+        self.name = "Default" # FOLDER NAME! Sorry thats confusing
+        self.lineTwo = "" # 34, for example saying there are 34 columns?
         self.entryKey = [None] # a list of every column name that acts as part of the key
-        self.folder = ""
+        #self.folder = ""
+        self.BrokenCol_EntryKeys = set() # a set of all added entry keys that have column issues
+        self.NewRemoved_EntryKeys = set() # a set of all entry keys that have been removed in the new data pack
+        self.Collision_EntryKeys = set() # a set of all entry keys that have been edited by both the update and the mod
+        self.fileName = "Default"
 
     def __str__(self):
         word = ""
@@ -31,7 +35,7 @@ class Table:
     # returns the entry key for a particular entry based off the table's entry key metadata
     def get_entry_key(self, entry):
         #print "Entry " + str(entry)
-        ek = "EK:  "
+        ek = "Entry Key: "
         i = 1
         #print "Key columns " + str(self.entryKey)
 
@@ -64,12 +68,14 @@ class Table:
                 line += self.separator
         return line
 
-    def get_fileprint_string(self):
+    def get_fileprint_string(self,group=None):
+        if group == None:
+            group = self.entries.keys()
         word = ""
         word += self.name + "\n"
         word += (self.lineTwo)
         word += (stringify_list(self.columns, self.separator) + "\n")
-        for ek in self.entries.keys():
+        for ek in group:
             word += (self.stringify_entry(ek) + "\n")
         return word
 
@@ -77,10 +83,32 @@ class Table:
         ftype = ".csv"
         if(self.separator != ","):
             ftype = ".tsv"
-        fname = os.path.join(directory, self.name + ftype)
 
+        normal_keys = (set(self.entries.keys()) - self.BrokenCol_EntryKeys)
+        normal_keys -= self.Collision_EntryKeys
+        normal_keys -= self.NewRemoved_EntryKeys
+
+        # print broken columns to a file
+        if( len(self.BrokenCol_EntryKeys) > 0):
+            fname = os.path.join(directory, self.fileName + "_BROKEN_COLUMNS" + ftype)
+            f = open(fname,"w")
+            f.write(self.get_fileprint_string(self.BrokenCol_EntryKeys))
+        # print collision to a file
+        if( len(self.Collision_EntryKeys) > 0):
+            fname = os.path.join(directory, self.fileName + "_COLLISION" + ftype)
+            f = open(fname,"w")
+            f.write(self.get_fileprint_string(self.Collision_EntryKeys))
+        # print removed entries to a file
+        if( len(self.NewRemoved_EntryKeys) > 0):
+            fname = os.path.join(directory, self.fileName + "_REMOVED" + ftype)
+            f = open(fname,"w")
+            f.write(self.get_fileprint_string(self.NewRemoved_EntryKeys))
+
+        fname = os.path.join(directory, self.fileName + ftype)
         f = open(fname,"w")
-        f.write(self.get_fileprint_string())
+        f.write(self.get_fileprint_string(normal_keys))
+        return 0
+
 
     def __len__(self):
         return len(entries)
@@ -228,6 +256,9 @@ def file_loader(csvFile):
 
     if (".tsv" in csvFile.name):
         table.separator = "\t"
+
+    table.fileName = os.path.basename(csvFile.name)[0:-4]
+
     i = 0
     for line in csvFile:
         entry = dict()
@@ -238,6 +269,8 @@ def file_loader(csvFile):
                 table.name = lst[0]
                 try:
                     table.entryKey = warhammer2_table_config.keyDict[table.name] # reference config library
+                    if table.entryKey[0] == None:
+                        sys.stderr.write("ERROR: Table " + table.name + " has an unspecified key column list in Warhammer2_table_config!\n")
                 except KeyError as e:
                     sys.stderr.write("EntryKey not found for table: " + table.name + "\n")
                     return None
@@ -261,6 +294,7 @@ def file_loader(csvFile):
                 sys.stderr.write("Mismatched entry: " + line + "\n")
         i+=1
     # print "Adding file: " + csvFile.name + " for " + table.name
+
     return table
 
 """
@@ -329,7 +363,6 @@ def concatTablesInFolder(folder):
 
     # sort the way the launcher loads, where alphanumerically lower names supercede higher names
     lst = sorted(lstTSV, key=str.lower, reverse=True)
-    # TODO CHECK THIS ORDER!
 
     i = 0
     baseTable = None
@@ -343,6 +376,7 @@ def concatTablesInFolder(folder):
             tmpTable = file_loader(tmpFile)
             baseTable = merge_tables(baseTable,tmpTable)
         i += 1
+    baseTable.fileName += "_CONCAT"
     return baseTable
 
 
@@ -369,6 +403,8 @@ def load_folder_Tables(folder):
 
 """
 returns a set of differneces if the entry exists in both tables and has been edited
+
+Warning: All removed columns will have a null value
 """
 def get_entry_diff(ek, basetable, modtable):
     differences = set()
@@ -378,10 +414,24 @@ def get_entry_diff(ek, basetable, modtable):
     for col in basetable.columns:
         baseval = baseentry[col]
         modval = modentry[col]
+
         if(baseval != modval):
             diff = Diff(ek, col, baseval, modval)
             differences |= {diff}
     return differences
+
+
+
+"""
+Tests if a string could be cast as a number
+"""
+def is_number(s):
+    try:
+        float(s)
+        return True
+    except ValueError:
+        pass
+    return False
 
 """
 rebases a table object onto another table object
@@ -391,48 +441,97 @@ also, if overwrite = false, then the rebase will remove any entire etnries that 
 
 OVERWRITES MOD TABLE AND RETURNS IT EDITED
 """
-def rebase_table(oldTable, modTable, newTable, overwrite=False):
+def rebase_table(oldTable, modTable, newTable, LOG, overwrite=False, added_columns=[], removed_columns=[], verbose=False):
     ot_entries = set(oldTable.entries.keys())
     mt_entries = set(modTable.entries.keys())
     nt_entries = set(newTable.entries.keys())
 
-    possible_edits = ot_entries & mt_entries
-    added_entries = mt_entries - ot_entries
-    mod_removed_entries = ot_entries - mt_entries
-    new_removed_entries = ot_entries - nt_entries
-    new_entries = nt_entries - ot_entries
+    possible_edits = ot_entries & mt_entries # used to re-perform edits
+    added_entries = mt_entries - ot_entries # if entries are added AND anything was renamed or columns were added...
+    mod_removed_entries = ot_entries - mt_entries # should remain removed...
+    new_removed_entries = ot_entries - nt_entries # used to check for errors
+    new_entries = nt_entries - ot_entries # entries added in newTable
+
+    if (len(mod_removed_entries) > 0) and (verbose == True) and (overwrite == True):
+        for mre in mod_removed_entries:
+            LOG.write("The Mod removed " + mre + " and it will remain removed in the new TSV file.\n")
+
+    columns_changed = (len(added_columns) > 0) or (len(removed_columns) > 0)
+
+    # TODO: will this handle the situation where we edited an entry that was removed (or renamed)?
     if (len(new_removed_entries) > 0) and (overwrite == True or (len(new_removed_entries & mt_entries) > 0)):
-        sys.stderr.write("ERROR Newly removed entries: \n" + str(new_removed_entries) + "\n")
-        return None
+        LOG.write("WARNING: This folder contains Newly removed entries! Newly removed entries will be placed in the BROKEN_COLUMNS' tsv file\n")
+
+
+    # must KEEP every entry found in Mod table not found in old base table (since it got added)
+    # When supporting certain situations (like column changes), added entries will cause errors
+    if(columns_changed):
+        modTable.Columns = copy.copy(newTable.Columns) # reset the columns...
+        for ek in added_entries:
+            modTable.BrokenCol_EntryKeys |= {ek}
+            entry = modTable.entries[ek]
+            for a_col in added_columns:
+                entry[a_col] = "MISSING"
+    else:
+         pass #: they already exist in mod_table...
 
     # Must add every new entry in newTable
     if overwrite == True:
         for ek in new_entries:
-            modTable.entries[ek] = copy.copy(new_entries.entries[ek])
-            # TODO: LOG THIS: sys.stderr.write("Added entry from new data.pack: " + ek + "\n")
-
-    # must KEEP every entry found in Mod table not found in old base table (since it got added)
-    # pass: they already exist in mod_table...
-    # TODO: When supporting certain situations (like column changes), added entries will cause errors
+            modTable.entries[ek] = copy.copy(newTable.entries[ek])
+            if verbose == True:
+                LOG.write("Added entry from new data.pack: " + ek + "\n")
 
     # apply changes to all edited entries to the new table's version of that entry
     for ek in possible_edits:
         differences = get_entry_diff(ek, oldTable, modTable)
-        modTable.entries[ek] = copy.copy(newTable.entries[ek])
-        entry = modTable.entries[ek]
-        # leave unedited lines in the mod table
-        for df in differences:
-            entry[df.column] = df.newValue
-            # TODO: Log all of these edits!
-        # Now the entry has only the pack's changed things edited
+        update_map = dict() # maps column edited to the diff
+        removed = False
+        # revert the entry to the newTable's version
+        try:
+            modTable.entries[ek] = copy.copy(newTable.entries[ek]) # revert it to the new entry
 
-    # TODO: SAFE MODE! report any time a mod edits a value also changed in the update!
+        except KeyError:
+            LOG.write("WARNING " + ek + " was removed from the new data.pack \n")
+            modTable.NewRemoved_EntryKeys |= {ek}
+            removed = True
 
+        if (removed == False):
+            updates = get_entry_diff(ek, oldTable, newTable)
+            for u in updates:
+                update_map[u.column] = u
 
+        if (len(differences) > 0):
+            if verbose == True:
+                LOG.write("\tRebasing: " + ek + "\n")
 
-    # TODO: Test that removed entries stay removed!
-    # TODO: Test everything else!
+            entry = modTable.entries[ek]
+            # leave unedited lines in the mod table
+            for df in differences:
+                change_string = not (is_number(df.newValue))
+                try:
+                    update_diff = update_map[df.column]
+                except KeyError:
+                    update_diff = None
 
+                # update collisions when a collision was detected
+                if (update_diff != None) : #and change_string == True:
+
+                    if verbose == True:
+                        LOG.write("\t-\tWARNING: Collision at " + str(df.column) + "\n\t\t*\t-> mod val: " + df.newValue + ". new val: " + update_diff.newValue + ". old val: " + df.oldValue + "\n")
+                    if change_string == True:
+                        modTable.Collision_EntryKeys |= {ek}
+                        LOG.write("\t\t*\tCollision entry will ONLY be included in Collision TSV file\n")
+                    else:
+                        LOG.write("\t\t*\tCollision entry will be assumed safe and remain in standard TSV file\n")
+                else:
+                    if verbose == True:
+                        LOG.write("\t-\t" + str(df) + "\n")
+                entry[df.column] = df.newValue
+
+            # Now the entry has only the pack's changed things edited
+
+    LOG.flush()
     return modTable
 
 
