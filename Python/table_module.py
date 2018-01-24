@@ -21,6 +21,8 @@ class Table:
         self.BrokenCol_EntryKeys = set() # a set of all added entry keys that have column issues
         self.NewRemoved_EntryKeys = set() # a set of all entry keys that have been removed in the new data pack
         self.Collision_EntryKeys = set() # a set of all entry keys that have been edited by both the update and the mod
+        self.Added_EntryKeys = set() # a set of all entry keys that were added in the mod
+        self.Missing_EntryKeys = set() # a set of every entry key that belongs to an entry key that the data.pack has but the mod folder doesn't
         self.fileName = "Default"
 
     def __str__(self):
@@ -87,6 +89,8 @@ class Table:
         normal_keys = (set(self.entries.keys()) - self.BrokenCol_EntryKeys)
         normal_keys -= self.Collision_EntryKeys
         normal_keys -= self.NewRemoved_EntryKeys
+        normal_keys -= self.Added_EntryKeys
+        normal_keys -= self.Missing_EntryKeys
 
         # print broken columns to a file
         if( len(self.BrokenCol_EntryKeys) > 0):
@@ -103,6 +107,16 @@ class Table:
             fname = os.path.join(directory, self.fileName + "_REMOVED" + ftype)
             f = open(fname,"w")
             f.write(self.get_fileprint_string(self.NewRemoved_EntryKeys))
+        # print removed entries to a file
+        if( len(self.Added_EntryKeys) > 0):
+            fname = os.path.join(directory, self.fileName + "_ADDED" + ftype)
+            f = open(fname,"w")
+            f.write(self.get_fileprint_string(self.Added_EntryKeys))
+        # print removed entries to a file
+        if( len(self.Missing_EntryKeys) > 0):
+            fname = os.path.join(directory, self.fileName + "_MISSING" + ftype)
+            f = open(fname,"w")
+            f.write(self.get_fileprint_string(self.Missing_EntryKeys))
 
         fname = os.path.join(directory, self.fileName + ftype)
         f = open(fname,"w")
@@ -269,8 +283,7 @@ def file_loader(csvFile):
                 table.name = lst[0]
                 try:
                     table.entryKey = warhammer2_table_config.keyDict[table.name] # reference config library
-                    if table.entryKey[0] == None:
-                        sys.stderr.write("ERROR: Table " + table.name + " has an unspecified key column list in Warhammer2_table_config!\n")
+
                 except KeyError as e:
                     sys.stderr.write("EntryKey not found for table: " + table.name + "\n")
                     return None
@@ -281,6 +294,9 @@ def file_loader(csvFile):
             table.lineTwo = line
         elif(i==2):
             table.columns = parse_line_to_list(line, table.separator)
+            if table.entryKey[0] == None:
+                sys.stderr.write("WARNING: Table " + table.name + " has an unspecified key column list in Warhammer2_table_config!\n")
+                table.entryKey = table.columns
         else:
             lst = parse_line_to_list(line, table.separator)
             if (len(lst) == len(table.columns)):
@@ -451,22 +467,36 @@ def rebase_table(oldTable, modTable, newTable, LOG, overwrite=False, added_colum
     mod_removed_entries = ot_entries - mt_entries # should remain removed...
     new_removed_entries = ot_entries - nt_entries # used to check for errors
     new_entries = nt_entries - ot_entries # entries added in newTable
+    missing_entries = (ot_entries - mt_entries) & nt_entries
 
-    if (len(mod_removed_entries) > 0) and (verbose == True) and (overwrite == True):
+    # TODO: default to writing these files?
+    # TODO: If columns are broken, don't process added entries like this...
+    modTable.Added_EntryKeys |= added_entries
+    modTable.Missing_EntryKeys |= missing_entries
+
+    if (len(mod_removed_entries) > 0):
         for mre in mod_removed_entries:
-            LOG.write("The Mod removed " + mre + " and it will remain removed in the new TSV file.\n")
+            if (verbose == True) and (overwrite == True):
+                LOG.write("The Mod removed " + mre + " and it will remain removed in the new TSV file.\n")
+
+    if (len(missing_entries) > 0):
+        for me in missing_entries:
+            modTable.entries[me] = copy.copy(newTable.entries[me])
 
     columns_changed = (len(added_columns) > 0) or (len(removed_columns) > 0)
 
-    # TODO: will this handle the situation where we edited an entry that was removed (or renamed)?
+    # TODO: will this handle the situation where we edited an entry that was removed (or renamed
+    # TODO: DO SOMETHING ABOUT WHEN AN ENTRY WAS RENAMED? OR IF ITS REFERENCE WAS?
     if (len(new_removed_entries) > 0) and (overwrite == True or (len(new_removed_entries & mt_entries) > 0)):
-        LOG.write("WARNING: This folder contains Newly removed entries! Newly removed entries will be placed in the BROKEN_COLUMNS' tsv file\n")
+        LOG.write("WARNING: This folder contains Newly removed entries! Newly removed entries will be placed in the '..._REMOVED' tsv file\n")
 
 
     # must KEEP every entry found in Mod table not found in old base table (since it got added)
     # When supporting certain situations (like column changes), added entries will cause errors
     if(columns_changed):
         modTable.Columns = copy.copy(newTable.Columns) # reset the columns...
+        if (len(added_entries) > 0):
+            LOG.write("WARNING: This folder contains added entries when a table's columns were changed! These entries will be placed in the '..._BROKEN_COLUMNS' tsv file\n")
         for ek in added_entries:
             modTable.BrokenCol_EntryKeys |= {ek}
             entry = modTable.entries[ek]

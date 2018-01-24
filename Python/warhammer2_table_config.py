@@ -460,7 +460,7 @@ keyDict = {
 "character_skill_level_details_tables": ['level', 'skill_key'], # has no unique columns, will check column groups instead
 "character_skill_level_to_ancillaries_junctions_tables": ['granted_ancillary'],
 "character_skill_level_to_dilemmas_junctions_tables": ['unknown1'],
-"character_skill_level_to_effects_junctions_tables": [None], # has no unique columns or column groups!
+"character_skill_level_to_effects_junctions_tables": ["character_skill_key","effect_key","level"], # has no unique columns or column groups!
 "character_skill_nodes_skill_locks_tables": ['character_skill', 'character_skill_node'], # has no unique columns, will check column groups instead
 "character_skill_nodes_tables": ['key'],
 "character_skill_node_ancillary_locks_tables": ['character_skill_node'],
@@ -527,7 +527,7 @@ keyDict = {
 "effect_bonus_value_battle_context_unit_attribute_junctions_tables": ['effect_key'],
 "effect_bonus_value_building_set_junctions_tables": ['building_set', 'effect'], # has no unique columns, will check column groups instead
 "effect_bonus_value_faction_junctions_tables": ['unknown2'],
-"effect_bonus_value_ids_unit_sets_tables": [None], # has no unique columns or column groups!
+"effect_bonus_value_ids_unit_sets_tables": ["bonus_value_id","effect","unit_set"], # has no unique columns or column groups!
 "effect_bonus_value_id_action_results_additional_outcomes_junctions_tables": ['action_results_additional_outcome_record', 'effect'], # has no unique columns, will check column groups instead
 "effect_bonus_value_loyalty_event_junctions_tables": ['unknown1'],
 "effect_bonus_value_military_force_ability_junctions_tables": ['unknown1', 'unknown2'], # has no unique columns, will check column groups instead
