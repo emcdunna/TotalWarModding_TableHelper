@@ -106,7 +106,7 @@ def main(args):
                 newTableFolder = os.path.join(newBaseDir,folder)
 
                 quick_table = concatTablesInFolder(baseTableFolder)
-                if quick_table.entryKey[0] == None:
+                if quick_table.keyColumns[0] == None:
                     LOG.write("ERROR: missing configuration for " + folder + " in Warhammer2_table_config!\nABORTING PROCESS FOR THIS FOLDER\n")
                 else:
                     basetable_columns = set(quick_table.columns)

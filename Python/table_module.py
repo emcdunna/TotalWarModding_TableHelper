@@ -3,6 +3,16 @@ import warhammer2_table_config
 import os
 import copy
 
+
+CREATE_UNIT_ROOT_FOLDERS = [
+"main_units_tables",
+"land_units_tables",
+"variants_tables",
+"melee_weapons_tables",
+"missile_weapons_tables"
+]
+
+
 """
 A table obj holds a mapping of keys to values for each entry, and a set of entries
 -- an entry is like a line in the table
@@ -16,7 +26,7 @@ class Table:
         self.separator = ","
         self.name = "Default" # FOLDER NAME! Sorry thats confusing
         self.lineTwo = "" # 34, for example saying there are 34 columns?
-        self.entryKey = [None] # a list of every column name that acts as part of the key
+        self.keyColumns = [None] # a list of every column name that acts as part of the key
         #self.folder = ""
         self.BrokenCol_EntryKeys = set() # a set of all added entry keys that have column issues
         self.NewRemoved_EntryKeys = set() # a set of all entry keys that have been removed in the new data pack
@@ -24,31 +34,48 @@ class Table:
         self.Added_EntryKeys = set() # a set of all entry keys that were added in the mod
         self.Missing_EntryKeys = set() # a set of every entry key that belongs to an entry key that the data.pack has but the mod folder doesn't
         self.fileName = "Default"
+        #self.clones = []
 
     def __str__(self):
         word = ""
         word += self.name + "\n"
-        word += "Key Column(s): " + str(self.entryKey) + "\n"
+        word += "Key Column(s): " + str(self.keyColumns) + "\n"
         word += stringify_list(self.columns, self.separator) + "\n"
         for ek in self.entries.keys():
             word += self.stringify_entry(ek) + "\n"
         return word
 
+    def replace(self, column, baseval, repval):
+        status = "No dependent entry values. "
+        for ek in self.entries.keys():
+            entry = self.entries[ek]
+            if entry[column] == baseval:
+                entry[column] = repval
+                status = "Replaced dependent entry values."
+        return status
+
+    def add_entry(self, entry):
+
+        ek = self.get_entry_key( entry)
+        self.entries[ek] = entry
+        self.Added_EntryKeys |= {ek}
+
     # returns the entry key for a particular entry based off the table's entry key metadata
     def get_entry_key(self, entry):
         #print "Entry " + str(entry)
-        ek = "Entry Key: "
+        ek = ""
         i = 1
-        #print "Key columns " + str(self.entryKey)
+        #print "Key columns " + str(self.keyColumns)
 
-        for keyCol in self.entryKey: # iterate through each entry key column, add the value of that column to the key string
+        for keyCol in self.keyColumns: # iterate through each entry key column, add the value of that column to the key string
             if keyCol == None:
                 return "NULL_ENTRY_KEY"
             ek += entry[keyCol]
-            if i < len(self.entryKey):
-                ek += "  TO  "
+            if i < len(self.keyColumns):
+                ek += " TO "
                 i +=1
         return ek
+
 
     def get_file_extension(self):
         if(self.separator == ","):
@@ -82,6 +109,11 @@ class Table:
         return word
 
     def print_to_file(self, directory):
+
+        try:
+            os.makedirs(directory)
+        except:
+            pass
         ftype = ".csv"
         if(self.separator != ","):
             ftype = ".tsv"
@@ -119,6 +151,7 @@ class Table:
             f.write(self.get_fileprint_string(self.Missing_EntryKeys))
 
         fname = os.path.join(directory, self.fileName + ftype)
+
         f = open(fname,"w")
         f.write(self.get_fileprint_string(normal_keys))
         return 0
@@ -243,7 +276,7 @@ def stringify_list(lst, sep):
 Takes in string line and separator character
 returns lst of items
 """
-def parse_line_to_list(line, sep):
+def parse_line_to_list(line, sep="\t"):
     lst = []
     word = ""
     for i in line:
@@ -282,10 +315,10 @@ def file_loader(csvFile):
             if(len(lst) > 0):
                 table.name = lst[0]
                 try:
-                    table.entryKey = warhammer2_table_config.keyDict[table.name] # reference config library
+                    table.keyColumns = warhammer2_table_config.keyDict[table.name] # reference config library
 
                 except KeyError as e:
-                    sys.stderr.write("EntryKey not found for table: " + table.name + "\n")
+                    sys.stderr.write("Key Columns not found for table: " + table.name + " in WH2 config file\n")
                     return None
             else:
                 sys.stderr.write("Empty first line in file: " + csvFile.name + "\n")
@@ -294,9 +327,9 @@ def file_loader(csvFile):
             table.lineTwo = line
         elif(i==2):
             table.columns = parse_line_to_list(line, table.separator)
-            if table.entryKey[0] == None:
-                sys.stderr.write("WARNING: Table " + table.name + " has an unspecified key column list in Warhammer2_table_config!\n")
-                table.entryKey = table.columns
+            if table.keyColumns[0] == None:
+                # TODO: RE-ENABLE THIS sys.stderr.write("WARNING: Table " + table.name + " has an unspecified key column list in Warhammer2_table_config!\n")
+                table.keyColumns = table.columns
         else:
             lst = parse_line_to_list(line, table.separator)
             if (len(lst) == len(table.columns)):
@@ -313,38 +346,6 @@ def file_loader(csvFile):
 
     return table
 
-"""
-Takes a tablediff object, which stores the changes between two tables, and yet another table object,
-"mod table", which is the new table to apply these changes to.
-
-The usage of this would be to send...
-    1) tablediff(oldWarhammerTable, myOldModTable)
-    2) table(newWarhammerTable)
-Where the changes between newWarhammerTable and oldWarhammerTable DON'T concern us, but the changes between
-oldWarhammerTable and myOldModTable should be applied to the newWarhammerTable, leaving all else in that
-table the same.
-
-THI IS TO BE USED AFTER A PATCH BY CA WHICH CHANGES MANY ASPECTS OF THE TABLE THAT YOU DON'T CARE ABOUT,
-SO YOU JUST WANT TO RE-DO THE OLD CHANGES TO THE NEW BASE TABLE.
-
--- Currently this overrides patchtable object with new changes
-"""
-def apply_differences(tablediff, patchtable):
-    ftype = ".csv"
-    if(patchtable.separator != ","):
-        ftype = ".tsv"
-
-    for diff in tablediff.differences:
-        try:
-            entry = patchtable.entries[diff.entryKey]
-            entry[diff.column] = diff.newValue
-        # the key doesnt exist in the new base, ignore it
-        except KeyError:
-            sys.stderr.write(patchtable.name + " -\tMissing key in patch table: " + diff.entryKey + "\n")
-
-    return patchtable
-
-
 
 
 """
@@ -353,6 +354,11 @@ should allow entries from second table to override entries in the first table.
 Returns the base table object which stores both sets of information concatenated together.
 """
 def merge_tables(bot_table, top_table):
+    if bot_table == None:
+        return None
+    elif top_table == None:
+        return bot_table
+
     if(bot_table.name != top_table.name):
         sys.stderr.write("Merging tables " + bot_table.name + " have different names!\n")
         return None
@@ -585,29 +591,545 @@ def run_diff(baseTableFolder, modTableFolder):
 
 
 
+
+
 """
-Applies differences for one folder set (run once for each folder)
-
-Writes the entire combined folder to the output directory
+Loads every table in this directory.
+returns a dict of folder name mapped to a list of tables loaded there.
 """
-def apply_diff_tree(baseTableFolder, modTableFolder, newBaseTableFolder):
-    baseTable = concatTablesInFolder(baseTableFolder)
-    modTable = concatTablesInFolder(modTableFolder)
-    newTable = concatTablesInFolder(newBaseTableFolder)
+def load_directory_Tables(directory):
+    db = os.path.join(directory, "db")
+    folders = os.listdir(db)
 
-    tablediff = TableDiff(baseTable, modTable) # detects differences between two tables
+    dir_tables = {}
+    for f in folders:
+        path = os.path.join(db,f)
+        f_tables = load_folder_Tables(path)
+        dir_tables[f] = f_tables
 
-    if(len(tablediff.differences) == 0):
-        sys.stderr.write("Not applying changes for file for: " + baseTable.name + " because there are no differences.\n")
-        return None
+    return dir_tables
+
+
+"""
+returns a dict of column -> set(all possible values)
+"""
+def get_column_data(table):
+    data = {}
+    for c in table.columns:
+        data[c] = set()
+
+        for ek in table.entries.keys():
+            val = table.entries[ek][c]
+            data[c] |= {val}
+    return data
+
+"""
+evaluates two column data sets to determine if they contain the same kind of data (assumedly)
+"""
+def eval_column_data(col_set_1, col_set_2):
+    col_set_1 -= {""} # LEFT
+    col_set_2 -= {""} # RIGHT
+    # only check one out of the entire set!
+    for d in col_set_1:
+        if( is_number(d) == True):
+            return "NUMBER_LEFT",0
+        elif (is_bool(d)):
+            return "BOOL_LEFT",0
+        else:
+            break
+    # only check one out of the entire set!
+    for d in col_set_2:
+        if( is_number(d) == True):
+            return "NUMBER_RIGHT",0
+        elif (is_bool(d)):
+            return "BOOL_RIGHT",0
+        else:
+            break
+
+    shared = col_set_1 & col_set_2
+    if ( len(shared) == 0):
+        return "DIFFERENT", 0
+    elif (len(shared) == len(col_set_1) ): #(col_set_1 == col_set):
+        return "SAME", 1
     else:
-        #print "Applying differences for " + newTable.name
-        updated_table =apply_differences(tablediff, newTable)
-        return updated_table
+        d_1not2 = col_set_1 - col_set_2
+        d_2not1 = col_set_2 - col_set_1
+        if ( len(d_1not2) == 0) and (len(shared) > 0):
+            return "SUBSET_LEFT_OF_RIGHT", float(len(shared)) / len(col_set_1 | col_set_2)
+        elif ( len(d_2not1) == 0) and (len(shared) > 0):
+            return "SUBSET_RIGHT_OF_LEFT", float(len(shared)) / len(col_set_1 | col_set_2)
+        else:
+            return "OVERLAP", float(len(shared)) / len(col_set_1 | col_set_2)
+    return "ERROR", 0
+
+def is_bool(word):
+    if (word.lower() == "false") or (word.lower() == "true"):
+        return True
+    else:
+        return False
+
+"""
+Maps evankeys to columns, to expose schema links
+"""
+def mapSchema(table):
+    tup_lst = dict()
+    for ek in table.entries.keys():
+        entry = table.entries[ek]
+
+        for col in table.columns:
+            coldata = entry[col]
+            if "evankey" in coldata:
+                col_lst = coldata.split("_")
+                col_key = col_lst[1]
+                # something like 14, unit to map the evankey_14 showing up in that column
+                tup_lst[col] = int(col_key)
+    return tup_lst
+
+"""
+represents a column of data in a table, and how it relates to others in the data tables
+"""
+class schema_node:
+    def __init__(self):
+        self.folder = "Default" # the folder name that this schema node represents (like land_units_tables)
+        self.column = "Default" # the column name in that table which this schema node represents
+        self.type = "Unknown" # MUST BE EITHER ROOT or REFERENCE
+        #self.links = set() # schema node links where one link is this node (a DIRECT link)
+        self.direct_links = set() # a set of nodes directly linked to this node
+        self.indirect_links = set() # a set of all nodes in the same table as this node
+
+
+    def __str__(self):
+        word = "\'" + str(self.folder) + "/" + str(self.column) + "\'" + " ("+ self.type + ")"
+        return word
+
+"""
+A link between two schema nodes, describing the relationship between them
+"""
+class schema_node_link:
+    def __init__(self):
+        self.left_node = None
+        self.right_node = None
+
+        self.relationship = None # relationship left to right
+        self.overlap_ratio = 0
+
+    def __str__(self):
+        return self.left_node.folder + "/" +self.left_node.column + "  -->  " + self.right_node.folder +  "/" +self.right_node.column
+
+    def get_other_node(self, node):
+        if node == self.left_node:
+            return self.right_node
+        elif node == self.right_node:
+            return self.left_node
+        else:
+            return None
+
+"""
+Scans the schema from a very special pack.
+This pack MUST be a cleaned version of an Assembly kit export where an entry from every table has been edited
+to change it's string parameter to evankey_<number>, then updating all dependencies.
+What this will do for all entries is specifically map a field from one table to the fields in the other tables.
+
+Then, we take this mapping and detect how they are related. Is one a subset of the other? can there be duplicates?
+
+This schema then gets saved in such a way as to be used by an error-checking script later.
+"""
+def schema_scan(dirTables, evankey_dir, LOG):
+    LOG.write( "STAGE: Loading data_pack directory\n")
+    # Loads the data_pack directory tables
+
+    folder_to_ColumnData = {}
+    folder_set = set(dirTables.keys())
+    for folder in folder_set:
+        tables = dirTables[folder]
+        try:
+            t = tables["data__"]
+            coldata = get_column_data(t)
+            folder_to_ColumnData[folder] = coldata # coldata is a dict of column -> all possible values (set)
+        except:
+            LOG.write("WARNING: Error found for folder " + folder + "\n")
+
+    LOG.write( "STAGE: Creating schema nodes"+ "\n")
+    # prepare master schema
+    folders = os.listdir(evankey_dir)
+
+    master_schema =dict()
+    folder_to_nodes_dict = {}
+    all_nodes = []
+    for folder in folders:
+        LOG.write( "-" * 100+ "\n")
+        LOG.write("Scanning folder: " + folder + "\n")
+        try:
+            baseTableFolder = os.path.join(evankey_dir,folder)
+            baseTable = concatTablesInFolder(baseTableFolder)
+
+            curr = mapSchema(baseTable) # returns a map of (column: key#) pairs for this folder
+            for col in curr.keys():
+                keynum = curr[col]
+                nd = schema_node()
+                nd.folder = folder
+                nd.column = col
+                nd.type = "REFERENCE"
+
+                try:
+                    folder_to_nodes_dict[nd.folder].append(nd)
+                except:
+                    folder_to_nodes_dict[nd.folder] = [nd]
+
+                if len(baseTable.keyColumns) == 1:
+                    if col == baseTable.keyColumns[0]:
+                        nd.type = "ROOT"
+                try:
+                    master_schema[keynum].append( nd )
+                except:
+                    master_schema[keynum] = [nd]
+                LOG.write( str(nd) + "\n")
+                all_nodes.append(nd)
+
+        except:
+            sys.stdout.write("FOLDER ERROR with folder " + folder + "\n")
+
+
+    LOG.write( "STAGE: Linking nodes together"+ "\n")
+    for i in master_schema.keys():
+        link_set = master_schema[i]
+        if len(link_set) > 0:
+
+            proc_pairs = []
+            for nd in link_set:
+
+                for o_nd in link_set:
+                    if nd == o_nd:
+                        pass
+                    else:
+                        nd.direct_links |= {o_nd}
+                        # old code went here
+
+    for nd in all_nodes:
+        nd.indirect_links = set(folder_to_nodes_dict[nd.folder]) - {nd}
+
+    return folder_to_nodes_dict
+
+
+
+"""
+returns a table which only contains the entries that differ between the
+modTable and the baseTable.
+Essentially it deletes out anything that hasn't been edited from the
+modTable
+"""
+def unique_table(baseTable, modTable, LOG):
+
+    if baseTable == None or modTable == None:
+        return None
+    if baseTable.name != modTable.name:
+        return None
+    table = copy.deepcopy(modTable)
+
+    joint_eks = set(modTable.entries.keys()) & set(baseTable.entries.keys())
+    for jek in joint_eks:
+        try:
+            baseEntry = baseTable.entries[jek]
+            modEntry = modTable.entries[jek]
+            if modEntry == baseEntry:
+                del table.entries[jek]
+                #LOG.write("Deleting Joint Entry Key: " + jek + "\n")
+            else:
+                LOG.write("Keeping Joint Entry Key: " + jek + "\n")
+        except:
+            LOG.write("ERROR for Entry Key: " + jek + "\n")
+
+    # TODO: if plausible, this doesn't remove these EKs from being in the sets of broken columns or other
+    # Entry key related lists
+    return table
 
 
 
 
+"""
+takes a modified dirTables array object and compares against base, minimizing all common entries
+by running unique_table
+"""
+def print_unique_tables(baseDirTables, modDirTables, LOG, outputDir):
+    for folder in modDirTables.keys():
+        modTables = modDirTables[folder]
+        baseTables = baseDirTables[folder]
+        jointKeys = set(modTables.keys()) & set(baseTables.keys())
+        for tk in jointKeys:
+            modTable = modTables[tk]
+            baseTable = baseTables[tk]
+            newTable = unique_table(baseTable, modTable, LOG)
+            if newTable == None:
+                LOG.write("FAILED to write table " + folder + "/" + tk + "\n" )
+            else:
+                if len(newTable.entries.keys()) > 0:
+
+                    fpath = os.path.join(outputDir,folder)
+                    try:
+                        os.makedirs(fpath)
+                    except:
+                        pass
+                    LOG.write("Writing unique table for " + folder + "/" + tk + "\n")
+                    newTable.print_to_file(fpath)
+                else:
+                    LOG.write("Skipping write to " + folder + "/" + tk + "\n")
+
+
+"""
+finds specific data in specific tables, replaces it, and updates all dependencies depending on
+the schema link nodes
+
+replaceData is a 2D list of format
+[
+[ folder name,   column name,     base value,     new value],
+[...],
+...
+]
+"""
+def replace_data(replaceData, dirTables, folder_to_nodes_dict, LOG):
+    for repList in replaceData:
+        folder = repList[0]
+        column = repList[1]
+        baseVal = repList[2]
+        repVal = repList[3]
+
+        mainTable = dirTables[folder]["data__"]
+        LOG.write("#" * 90 + "\n")
+        LOG.write("REPLACING " + folder + "/" + column + ": " + baseVal + " --> " + repVal + "\n")
+        result = mainTable.replace(column, baseVal, repVal)
+        LOG.write("RESULT: " + str(result) + "\n")
+        try:
+            nodes = folder_to_nodes_dict[folder]
+        except KeyError:
+            LOG.write("ERROR: Couldn't find folder " + folder + " in folder_to_nodes_dict.\n")
+            sys.stderr.write("ERROR: Couldn't find folder " + folder + " in folder_to_nodes_dict.\n")
+            nodes = []
+        root_found = False
+        for node in nodes:
+            if node.type == "ROOT":
+                if root_found == True:
+                    LOG.write("WARNING: Two root nodes found for " +  folder + "\n")
+
+                up_res = update_replaced_dependencies(dirTables, node, baseVal, repVal, LOG)
+                if up_res != None:
+                    LOG.write("RESULT: " + str(up_res) +"\n")
+                root_found == True
+
+
+
+
+
+"""
+Updates all dependencies for a renamed entry.
+"""
+def update_replaced_dependencies(dirTables, node, baseval, repval, LOG):
+    try:
+        nodeTable = dirTables[node.folder]["data__"]
+    except KeyError:
+        LOG.write("Folder " + node.folder + " not found in dirTables.\n")
+        return "FAIL: Node folder not found"
+    LOG.write("Updating dependencies for " + node.folder + "/" + node.column + "\n")
+
+    LOG.write("Replaced val: " + str(repval) + "\n")
+    LOG.write("Base val: " + str(baseval) + "\n")
+
+    # only update dependents if the node is a root
+    if (node.type == "ROOT"):
+
+        # for every dependent table
+        for lnk_node in node.direct_links:
+            lnk_node_table = dirTables[lnk_node.folder]["data__"]
+            LOG.write("Processing link to " + lnk_node.folder + "/" +lnk_node.column + "\n" )
+            result = lnk_node_table.replace(lnk_node.column, baseval, repval) # replace all references
+            LOG.write("\t\t" + str(result) + "\n")
+
+    else:
+        LOG.write("FAIL: Not root node!\n")
+        return "FAIL: NOT ROOT NODE"
+
+
+"""
+Finds every direct link to a folder/column/value path.
+
+We go to the table, and for every entryKey[column] == value match, thats an entry to check
+
+The direct links are just in the node's links.
+"""
+def find_direct_links(dirTables, node, value, LOG, depthStr = ""):
+    data = []
+    for lnk_node in node.direct_links:
+        lnk_node_table = dirTables[lnk_node.folder]["data__"]
+        LOG.write(depthStr + "Direct Link: " + lnk_node.folder + "/" + lnk_node.column + "\n" )
+
+        for lnk_ek in lnk_node_table.entries.keys():
+            lnk_entry = lnk_node_table.entries[lnk_ek]
+
+            # if this entry's contains a reference to the root node
+            if lnk_entry[lnk_node.column] == value:
+                data.append((lnk_node, lnk_ek)) # the node and entry key that match
+
+    return data
+
+
+"""
+Finds every indirect link in a set of entries.
+
+An indirect link is a reverse look up to see where the reference comes from
+"""
+def find_indirect_links(dirTables, folder_to_nodes_dict, folder, entries, LOG, depthStr = ""):
+    data = []
+    nodes = folder_to_nodes_dict[folder]
+    table = dirTables[folder]["data__"]
+
+    for node in nodes:
+        if node.type != "ROOT":
+            column = node.column
+
+            values = set()
+            for ek in entries:
+                entry = table.entries[ek]
+                value = entry[column]
+                values |= {value}
+            # don't do the same value twice
+            for value in values:
+                LOG.write("Indirect Link: " + folder + "/" + column + " --> " + value + "\n")
+                curr_data = find_direct_links(dirTables, node, value, LOG)
+                data.append( (node, value, curr_data) )
+    return data
+
+
+
+"""
+Prints the full node web
+"""
+def print_node_web(folder_to_nodes_dict):
+    for folder in folder_to_nodes_dict.keys():
+        nodes = folder_to_nodes_dict[folder]
+        print "#" * 100
+        print folder
+        for node in nodes:
+            print "-" * 50
+            print "\t" + str(node)
+            print "\tDIRECT = ["
+            for lnk_node in node.direct_links:
+                print  "\t\t" + str(lnk_node)
+            print "\t]\n\tINDIRECT = {"
+            for lnk_node in node.indirect_links:
+                print  "\t\t" + str(lnk_node)
+            print "\t}"
+
+"""
+Looks at a table's column data and determines which entry keys match the value
+"""
+def find_connections(dirTables, node, value):
+    nodeTable = dirTables[node.folder]["data__"]
+    matching_entries = set()
+    for ek in nodeTable.entries.keys():
+        entry = nodeTable.entries[ek]
+        ek_value = entry[node.column]
+        if value == ek_value:
+            matching_entries |= {ek}
+    return matching_entries
+
+
+"""
+Recrusively finds data links to a folder/column/value path. Direct links are other places that look
+up this reference, and indirect links are other references made by entries that hold the root reference
+
+For example, looking up a main units/unit value would search for (direct) references to this main_unit value,
+but also look up the other references in the main_unit table like land_unit.
+"""
+def find_data_links(dirTables, node, value, LOG, processedNodes, depth = "", maxIndirectDepth=8):
+    matching_entries = find_connections(dirTables, node, value)
+    nodeTable = dirTables[node.folder]["data__"]
+    if (len(matching_entries) == 0) or (value == ""):
+        #LOG.write(depth + "- End of reference chain }\n")
+        return set()
+    LOG.write(depth + "NODE: " + str(node) + " - \'" + value + "\' {\n")
+    for m in matching_entries:
+        LOG.write(depth + "- Match: \'" + m + "\'\n")
+
+    directres = dict()
+    indirectres = dict()
+    processedNodes |= {node} # this keeps it from running infinitely
+
+    LOG.write(depth + "DIRECT: {\n")
+    # DIFFERENT TABLE, SAME VALUE
+    # looking for any time someone references this value
+    for lnk_node in node.direct_links:
+        if lnk_node not in processedNodes:
+            res = find_data_links(dirTables, lnk_node, value, LOG, processedNodes, depth + "\t", maxIndirectDepth)
+            directres[lnk_node] = res
+    LOG.write(depth +"}\n")
+
+
+    LOG.write(depth + "INDIRECT: {\n")
+    intdepth = len(depth)
+    # SAME TABLE, DIFFERENT VALUE
+    # looking all other references that these entries make
+    for lnk_node in node.indirect_links:
+        if lnk_node not in processedNodes:
+            if intdepth <= maxIndirectDepth:
+                if ((intdepth == 0) or (lnk_node.type != "ROOT")) :
+                    values = set()
+                    for m in matching_entries:
+                        values |= {nodeTable.entries[m][lnk_node.column]}
+
+                    indirectres[lnk_node] = dict()
+                    for v in values:
+                        res = find_data_links(dirTables, lnk_node, v, LOG, processedNodes, depth + "\t", maxIndirectDepth)
+                        indirectres[lnk_node][v] = res
+                else:
+                    LOG.write(depth + "Skipping deep root node " + str(lnk_node) + "\n")
+            else:
+                LOG.write(depth + "Skipping " + str(lnk_node) + " due to max indirect depth\n")
+    LOG.write(depth +"}\n")
+    LOG.write(depth +"}\n")
+    return (matching_entries, directres, indirectres)
+
+
+
+"""
+Merges every entry in modDirTables into baseDirTables and returns the result
+overwrites baseDirTables
+"""
+def merge_dirTables(baseDirTables, modDirTables, LOG):
+    try:
+        for folder in modDirTables.keys():
+            tables = modDirTables[folder]
+            for tk in tables.keys():
+                table = tables[tk]
+                try:
+                    LOG.write("f: " + str(folder) + "\n")
+                    LOG.write("tk: " + str(tk) + "\n")
+                    b_table = baseDirTables[folder][tk]
+                    b_table = merge_tables(b_table, table)
+                except KeyError:
+                    LOG.write("KEYERROR for " + folder + "\n")
+                    baseDirTables[folder][tk] = table
+        return baseDirTables
+    except KeyError:
+        LOG.write("FAILED to get merged dir tables.\n")
+        return None
+
+
+
+"""
+gets a unique dir tables dictionary
+overwrites modDirTables
+"""
+def unique_dirTables(baseDirTables, modDirTables, LOG):
+    try:
+        for folder in modDirTables.keys():
+            m_tables = modDirTables[folder]
+            for tk in m_tables.keys():
+                m_table = m_tables[tk]
+                b_table = baseDirTables[folder][tk]
+                m_table = unique_table(b_table, m_table, LOG)
+        return modDirTables
+    except KeyError:
+        LOG.write("FAILED to get unique dir tables.\n ")
+        return None
 
 
 

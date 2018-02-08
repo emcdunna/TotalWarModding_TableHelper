@@ -3,14 +3,14 @@ import sys
 import os
 import itertools
 import datetime
+
+
 """
 This is a script to evaluate a table and detect the column(s) that act as the key for that table.
 Keys are unique identifiers that allow tables to be overwritten.
 In PFM, the "key" (or keys) is the column highlighted in yellow and moved to the left (by default)
 We need to know which column is the key in order to evaluate differences.
 """
-
-
 
 """
 detects if a column of data is composed only of unique identifiers
