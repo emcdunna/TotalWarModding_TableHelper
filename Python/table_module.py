@@ -70,7 +70,11 @@ class Table:
         for keyCol in self.keyColumns: # iterate through each entry key column, add the value of that column to the key string
             if keyCol == None:
                 return "NULL_ENTRY_KEY"
-            ek += entry[keyCol]
+            try:
+                ek += entry[keyCol]
+            except KeyError:
+                ek += "MISSING_KEY"
+                sys.stderr.write("Missing key for table " + self.name + "/" + self.fileName + "\n\t" + str(entry) + "\n")
             if i < len(self.keyColumns):
                 ek += " TO "
                 i +=1
@@ -126,7 +130,7 @@ class Table:
 
         # print broken columns to a file
         if( len(self.BrokenCol_EntryKeys) > 0):
-            fname = os.path.join(directory, self.fileName + "_BROKEN_COLUMNS" + ftype)
+            fname = os.path.join(directory, self.fileName + "_BROKEN-COLUMNS" + ftype)
             f = open(fname,"w")
             f.write(self.get_fileprint_string(self.BrokenCol_EntryKeys))
         # print collision to a file
@@ -190,6 +194,20 @@ class TableDiff:
         self.compare_tables() # run compare tables on itself to update differences
 
     def compare_tables(self):
+        diff = None
+        if self.oldTable == None and self.newTable == None:
+            diff = Diff("ENTIRE TABLE","ENTIRE TABLE","MISSING","MISSING")
+            self.differences |= {diff}
+            return
+        elif self.newTable == None:
+            diff = Diff("ENTIRE TABLE","ENTIRE TABLE","NOT MISSING","MISSING")
+            self.differences |= {diff}
+            return
+        elif self.oldTable == None:
+            diff = Diff("ENTIRE TABLE","ENTIRE TABLE","MISSING","NOT MISSING")
+            self.differences |= {diff}
+            return
+
         entryKeySet = set(self.oldTable.entries.keys()) | set(self.newTable.entries.keys())
 
         if(self.oldTable.name != self.newTable.name):
@@ -398,6 +416,8 @@ def concatTablesInFolder(folder):
             tmpTable = file_loader(tmpFile)
             baseTable = merge_tables(baseTable,tmpTable)
         i += 1
+    if baseTable == None:
+        return None
     baseTable.fileName += "_CONCAT"
     return baseTable
 
@@ -585,7 +605,10 @@ def run_diff(baseTableFolder, modTableFolder):
     if(len(tablediff.differences) == 0):
         sys.stderr.write("Not writing diff file for: " + baseTable.name + " because there are no differences.\n")
     else:
-        diff_file = open("Results\\" + modTable.name + "_CHANGES.tsv","w")
+        if modTable == None or baseTable == None:
+            diff_file = open("Results\\ERR_" + baseTableFolder.split("\\")[-1] + "_CHANGES.tsv","w")
+        else:
+            diff_file = open("Results\\" + modTable.name + "_CHANGES.tsv","w")
         diff_file.write("Changes between " + baseTableFolder + " (base) and " + modTableFolder + " (mod)\n")
         diff_file.write(tablediff.to_tsv() + "\n")
 
@@ -794,9 +817,10 @@ def schema_scan(dirTables, evankey_dir, LOG):
     for i in master_schema.keys():
         link_set = master_schema[i]
         if len(link_set) > 0:
-
+            LOG.write("-"*100 + "\nScanning link set:\n")
             proc_pairs = []
             for nd in link_set:
+                LOG.write("\t- " + str(nd) + "\n")
 
                 for o_nd in link_set:
                     if nd == o_nd:
@@ -804,6 +828,37 @@ def schema_scan(dirTables, evankey_dir, LOG):
                     else:
                         nd.direct_links |= {o_nd}
                         # old code went here
+
+            # deal with having too many root nodes
+            # assumes node whose folder is shortest is root... its often correct
+
+            shortest_node = None
+            for nd in link_set:
+                if nd.type == "ROOT":
+                    if shortest_node == None:
+                        LOG.write("Setting shortest node: " + str(nd) +"\n")
+                        shortest_node = nd
+                    else:
+                        nd_length = len(nd.folder)
+
+                        if nd_length < len(shortest_node.folder):
+                            shortest_node.type = "REFERENCE"
+                            shortest_node = nd
+                            LOG.write("Resetting shortest node: " + str(nd) +"\n")
+                        else:
+                            nd.type = "REFERENCE"
+                            LOG.write("Setting node to reference: " + str(nd) +"\n")
+
+            found = False
+            for nd in link_set:
+                if nd.type == "ROOT":
+                    if found == True:
+                        sys.stderr.write("FAILED TO IDENTIFY UNIQUE ROOT FOR NODE: " + str(nd) + "\n")
+                    else:
+                        found = True
+            LOG.write("* Final root node: " + str(shortest_node) + "\n")
+
+
 
     for nd in all_nodes:
         nd.indirect_links = set(folder_to_nodes_dict[nd.folder]) - {nd}
@@ -1039,7 +1094,7 @@ up this reference, and indirect links are other references made by entries that 
 For example, looking up a main units/unit value would search for (direct) references to this main_unit value,
 but also look up the other references in the main_unit table like land_unit.
 """
-def find_data_links(dirTables, node, value, LOG, processedNodes, depth = "", maxIndirectDepth=8):
+def find_data_links(dirTables, node, value, LOG, processedNodes, depth = "", maxIndirectDepth=8, do_direct = True):
     matching_entries = find_connections(dirTables, node, value)
     nodeTable = dirTables[node.folder]["data__"]
     if (len(matching_entries) == 0) or (value == ""):
@@ -1047,20 +1102,24 @@ def find_data_links(dirTables, node, value, LOG, processedNodes, depth = "", max
         return set()
     LOG.write(depth + "NODE: " + str(node) + " - \'" + value + "\' {\n")
     for m in matching_entries:
-        LOG.write(depth + "- Match: \'" + m + "\'\n")
+        LOG.write(depth + "\tMatch: \'" + m + "\'\n")
 
     directres = dict()
     indirectres = dict()
     processedNodes |= {node} # this keeps it from running infinitely
+    depth += "\t"
 
-    LOG.write(depth + "DIRECT: {\n")
-    # DIFFERENT TABLE, SAME VALUE
-    # looking for any time someone references this value
-    for lnk_node in node.direct_links:
-        if lnk_node not in processedNodes:
-            res = find_data_links(dirTables, lnk_node, value, LOG, processedNodes, depth + "\t", maxIndirectDepth)
-            directres[lnk_node] = res
-    LOG.write(depth +"}\n")
+    # TODO: Direct links need to be Breadth first
+    if do_direct:
+        LOG.write(depth + "DIRECT: {\n")
+
+        # DIFFERENT TABLE, SAME VALUE
+        # looking for any time someone references this value
+        for lnk_node in node.direct_links:
+            if lnk_node not in processedNodes:
+                res = find_data_links(dirTables, lnk_node, value, LOG, processedNodes, depth + "\t", maxIndirectDepth, False)
+                directres[lnk_node] = res
+        LOG.write(depth +"}\n")
 
 
     LOG.write(depth + "INDIRECT: {\n")
@@ -1084,6 +1143,7 @@ def find_data_links(dirTables, node, value, LOG, processedNodes, depth = "", max
             else:
                 LOG.write(depth + "Skipping " + str(lnk_node) + " due to max indirect depth\n")
     LOG.write(depth +"}\n")
+    depth = depth[0:-1]
     LOG.write(depth +"}\n")
     return (matching_entries, directres, indirectres)
 

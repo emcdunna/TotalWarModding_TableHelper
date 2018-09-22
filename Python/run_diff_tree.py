@@ -58,9 +58,10 @@ def main(args):
                 modTableFolder = os.path.join(modDirectory,folder)
 
                 table_module.run_diff(baseTableFolder, modTableFolder)
-                sys.stderr.write("Output under Results folder\n")
+
         else:
             sys.stderr.write("No shared folder names in both mod directory and base directory!\n")
+    sys.stderr.write("Output under Results folder\n")
 
 
 if __name__== "__main__":

@@ -142,12 +142,12 @@ For this evaluation, we will not sort the table into a dict of dicts. Instead, w
 evaluate it a simple list of lists, looking for uniqueness.
 """
 def main(args):
-    sys.stderr.write("WARNING: Only run this on an export of the DB directory for CA's data.pack, not a directory exported by a mod.------\n")
+    sys.stderr.write("WARNING: Only run this on an export of the DB directory for CA's data.pack, not a directory exported by a mod.\n------\n")
     output_file = open("Python/warhammer2_table_config_NEW.py",'w')
     if len(args) != 1:
         sys.stderr.write("Error: Invalid number of arguments. \n")
         sys.stderr.write("Usage: python find_keys.py <baseDirectory>\n")
-        sys.stderr.write("Directory structure should be \'db/main_units_tables/main.tsv\' for example/\n")
+        sys.stderr.write("Directory structure should be \'db/main_units_tables/data__.tsv\' for example/\n")
     else:
 
         table_dir = os.path.join(args[0], "db")

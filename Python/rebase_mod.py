@@ -32,7 +32,7 @@ In Git / SVN language, this is like doing a "rebase" to the new remote master (C
 """
 def main(args):
     if len(args) != 4:
-        sys.stderr.write("Error!\nUsage is \'python apply_differences.py oldBaseDir oldModDir newBaseDir outputDir\'\n")
+        sys.stderr.write("Error!\nUsage is \'python rebase_mod.py oldBaseDir oldModDir newBaseDir outputDir\'\n")
 
         return -1
     else:

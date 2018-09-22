@@ -10,7 +10,6 @@ new_data_garrisons = open("D:/Lorehammer2/garrisons/data__.tsv",'w')
 settlement_file = open("D:/Lorehammer2/garrisons/new_settlement_garrisons.tsv",'w')
 num_map = [4,2,3,1,1]
 
-#minor_map = [4,3,3,1,1]
 
 #ignore_buildings = {"altdorf","black_crag","drakenhof","couronne","karaz_a_karak"}
 file_header = """building_level_armed_citizenry_junctions_tables

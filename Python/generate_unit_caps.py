@@ -24,7 +24,6 @@ def get_building_level(word):
 args    0   input file holding tsv data about which units to generate caps for
 args    1   output directory
 args    2   data_pack directory
-args    3   building_units_allowed_file determines which set of unit recruitment buildings gets used
 
 STEPS:
 1) Make cap of the unit 0 in main units
@@ -36,23 +35,21 @@ STEPS:
 """
 def main(args):
 
+    if len(args) != 3:
+        sys.stderr.write("ERROR: Usage is python generate_unit_caps.py inputFile outputDirectory dataPackDirectory")
+        sys.stderr.write("Input file format: unit_group <tab> unit\n")
+        return -1
     inputfile = open(args[0],'r')  # unit group \t unit
     outputDir = os.path.join(args[1],"db")
     dataPack = args[2]
     try:
-        os.makedirs(os.path.join(args[1],"text"))
+        buildingUnitsAllowed_file = open("Exports/lh_overhaul_2_14_2018/db/building_units_allowed_tables/evan.tsv",'r')
     except:
-        pass
+        sys.stderr.write("Warning: using default building units allowed table from data_pack.tsv\n")
+        buildingUnitsAllowed_file = open(os.path.join(dataPack,"db","building_units_allowed_tables","data__.tsv"),'r')
 
-    unitstrings_loc = open(os.path.join(args[1],"text","effects.loc.tsv"),'w')
     LOG = sys.stdout
     baseDirTables = load_directory_Tables(dataPack)
-    try:
-        buildingUnitsAllowed_file = open(args[3],'r')
-        base_buildingUnitsAllowedTable = file_loader(buildingUnitsAllowed_file)
-    except:
-        LOG.write("WARNING: Using default building_units_allowed_file\n")
-        base_buildingUnitsAllowedTable = baseDirTables["building_units_allowed_tables"]["data__"]
 
     effectTable = copy.deepcopy(baseDirTables["effects_tables"]["data__"])
     effectBonusTable = copy.deepcopy(baseDirTables["effect_bonus_value_ids_unit_sets_tables"]["data__"])
@@ -60,22 +57,15 @@ def main(args):
     unitSetsTable = copy.deepcopy(baseDirTables["unit_sets_tables"]["data__"])
     unitSetToUnitsTable = copy.deepcopy(baseDirTables["unit_set_to_unit_junctions_tables"]["data__"])
 
+    base_buildingUnitsAllowedTable = file_loader(buildingUnitsAllowed_file)
+
     unitsets_to_units = dict()
     unitset_to_effect = dict()
-    unitset_to_unitstring = dict()
+
     for line in inputfile:
         lst = parse_line_to_list(line,"\t")
         unitset = lst[0]
         unit = lst[1]
-        try:
-            unitstring = lst[2]
-
-        except:
-            unitstring = ""
-
-
-        if unitstring != "":
-            unitset_to_unitstring[unitset] = unitstring
         try:
             unitsets_to_units[unitset].append(unit)
         except:
@@ -99,28 +89,20 @@ def main(args):
         ind += 1
         units = unitsets_to_units[unitset]
         effect = unitset_to_effect[unitset]
-        try:
-            unitstring = unitset_to_unitstring[unitset]
-        except:
-            unitstring = ""
-
-        # We assume this is an already made unit set and doesnt need unit set entry or an effect
-        if unitstring != "":
-            unitstrings_loc.write("\"effects_description_" + effect + "\"\t\"Capacity: %\+n " + unitstring + "\"\t\"True\"\n")
-            # effects
-            effect_entry = {"effect":effect,"icon":"army.png","priority":str(500 + ind),"icon_negative":"army.png","category":"campaign","is_positive_value_good":"True"}
-            effectTable.add_entry(effect_entry)
-
-            # effect bonus value ids unit_sets
-            effectBonusValue_entry = {"bonus_value_id":"unit_cap","effect":effect,"unit_set":unitset}
-            effectBonusTable.add_entry(effectBonusValue_entry)
-
-            # unit sets
-            unitSet_entry = {"unknown0":unitset,"unknown1":"False","unknown2":"-1","unknown3":"-1"}
-            unitSetsTable.add_entry(unitSet_entry)
-
-
         building_units = set()
+
+        # effects
+        effect_entry = {"effect":effect,"icon":"army.png","priority":str(500 + ind),"icon_negative":"army.png","category":"campaign","is_positive_value_good":"True"}
+        effectTable.add_entry(effect_entry)
+
+        # effect bonus value ids unit_sets
+        effectBonusValue_entry = {"bonus_value_id":"unit_cap","effect":effect,"unit_set":unitset}
+        effectBonusTable.add_entry(effectBonusValue_entry)
+
+        # unit sets
+        unitSet_entry = {"unknown0":unitset,"unknown1":"False","unknown2":"-1","unknown3":"-1"}
+        unitSetsTable.add_entry(unitSet_entry)
+
         # unit set to units table
         for unit in units:
             unitSet_to_unit_entry = {"exclude":"False","unit_caste":"","unit_category":"","unit_class":"","unit_record":unit,"unit_set":unitset}
@@ -130,13 +112,13 @@ def main(args):
             except KeyError:
                 LOG.write("WARNING: No buildings found for unit: " + unit + "\n")
 
+
         # building effects
-        if (unit_string != ""):
-            for building in building_units:
-                bl = get_building_level(building)
-                val = bl * 2
-                building_to_effect_entry = {"building":building,"effect":effect,"effect_scope":"building_to_faction_own","value":str(val),"value_damaged":str(val),"value_ruined":"0"}
-                buldingEffectsTable.add_entry(building_to_effect_entry)
+        for building in building_units:
+            bl = get_building_level(building)
+            val = bl * 2
+            building_to_effect_entry = {"building":building,"effect":effect,"effect_scope":"building_to_faction_own","value":str(val),"value_damaged":str(val),"value_ruined":"0"}
+            buldingEffectsTable.add_entry(building_to_effect_entry)
 
     effectTable.fileName= "unit_caps"
     effectBonusTable.fileName= "unit_caps"

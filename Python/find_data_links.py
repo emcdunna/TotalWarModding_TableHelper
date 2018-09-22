@@ -46,7 +46,7 @@ def main(args):
             LOG.write("ERROR: Couldn't find node matching \'" + folder + "/"  + column + "\'\n")
         else:
             result = find_data_links(dirTables, node, value, LOG, set())
-            
+
 
 
 if __name__== "__main__":
