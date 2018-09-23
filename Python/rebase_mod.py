@@ -31,8 +31,8 @@ voice_actor name changes, or new columns or even new entries added to tables
 In Git / SVN language, this is like doing a "rebase" to the new remote master (CA's patch)
 """
 def main(args):
-    if len(args) != 4:
-        sys.stderr.write("Error!\nUsage is \'python rebase_mod.py oldBaseDir oldModDir newBaseDir outputDir\'\n")
+    if len(args) != 3:
+        sys.stderr.write("Error!\nUsage is \'python rebase_mod.py oldBaseDir oldModDir newBaseDir\'\n")
 
         return -1
     else:
@@ -42,8 +42,9 @@ def main(args):
         oldBaseDir = os.path.join(args[0],"db")
         oldModDir = os.path.join(args[1],"db")
         newBaseDir = os.path.join(args[2],"db")
-        #outputDir = "REBASED_MOD_"+ str(datetime.datetime.now()).split(" ")[0]
-        outputDir = os.path.join(args[3],"db")
+        outputDir = "REBASED_MOD_"+ str(datetime.datetime.now()).split(" ")[0] + "\\db"
+        print("Output dir: " + outputDir)
+        #outputDir = os.path.join(args[3],"db")
 
         oldBaseLst = os.listdir(oldBaseDir)
         oldModLst = os.listdir(oldModDir)
@@ -133,6 +134,8 @@ def main(args):
                         LOG.write("\n")
                     for a in folder_renamed_columns.keys():
                         LOG.write("Treating column " + folder_renamed_columns[a] + " as new column " + a + "\n")
+                        added_columns -= {a}
+                        removed_columns -= {folder_renamed_columns[a]}
                     baseTableFolder_tables = load_folder_Tables(baseTableFolder,folder_renamed_columns)
                     modTableFolder_tables = load_folder_Tables(modTableFolder,folder_renamed_columns)
                     newTableFolder_tables = load_folder_Tables(newTableFolder,folder_renamed_columns)

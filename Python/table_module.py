@@ -13,6 +13,8 @@ CREATE_UNIT_ROOT_FOLDERS = [
 ]
 
 
+ASSUME_1_ADD_1_REMOVE_ARE_EQUAL = True
+
 """
 A table obj holds a mapping of keys to values for each entry, and a set of entries
 -- an entry is like a line in the table
@@ -151,6 +153,7 @@ class Table:
             ftype = ".tsv"
 
         normal_keys = (set(self.entries.keys()) - self.BrokenCol_EntryKeys)
+        quick_keys = normal_keys - (self.NewRemoved_EntryKeys | self.Missing_EntryKeys)
         normal_keys -= self.Collision_EntryKeys
         normal_keys -= self.NewRemoved_EntryKeys
         normal_keys -= self.Added_EntryKeys
@@ -182,10 +185,15 @@ class Table:
             f = open(fname,"w")
             f.write(self.get_fileprint_string(self.Missing_EntryKeys))
 
-        fname = os.path.join(directory, self.fileName + ftype)
+        if len(quick_keys) > 0:
+            fname = os.path.join(directory, self.fileName + ftype)
+            f = open(fname, "w")
+            f.write(self.get_fileprint_string(quick_keys))
 
-        f = open(fname,"w")
-        f.write(self.get_fileprint_string(normal_keys))
+        if len(normal_keys) > 0:
+            fname = os.path.join(directory, self.fileName + "_EDITED" + ftype)
+            f = open(fname,"w")
+            f.write(self.get_fileprint_string(normal_keys))
         return 0
 
 
@@ -669,14 +677,18 @@ def run_diff(baseTableFolder, modTableFolder):
 Loads every table in this directory.
 returns a dict of folder name mapped to a list of tables loaded there.
 """
-def load_directory_Tables(directory):
+def load_directory_Tables(directory,renamed_columns={}):
     db = os.path.join(directory, "db")
     folders = os.listdir(db)
 
     dir_tables = {}
     for f in folders:
+        try:
+            r_cols = renamed_columns[f]
+        except:
+            r_cols = {}
         path = os.path.join(db,f)
-        f_tables = load_folder_Tables(path)
+        f_tables = load_folder_Tables(path,r_cols)
         dir_tables[f] = f_tables
 
     return dir_tables
@@ -1279,10 +1291,17 @@ def find_renamed_columns(old_table, new_table):
     removed_columns = basetable_columns - newtable_columns
 
     mapping_new_to_old = {}
-
+    print("ac " + str(len(added_columns)))
+    print("rc " + str(len(removed_columns)))
     for a in added_columns:
         num_matches = 0
         for r in removed_columns:
+
+            if len(added_columns) == 1 and len(removed_columns) == 1 and ASSUME_1_ADD_1_REMOVE_ARE_EQUAL == True:
+                print("SETTING ASSUMED AC RC of " + a + " - " + r)
+                mapping_new_to_old[a] = r
+                return mapping_new_to_old
+
             name_matching = similar(a,r)
             if name_matching > 0.8:
                 num_matches += 1

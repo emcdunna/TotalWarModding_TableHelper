@@ -40,19 +40,36 @@ def main(args):
     input_directory = args[2]
     outputDir = os.path.join(args[3],"db")
 
+    renamed_columns = detect_renamed_columns("Exports\\data_pack_2_14_18", root_dir,
+                                             open("renamed_cols.txt", "w"))
     # the dict of all tables in the root directory
-    baseDirTables = load_directory_Tables(root_dir)
+    baseDirTables = load_directory_Tables(root_dir,renamed_columns)
 
     # dict of all tables in the test directory
-    input_dirTables = load_directory_Tables(input_directory)
+    input_dirTables = load_directory_Tables(input_directory,renamed_columns)
 
     # dict of folder names to a list of schema nodes
     folder_to_nodes_dict = schema_scan(baseDirTables, evanKeyDir, devnull)
 
     base_folders_to_columndata = dict()
     mod_folders_to_columndata = dict()
+
+
+
+
     # collect column data for each table
     for folder in baseDirTables.keys():
+
+        try:
+            folder_renamed_columns = renamed_columns[folder]
+        except KeyError:
+            folder_renamed_columns = {}
+
+        old_to_new_renamed = {}
+        for a in folder_renamed_columns.keys():
+            r = folder_renamed_columns[a]
+            old_to_new_renamed[r] = a
+
         try:
             table = baseDirTables[folder]["data__"]
             col_data = get_column_data(table)
@@ -86,6 +103,18 @@ def main(args):
     """
     # process each folder to find out
     for folder in mod_folders_to_columndata.keys():
+
+        try:
+            folder_renamed_columns = renamed_columns[folder]
+        except KeyError:
+            folder_renamed_columns = {}
+
+        old_to_new_renamed = {}
+        for a in folder_renamed_columns.keys():
+            r = folder_renamed_columns[a]
+            old_to_new_renamed[r] = a
+
+
         LOG_STRING = ""
 
         cont = True
@@ -199,12 +228,30 @@ def main(args):
                         for lnk_node in node.direct_links:
                             if lnk_node.type == "ROOT":
                                 no_nodes = False
+                                mod_lnk_node_data = set()
+                                base_lnk_node_data = set()
                                 curr_STRING += ("\t\tProcessing table reference: \'" + folder +"/"+column + "\' --> \'" + lnk_node.folder + "/" + lnk_node.column + "\'{\n")
-                                base_lnk_node_data = base_folders_to_columndata[lnk_node.folder][lnk_node.column]
+                                try:
+                                    base_lnk_node_data = base_folders_to_columndata[lnk_node.folder][lnk_node.column]
+                                except KeyError:
+                                    try:
+                                        base_lnk_node_data = base_folders_to_columndata[lnk_node.folder][old_to_new_renamed[lnk_node.column]]
+                                    except KeyError:
+                                        try:
+                                            base_lnk_node_data = base_folders_to_columndata[lnk_node.folder][folder_renamed_columns[lnk_node.column]]
+                                        except KeyError:
+                                            pass
+
                                 try:
                                     mod_lnk_node_data = mod_folders_to_columndata[lnk_node.folder][lnk_node.column]
                                 except KeyError:
-                                    mod_lnk_node_data = set()
+                                    try:
+                                        mod_lnk_node_data = base_folders_to_columndata[lnk_node.folder][old_to_new_renamed[lnk_node.column]]
+                                    except KeyError:
+                                        try:
+                                            mod_lnk_node_data = base_folders_to_columndata[lnk_node.folder][folder_renamed_columns[lnk_node.column]]
+                                        except:
+                                            pass
 
                                 mod_or_base_lnk_node_data = mod_lnk_node_data | base_lnk_node_data | base_node_data
 
