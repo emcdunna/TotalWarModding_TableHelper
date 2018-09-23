@@ -86,6 +86,8 @@ def main(args):
         except:
             pass
 
+        renamed_columns = detect_renamed_columns(oldBaseDir, newBaseDir, open(os.path.join(outputDir,"renamed_cols.txt"),"w"))
+
         """
         This apply diff will not compress tables into one mega table, and will account for missing keys in new data.pack,
         and will account for if the mod used "data__" table (so if you removed any entries from data__, they will stay
@@ -93,6 +95,11 @@ def main(args):
         """
         if len(allDirs) > 0:
             for folder in allDirs:
+                try:
+                    folder_renamed_columns = renamed_columns[folder]
+                except KeyError:
+                    folder_renamed_columns = {}
+
                 try:
                     os.makedirs(os.path.join(outputDir,folder))
                 except:
@@ -124,10 +131,11 @@ def main(args):
                             LOG.write(rc + "\n")
                         LOG.write("""WARNING: Any added entries will be written to a 'Broken' file in the same output directory, as they will have issues that must be manually resolved""")
                         LOG.write("\n")
-
-                    baseTableFolder_tables = load_folder_Tables(baseTableFolder)
-                    modTableFolder_tables = load_folder_Tables(modTableFolder)
-                    newTableFolder_tables = load_folder_Tables(newTableFolder)
+                    for a in folder_renamed_columns.keys():
+                        LOG.write("Treating column " + folder_renamed_columns[a] + " as new column " + a + "\n")
+                    baseTableFolder_tables = load_folder_Tables(baseTableFolder,folder_renamed_columns)
+                    modTableFolder_tables = load_folder_Tables(modTableFolder,folder_renamed_columns)
+                    newTableFolder_tables = load_folder_Tables(newTableFolder,folder_renamed_columns)
 
                     btft_set = set(baseTableFolder_tables.keys())
                     mtft_set = set(modTableFolder_tables.keys())
@@ -148,7 +156,6 @@ def main(args):
                     if (len(ntft_set) >1):
                         LOG.write("WARNING: found more than one table file in new data.pack export\n")
 
-
                     # decide which tables are overwrites and which are not
                     overwritten_tables = mtft_set & btft_set
                     other_tables = mtft_set - btft_set
@@ -164,7 +171,6 @@ def main(args):
                     if len(missing_tables) >0:
                         for m in missing_tables:
                             LOG.write("New data.pack missing table from old pack: " + m + "\n")
-
 
                     # Rebase every table that is an overwrite of a data.pack one
                     for tablekey in overwritten_tables:
@@ -187,8 +193,8 @@ def main(args):
                             LOG.write("Rebased table came back as None\n")
 
                     # Rebase all non-overwrite tables
-                    basetable = concatTablesInFolder(baseTableFolder)
-                    newtable = concatTablesInFolder(newTableFolder)
+                    basetable = concatTablesInFolder(baseTableFolder,folder_renamed_columns)
+                    newtable = concatTablesInFolder(newTableFolder,folder_renamed_columns)
                     for tablekey in other_tables:
                         modtable = modTableFolder_tables[tablekey]
                         LOG.write("-" * 40 + "\n")

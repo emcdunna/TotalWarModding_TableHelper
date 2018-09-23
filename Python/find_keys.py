@@ -1,4 +1,4 @@
-import table_module
+from table_module import *
 import sys
 import os
 import itertools
@@ -123,7 +123,7 @@ def load_table_list(table_file):
             sep = "\t"
         else:
             sep = ","
-        lst = table_module.parse_line_to_list(line,sep)
+        lst = parse_line_to_list(line,sep)
         table_list.append(lst)
     return table_list
 
@@ -134,6 +134,7 @@ def find_key(file_path):
     table_list = load_table_list(table_file)
     result = eval_table_list(table_list)
     return result
+
 
 """
 Open the folder directory, and for each folder, evaluate the table files.

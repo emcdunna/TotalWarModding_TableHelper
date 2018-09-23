@@ -2,7 +2,7 @@ import sys
 import warhammer2_table_config
 import os
 import copy
-
+from difflib import SequenceMatcher
 
 CREATE_UNIT_ROOT_FOLDERS = [
 "main_units_tables",
@@ -28,6 +28,7 @@ class Table:
         self.lineTwo = "" # 34, for example saying there are 34 columns?
         self.keyColumns = [None] # a list of every column name that acts as part of the key
         #self.folder = ""
+        self.newerKeyColumns = [None] # dict of key columns which were replaced
         self.BrokenCol_EntryKeys = set() # a set of all added entry keys that have column issues
         self.NewRemoved_EntryKeys = set() # a set of all entry keys that have been removed in the new data pack
         self.Collision_EntryKeys = set() # a set of all entry keys that have been edited by both the update and the mod
@@ -54,37 +55,64 @@ class Table:
                 status = "Replaced dependent entry values."
         return status
 
-    def add_entry(self, entry):
+    def get_column_data(self,column):
+        data = []
+        if column in self.columns:
+            for ek in self.entries.keys():
+                entry = self.entries[ek]
+                data.append(entry[column])
+        else:
+            sys.stderr.write("Column " + column + " not found in Table's columns[]\n")
+        return data
 
+    def add_entry(self, entry):
         ek = self.get_entry_key( entry)
         self.entries[ek] = entry
         self.Added_EntryKeys |= {ek}
 
     # returns the entry key for a particular entry based off the table's entry key metadata
-    def get_entry_key(self, entry):
+    def get_entry_key(self, entry, file_index=0):
+
         #print "Entry " + str(entry)
         ek = ""
         i = 1
         #print "Key columns " + str(self.keyColumns)
-
+        FAILED_TO_FIND_KEYS = False
         for keyCol in self.keyColumns: # iterate through each entry key column, add the value of that column to the key string
             if keyCol == None:
                 return "NULL_ENTRY_KEY"
             try:
                 ek += entry[keyCol]
             except KeyError:
-                ek += "MISSING_KEY"
-                sys.stderr.write("Missing key for table " + self.name + "/" + self.fileName + "\n\t" + str(entry) + "\n")
+                FAILED_TO_FIND_KEYS = True
+                break
             if i < len(self.keyColumns):
                 ek += " TO "
                 i +=1
-        return ek
+
+        if FAILED_TO_FIND_KEYS == False:
+            return ek
+        else:
+            ek = ""
+            i=1
+            for keyCol in self.newerKeyColumns:
+                if keyCol == None:
+                    return "NULL_ENTRY_KEY"
+                try:
+                    ek += entry[keyCol]
+                except KeyError:
+                    sys.stderr.write("Missing key for table " + self.name + "/" + self.fileName + "\n\t" + str(entry) + "\n")
+                    return "default_key-" + str(file_index)
+                if i < len(self.keyColumns):
+                    ek += " TO "
+                    i += 1
+            return ek
 
 
     def get_file_extension(self):
-        if(self.separator == ","):
+        if self.separator == ",":
             return ".csv"
-        elif(self.separator == "\t"):
+        elif self.separator == "\t":
             return ".tsv"
         else:
             sys.stderr.write("ERROR: Invalid separator!\n")
@@ -97,7 +125,7 @@ class Table:
         for k in self.columns:
             j+=1
             line += entry[k]
-            if (j < len(self.columns)):
+            if j < len(self.columns):
                 line += self.separator
         return line
 
@@ -106,7 +134,7 @@ class Table:
             group = self.entries.keys()
         word = ""
         word += self.name + "\n"
-        word += (self.lineTwo)
+        word += self.lineTwo
         word += (stringify_list(self.columns, self.separator) + "\n")
         for ek in group:
             word += (self.stringify_entry(ek) + "\n")
@@ -119,7 +147,7 @@ class Table:
         except:
             pass
         ftype = ".csv"
-        if(self.separator != ","):
+        if self.separator != ",":
             ftype = ".tsv"
 
         normal_keys = (set(self.entries.keys()) - self.BrokenCol_EntryKeys)
@@ -129,27 +157,27 @@ class Table:
         normal_keys -= self.Missing_EntryKeys
 
         # print broken columns to a file
-        if( len(self.BrokenCol_EntryKeys) > 0):
+        if len(self.BrokenCol_EntryKeys) > 0:
             fname = os.path.join(directory, self.fileName + "_BROKEN-COLUMNS" + ftype)
             f = open(fname,"w")
             f.write(self.get_fileprint_string(self.BrokenCol_EntryKeys))
         # print collision to a file
-        if( len(self.Collision_EntryKeys) > 0):
+        if len(self.Collision_EntryKeys) > 0:
             fname = os.path.join(directory, self.fileName + "_COLLISION" + ftype)
             f = open(fname,"w")
             f.write(self.get_fileprint_string(self.Collision_EntryKeys))
         # print removed entries to a file
-        if( len(self.NewRemoved_EntryKeys) > 0):
+        if len(self.NewRemoved_EntryKeys) > 0:
             fname = os.path.join(directory, self.fileName + "_REMOVED" + ftype)
             f = open(fname,"w")
             f.write(self.get_fileprint_string(self.NewRemoved_EntryKeys))
         # print removed entries to a file
-        if( len(self.Added_EntryKeys) > 0):
+        if len(self.Added_EntryKeys) > 0:
             fname = os.path.join(directory, self.fileName + "_ADDED" + ftype)
             f = open(fname,"w")
             f.write(self.get_fileprint_string(self.Added_EntryKeys))
         # print removed entries to a file
-        if( len(self.Missing_EntryKeys) > 0):
+        if len(self.Missing_EntryKeys) > 0:
             fname = os.path.join(directory, self.fileName + "_MISSING" + ftype)
             f = open(fname,"w")
             f.write(self.get_fileprint_string(self.Missing_EntryKeys))
@@ -162,7 +190,7 @@ class Table:
 
 
     def __len__(self):
-        return len(entries)
+        return len(self.entries)
 """
 Contains a single difference, which is a column name, old val, and new val
 """
@@ -210,11 +238,11 @@ class TableDiff:
 
         entryKeySet = set(self.oldTable.entries.keys()) | set(self.newTable.entries.keys())
 
-        if(self.oldTable.name != self.newTable.name):
+        if self.oldTable.name != self.newTable.name:
             sys.stderr.write("Tables have different names! \n")
             return False
 
-        elif(self.oldTable.columns != self.newTable.columns):
+        elif self.oldTable.columns != self.newTable.columns:
             sys.stderr.write("Tables have different columns names! \n")
             for c in self.oldTable.columns:
                 if c in self.newTable.columns:
@@ -251,7 +279,7 @@ class TableDiff:
                 except KeyError as e:
                     sys.stderr.write("ERROR processing entry with key " + entryKey + "\n")
 
-            if(oldEntry != None and newEntry != None):
+            if oldEntry != None and newEntry != None:
                 for col in self.oldTable.columns: #TODO dont just iterate through oldTable
 
                     oldv = oldEntry[col]
@@ -259,7 +287,7 @@ class TableDiff:
                         newv = newEntry[col]
                     except KeyError as e:
                         newv = "MISSING"
-                    if(oldv != newv):
+                    if oldv != newv:
                         diff = Diff(entryKey, col, oldv, newv)
                         self.differences = self.differences | {diff}
 
@@ -286,7 +314,7 @@ def stringify_list(lst, sep):
     for i in lst:
         j+=1
         line += i
-        if (j < len(lst)):
+        if j < len(lst):
             line += sep
     return line
 
@@ -313,27 +341,34 @@ Takes in a CSV/TSV File, stores the results to a table object.
 -- assumes 3rd line is column-keys, and 4+ lines are all data (no blanks at the end)
 -- assumes .tsv means will be tab separated, else comma separated
 """
-def file_loader(csvFile):
+def file_loader(csvFile,renamed_columns={}):
     table = Table()
+    old_to_new_renamed = {}
+    for a in renamed_columns.keys():
+        r = renamed_columns[a]
+        old_to_new_renamed[r] = a
+
     if (csvFile.name[-4:] != ".tsv") and (csvFile.name[-4:] != ".csv"):
         sys.stderr.write("Invalid file: " + csvFile.name + "\n")
         return None
 
-    if (".tsv" in csvFile.name):
+    if ".tsv" in csvFile.name:
         table.separator = "\t"
 
     table.fileName = os.path.basename(csvFile.name)[0:-4]
 
     i = 0
+
     for line in csvFile:
         entry = dict()
         lst = []
-        if(i == 0):
+        if i == 0:
             lst = parse_line_to_list(line, table.separator)
-            if(len(lst) > 0):
+            if len(lst) > 0:
                 table.name = lst[0]
                 try:
                     table.keyColumns = warhammer2_table_config.keyDict[table.name] # reference config library
+                    table.newerKeyColumns = warhammer2_table_config.NEW_SCHEMA_keyDict[table.name]
 
                 except KeyError as e:
                     sys.stderr.write("Key Columns not found for table: " + table.name + " in WH2 config file\n")
@@ -341,25 +376,37 @@ def file_loader(csvFile):
             else:
                 sys.stderr.write("Empty first line in file: " + csvFile.name + "\n")
 
-        elif(i==1):
+        elif i == 1:
             table.lineTwo = line
-        elif(i==2):
-            table.columns = parse_line_to_list(line, table.separator)
+        elif i == 2:
+            tmp_lst = parse_line_to_list(line, table.separator)
+            res_columns = []
+            for c in tmp_lst:
+                if c in old_to_new_renamed.keys():
+                    res_columns.append(old_to_new_renamed[c])
+                else:
+                    res_columns.append(c)
+
+            table.columns = res_columns
             if table.keyColumns[0] == None:
                 # TODO: RE-ENABLE THIS sys.stderr.write("WARNING: Table " + table.name + " has an unspecified key column list in Warhammer2_table_config!\n")
                 table.keyColumns = table.columns
         else:
             lst = parse_line_to_list(line, table.separator)
-            if (len(lst) == len(table.columns)):
+            if len(lst) == len(table.columns):
                 j = 0
                 for col in table.columns:
+                    # if this is a renamed column!
+                    if col in old_to_new_renamed.keys():
+                        col = old_to_new_renamed[col]
                     entry[col] = lst[j]
-                    j+=1
-                entry_key = table.get_entry_key(entry) # contains a dict of col_name: value pairs
+                    j += 1
+
+                entry_key = table.get_entry_key(entry,i) # contains a dict of col_name: value pairs
                 table.entries[entry_key] = entry
             else:
                 sys.stderr.write("Mismatched entry: " + line + "\n")
-        i+=1
+        i += 1
     # print "Adding file: " + csvFile.name + " for " + table.name
 
     return table
@@ -377,10 +424,10 @@ def merge_tables(bot_table, top_table):
     elif top_table == None:
         return bot_table
 
-    if(bot_table.name != top_table.name):
+    if bot_table.name != top_table.name:
         sys.stderr.write("Merging tables " + bot_table.name + " have different names!\n")
         return None
-    elif(bot_table.columns != top_table.columns):
+    elif bot_table.columns != top_table.columns:
         sys.stderr.write("Merging tables have " + bot_table.name + " different columns names!\n")
         return None
     else:
@@ -393,7 +440,7 @@ def merge_tables(bot_table, top_table):
 Looks for every tsv/csv file in a folder, runs file loader on them, and adds then runs
 the merge table command to merge them into one table object
 """
-def concatTablesInFolder(folder):
+def concatTablesInFolder(folder,renamed_columns={}):
     lst = os.listdir(folder)
     lstTSV = []
     # remove non tsv/csv files
@@ -409,11 +456,11 @@ def concatTablesInFolder(folder):
     for tsvFile in lst:
         tmpFile = open(folder + "\\" + lst[i], 'r')
         if i == 0:
-            baseTable = file_loader(tmpFile)
+            baseTable = file_loader(tmpFile,renamed_columns)
             if baseTable == None:
                 return None
         else:
-            tmpTable = file_loader(tmpFile)
+            tmpTable = file_loader(tmpFile,renamed_columns)
             baseTable = merge_tables(baseTable,tmpTable)
         i += 1
     if baseTable == None:
@@ -425,7 +472,7 @@ def concatTablesInFolder(folder):
 """
 Loads all tables in this folder, returns a map of table file's name to its table objects
 """
-def load_folder_Tables(folder):
+def load_folder_Tables(folder,renamed_columns={}):
     lst = os.listdir(folder)
     lstTSV = []
     # remove non tsv/csv files
@@ -439,12 +486,13 @@ def load_folder_Tables(folder):
     baseTableMap = dict()
     for tsvFile in lst:
         tmpFile = open(folder + "\\" + tsvFile, 'r')
-        baseTable = file_loader(tmpFile)
+        baseTable = file_loader(tmpFile,renamed_columns)
         baseTableMap[tsvFile.split(".")[0]] = baseTable
     return baseTableMap
 
+
 """
-returns a set of differneces if the entry exists in both tables and has been edited
+returns a set of differences if the entry exists in both tables and has been edited
 
 Warning: All removed columns will have a null value
 """
@@ -455,13 +503,15 @@ def get_entry_diff(ek, basetable, modtable):
 
     for col in basetable.columns:
         baseval = baseentry[col]
-        modval = modentry[col]
+        try:
+            modval = modentry[col]
+        except KeyError:
+            modval = "NULL"
 
-        if(baseval != modval):
+        if baseval != modval:
             diff = Diff(ek, col, baseval, modval)
             differences |= {diff}
     return differences
-
 
 
 """
@@ -471,9 +521,8 @@ def is_number(s):
     try:
         float(s)
         return True
-    except ValueError:
-        pass
-    return False
+    except:
+        return False
 
 """
 rebases a table object onto another table object
@@ -500,12 +549,12 @@ def rebase_table(oldTable, modTable, newTable, LOG, overwrite=False, added_colum
     modTable.Added_EntryKeys |= added_entries
     modTable.Missing_EntryKeys |= missing_entries
 
-    if (len(mod_removed_entries) > 0):
+    if len(mod_removed_entries) > 0:
         for mre in mod_removed_entries:
             if (verbose == True) and (overwrite == True):
                 LOG.write("The Mod removed " + mre + " and it will remain removed in the new TSV file.\n")
 
-    if (len(missing_entries) > 0):
+    if len(missing_entries) > 0:
         for me in missing_entries:
             modTable.entries[me] = copy.copy(newTable.entries[me])
 
@@ -519,9 +568,9 @@ def rebase_table(oldTable, modTable, newTable, LOG, overwrite=False, added_colum
 
     # must KEEP every entry found in Mod table not found in old base table (since it got added)
     # When supporting certain situations (like column changes), added entries will cause errors
-    if(columns_changed):
-        modTable.Columns = copy.copy(newTable.Columns) # reset the columns...
-        if (len(added_entries) > 0):
+    if columns_changed:
+        modTable.columns = copy.copy(newTable.columns) # reset the columns...
+        if len(added_entries) > 0:
             LOG.write("WARNING: This folder contains added entries when a table's columns were changed! These entries will be placed in the '..._BROKEN_COLUMNS' tsv file\n")
         for ek in added_entries:
             modTable.BrokenCol_EntryKeys |= {ek}
@@ -552,12 +601,12 @@ def rebase_table(oldTable, modTable, newTable, LOG, overwrite=False, added_colum
             modTable.NewRemoved_EntryKeys |= {ek}
             removed = True
 
-        if (removed == False):
+        if removed == False:
             updates = get_entry_diff(ek, oldTable, newTable)
             for u in updates:
                 update_map[u.column] = u
 
-        if (len(differences) > 0):
+        if len(differences) > 0:
             if verbose == True:
                 LOG.write("\tRebasing: " + ek + "\n")
 
@@ -571,7 +620,7 @@ def rebase_table(oldTable, modTable, newTable, LOG, overwrite=False, added_colum
                     update_diff = None
 
                 # update collisions when a collision was detected
-                if (update_diff != None) : #and change_string == True:
+                if update_diff != None: #and change_string == True:
 
                     if verbose == True:
                         LOG.write("\t-\tWARNING: Collision at " + str(df.column) + "\n\t\t*\t-> mod val: " + df.newValue + ". new val: " + update_diff.newValue + ". old val: " + df.oldValue + "\n")
@@ -602,7 +651,7 @@ def run_diff(baseTableFolder, modTableFolder):
 
     tablediff = TableDiff(baseTable, modTable) # detects differences between two tables
 
-    if(len(tablediff.differences) == 0):
+    if len(tablediff.differences) == 0:
         sys.stderr.write("Not writing diff file for: " + baseTable.name + " because there are no differences.\n")
     else:
         if modTable == None or baseTable == None:
@@ -654,25 +703,25 @@ def eval_column_data(col_set_1, col_set_2):
     col_set_2 -= {""} # RIGHT
     # only check one out of the entire set!
     for d in col_set_1:
-        if( is_number(d) == True):
+        if is_number(d) == True:
             return "NUMBER_LEFT",0
-        elif (is_bool(d)):
+        elif is_bool(d):
             return "BOOL_LEFT",0
         else:
             break
     # only check one out of the entire set!
     for d in col_set_2:
-        if( is_number(d) == True):
+        if is_number(d) == True:
             return "NUMBER_RIGHT",0
-        elif (is_bool(d)):
+        elif is_bool(d):
             return "BOOL_RIGHT",0
         else:
             break
 
     shared = col_set_1 & col_set_2
-    if ( len(shared) == 0):
+    if len(shared) == 0:
         return "DIFFERENT", 0
-    elif (len(shared) == len(col_set_1) ): #(col_set_1 == col_set):
+    elif len(shared) == len(col_set_1): #(col_set_1 == col_set):
         return "SAME", 1
     else:
         d_1not2 = col_set_1 - col_set_2
@@ -989,7 +1038,7 @@ def update_replaced_dependencies(dirTables, node, baseval, repval, LOG):
     LOG.write("Base val: " + str(baseval) + "\n")
 
     # only update dependents if the node is a root
-    if (node.type == "ROOT"):
+    if node.type == "ROOT":
 
         # for every dependent table
         for lnk_node in node.direct_links:
@@ -1060,18 +1109,19 @@ Prints the full node web
 def print_node_web(folder_to_nodes_dict):
     for folder in folder_to_nodes_dict.keys():
         nodes = folder_to_nodes_dict[folder]
-        print "#" * 100
-        print folder
+        print("#" * 100)
+        print(folder)
         for node in nodes:
-            print "-" * 50
-            print "\t" + str(node)
-            print "\tDIRECT = ["
+            print("-" * 50)
+            print("\t" + str(node))
+            print("\tDIRECT = [")
             for lnk_node in node.direct_links:
-                print  "\t\t" + str(lnk_node)
-            print "\t]\n\tINDIRECT = {"
+                print("\t\t" + str(lnk_node))
+            print("\t]\n\tINDIRECT = {")
             for lnk_node in node.indirect_links:
-                print  "\t\t" + str(lnk_node)
-            print "\t}"
+                print("\t\t" + str(lnk_node))
+            print("\t}")
+
 
 """
 Looks at a table's column data and determines which entry keys match the value
@@ -1129,7 +1179,7 @@ def find_data_links(dirTables, node, value, LOG, processedNodes, depth = "", max
     for lnk_node in node.indirect_links:
         if lnk_node not in processedNodes:
             if intdepth <= maxIndirectDepth:
-                if ((intdepth == 0) or (lnk_node.type != "ROOT")) :
+                if (intdepth == 0) or (lnk_node.type != "ROOT"):
                     values = set()
                     for m in matching_entries:
                         values |= {nodeTable.entries[m][lnk_node.column]}
@@ -1145,7 +1195,7 @@ def find_data_links(dirTables, node, value, LOG, processedNodes, depth = "", max
     LOG.write(depth +"}\n")
     depth = depth[0:-1]
     LOG.write(depth +"}\n")
-    return (matching_entries, directres, indirectres)
+    return matching_entries, directres, indirectres
 
 
 
@@ -1194,7 +1244,149 @@ def unique_dirTables(baseDirTables, modDirTables, LOG):
 
 
 
+"""
+DETECT RENAMED COLUMNS FUNCTIONS:
+"""
+def similar(a, b):
+    res = SequenceMatcher(None, a, b).ratio()
+    print("Similarity: " + a + " - " + b + " = " + str(res))
+    return res
 
+def column_equivalence(col1,col2):
+    s1 = set(col1)
+    s2 = set(col2)
+    join = s1 & s2
+
+    c1_eq = len(join) / float(len(col1))
+    c2_eq = len(join) / float(len(col2))
+
+    if len(join) == 0:
+        pass #print("No Equivalency")
+    else:
+        pass
+        #print("C1 equivalency " + str(c1_eq))
+        #print("C2 equivalency " + str(c2_eq))
+    return (c1_eq, c2_eq)
+
+
+"""
+Will return a dict defining mappings of old columns to new names
+"""
+def find_renamed_columns(old_table, new_table):
+    basetable_columns = set(old_table.columns)
+    newtable_columns = set(new_table.columns)
+    added_columns = newtable_columns - basetable_columns
+    removed_columns = basetable_columns - newtable_columns
+
+    mapping_new_to_old = {}
+
+    for a in added_columns:
+        num_matches = 0
+        for r in removed_columns:
+            name_matching = similar(a,r)
+            if name_matching > 0.8:
+                num_matches += 1
+                mapping_new_to_old[a] = r
+            else:
+                #print("Evaluating equivalency between " + a + " and " + r)
+                a_data = new_table.get_column_data(a)
+                r_data = old_table.get_column_data(r)
+                (c1_eq, c2_eq) = column_equivalence(a_data, r_data)
+
+                if c1_eq >= 0.5 and c2_eq >= 0.5:
+                    #print("Match found " + a + ":" +r)
+                    num_matches += 1
+                    mapping_new_to_old[a] = r
+        if num_matches > 1:
+            #print("Warning! More than one match found for new column " + a)
+            del mapping_new_to_old[a]
+        elif num_matches == 0:
+            pass #print("Warning! No match found for column " + a)
+    return mapping_new_to_old
+
+
+def detect_renamed_columns(oldBaseDir, newBaseDir, LOG):
+    oldBaseLst = os.listdir(oldBaseDir)
+    newBaseLst = os.listdir(newBaseDir)
+
+    newFolderSet = set(newBaseLst)
+    baseFolderSet = set(oldBaseLst)
+
+    newNotOld = newFolderSet - baseFolderSet
+    oldNotNew = baseFolderSet - newFolderSet
+
+    allDirs = baseFolderSet & newFolderSet
+
+    if len(newNotOld) > 0:
+        LOG.write("WARNING: New data.pack directory has some folders not present in old data.pack directory: \n")
+        for d in newNotOld:
+            LOG.write("\t- " + d + "\n")
+
+    if len(oldNotNew) > 0:
+        LOG.write("WARNING: Old data.pack directory has some folders not present in new data.pack directory: \n")
+        for d in oldNotNew:
+            LOG.write("\t- " + d + "\n")
+
+    if len(allDirs) > 0:
+
+        config_overwrites = {}
+        for folder in allDirs:
+
+            baseTableFolder = os.path.join(oldBaseDir, folder)
+            newTableFolder = os.path.join(newBaseDir, folder)
+
+            quick_table = concatTablesInFolder(baseTableFolder)
+            q2_table = concatTablesInFolder(newTableFolder)
+            if q2_table == None or quick_table == None or quick_table.keyColumns[0] == None:
+                LOG.write(
+                    "ERROR: missing configuration for " + folder + " in Warhammer2_table_config!\nABORTING PROCESS FOR THIS FOLDER\n")
+            else:
+                basetable_columns = set(quick_table.columns)
+                newtable_columns = set(q2_table.columns)
+                added_columns = newtable_columns - basetable_columns
+                removed_columns = basetable_columns - newtable_columns
+
+                baseTableFolder_tables = load_folder_Tables(baseTableFolder)
+                newTableFolder_tables = load_folder_Tables(newTableFolder)
+                btft_set = set(baseTableFolder_tables.keys())
+                ntft_set = set(newTableFolder_tables.keys())
+                missing_tables = btft_set - ntft_set
+                if len(missing_tables) > 0:
+                    for m in missing_tables:
+                        LOG.write("New data.pack missing table from old pack: " + m + "\n")
+
+                if basetable_columns != newtable_columns:
+
+                    if len(btft_set) > 1:
+                        LOG.write("WARNING: found more than one table file in old data.pack export\n")
+
+                    if len(ntft_set) > 1:
+                        LOG.write("WARNING: found more than one table file in new data.pack export\n")
+
+                    LOG.write("Processing changed columns for folder " + folder + "\n")
+                    LOG.write("Added Columns: \n")
+                    for ac in added_columns:
+                        LOG.write(ac + "\n")
+                    LOG.write("Removed Columns: \n")
+                    for rc in removed_columns:
+                        LOG.write(rc + "\n")
+
+                    basetable = concatTablesInFolder(baseTableFolder)
+                    newtable = concatTablesInFolder(newTableFolder)
+
+                    results = find_renamed_columns(basetable, newtable)
+
+                    for k in results.keys():
+                        v = results[k]
+                        LOG.write("Accepted mapping of " + k + " to " + v)
+                    config_overwrites[folder] = results
+                else:
+                    config_overwrites[folder] = {}
+        LOG.flush()
+        return config_overwrites
+    else:
+        LOG.write("No shared folder names in both mod directory and base directory!\n")
+        return {}
 
 
 

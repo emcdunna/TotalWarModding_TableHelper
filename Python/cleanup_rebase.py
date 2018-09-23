@@ -25,8 +25,8 @@ def main(args):
 
     for folder in input_dirTables.keys():
         if True:#try:
-            print "#"*120
-            print "Folder " + folder
+            print("#" * 120)
+            print("Folder " + folder)
             mod_folder_tables = input_dirTables[folder]
             base_folder_tables = baseDirTables[folder]
 
@@ -73,8 +73,8 @@ def main(args):
                 This IGNORES removed entries and BROKENCOLUMN entries
             """
             for key in main_table_dict.keys():
-                print "-"* 50
-                print "Table: " + key
+                print("-" * 50)
+                print("Table: " + key)
                 table = main_table_dict[key]
 
                 mt_eks = set(table.entries.keys())
@@ -87,27 +87,29 @@ def main(args):
                     try:
                         m_table = miss_table_dict[key]
                         if "data__" == key:
-                            print "\tNot adding missing entries to this table, since they were removed on purpose."
+                            print("\tNot adding missing entries to this table, since they were removed on purpose.")
                         else:
                             table = merge_tables(table, m_table)
                             table.fileName += "_FULL_data__"
-                            print "\tAdding missing entries to this table and renaming it FULL "
+                            print("\tAdding missing entries to this table and renaming it FULL ")
                     except KeyError:
                         pass
 
                 try:
                     r_table = rem_table_dict[key]
-                    print "\tIgnoring Removed table entries (these will remain removed in the cleaned rebase tsv file)"
+                    print("\tIgnoring Removed table entries (these will remain removed in the cleaned rebase tsv file)")
                 except KeyError:
                     pass
                 try:
                     b_table = broken_table_dict[key]
-                    print "\tIgnoring Broken Column table entries (these will remain removed in the cleaned rebase tsv file)"
+                    print(
+                        "\tIgnoring Broken Column table entries (these will remain removed in the cleaned rebase tsv file)")
                 except KeyError:
                     pass
                 try:
                     c_table = collision_table_dict[key]
-                    print "\tIgnoring Collision table entries (these will remain removed in the cleaned rebase tsv file)"
+                    print(
+                        "\tIgnoring Collision table entries (these will remain removed in the cleaned rebase tsv file)")
                 except KeyError:
                     pass
 
@@ -115,21 +117,15 @@ def main(args):
                 try:
                     a_table = add_table_dict[key]
                     table = merge_tables(table, a_table)
-                    print "\tRe-adding \'added\' entries to the table file."
+                    print("\tRe-adding \'added\' entries to the table file.")
                 except KeyError:
                     pass
                 if len(table.entries) != 0:
                     table.print_to_file(os.path.join(outputDir,folder))
                 else:
-                    print "\tNot writing table file, as it is empty."
+                    print("\tNot writing table file, as it is empty.")
 
-
-
-
-            print "-"* 50
-
-
-
+            print("-" * 50)
 
         #except:
         #   pass
